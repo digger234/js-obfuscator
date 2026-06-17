@@ -19,27 +19,24 @@ def haze(code):
     stash = []
     code = re.sub(r'("[^"\\]*(?:\\.[^"\\]*)*"|\'[^\'\\]*(?:\\.[^\'\\]*)*\'|`[^`\\]*(?:\\.[^`\\]*)*`|/(?![*+?])(?:[^\r\n\[/\\]|\\.|\[(?:[^\r\n\]\\]|\\.)*\])+/g?)', lambda m: (stash.append(m.group(0)), f"__STR_{len(stash)-1}__")[1], code)
     vars = re.findall(r'\b[a-zA-Z_$][a-zA-Z0-9_$]*\b', code)
-    skip = {
-        "var", "let", "const", "function", "return", "if", "else", "for", "while", "do", "switch", "case", "break", "continue", "default", "try", "catch", "finally", "throw", "new", "this", "typeof", "instanceof", "delete", "void", "in", "of", "class", "extends", "import", "export", "debugger", "true", "false", "null", "undefined", "async", "await", "yield", "with", "super", "decodeURIComponent", "escape", "Date", "now", "push", "length", "charCodeAt", "fromCharCode", "console", "Function", "d", "o", "k", "String", "Object", "Image", "globalThis", "window", "document", "setInterval", "setTimeout", "performance", "Math", "Infinity", "NaN", "arguments", "__ABC__", "slice", "toString", "join", "unref", "imul", "max", "min", "abs", "floor", "defineProperty", "freeze", "keys", "prototype", "test", "log", "shift", "push", "_0xdec", "_0xabc", "__ARRAY__", "substring", "indexOf", "split", "replace", "throw", "Error", "innerWidth", "outerWidth", "innerHeight", "outerHeight", "__HASH__", "__LEN__", "sign", "size", "map", "eval", "error"
-    }
+    skip = {"var", "let", "const", "function", "return", "if", "else", "for", "while", "do", "switch", "case", "break", "continue", "default", "try", "catch", "finally", "throw", "new", "this", "typeof", "instanceof", "delete", "void", "in", "of", "class", "extends", "import", "export", "debugger", "true", "false", "null", "undefined", "async", "await", "yield", "with", "super", "decodeURIComponent", "escape", "Date", "now", "push", "length", "charCodeAt", "fromCharCode", "console", "Function", "d", "o", "k", "String", "Object", "Image", "globalThis", "window", "document", "setInterval", "setTimeout", "performance", "Math", "Infinity", "NaN", "arguments", "__ABC__", "slice", "toString", "join", "unref", "imul", "max", "min", "abs", "floor", "defineProperty", "freeze", "keys", "prototype", "test", "log", "shift", "push", "_0xdec", "_0xabc", "__ARRAY__", "substring", "indexOf", "split", "replace", "throw", "Error", "innerWidth", "outerWidth", "innerHeight", "outerHeight", "__HASH__", "__LEN__", "sign", "size", "map", "eval", "error", "GM_xmlhttpRequest", "GM_setValue", "GM_getValue", "GM_deleteValue", "GM_listValues", "GM_addStyle", "GM_getResourceText", "GM_getResourceURL", "GM_log", "GM_openInTab", "GM_registerMenuCommand", "GM_unregisterMenuCommand", "GM_setClipboard", "GM_info"}
 
     vars = sorted(list(set(vars) - skip))
     vars = [v for v in vars if not (len(v) == 3 and v[0] == 'x' and all(c in '0123456789abcdefABCDEF' for c in v[1:]))]
     vars = [v for v in vars if not (v.startswith('__STR_') and v.endswith('__'))]
     mapping = {v: greek[i % len(greek)] + str(i // len(greek)) for i, v in enumerate(vars)}
     for old, new in mapping.items():
-        code = re.sub(r'\b' + re.escape(old) + r'\b', new, code)
-    methods = {
-        'charCodeAt': '["\\x63\\x68\\x61\\x72\\x43\\x6f\\x64\\x65\\x41\\x74"]',
-        'fromCharCode': '["\\x66\\x72\\x6f\\x6d\\x43\\x68\\x61\\x72\\x43\\x6f\\x64\\x65"]',
-        'length': '["\\x6c\\x65\\x6e\\x67\\x74\\x68"]',
-        'push': '["\\x70\\x75\\x73\\x68"]',
-        'shift': '["\\x73\\x68\\x69\\x66\\x74"]',
-        'escape': 'globalThis["\\x65\\x73\\x63\\x61\\x70\\x65"]',
-        'decodeURIComponent': 'globalThis["\\x64\\x65\\x63\\x6f\\x64\\x65\\x55\\x52\\x49\\x43\\x6f\\x6d\\x70\\x6f\\x6e\\x65\\x6e\\x74"]',
-        'Function': 'globalThis["\\x46\\x75\\x6e\\x63\\x74\\x69\\x6f\\x6e"]'
-    }
-    for old, nw in methods.items():
+        code = re.sub(r'\b' + re.escape(old) + r'\b', lambda m, val=new: val, code)
+    for old, nw in [
+        ('charCodeAt', '["\\x63\\x68\\x61\\x72\\x43\\x6f\\x64\\x65\\x41\\x74"]'),
+        ('fromCharCode', '["\\x66\\x72\\x6f\\x6d\\x43\\x68\\x61\\x72\\x43\\x6f\\x64\\x65"]'),
+        ('length', '["\\x6c\\x65\\x6e\\x67\\x74\\x68"]'),
+        ('push', '["\\x70\\x75\\x73\\x68"]'),
+        ('shift', '["\\x73\\x68\\x69\\x66\\x74"]'),
+        ('escape', 'globalThis["\\x65\\x73\\x63\\x61\\x70\\x65"]'),
+        ('decodeURIComponent', 'globalThis["\\x64\\x65\\x63\\x6f\\x64\\x65\\x55\\x52\\x49\\x43\\x6f\\x6d\\x70\\x6f\\x6e\\x65\\x6e\\x74"]'),
+        ('Function', 'globalThis["\\x46\\x75\\x6e\\x63\\x74\\x69\\x6f\\x6e"]')
+    ]:
         code = code.replace('.' + old, nw)
         if old in {'escape', 'decodeURIComponent', 'Function'}:
             code = re.sub(r'\b' + re.escape(old) + r'\b', lambda m: nw.replace('\\', '\\\\'), code)
@@ -767,7 +764,7 @@ encs = [
 
 def pack(val, key):
     data = val.encode('utf-8')
-    mode = random.randint(0, len(encs) - 1)
+    mode = djb(data) % len(encs)
     payload = encs[mode](data, key)
     return hide(payload)
 
@@ -817,9 +814,19 @@ def gen(used):
         '\u0430', '\u0435', '\u043e', '\u0440', '\u0441', '\u0445',
         '\u0443', '\u0456', '\u0457'
     ]
-    while True:
-        name = random.choice(chars) + "".join(random.choices(chars, k=random.randint(8, 12)))
-        if name not in used: return name
+    idx = len(used)
+    res = chars[idx % len(chars)]
+    tmp = idx // len(chars)
+    while tmp > 0:
+        res += chars[tmp % len(chars)]
+        tmp = tmp // len(chars)
+    while len(res) < 10:
+        res += chars[(len(res) + idx) % len(chars)]
+    if res in used:
+        i = 0
+        while res + str(i) in used: i += 1
+        res += str(i)
+    return res
 
 exclude = {
     'var', 'let', 'const', 'function', 'return', 'if', 'else', 'for',
@@ -1252,9 +1259,10 @@ def emit(node):
         if node["computed"]:
             opt = [token('op', '?.')] if node.get("optional") else []
             return emit(node["obj"]) + opt + [token('punc', '[')] + emit(node["prop"]) + [token('punc', ']')]
+        pv = node["prop"].get("value") if isinstance(node["prop"], dict) else None
         if node.get("optional"):
-            return emit(node["obj"]) + [token('op', '?.')] + [token('id', node["prop"]["value"])]
-        return emit(node["obj"]) + [token('punc', '.')] + [token('id', node["prop"]["value"])]
+            return emit(node["obj"]) + [token('op', '?.')] + (emit(node["prop"]) if pv is None else [token('id', pv)])
+        return emit(node["obj"]) + [token('punc', '.')] + (emit(node["prop"]) if pv is None else [token('id', pv)])
     if kind == "assign": return emit(node["left"]) + [token('op', node["op"])] + emit(node["right"])
     if kind == "ternary": return emit(node["test"]) + [token('op', '?')] + emit(node["then"]) + [token('op', ':')] + emit(node["else"])
     if kind == "array":
@@ -1578,7 +1586,6 @@ def params(node):
 def flat(node):
     if node is None: return None
     if isinstance(node, list):
-        if len(node) < 10: return [flat(s) for s in node]
         children = [flat(s) for s in node]
         vars = []
         lines = []
@@ -1589,17 +1596,6 @@ def flat(node):
                 lines.extend(a)
             if s["kind"] != "simple" or not s["toks"] or s["toks"][0].v not in {'var', 'let', 'const'}:
                 lines.extend(split(s))
-        if len(lines) < 3:
-            res = []
-            if vars:
-                decl = [token('id', 'var')]
-                for i, v in enumerate(vars):
-                    decl.append(token('id', v))
-                    if i < len(vars) - 1: decl.append(token('punc', ','))
-                decl.append(token('punc', ';'))
-                res.append({"kind": "simple", "toks": decl})
-            res.extend(lines)
-            return res
         states = []
         while len(states) < len(lines) + 1:
             val = str(random.randint(10000, 99999))
@@ -1637,12 +1633,12 @@ def flat(node):
             ] + toks + move
             part.append(block)
         fakes = []
-        while len(fakes) < 2:
+        while len(fakes) < 5:
             val = str(random.randint(10000, 99999))
             if val not in states and val not in fakes: fakes.append(val)
         trash = []
-        for state in fakes:
-            raw = dead()
+        for idx, state in enumerate(fakes):
+            raw = dead(idx)
             toks = scan(raw)
             goto = str(random.randint(10000, 99999))
             new = random.randint(1000, 9999)
@@ -1874,23 +1870,19 @@ def secure(val):
     tail = ((west ^ 0xaa) + 456) & 255
     leaf = ((north + 789) ^ 0xff) & 255
     key = (head ^ tail ^ leaf) & 0xff
-    enc = [ord(c) ^ key for c in val]
+    salt = random.randint(1, 0xfe)
+    enc = [(ord(c) ^ key ^ ((i * salt + (i >> 2)) & 0xff)) & 0xff for i, c in enumerate(val)]
     data = ",".join(map(str, enc))
     js = f"""(function(){{
-        var start = Date.now();
-        debugger;
-        var diff = Date.now() - start;
         var head = (({east} * 3 + 123) ^ 0x55) & 255;
         var tail = ((({west} ^ 0xaa) + 456) & 255);
         var leaf = (({north} + 789) ^ 0xff) & 255;
         var k = (head ^ tail ^ leaf) & 255;
-        if (diff > 100) {{
-            k = k ^ 0xaa;
-        }}
+        var salt = {salt};
         var enc = [{data}];
         var res = "";
         for (var i = 0; i < enc.length; i++) {{
-            res += String.fromCharCode(enc[i] ^ k);
+            res += String.fromCharCode(enc[i] ^ k ^ ((i * salt + (i >> 2)) & 255));
         }}
         return res;
     }})()"""
@@ -1925,7 +1917,7 @@ def pool(node, strings, key):
                             else:
                                 res.extend(dt)
                         else:
-                            mode = random.randint(0, len(encs) - 1)
+                            mode = djb(val.encode('utf-8')) % len(encs)
                             payload = encs[mode](val.encode('utf-8'), key)
                             b64 = hide(payload)
                             if b64 not in strings: strings.append(b64)
@@ -1958,7 +1950,7 @@ def pool(node, strings, key):
                     else:
                         res.extend(dt)
                 else:
-                    mode = random.randint(0, len(encs) - 1)
+                    mode = djb(val.encode('utf-8')) % len(encs)
                     payload = encs[mode](val.encode('utf-8'), key)
                     b64 = hide(payload)
                     if b64 not in strings: strings.append(b64)
@@ -1981,7 +1973,7 @@ def pool(node, strings, key):
                 val = style(val)
                 if core(val):
                     return secure(val)
-                mode = random.randint(0, len(encs) - 1)
+                mode = djb(val.encode('utf-8')) % len(encs)
                 payload = encs[mode](val.encode('utf-8'), key)
                 b64 = hide(payload)
                 if b64 not in strings: strings.append(b64)
@@ -1993,14 +1985,11 @@ def pool(node, strings, key):
         if n.get("kind") == "template":
             raw = n["value"]
             if '${' not in raw:
-                if len(raw) >= 2 and raw[0] in {"'", '"', '`'} and raw[-1] == raw[0]:
-                    val = raw[1:-1]
-                else:
-                    val = raw
+                val = raw[1:-1] if (len(raw) >= 2 and raw[0] in {"'", '"', '`'} and raw[-1] == raw[0]) else raw
                 val = style(val)
                 if core(val):
                     return secure(val)
-                mode = random.randint(0, len(encs) - 1)
+                mode = djb(val.encode('utf-8')) % len(encs)
                 payload = encs[mode](val.encode('utf-8'), key)
                 b64 = hide(payload)
                 if b64 not in strings: strings.append(b64)
@@ -2011,10 +2000,7 @@ def pool(node, strings, key):
                 return {"kind": "simple", "toks": toks}
             else:
                 q = raw[0] if raw[0] in {"'", '"', '`'} else "'"
-                if len(raw) >= 2 and raw[0] in {"'", '"', '`'} and raw[-1] == raw[0]:
-                    val = raw[1:-1]
-                else:
-                    val = raw
+                val = raw[1:-1] if (len(raw) >= 2 and raw[0] in {"'", '"', '`'} and raw[-1] == raw[0]) else raw
                 val = style(val)
                 return {"kind": "template", "value": q + val + q}
         return n
@@ -2075,7 +2061,7 @@ def nums(node):
             if tok.t != 'num': res.append(tok)
         return res
     def fn(n):
-        if n.get("numsed"): return n
+        if n.get("seen"): return n
         if n.get("kind") == "lit":
             if n["type"] == "num":
                 val = n["value"]
@@ -2084,17 +2070,17 @@ def nums(node):
                     z = random.randint(1, 0xff)
                     def mark(t):
                         if isinstance(t, dict):
-                            t["numsed"] = True
+                            t["seen"] = True
                             for k, v in t.items(): mark(v)
                         elif isinstance(t, list):
                             for x in t: mark(x)
                         return t
-                    xored = {"kind": "binary", "op": "^", "left": {"kind": "lit", "value": val ^ y, "type": "num"}, "right": {"kind": "lit", "value": y, "type": "num"}}
-                    subed = {"kind": "binary", "op": "-", "left": {"kind": "lit", "value": val + z, "type": "num"}, "right": {"kind": "lit", "value": z, "type": "num"}}
+                    a = {"kind": "binary", "op": "^", "left": {"kind": "lit", "value": val ^ y, "type": "num"}, "right": {"kind": "lit", "value": y, "type": "num"}}
+                    b = {"kind": "binary", "op": "-", "left": {"kind": "lit", "value": val + z, "type": "num"}, "right": {"kind": "lit", "value": z, "type": "num"}}
                     res = {
                         "kind": "binary", "op": "&",
-                        "left": {"kind": "binary", "op": "|", "left": xored, "right": subed},
-                        "right": {"kind": "binary", "op": "|", "left": subed, "right": xored}
+                        "left": {"kind": "binary", "op": "|", "left": a, "right": b},
+                        "right": {"kind": "binary", "op": "|", "left": b, "right": a}
                     }
                     return mark(res)
         return n
@@ -2338,28 +2324,9 @@ def primes():
     var val = primes(100);
     """
 
-def dead():
-    bag = [bubble, quick, rank, seek, form, term, tree, graph, sha, md5, aes, rsa, primes, memo, kmp, matrix, encode, sieve, heap, cipher, link, search, count, luhn, crc, game, ackermann, levenshtein, dfs, dijkstra, bops, newton, huffman]
-    if random.random() < 0.5:
-        return fuzz(random.choice(bag)())
-    used = set()
-    func = gen(used)
-    used.add(func)
-    a = gen(used)
-    used.add(a)
-    b = gen(used)
-    used.add(b)
-    c = gen(used)
-    used.add(c)
-    d = gen(used)
-    used.add(d)
-    idx = random.randint(0, 2)
-    simple = [
-        f"function {func}({a}, {b}) {{ var {c} = {a} + {b}; if ({c} > 100) {{ return {c} * 2; }} else {{ return {c} - 5; }} }} var {d} = {func}(10, 20);",
-        f"function {func}({a}) {{ var {b} = []; for (var {c} = 0; {c} < {a}.length; {c}++) {{ {b}.push({a}[{c}] * 3); }} return {b}; }} var {d} = {func}([1, 2, 3]);",
-        f"function {func}({a}) {{ var {b} = 0; for (var {c} = 0; {c} < {a}.length; {c}++) {{ {b} = ({b} << 5) - {b} + {a}.charCodeAt({c}); }} return {b}; }} var {d} = {func}('test');"
-    ]
-    return simple[idx]
+def dead(idx):
+    bag = [sha, md5, aes, rsa, primes, memo, kmp, matrix, sieve, ackermann, levenshtein, dfs, dijkstra, huffman]
+    return fuzz(bag[idx % len(bag)](), idx)
 
 def rot(arr, k):
     if not arr: return arr
@@ -2391,8 +2358,8 @@ def wrap(code, strings, key, k):
     decoder = f"""
     globalThis._0xabc = __ARRAY__;
     try {{
-        var _realGlobal = Function("return this")();
-        _realGlobal._0xabc = globalThis._0xabc;
+        var glob = Function("return this")();
+        glob._0xabc = globalThis._0xabc;
     }} catch(e) {{}}
     (function(arr, num) {{
         var fn = function(n) {{
@@ -2981,7 +2948,11 @@ def escape(code):
         'try', 'catch', 'finally', 'throw', 'new', 'this', 'typeof',
         'instanceof', 'delete', 'void', 'in', 'of', 'class', 'extends',
         'import', 'export', 'debugger', 'true', 'false', 'null', 'undefined',
-        'async', 'await', 'yield', 'with', 'super'
+        'async', 'await', 'yield', 'with', 'super',
+        'GM_xmlhttpRequest', 'GM_setValue', 'GM_getValue', 'GM_deleteValue',
+        'GM_listValues', 'GM_addStyle', 'GM_getResourceText', 'GM_getResourceURL',
+        'GM_log', 'GM_openInTab', 'GM_registerMenuCommand', 'GM_unregisterMenuCommand',
+        'GM_setClipboard', 'GM_info'
     }
     toks = scan(code)
     out = []
@@ -3010,7 +2981,8 @@ def escape(code):
             res = ""
             for c in t.v:
                 o = ord(c)
-                res += f"\\u{o:04x}"
+                if o > 127: res += f"\\u{o:04x}"
+                if o <= 127: res += c
             out.append(res)
         elif t.t == 'id' and t.v in keywords:
             out.append(t.v)
@@ -3677,7 +3649,8 @@ def fake(node):
                 v = gen(set())
                 n1 = random.randint(10, 100)
                 n2 = random.randint(10, 100)
-                raw = f"var {v} = {n1} + {n2};"
+                n3 = random.randint(10, 100)
+                raw = f"var {v} = Math.floor(Math.sin({n1}) * {n2}) ^ {n3};"
                 toks = scan(raw)
                 els = parse(toks)
                 fakes = fake(s)
@@ -3692,12 +3665,31 @@ def store(node):
     def fn(n):
         if n.get("stored"): return n
         if n.get("kind") == "func":
-            locals = local(n["body"]) - exclude
+            raw = local(n["body"]) - exclude
+            aset = set()
+            def dive(node):
+                if not node: return
+                if isinstance(node, list):
+                    for x in node: dive(x)
+                    return
+                if isinstance(node, dict):
+                    if node.get("kind") == "simple":
+                        toks = node.get("toks", [])
+                        if toks and toks[0].v in {'var','let','const'}:
+                            for t in toks:
+                                if t.v == 'arguments':
+                                    vs, _ = extract(toks)
+                                    aset.update(vs)
+                                    return
+                    if node.get("kind") == "func": return
+                    for v in node.values(): dive(v)
+            dive(n["body"])
+            locals = raw - aset
             if not locals:
                 return {"kind": "func", "name": n["name"], "args": n["args"], "body": store(n["body"]), "async": n.get("async")}
             body = store(n["body"])
             def convert(nt):
-                def subfn(sn):
+                def run(sn):
                     if sn.get("stored"): return sn
                     k = sn.get("kind")
                     if k == "id":
@@ -3766,7 +3758,7 @@ def store(node):
                                 i += 1
                             return {"kind": "simple", "toks": items}
                     return sn
-                return walk(nt, subfn)
+                return walk(nt, run)
             inner = convert(body)
             toks = [token('id', 'var')]
             for idx, name in enumerate(locals):
@@ -3907,9 +3899,7 @@ def junk(node):
                 na = random.randint(1, 0xffff)
                 nb = random.randint(1, 0xffff)
                 nc = random.randint(1, 0xffff)
-                xr = {"kind":"binary","op":"^","left":{"kind":"lit","value":na,"type":"num"},"right":{"kind":"lit","value":nb,"type":"num"}}
-                an = {"kind":"binary","op":"&","left":{"kind":"lit","value":nb,"type":"num"},"right":{"kind":"lit","value":nc,"type":"num"}}
-                right = {"kind":"binary","op":"+","left":xr,"right":{"kind":"binary","op":"*","left":{"kind":"lit","value":2,"type":"num"},"right":an}}
+                right = {"kind":"binary","op":"^","left":{"kind":"binary","op":"&","left":{"kind":"lit","value":na,"type":"num"},"right":{"kind":"lit","value":nb,"type":"num"}},"right":{"kind":"binary","op":"+","left":{"kind":"binary","op":"-","left":{"kind":"binary","op":"|","left":{"kind":"lit","value":na,"type":"num"},"right":{"kind":"lit","value":nb,"type":"num"}},"right":{"kind":"binary","op":"^","left":{"kind":"lit","value":nb,"type":"num"},"right":{"kind":"lit","value":nc,"type":"num"}}},"right":{"kind":"lit","value":nc,"type":"num"}}}
                 toks = [token('id','var'),token('id',v),token('op','=')] + emit(right) + [token('punc',';')]
                 body.append({"kind":"simple","toks":toks})
             return {"kind":"block","body":body, "junked": True}
@@ -4032,51 +4022,15 @@ def check(node):
         return n
     return walk(node, fn)
 
-def fuzz(js):
-    keep = {
-        'var','let','const','function','return','if','else','while','for','do',
-        'break','continue','new','delete','typeof','instanceof','in','of',
-        'switch','case','default','throw','try','catch','finally','class',
-        'extends','super','this','import','export','from','as','async','await',
-        'yield','null','undefined','true','false','void','with','debugger',
-        'Object','Array','Function','String','Number','Boolean','Symbol','Math',
-        'Date','RegExp','Error','Promise','Map','Set','WeakMap','WeakSet',
-        'JSON','console','window','document','globalThis','global','self','process',
-        'parseInt','parseFloat','isNaN','isFinite','Infinity','NaN','eval',
-        'alert','confirm','prompt','setTimeout','setInterval','clearTimeout',
-        'clearInterval','atob','btoa','encodeURIComponent','decodeURIComponent',
-        'push','pop','shift','unshift','splice','slice','concat','join','reverse',
-        'sort','indexOf','lastIndexOf','includes','find','findIndex','every',
-        'some','filter','map','reduce','forEach','keys','values','entries',
-        'from','fill','flat','flatMap','at','charAt','charCodeAt','fromCharCode',
-        'codePointAt','fromCodePoint','substring','substr','replace','replaceAll',
-        'match','matchAll','search','split','trim','trimStart','trimEnd','padStart',
-        'padEnd','repeat','toLowerCase','toUpperCase','toString','valueOf',
-        'normalize','assign','create','freeze','seal','isFrozen','isSealed',
-        'hasOwnProperty','isPrototypeOf','propertyIsEnumerable','getPrototypeOf',
-        'defineProperty','getOwnPropertyNames','setPrototypeOf',
-        'floor','ceil','round','abs','sqrt','cbrt','pow','exp','log','log2',
-        'log10','max','min','random','sign','trunc','hypot','sin','cos','tan',
-        'asin','acos','atan','atan2','sinh','cosh','tanh','PI','E','LN2','SQRT2',
-        'GM_xmlhttpRequest', 'GM_setValue', 'GM_getValue', 'GM_deleteValue',
-        'GM_listValues', 'GM_addStyle', 'GM_getResourceText', 'GM_getResourceURL',
-        'GM_log', 'GM_openInTab', 'GM_registerMenuCommand', 'GM_unregisterMenuCommand',
-        'GM_setClipboard', 'GM_info',
-        'length','prototype','constructor','name','apply','call','bind',
-        'next','done','value','then','catch','resolve','reject','all','race',
-        'any','allSettled','add','get','set','has','clear','size',
-        'Uint8Array','Int8Array','Uint16Array','Int32Array','Float32Array',
-        'Float64Array','ArrayBuffer','DataView','TextEncoder','TextDecoder',
-        'performance','now','mark','measure',
-    }
+def fuzz(js, idx=0):
+    keep = {'var','let','const','function','return','if','else','while','for','do','break','continue','new','delete','typeof','instanceof','in','of','switch','case','default','throw','try','catch','finally','class','extends','super','this','import','export','from','as','async','await','yield','null','undefined','true','false','void','with','debugger','Object','Array','Function','String','Number','Boolean','Symbol','Math','Date','RegExp','Error','Promise','Map','Set','WeakMap','WeakSet','JSON','console','window','document','globalThis','global','self','process','parseInt','parseFloat','isNaN','isFinite','Infinity','NaN','eval','alert','confirm','prompt','setTimeout','setInterval','clearTimeout','clearInterval','atob','btoa','encodeURIComponent','decodeURIComponent','push','pop','shift','unshift','splice','slice','concat','join','reverse','sort','indexOf','lastIndexOf','includes','find','findIndex','every','some','filter','map','reduce','forEach','keys','values','entries','from','fill','flat','flatMap','at','charAt','charCodeAt','fromCharCode','codePointAt','fromCodePoint','substring','substr','replace','replaceAll','match','matchAll','search','split','trim','trimStart','trimEnd','padStart','padEnd','repeat','toLowerCase','toUpperCase','toString','valueOf','normalize','assign','create','freeze','seal','isFrozen','isSealed','hasOwnProperty','isPrototypeOf','propertyIsEnumerable','getPrototypeOf','defineProperty','getOwnPropertyNames','setPrototypeOf','floor','ceil','round','abs','sqrt','cbrt','pow','exp','log','log2','log10','max','min','random','sign','trunc','hypot','sin','cos','tan','asin','acos','atan','atan2','sinh','cosh','tanh','PI','E','LN2','SQRT2','GM_xmlhttpRequest','GM_setValue','GM_getValue','GM_deleteValue','GM_listValues','GM_addStyle','GM_getResourceText','GM_getResourceURL','GM_log','GM_openInTab','GM_registerMenuCommand','GM_unregisterMenuCommand','GM_setClipboard','GM_info','length','prototype','constructor','name','apply','call','bind','next','done','value','then','catch','resolve','reject','all','race','any','allSettled','add','get','set','has','clear','size','Uint8Array','Int8Array','Uint16Array','Int32Array','Float32Array','Float64Array','ArrayBuffer','DataView','TextEncoder','TextDecoder','performance','now','mark','measure'}
     defined = set(re.findall(r'function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(', js))
     defined |= set(re.findall(r'(?:var|let|const)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)', js))
     defined -= keep
     mp = {}
     u = set()
     for nm in defined:
-        x = '_0x' + ''.join(random.choices('0123456789abcdef', k=5))
-        while x in u: x = '_0x' + ''.join(random.choices('0123456789abcdef', k=5))
+        x = f"_0x{idx:02x}{len(u):03x}"
         mp[nm] = x
         u.add(x)
     for old, nw in mp.items():
@@ -4141,9 +4095,16 @@ def obf(code):
     for l in locals:
         if l not in exclude: env[l] = gen(env.values())
     tree = rename(tree, env)
+    global maps
+    maps = {
+        "+": env["_0xadd"],
+        "-": env["_0xsub"],
+        "^": env["_0xxor"],
+        "&": env["_0xand"]
+    }
     for step in [
-        prop, keys, logic, params, calc, fold, mba, fake, spin, sift, store,
-        flat, inject, junk, trap, ghost, proxy, scramble, skew, hold,
+        prop, keys, logic, params, calc, fold, mba, fake, spin, sift,
+        flat, store, inject, junk, trap, ghost, proxy, scramble, skew, hold,
         swap, root, check
     ]:
         tree = step(tree)
@@ -4162,99 +4123,56 @@ def obf(code):
     funcs = [probe(), snare(), guard(), cage(), leak(), save()]
     random.shuffle(funcs)
     if strings: result = wrap(result, strings, key, k)
-    shift = random.randint(10, 100)
-    enc = "".join([chr((ord(c) + shift) % 65536) for c in result])
-    raw2 = enc.encode('utf-8')
-    xk = [random.randint(1, 0xfe) for i in range(16)]
-    mixed = []
-    for i, b in enumerate(raw2):
-        if i % 2 == 0:
-            temp = (b + i) % 256
-        else:
-            temp = (b - i + 256) % 256
-        mixed.append(temp ^ xk[i % 16])
-    xored = bytes(mixed)
-    b64 = hide(xored)
-    xp = []
-    for kv in xk:
-        r2 = random.randint(1, 0xff)
-        xp.append(f"({hex(kv ^ r2)}^{hex(r2)})")
-    ka = "[" + ",".join(xp) + "]"
+    else: result = escape(result)
+    xk = [random.randint(1, 0xfe) for _ in range(32)]
+    rk = [random.randint(1, 0xff) for _ in range(32)]
+    seed = djb(key.encode('utf-8')) & 0xffffffff
+    enc = bytearray()
+    for i, c in enumerate(result.encode('utf-8')):
+        h = (seed >> ((i % 8) * 4)) & 0xff
+        enc.append(((c + i) % 256) ^ xk[i % 32] ^ rk[i % 32] ^ h)
+    b64 = hide(bytes(enc))
+    xp = "[" + ",".join(f"({hex(xk[i]^rk[i])}^{hex(rk[i])})" for i in range(32)) + "]"
+    rp = "[" + ",".join(hex(v) for v in rk) + "]"
+    hx = hex(seed)
     body = r"""
-    function run(d, o, k) {
-        var get = function(a) {
-            return a.map(function(x) {
-                return String.fromCharCode(x ^ 127);
-            }).join('');
-        };
-
-        var code = run.toString();
-        var pure = code.replace(/\s+/g, '');
+    function run(d, k, r, s) {
+        var get = function(a) { return a.map(function(x){ return String["\x66\x72\x6f\x6d\x43\x68\x61\x72\x43\x6f\x64\x65"](x ^ 127); }).join(''); };
+        var fn = run.toString().replace(/\s+/g,'');
         var sign = __HASH__;
         var size = __LEN__;
-        var temp = pure.replace(sign.toString(), '0').replace(size.toString(), '0');
-        var hash = 5381;
-        for (var i = 0; i < temp.length; i++) {
-            hash = ((hash << 5) + hash) + temp.charCodeAt(i);
+        var tmp = fn.replace(sign.toString(),'0').replace(size.toString(),'0');
+        var h = 5381;
+        for(var i=0;i<tmp.length;i++) h=((h<<5)+h)+tmp.charCodeAt(i);
+        h = h>>>0;
+        if(tmp.length!==size||h!==sign){ globalThis[get([28,16,17,12,16,19,26])][get([26,13,13,16,13])]('Protected'); return; }
+        var alp = "__ABC__";
+        var lk = [];
+        for(var i=0;i<alp.length;i++) lk[alp.charCodeAt(i)]=i;
+        var raw='',buf=0,bits=0;
+        for(var i=0;i<d.length&&d[i]!=='=';i++){
+            buf=(buf<<6)|lk[d.charCodeAt(i)];
+            bits+=6;
+            if(bits>=8){bits-=8;raw+=globalThis[get([44,11,13,22,17,24])][get([25,13,16,18,60,23,30,13,60,16,27,26])]((buf>>bits)&255);}
         }
-        hash = hash >>> 0;
-        if (temp.length !== size || hash !== sign) {
-            globalThis.console.error("Lonely Moonlight: Trap 1 (Signature mismatch) triggered! Size:", temp.length, "Expected:", size, "Hash:", hash, "Expected:", sign);
-            return;
+        if(new(globalThis[get([45,26,24,58,7,15])])(get([117,87,95,4,75,2,3,118,86]))[get([11,26,12,11])](run.toString())){
+            globalThis[get([28,16,17,12,16,19,26])][get([26,13,13,16,13])]('Protected'); return;
         }
-
-        var alphabet = "__ABC__";
-        var b64dec = function(str) {
-            var start = Date.now();
-            var junk = [];
-            for (var i = 0; i < 200; i++) { junk.push(i ^ 0x55); }
-            if (Date.now() - start > 100) { 
-                globalThis.console.error("Lonely Moonlight: Trap 4 (Time check) triggered! Elapsed:", Date.now() - start);
-                return "";
-            }
-
-            var lookup = [];
-            for (var i = 0; i < alphabet.length; i++) { lookup[alphabet.charCodeAt(i)] = i; }
-            var res = "", buf = 0, bits = 0;
-            for (var i = 0; i < str.length && str[i] !== "="; i++) {
-                var val = lookup[str.charCodeAt(i)];
-                buf = (buf << 6) | val;
-                bits += 6;
-                if (bits >= 8) {
-                    bits -= 8;
-                    res += globalThis[get([44, 11, 13, 22, 17, 24])][get([25, 13, 16, 18, 60, 23, 30, 13, 60, 16, 27, 26])]((buf >> bits) & 255);
-                }
-            }
-            return res;
-        };
-        if (new (globalThis[get([45, 26, 24, 58, 7, 15])])(get([117, 87, 95, 4, 75, 2, 3, 118, 86]))[get([11, 26, 12, 11])](b64dec[get([11, 16, 44, 11, 13, 22, 17, 24])]())){ 
-            globalThis.console.error("Lonely Moonlight: Trap 2 (RegExp check on b64dec) triggered!");
-            return;
+        var u='';
+        for(var i=0;i<raw.length;i++){
+            var b=raw.charCodeAt(i);
+            var hv=(s>>(((i&7)*4)))&255;
+            u+=globalThis[get([44,11,13,22,17,24])][get([25,13,16,18,60,23,30,13,60,16,27,26])](((b^k[i&31]^r[i&31]^hv)-i%256+256)%256);
         }
-        var r = b64dec(d);
-        var u = "";
-        for (var i = 0; i < r[get([19, 26, 17, 24, 11, 23])]; i++) {
-            var mix = r[get([28, 23, 30, 13, 60, 16, 27, 26, 62, 11])](i) ^ k[i & 15];
-            var orig;
-            if (i % 2 === 0) {
-                orig = (mix - i + 2560000) % 256;
-            } else {
-                orig = (mix + i) % 256;
-            }
-            u += globalThis[get([44, 11, 13, 22, 17, 24])][get([25, 13, 16, 18, 60, 23, 30, 13, 60, 16, 27, 26])](orig);
-        }
-        var s = globalThis[get([27, 26, 28, 16, 27, 26, 42, 45, 54, 60, 16, 18, 15, 16, 17, 26, 17, 11])](globalThis[get([26, 12, 28, 30, 15, 26])](u));
-        var c = "";
-        for (var i = 0; i < s[get([19, 26, 17, 24, 11, 23])]; i++) {
-            c += globalThis[get([44, 11, 13, 22, 17, 24])][get([25, 13, 16, 18, 60, 23, 30, 13, 60, 16, 27, 26])]((s[get([28, 23, 30, 13, 60, 16, 27, 26, 62, 11])](i) - o + 65536) % 65536);
-        }
-        eval(c);
+        try{ u=globalThis[get([27,26,28,16,27,26,42,45,54,60,16,18,15,16,17,26,17,11])](globalThis[get([26,12,28,30,15,26])](u)); }catch(e){}
+        eval(u);
     }
     """
     body = haze(body)
     body = body.replace("__ABC__", abc)
-    temp = body.replace("__HASH__", "0").replace("__LEN__", "0")
-    slim = re.sub(r'\s+', '', temp)
+    body = "".join(f"\\u{ord(c):04x}" if ord(c) > 127 else c for c in body)
+    tmp2 = body.replace("__HASH__", "0").replace("__LEN__", "0")
+    slim = re.sub(r'\s+', '', tmp2)
     mark = 5381
     for c in slim:
         mark = ((mark << 5) + mark) + ord(c)
@@ -4262,14 +4180,21 @@ def obf(code):
     body = body.replace("__HASH__", str(mark)).replace("__LEN__", str(len(slim)))
     lines = [line.strip() for line in body.split('\n') if line.strip()]
     plain = " ".join(lines)
-    shell = f"({plain})('{b64}', {shift}, {ka});"
-    return " ".join(funcs) + " " + shell
+    shell = f"({plain})('{b64}',{xp},{rp},{hx});"
+    anchor = "if(false){GM_xmlhttpRequest({});}"
+    res = " ".join(funcs) + " " + anchor + " " + shell
+    return "".join(f"\\u{ord(c):04x}" if ord(c) > 127 else c for c in res)
 
 def read(path):
     with open(path, "r", encoding="utf-8") as f: return f.read()
 
 def write(path, data):
     with open(path, "w", encoding="utf-8") as f: f.write(data)
+
+def strip(code):
+    m = re.match(r'(// ==UserScript==.*?// ==/UserScript==\s*)', code, re.DOTALL)
+    if m: return m.group(1), code[m.end():]
+    return '', code
 
 def main():
     if len(sys.argv) < 2: sys.exit(1)
@@ -4281,8 +4206,9 @@ def main():
         if inp.endswith('.js'): out = inp[:-3]
         out = out + '_obf.js'
     code = read(inp)
-    res = obf(code)
-    write(out, res)
+    header, body = strip(code)
+    res = obf(body)
+    write(out, header + res)
 
 if __name__ == '__main__':
     main()

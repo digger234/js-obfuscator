@@ -70,9 +70,7 @@ function loadVersion(version) {
                     script.textContent = codeRes.responseText;
                     document.head.appendChild(script);
                     script.remove();
-                    loader.remove();
                 } catch (e) {
-                    console.error(e);
                     loader.remove();
                 }
             },
