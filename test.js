@@ -63,19 +63,27 @@ function loadVersion(version) {
     loadDependencies(version).then(() => {
         GM_xmlhttpRequest({
             method: "GET",
-            url: `https://gist.githubusercontent.com/raw/${gistId}`,
-            onload(codeRes) {
+            url: `https://api.github.com/gists/${gistId}`,
+            onload(res) {
                 try {
-                    const script = document.createElement("script");
-                    script.textContent = codeRes.responseText;
-                    document.head.appendChild(script);
-                    script.remove();
+                    const gist = JSON.parse(res.responseText);
+                    const file = Object.values(gist.files)[0];
+                    GM_xmlhttpRequest({
+                        method: "GET",
+                        url: file.raw_url,
+                        onload(codeRes) {
+                            const script = document.createElement("script");
+                            script.textContent = codeRes.responseText;
+                           document.head.appendChild(script);
+                            script.remove();
+                            loader.remove();
+                        }
+                    });
                 } catch (e) {
+                    console.error(e);
                     loader.remove();
+
                 }
-            },
-            onerror() {
-                loader.remove();
             }
         });
     });
