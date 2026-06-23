@@ -152,7 +152,7 @@ def rename(toks):
             depth = 1; j = i+1
             while j < len(toks) and depth > 0:
                 if toks[j]['v'] == '(': depth += 1
-                elif toks[j]['v'] == ')': depth -= 1
+                if toks[j]['v'] == ')': depth -= 1
                 j += 1
             if j < len(toks) and toks[j]['v'] == '{': skip.add(i-1)
     mapping = {}; used = set()
@@ -307,13 +307,13 @@ def machine(stmts, used):
     cases = []
     for idx, x in enumerate(stmts):
         z = states[idx+1]; q = random.randint(0x1000, 0x9fff)
-        mv = [tok('id',s), tok('op','='), tok('num',hex(z^q)), tok('pun',','), tok('id',t), tok('op','='), tok('num',hex(q)), tok('pun',';')]
+        step = [tok('id',s), tok('op','='), tok('num',hex(z^q)), tok('pun',','), tok('id',t), tok('op','='), tok('num',hex(q)), tok('pun',';')]
         block = [tok('id','case'), tok('num',str(states[idx])), tok('pun',':'), tok('pun','{')]
         block.extend(x)
         if not (x and x[-1]['v'] in (';','}')):
             block.append(tok('pun',';'))
         block.append(tok('pun','}'))
-        block.extend(mv)
+        block.extend(step)
         block.extend([tok('id','break'), tok('pun',';')])
         cases.extend(block)
     for _ in range(8):
@@ -350,7 +350,8 @@ def flat(toks, used):
                         if depth == 0: break
                 body.append(c); i += 1
             body = [tok('id','var') if x['t']=='id' and x['v'] in ('let','const') else x for x in body]
-            m = machine(chop(body), used)
+            hasret = any(x['t']=='id' and x['v']=='return' and x['v'] for x in body)
+            m = machine(chop(body), used) if not hasret else None
             if m: out.extend(m)
             else: out.extend(body)
             if i < len(toks): out.append(toks[i]); i += 1
@@ -394,7 +395,64 @@ def fuzz(used):
             tok('id','var'), tok('id',g), tok('op','='), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',';'),
             tok('pun','}'), tok('pun','('), tok('pun',')'), tok('pun',')'), tok('pun',')'), tok('pun',';')]
 
-bank = [dead, ghost, hush, blur, lace, flux, fuzz]
+def zap(used):
+    g = fresh(used); r = fresh(used); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(u|w)), tok('op','^'), tok('num',hex(u^w)), tok('pun',')'), tok('pun',';'),
+            tok('id','var'), tok('id',r), tok('op','='), tok('pun','!'), tok('pun','!'), tok('id',g), tok('pun',';')]
+
+def clamp(used):
+    g = fresh(used); r = fresh(used); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(u&w)), tok('op','|'), tok('num',hex(u|w)), tok('pun',')'), tok('pun',';'),
+            tok('id','var'), tok('id',r), tok('op','='), tok('pun','('), tok('id',g), tok('op','>>>'), tok('num','0x0'), tok('pun',')'), tok('pun',';')]
+
+def echo(used):
+    f = fresh(used); g = fresh(used); r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',f), tok('op','='), tok('id','function'), tok('pun','('), tok('id',g), tok('pun',')'), tok('pun','{'),
+            tok('id','return'), tok('pun','('), tok('id',g), tok('op','^'), tok('num',hex(r)), tok('op','^'), tok('num',hex(r)), tok('pun',')'), tok('pun',';'),
+            tok('pun','}'), tok('pun',';')]
+
+def bounce(used):
+    g = fresh(used); r = fresh(used); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',g), tok('op','='), tok('pun','['), tok('num',hex(u^w)), tok('op',','), tok('num',hex(u|w)), tok('pun',']'), tok('pun',';'),
+            tok('id','var'), tok('id',r), tok('op','='), tok('id',g), tok('pun','['), tok('num','0x0'), tok('pun',']'), tok('op','^'), tok('id',g), tok('pun','['), tok('num','0x1'), tok('pun',']'), tok('pun',';')]
+
+def coil(used):
+    g = fresh(used); r = random.randint(1,0xfe); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
+    return [tok('id','void'), tok('pun','('), tok('id','function'), tok('pun','('), tok('pun',')'), tok('pun','{'),
+            tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(r)), tok('op','+'), tok('num',hex(u)), tok('op','-'), tok('num',hex(r)), tok('pun',')'), tok('op','|'), tok('num',hex(w^w)), tok('pun',';'),
+            tok('pun','}'), tok('pun','('), tok('pun',')'), tok('pun',')'), tok('pun',';')]
+
+def mesh(used):
+    g = fresh(used); r = fresh(used); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(u)), tok('op','*'), tok('num','0x1'), tok('op','&'), tok('num',hex(u)), tok('pun',')'), tok('pun',';'),
+            tok('id','var'), tok('id',r), tok('op','='), tok('pun','('), tok('id',g), tok('op','+'), tok('num',hex(w^w)), tok('pun',')'), tok('pun',';')]
+
+def veer(used):
+    g = fresh(used); r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('pun','~'), tok('pun','('), tok('num',hex(r)), tok('op','|'), tok('num',hex(u)), tok('pun',')'), tok('pun',')'), tok('op','+'), tok('num','0x1'), tok('pun',';')]
+
+def drip(used):
+    return cloud(ghost(used) + dead(used), used)
+
+def fold(used):
+    return vex(blur(used) + hush(used), used)
+
+def knot(used):
+    f = fresh(used); g = fresh(used); r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    x = fresh(used); w = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',f), tok('op','='), tok('id','function'), tok('pun','('), tok('id',g), tok('pun',')'), tok('pun','{'),
+            tok('id','return'), tok('id',g), tok('op','|'), tok('num','0x0'), tok('pun',';'),
+            tok('pun','}'), tok('pun',';'),
+            tok('id','var'), tok('id',x), tok('op','='), tok('pun','('), tok('num',hex(r^w)), tok('op','^'), tok('num',hex(w)), tok('pun',')'), tok('pun',';'),
+            tok('id','void'), tok('pun','('), tok('id',f), tok('pun','('), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',')'), tok('pun',';')]
+
+def junk(used):
+    g = fresh(used); r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    out = comma([tok('pun',';')], used)
+    out.extend([tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',';')])
+    return out[1:]
+
+bank = [dead, ghost, hush, blur, lace, flux, fuzz, zap, clamp, echo, bounce, coil, mesh, veer, drip, fold, knot, junk]
 
 def fill(toks, used):
     out = []; i = 0; p = 0; b = 0; c = 0
@@ -430,21 +488,29 @@ def inject(toks, used):
         i += 1
     return out
 
+def body(toks, i):
+    j = i + 1
+    while j < len(toks) and toks[j]['v'] not in ('{', ';'): j += 1
+    return j < len(toks) and toks[j]['v'] == '{'
+
 def alias(toks, used):
     out = []; i = 0; depth = 0; g = False
     while i < len(toks):
         t = toks[i]
-        if t['t'] == 'id' and t['v'] == 'function': g = True
+        if t['t'] == 'id' and t['v'] == 'function' and body(toks, i): g = True
         if t['v'] == '{' and g:
             depth += 1
             if depth == 1:
                 out.append(t); i += 1
                 x = fresh(used); y = fresh(used); z = fresh(used); r = fresh(used)
                 u = random.randint(1,0xfe); w = random.randint(1,0xfe)
+                xa = fresh(used); xb = fresh(used)
                 out.extend([tok('id','var'), tok('id',x), tok('op','='), tok('id','globalThis'), tok('pun',','),
                              tok('id',y), tok('op','='), tok('id','Math'), tok('pun',','),
                              tok('id',z), tok('op','='), tok('num',hex(random.randint(1,0xfe)^random.randint(1,0xfe))), tok('pun',','),
-                             tok('id',r), tok('op','='), tok('pun','('), tok('num',hex(u^w)), tok('op','^'), tok('num',hex(w)), tok('pun',')'), tok('pun',';')])
+                             tok('id',r), tok('op','='), tok('pun','('), tok('num',hex(u^w)), tok('op','^'), tok('num',hex(w)), tok('pun',')'), tok('pun',','),
+                             tok('id',xa), tok('op','='), tok('pun','('), tok('num',hex(u|w)), tok('op','&'), tok('num',hex(u)), tok('pun',')'), tok('pun',','),
+                             tok('id',xb), tok('op','='), tok('id',xa), tok('op','^'), tok('id',z), tok('pun',';')])
                 g = False; continue
         if t['v'] == '}' and depth > 0: depth -= 1
         out.append(t); i += 1
@@ -583,15 +649,6 @@ def twist(pool, keys, a, q):
 def remap(toks, old, new):
     return [tok('id', new) if t['t'] == 'id' and t['v'] == old else t for t in toks]
 
-def wrap(toks, d, e):
-    out = []; i = 0
-    while i < len(toks):
-        t = toks[i]
-        if t['t'] == 'id' and t['v'] in (d, e) and i+1 < len(toks) and toks[i+1]['v'] == '(':
-            out.extend([tok('pun','['), tok('id',t['v']), tok('pun',']'), tok('pun','['), tok('num','0x0'), tok('pun',']')])
-            i += 1; continue
-        out.append(t); i += 1
-    return out
 
 def comma(toks, used):
     out = []; i = 0; p = 0; b = 0
@@ -606,6 +663,22 @@ def comma(toks, used):
             r = random.randint(1,0xfe); u = random.randint(1,0xfe); g = fresh(used)
             out.extend([tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',';')])
         i += 1
+    return out
+
+def fromlit(toks):
+    out = []
+    for t in toks:
+        if t['t'] == 'str':
+            r = raw(t['v'])
+            if r and len(r) >= 2 and all(ord(c) < 128 for c in r):
+                k = random.randint(1, 0x3f)
+                enc = [ord(c)^k for c in r]
+                v = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+                code = ('(' + chars('fromCharCode') + ')' if False else
+                        '(function(){var ' + v + '=[' + ','.join(str(x) for x in enc) + '];return ' + v +
+                        '.map(function(c){return String.fromCharCode(c^' + str(k) + ');}).join(\'\');}())')
+                out.extend(scan(code)); continue
+        out.append(t)
     return out
 
 def encode(toks):
@@ -628,21 +701,35 @@ def emit(toks):
         out += v
     return out
 
+def chars(s):
+    return 'String.fromCharCode(' + ','.join(str(ord(c)) for c in s) + ')'
+
+def xstr(s):
+    k = random.randint(1, 0x3f)
+    enc = [ord(c)^k for c in s]
+    v = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    return ('(function(){var ' + v + '=[' + ','.join(str(x) for x in enc) + '];return ' + v + '.map(function(c){return c^' + str(k) + ';}).map(function(c){return String.fromCharCode(c);}).join("");}())')
+
 def probe():
-    return ('(function(){var f=function(){var r=/\\r?\\n( {4}|\\t)/;if(r.test(f.toString()))throw new Error();};f();}());')
+    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    return ('(function(){var f=function(){var ' + s + '=new RegExp(' + chars(r'\r?\n( {4}|\t)') + ');if(' + s + '.test(f.toString()))throw new Error();};f();}());')
 
 def snare():
-    return ('(function(){var t=Date.now(),f=function(){debugger;if(Date.now()-t>600)throw new Error();t=Date.now();};f();var id=setInterval(f,500);if(id&&id.unref)id.unref();}());')
+    d = chars('debugger')
+    return ('(function(){var t=Date.now(),f=function(){(new Function(' + d + '))();if(Date.now()-t>600)throw new Error();t=Date.now();};f();var timer=setInterval(f,500);if(timer&&timer.unref)timer.unref();}());')
 
 def guard():
-    return ('(function(){try{if(Math.abs.toString().indexOf("[native code]")===-1)throw new Error();if(Function.prototype.toString.toString().indexOf("[native code]")===-1)throw new Error();}catch(e){throw new Error();}}());')
+    mark = xstr('[native code]')
+    return ('(function(){try{if(Math.abs.toString().indexOf(' + mark +')===-1)throw new Error();if(Function.prototype.toString.toString().indexOf(' + mark +')===-1)throw new Error();}catch(e){throw new Error();}}());')
 
 def cage():
-    return ('(function(){try{if(Function.prototype.bind.toString().indexOf("[native code]")===-1)throw new Error();}catch(e){throw new Error();}}());')
+    mark = xstr('[native code]')
+    return ('(function(){try{if(Function.prototype.bind.toString().indexOf(' + mark +')===-1)throw new Error();}catch(e){throw new Error();}}());')
 
 def save():
     f = hex((0x7a|0x1)^0x2); c = hex(0x40|0x9); g = hex(0x40|0xa); h = hex(0x50|0x15)
-    return ('(function(){document.addEventListener("keydown",function(e){if(e.keyCode===' + f + '||(e.ctrlKey&&e.shiftKey&&(e.keyCode===' + c + '||e.keyCode===' + g + '))||(e.ctrlKey&&e.keyCode===' + h + ')){e.preventDefault();e.stopPropagation();}});}());')
+    ev = chars('keydown')
+    return ('(function(){document.addEventListener(' + ev + ',function(e){if(e.keyCode===' + f + '||(e.ctrlKey&&e.shiftKey&&(e.keyCode===' + c + '||e.keyCode===' + g + '))||(e.ctrlKey&&e.keyCode===' + h + ')){e.preventDefault();e.stopPropagation();}});}());')
 
 def leak():
     return ('(function(){var r=function(){try{r();}catch(e){var a=[];for(var i=(0x0|0x0);i<(0x2000|0x710);i++)a.push(i);}};try{r();}catch(e){}}());')
@@ -651,13 +738,16 @@ def tamper():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
     u = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    return ('(function(){var ' + s + '=Date.now();var ' + t + '=function(){return Date.now()-' + s + ';};var ' + u + '=new Function("debugger");try{' + u + '();}catch(e){}if(' + t + '()>800)throw new Error();}());')
+    d = chars('debugger')
+    return ('(function(){var ' + s + '=Date.now();var ' + t + '=function(){return Date.now()-' + s + ';};var ' + u + '=new Function(' + d + ');try{' + u + '();}catch(e){}if(' + t + '()>800)throw new Error();}());')
 
 def block():
-    return ('(function(){try{if(typeof console.clear!=="function")throw new Error();}catch(e){}}());')
+    type = chars('function'); cx = chars('clear')
+    return ('(function(){try{if(typeof console[' + cx + ']!==' + type +')throw new Error();}catch(e){}}());')
 
 def dom():
-    return ('(function(){try{if(typeof document==="undefined"||!document.createElement)throw new Error();}catch(e){}}());')
+    u = chars('undefined'); ce = chars('createElement')
+    return ('(function(){try{if(typeof document===' + u + '||!document[' + ce + '])throw new Error();}catch(e){}}());')
 
 def timing():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
@@ -665,26 +755,32 @@ def timing():
     return ('(function(){var ' + s + '=Date.now();for(var ' + t + '=(0x0|0x0);' + t + '<(0x186a0|0x0);' + t + '++);if(Date.now()-' + s + '>800)throw new Error();}());')
 
 def hooks():
-    return ('(function(){try{var f=function(){};Object.defineProperty(f,"name",{get:function(){throw new Error();}});f.name;}catch(e){}}());')
+    nm = chars('name')
+    return ('(function(){try{var f=function(){};Object.defineProperty(f,' + nm + ',{get:function(){throw new Error();}});f.name;}catch(e){}}());')
 
 def detect():
     e = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
     r = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    return ('(function(){try{var ' + e + '=new Image();Object.defineProperty(' + e + ',"id",{get:function(){throw new Error();}});' + e + '.id;}catch(' + r + '){}}());')
+    i = chars('id')
+    return ('(function(){try{var ' + e + '=new Image();Object.defineProperty(' + e + ',' + i + ',{get:function(){throw new Error();}});' + e + '[' + i + '];}catch(' + r + '){}}());')
 
 def watch():
-    return ('(function(){try{if(Function.prototype.call.toString().indexOf("[native code]")===-1)throw new Error();}catch(e){}}());')
+    mark = xstr('[native code]')
+    return ('(function(){try{if(Function.prototype.call.toString().indexOf(' + mark +')===-1)throw new Error();}catch(e){}}());')
 
 def frame():
-    return ('(function(){try{if(typeof window!=="undefined"&&window.top!==window.self)throw new Error();}catch(e){}}());')
+    u = chars('undefined')
+    return ('(function(){try{if(typeof window!==' + u + '&&window.top!==window.self)throw new Error();}catch(e){}}());')
 
 def net():
     a = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    return ('(function(){try{var ' + a + '=new RegExp("\\\\[object Object\\\\]");if(!' + a + '.test(Object.prototype.toString.call({})))throw new Error();}catch(e){}}());')
+    pat = xstr('[object Object]')
+    return ('(function(){try{var ' + a + '=new RegExp(' + pat + ');if(!' + a + '.test(Object.prototype.toString.call({})))throw new Error();}catch(e){}}());')
 
 def crypt():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    return ('(function(){try{var ' + s + '=!RegExp("^$");if(!' + s + ')throw new Error();}catch(e){}}());')
+    empty = chars('^$')
+    return ('(function(){try{var ' + s + '=!RegExp(' + empty + ');if(!' + s + ')throw new Error();}catch(e){}}());')
 
 def cloop():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
@@ -693,11 +789,13 @@ def cloop():
 
 def seal():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    return ('(function(){try{var ' + s + '=typeof window!=="undefined"?window:globalThis;if(!(' + s + ' instanceof Object))throw new Error();}catch(e){}}());')
+    u = chars('undefined')
+    return ('(function(){try{var ' + s + '=typeof window!==' + u + '?window:globalThis;if(!(' + s + ' instanceof Object))throw new Error();}catch(e){}}());')
 
 def drift():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    return ('(function(){try{var ' + s + '=eval;if(' + s + '.toString().indexOf("[native code]")===-1)throw new Error();}catch(e){}}());')
+    mark = xstr('[native code]')
+    return ('(function(){try{var ' + s + '=eval;if(' + s + '.toString().indexOf(' + mark +')===-1)throw new Error();}catch(e){}}());')
 
 def score():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
@@ -706,7 +804,8 @@ def score():
 
 def pixel():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    return ('(function(){try{var ' + s + '=new Error().stack;if(typeof ' + s + '!=="string")throw new Error();}catch(e){}}());')
+    kind = xstr('string')
+    return ('(function(){try{var ' + s + '=new Error().stack;if(typeof ' + s + '!==' + kind +')throw new Error();}catch(e){}}());')
 
 def flare():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
@@ -734,16 +833,101 @@ def glow():
 def frost():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    return ('(function(){try{var ' + s + '=typeof globalThis;var ' + t + '=typeof window;if(' + s + '!=="object"&&' + t + '!=="object")throw new Error();}catch(e){}}());')
+    ob = xstr('object')
+    return ('(function(){try{var ' + s + '=typeof globalThis;var ' + t + '=typeof window;if(' + s + '!==' + ob + '&&' + t + '!==' + ob + ')throw new Error();}catch(e){}}());')
 
 def haze():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
     return ('(function(){try{var ' + s + '=Array.isArray([]);if(!' + s + ')throw new Error();}catch(e){}}());')
 
+def bench():
+    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    return ('(function(){try{var ' + s + '=Date.now();for(var ' + t + '=(0x0|0x0);' + t + '<(0x3e8|0x0);' + t + '++)(0x1|0x0);if(Date.now()-' + s + '>2000)throw new Error();}catch(e){}}());')
+
+def lock():
+    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    type = xstr('Function'); nm = chars('name')
+    return ('(function(){try{var ' + s + '=Object.keys;var ' + t + '=' + s + '.constructor;if(' + t + '[' + nm + ']!==' + type +')throw new Error();}catch(e){}}());')
+
+def shield():
+    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    mark = xstr('[native code]')
+    return ('(function(){try{var ' + s + '=Function.prototype.constructor;if(' + s + '.toString().indexOf(' + mark +')===-1)throw new Error();}catch(e){}}());')
+
+def vault():
+    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    return ('(function(){try{var ' + s + '=new Error();var ' + t + '=Object.getPrototypeOf(' + s + ');if(!(' + t + ' instanceof Object))throw new Error();}catch(e){}}());')
+
+def spike():
+    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    func = chars('log'); mark = xstr('[native code]')
+    return ('(function(){try{var ' + s + '=console[' + func + '].toString();if(' + s + '.indexOf(' + mark +')===-1)throw new Error();}catch(e){}}());')
+
+def glint():
+    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    return ('(function(){try{var ' + s + '=(~0x0+0x1+0x0)^(~0x0+0x1+0x0);if(' + s + '!==(0x0|0x0))throw new Error();}catch(e){}}());')
+
+def ridge():
+    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    type = chars('function')
+    return ('(function(){try{var ' + s + '=typeof Array.isArray;if(' + s + '!==' + type +')throw new Error();}catch(e){}}());')
+
+def veil():
+    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    nm = chars('named'); nk = chars('name')
+    return ('(function(){try{var ' + s + '=(function named(){}).name;if(' + s + '!==' + nm + ')throw new Error();}catch(e){}}());')
+
+def smelt():
+    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    gt = chars('getTime')
+    return ('(function(){try{var ' + s + '=new Date((0x0|0x0));var ' + t + '=' + s + '[' + gt + ']();if(' + t + '!==(0x0|0x0))throw new Error();}catch(e){}}());')
+
+def crimp():
+    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    ab = chars('ab'); ac = chars('a'); bc = chars('b')
+    return ('(function(){try{var ' + s + '=' + ac + '+' + bc + ';if(' + s + '!==' + ab + ')throw new Error();}catch(e){}}());')
+
+def smog():
+    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    js = chars('[1,2,3]'); ps = chars('parse')
+    return ('(function(){try{var ' + s + '=JSON[' + ps + '](' + js + ');if(!Array.isArray(' + s + '))throw new Error();}catch(e){}}());')
+
+def blaze():
+    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    mx = chars('max')
+    return ('(function(){try{var ' + s + '=Math[' + mx + '];var ' + t + '=' + s + '((0x1|0x0),(0x2|0x0));if(' + t + '!==(0x2|0x0))throw new Error();}catch(e){}}());')
+
+def draft():
+    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    kind = chars('string'); ts = chars('toString')
+    return ('(function(){try{var ' + s + '=(0x1|0x0)[' + ts + ']();if(typeof ' + s + '!==' + kind +')throw new Error();}catch(e){}}());')
+
+def shard():
+    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    type = chars('function'); ax = chars('assign')
+    return ('(function(){try{if(typeof Object[' + ax + ']!==' + type +')throw new Error();var ' + s + '=Object[' + ax + ']({},{a:(0x1|0x0)});if(' + s + '.a!==(0x1|0x0))throw new Error();}catch(e){}}());')
+
+def flint():
+    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    pu = chars('push'); po = chars('pop')
+    return ('(function(){try{var ' + s + '=[];' + s + '[' + pu + ']((0x1|0x0));var ' + t + '=' + s + '[' + po + ']();if(' + t + '!==(0x1|0x0))throw new Error();}catch(e){}}());')
+
+def loom():
+    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    type = chars('function')
+    return ('(function(){try{var ' + s + '=typeof Symbol;if(' + s + '!==' + type +')throw new Error();}catch(e){}}());')
+
 def stealth():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    return ('(function(){try{var ' + s + '=new RegExp("^([^ ]+( +[^ ]+)+)+[^ ]}","");' + s + '.constructor("' + t + '");throw new Error();}catch(e){if(e instanceof TypeError)return;throw new Error();}}());')
+    pat = xstr('^([^ ]+( +[^ ]+)+)+[^ ]}')
+    return ('(function(){try{var ' + s + '=new RegExp(' + pat + ');' + s + '[' + chars('constructor') + '](' + chars('') + ');throw new Error();}catch(e){if(e instanceof TypeError)return;throw new Error();}}());')
 
 def burn():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
@@ -751,11 +935,76 @@ def burn():
     return ('(function(){try{var ' + s + '=(0x2|0x0);var ' + t + '=(0x2|0x0);if((' + s + '*' + t + ')!==(0x4|0x0))throw new Error();}catch(e){}}());')
 
 def prot():
-    traps = [probe(),snare(),guard(),cage(),leak(),save(),tamper(),block(),dom(),timing(),hooks(),detect(),watch(),frame(),net(),crypt(),cloop(),seal(),drift(),score(),pixel(),flare(),pulse(),spark(),trace(),glow(),frost(),haze(),burn(),stealth()]
+    traps = [probe(),snare(),guard(),cage(),leak(),save(),tamper(),block(),dom(),timing(),hooks(),detect(),watch(),frame(),net(),crypt(),cloop(),seal(),drift(),score(),pixel(),flare(),pulse(),spark(),trace(),glow(),frost(),haze(),burn(),stealth(),bench(),lock(),shield(),vault(),spike(),glint(),ridge(),veil(),smelt(),crimp(),smog(),blaze(),draft(),shard(),flint(),loom()]
     random.shuffle(traps)
-    wt = ['try{' + t + '}catch(e){}' for t in traps]
+    wrapped = ['try{' + t + '}catch(e){}' for t in traps]
     delay = hex(random.randint(30, 80))
-    return 'setTimeout(function(){' + ''.join(wt) + '},' + delay + ');'
+    return 'setTimeout(function(){' + ''.join(wrapped) + '},' + delay + ');'
+
+def scatter(toks, used):
+    out = []; i = 0; depth = 0; g = False
+    while i < len(toks):
+        t = toks[i]
+        if t['t'] == 'id' and t['v'] == 'function' and body(toks, i): g = True
+        if t['v'] == '{' and g:
+            depth += 1
+            if depth == 1:
+                out.append(t); i += 1
+                r = fresh(used); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
+                out.extend([tok('id','var'), tok('id',r), tok('op','='), tok('id','function'), tok('pun','('), tok('pun',')'), tok('pun','{'),
+                             tok('id','return'), tok('pun','('), tok('num',hex(u^w)), tok('op','^'), tok('num',hex(w)), tok('pun',')'), tok('pun',';'),
+                             tok('pun','}'), tok('pun',';')])
+                g = False; continue
+        if t['v'] == '}' and depth > 0: depth -= 1
+        out.append(t); i += 1
+    return out
+
+def inflate(toks, used):
+    out = []; i = 0; p = 0; b = 0
+    while i < len(toks):
+        t = toks[i]
+        if t['v'] in ('(','['): p += 1
+        if t['v'] in (')',']'): p -= 1
+        if t['v'] == '{': b += 1
+        if t['v'] == '}': b -= 1
+        out.append(t)
+        if t['v'] == ';' and p == 0 and b >= 1 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
+            g = fresh(used); r = fresh(used); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
+            out.extend([tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(u)), tok('op','>>>'), tok('num','0x0'), tok('pun',')'), tok('op','|'), tok('num',hex(w^w)), tok('pun',';')])
+            out.extend([tok('id','var'), tok('id',r), tok('op','='), tok('pun','~'), tok('pun','('), tok('pun','~'), tok('id',g), tok('pun',')'), tok('op','+'), tok('num','0x0'), tok('pun',';')])
+        i += 1
+    return out
+
+def hurl(toks, used):
+    out = []; i = 0; p = 0; b = 0
+    while i < len(toks):
+        t = toks[i]
+        if t['v'] in ('(','['): p += 1
+        if t['v'] in (')',']'): p -= 1
+        if t['v'] == '{': b += 1
+        if t['v'] == '}': b -= 1
+        out.append(t)
+        if t['v'] == ';' and p == 0 and b >= 2 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
+            g = fresh(used); r = fresh(used); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
+            out.extend([tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(u)), tok('op','&'), tok('num',hex(u)), tok('pun',')'), tok('pun',';')])
+            out.extend([tok('id','var'), tok('id',r), tok('op','='), tok('pun','('), tok('id',g), tok('op','^'), tok('num',hex(w^w)), tok('op','|'), tok('num',hex(0)), tok('pun',')'), tok('pun',';')])
+        i += 1
+    return out
+
+def jolt(toks, used):
+    out = []; i = 0; p = 0; b = 0
+    while i < len(toks):
+        t = toks[i]
+        if t['v'] in ('(','['): p += 1
+        if t['v'] in (')',']'): p -= 1
+        if t['v'] == '{': b += 1
+        if t['v'] == '}': b -= 1
+        if t['t'] == 'id' and t['v'] == 'return' and p == 0 and b >= 1 and i > 0 and toks[i-1]['v'] in (';','{'):
+            g = fresh(used); r = fresh(used); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
+            out.extend([tok('id','var'), tok('id',g), tok('op','='), tok('num',hex(u^w)), tok('op','|'), tok('num','0x0'), tok('pun',';'),
+                        tok('id','var'), tok('id',r), tok('op','='), tok('pun','~'), tok('pun','('), tok('id',g), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',';')])
+        out.append(t); i += 1
+    return out
 
 def strip(code):
     m = re.match(r'(// ==UserScript==.*?// ==/UserScript==\s*)', code, re.DOTALL)
@@ -775,10 +1024,14 @@ def obf(src):
     toks = flat(toks, used)
     toks = inject(toks, used)
     toks = alias(toks, used)
+    toks = scatter(toks, used)
     toks = extra(toks, used)
     toks = morph(toks, used)
+    toks = jolt(toks, used)
     toks = cloak(toks, used)
     toks = fill(toks, used)
+    toks = inflate(toks, used)
+    toks = hurl(toks, used)
     grain(pool, keys, idx)
     z = pairs(pool, keys, idx, snap)
     toks = rejoin(toks, d, z)
@@ -788,22 +1041,16 @@ def obf(src):
     toks = reindex(toks, w, e)
     toks = nums(toks)
     toks = bools(toks)
-    pool, keys, c = twist(pool, keys, a, k)
+    pool, keys, c = spin(pool, keys, a, k)
     v, l, f = twist(v, l, b, m)
-    g = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    h = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    i = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    n = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    o = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    p = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    t = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    def pick(): return '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    g,h,i,n,o,p,s,t,shell = pick(),pick(),pick(),pick(),pick(),pick(),pick(),pick(),pick()
     proxy = ('var ' + g + '=(function(' + i + ',' + s + '){return function(' + o + '){return ' + i + '(' + o + '^' + s + '^' + s + ');};}(' + d + ',' + mba(random.randint(1,0xfe)) + '));'
-             'var ' + h + '=(function(' + n + ',' + t + '){return function(' + p + '){return ' + n + '(' + p + '^' + t + '^' + t + ');};}(' + e + ',' + mba(random.randint(1,0xfe)) + '));')
+             'var ' + h + '=(function(' + n + ',' + t + '){return function(' + p + '){return ' + n + '(' + p + '^' + t + '^' + t + ');};}(' + e + ',' + mba(random.randint(1,0xfe)) + '));'
+             'var ' + shell + '=(function(' + i + ',' + s + '){return function(' + o + '){return ' + i + '(' + o + ');};}(' + g + ',' + mba(random.randint(1,0xfe)) + '));')
     toks = remap(toks, d, g)
     toks = remap(toks, e, h)
-    toks = wrap(toks, g, h)
-    toks = comma(toks, used)
+    toks = fromlit(toks)
     toks = noop(used) + toks
     toks = encode(toks)
     code = emit(toks)
@@ -812,7 +1059,78 @@ def obf(src):
     j = decode(d, a, k)
     u = decode(e, b, m)
     anchor = 'if(false){GM_xmlhttpRequest({});}'
-    return header + anchor + r + q + j + u + c + f + proxy + prot() + code
+    pt = emit(obsnum(scan(prot())))
+    return header + anchor + r + q + j + u + c + f + proxy + pt + code
+
+
+def obsnum(toks):
+    out = []
+    for t in toks:
+        if t['t'] == 'num':
+            try:
+                v = t['v']
+                if v.endswith('n') or '.' in v or 'e' in v.lower(): out.append(t); continue
+                n = int(v, 0)
+                if 2 <= n <= 0xffff:
+                    a = random.randint(1, 0xff); b = random.randint(1, 0xff)
+                    expr = '(((' + hex(n^a) + '^' + hex(a) + ')^' + hex(b) + ')^' + hex(b) + ')'
+                    out.extend(scan(expr)); continue
+            except: pass
+            out.append(t)
+        else: out.append(t)
+    return out
+
+def trap(used):
+    s = fresh(used); t = fresh(used); r = fresh(used)
+    u = random.randint(1,0xfe); w = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',s), tok('op','='), tok('pun','('), tok('num',hex(u^w)), tok('op','^'), tok('num',hex(w)), tok('pun',')'), tok('pun',';'),
+            tok('id','var'), tok('id',t), tok('op','='), tok('pun','('), tok('id',s), tok('op','>>'), tok('num','0x0'), tok('op','|'), tok('num','0x0'), tok('pun',')'), tok('pun',';'),
+            tok('id','var'), tok('id',r), tok('op','='), tok('pun','('), tok('pun','~'), tok('id',t), tok('op','+'), tok('num','0x1'), tok('pun',')'), tok('op','+'), tok('id',s), tok('pun',';')]
+
+def cloud(toks, used):
+    out = []; i = 0; p = 0; b = 0
+    while i < len(toks):
+        t = toks[i]
+        if t['v'] in ('(','['): p += 1
+        if t['v'] in (')',']'): p -= 1
+        if t['v'] == '{': b += 1
+        if t['v'] == '}': b -= 1
+        out.append(t)
+        if t['v'] == ';' and p == 0 and b >= 1 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
+            out.extend(trap(used))
+        i += 1
+    return out
+
+def spin(pool, keys, a, q):
+    n = len(pool)
+    if n < 4: return pool, keys, ''
+    r = random.randint(2, n - 2)
+    new_pool = [pool[(j + r) % n] for j in range(n)]
+    new_keys = [keys[(j + r) % n] for j in range(n)]
+    s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
+    half = r // 2
+    code = ('(function(){var ' + s + '=' + mba(half) + ';var ' + t + '=' + mba(r - half) + ';'
+            'while(' + s + '-->0x0){' + a + '.unshift(' + a + '.pop());' + q + '.unshift(' + q + '.pop());}' +
+            'while(' + t + '-->0x0){' + a + '.unshift(' + a + '.pop());' + q + '.unshift(' + q + '.pop());}' +
+            '}());')
+    return new_pool, new_keys, code
+
+def vex(toks, used):
+    out = []; i = 0; p = 0; b = 0
+    while i < len(toks):
+        t = toks[i]
+        if t['v'] in ('(','['): p += 1
+        if t['v'] in (')',']'): p -= 1
+        if t['v'] == '{': b += 1
+        if t['v'] == '}': b -= 1
+        out.append(t)
+        if t['v'] == ';' and p == 0 and b >= 2 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
+            g = fresh(used); r = fresh(used); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
+            out.extend([tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(u^w)), tok('op','^'), tok('num',hex(w)), tok('op','>>'), tok('num','0x0'), tok('pun',')'), tok('pun',';')])
+            out.extend([tok('id','var'), tok('id',r), tok('op','='), tok('pun','('), tok('num',hex(u|w)), tok('op','&'), tok('num',hex(w^w)), tok('op','|'), tok('id',g), tok('pun',')'), tok('pun',';')])
+        i += 1
+    return out
 
 def read(path):
     with open(path, 'r', encoding='utf-8') as f: return f.read()
