@@ -1,4 +1,5 @@
 import re, random, sys, os
+from itertools import cycle
 
 def tok(t, v): return {'t': t, 'v': v}
 def alpha(c): return c.isalpha() or c in '_$' or ord(c) > 127
@@ -94,7 +95,7 @@ def scan(src):
 
 def fresh(used):
     while True:
-        v = '_0x' + hex(random.randint(0xaaaa, 0xffff))[2:]
+        v = '_0x' + hex(random.randint(0x10000, 0xffffff))[2:]
         if v not in used: used.add(v); return v
 
 def splice(s):
@@ -143,7 +144,8 @@ def tpl(toks):
             first = False
     return out
 
-def name(toks):
+def name(toks, used=None):
+    if used is None: used = set()
     skip = set()
     for i, t in enumerate(toks):
         if t['v'] in ('.','?.') and i+1 < len(toks) and toks[i+1]['t'] == 'id': skip.add(i+1)
@@ -155,7 +157,7 @@ def name(toks):
                 if toks[j]['v'] == ')': depth -= 1
                 j += 1
             if j < len(toks) and toks[j]['v'] == '{': skip.add(i-1)
-    mapping = {}; used = set()
+    mapping = {}
     for i, t in enumerate(toks):
         if i in skip: continue
         if t['t'] == 'id' and t['v'] not in kwds and t['v'] not in safe:
@@ -503,7 +505,7 @@ def kane(used):
             tok('pun','}'), tok('id','while'), tok('pun','('), tok('num','0x0'), tok('pun',')'), tok('pun',';')]
 
 def chalk(toks, d, idx, used):
-    out = []; i = 0; p = 0; b = 0; c = 0; vals = list(idx.values())
+    out = []; i = 0; p = 0; b = 0; vals = list(idx.values())
     while i < len(toks):
         t = toks[i]
         if t['v'] in ('(','['): p += 1
@@ -511,17 +513,15 @@ def chalk(toks, d, idx, used):
         if t['v'] == '{': b += 1
         if t['v'] == '}': b -= 1
         out.append(t)
-        if t['v'] == ';' and p == 0 and b >= 2 and i+1 < len(toks) and toks[i+1]['v'] not in skip and c % 6 == 5 and vals:
-            x = vals[c // 6 % len(vals)]
-            a = fresh(used); r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+        if t['v'] == ';' and p == 0 and b >= 3 and i+1 < len(toks) and toks[i+1]['v'] not in skip and vals:
+            x = vals[0]
+            a = fresh(used)
             out.extend([tok('id','var'), tok('id',a), tok('op','='), tok('pun','('), tok('id',d), tok('pun','('), tok('num',str(x)), tok('pun',')'),
                         tok('op','?'), tok('id',d), tok('pun','('), tok('num',str(x)), tok('pun',')'), tok('pun',':'), tok('id',d), tok('pun','('), tok('num',str(x)), tok('pun',')'), tok('pun',')'), tok('pun',';')])
-        if t['v'] == ';' and p == 0 and b >= 1 and i+1 < len(toks) and toks[i+1]['v'] not in skip and c % 9 == 8 and vals:
-            y = vals[c // 9 % len(vals)]
+            y = vals[-1] if len(vals) > 1 else vals[0]
             n = fresh(used); m = fresh(used)
             out.extend([tok('id','var'), tok('id',n), tok('op','='), tok('id',d), tok('pun','('), tok('num',str(y)), tok('pun',')'), tok('pun',','),
                         tok('id',m), tok('op','='), tok('pun','('), tok('id',n), tok('op','.'), tok('id','length'), tok('op','+'), tok('num','0x0'), tok('pun',')'), tok('pun',';')])
-        if t['v'] == ';': c += 1
         i += 1
     return out
 
@@ -568,10 +568,45 @@ def surge(used):
             tok('id','return'), tok('id',d), tok('op','&'), tok('num',hex(w^w)), tok('op','^'), tok('id',d), tok('pun',';'),
             tok('pun','}'), tok('pun','('), tok('num',hex(u^w)), tok('op',','), tok('num',hex(w)), tok('pun',')'), tok('pun',')'), tok('pun',';')]
 
-bank = [dead, ghost, hush, flux, echo, knot, tinge, glaze, hooke, kane, shine, quirk, wisp, surge]
+def blip(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','try'), tok('pun','{'),
+            tok('id','var'), tok('id',a), tok('op','='), tok('pun','('), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',','),
+            tok('id',b), tok('op','='), tok('pun','('), tok('pun','~'), tok('id',a), tok('op','+'), tok('num','0x1'), tok('pun',')'), tok('op','+'), tok('id',a), tok('pun',';'),
+            tok('pun','}'), tok('id','catch'), tok('pun','('), tok('id','e'), tok('pun',')'), tok('pun','{'), tok('pun','}')]
+
+def hatch(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','switch'), tok('pun','('), tok('pun','('), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',')'), tok('pun','{'),
+            tok('id','case'), tok('num',hex(r)), tok('pun',':'),
+            tok('id','var'), tok('id',a), tok('op','='), tok('pun','('), tok('num',hex(u^r)), tok('op','^'), tok('num',hex(r)), tok('pun',')'), tok('pun',','),
+            tok('id',b), tok('op','='), tok('pun','('), tok('id',a), tok('op','&'), tok('num','0x0'), tok('op','|'), tok('id',a), tok('pun',')'), tok('pun',';'),
+            tok('id','break'), tok('pun',';'),
+            tok('pun','}')]
+
+def snarl(used):
+    a = fresh(used); b = fresh(used); c = fresh(used); d = fresh(used); e = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('pun','['), tok('num',hex(r^u)), tok('pun',','), tok('num',hex(u^w)), tok('pun',','), tok('num',hex(r^w)), tok('pun',']'), tok('pun',','),
+            tok('id',b), tok('op','='), tok('id',a), tok('pun','['), tok('num','0x0'), tok('pun',']'), tok('op','^'), tok('id',a), tok('pun','['), tok('num','0x1'), tok('pun',']'), tok('pun',','),
+            tok('id',c), tok('op','='), tok('pun','('), tok('id',b), tok('op','|'), tok('id',a), tok('pun','['), tok('num','0x2'), tok('pun',']'), tok('pun',')'), tok('op','&'), tok('num','0x0'), tok('pun',','),
+            tok('id',d), tok('op','='), tok('pun','('), tok('pun','~'), tok('id',b), tok('op','+'), tok('num','0x1'), tok('pun',')'), tok('op','+'), tok('id',b), tok('pun',','),
+            tok('id',e), tok('op','='), tok('id',c), tok('op','^'), tok('id',d), tok('op','|'), tok('num','0x0'), tok('pun',';')]
+
+def grit(used):
+    a = fresh(used); b = fresh(used); c = fresh(used); d = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('pun','('), tok('num',hex(r<<1>>1)), tok('op','>>>'), tok('num','0x0'), tok('pun',')'), tok('pun',','),
+            tok('id',b), tok('op','='), tok('pun','('), tok('id',a), tok('op','^'), tok('num',hex(u^u)), tok('op','|'), tok('num',hex(w)), tok('pun',')'), tok('pun',','),
+            tok('id',c), tok('op','='), tok('pun','('), tok('id',b), tok('op','>>'), tok('num','0x10'), tok('op','<<'), tok('num','0x10'), tok('pun',')'), tok('pun',','),
+            tok('id',d), tok('op','='), tok('pun','('), tok('pun','~'), tok('id',c), tok('op','^'), tok('pun','~'), tok('id',a), tok('pun',')'), tok('op','&'), tok('num','0x0'), tok('pun',';')]
+
+bank = [dead, ghost, hush, flux, echo, knot, tinge, glaze, hooke, kane, shine, quirk, wisp, surge, blip, hatch, snarl, grit]
 
 def fill(toks, used):
-    out = []; i = 0; p = 0; b = 0; c = 0
+    out = []; i = 0; p = 0; b = 0; seq = cycle(bank)
     while i < len(toks):
         t = toks[i]
         if t['v'] in ('(','['): p += 1
@@ -579,22 +614,22 @@ def fill(toks, used):
         if t['v'] == '{': b += 1
         if t['v'] == '}': b -= 1
         out.append(t)
-        if t['v'] == ';' and p == 0 and b >= 1 and i+1 < len(toks) and toks[i+1]['v'] not in skip and c % 3 == 0:
-            out.extend(bank[c // 3 % len(bank)](used))
-        if t['v'] == ';' and p == 0 and b >= 1 and i+1 < len(toks) and toks[i+1]['v'] not in skip and c % 7 == 6:
-            out.extend(comma([tok('pun',';')], used)[1:])
-        if t['v'] == ';' and p == 0 and b >= 1 and i+1 < len(toks) and toks[i+1]['v'] not in skip and c % 11 == 10:
+        if t['v'] == ';' and p == 0 and b >= 3 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
+            out.extend(next(seq)(used)); out.extend(next(seq)(used))
+            r = random.randint(1,0xfe); u = random.randint(1,0xfe); g = fresh(used)
+            out.extend([tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',';')])
             out.extend(trap(used))
-        if t['v'] == ';': c += 1
         i += 1
     return out
 
 def inject(toks, used):
-    out = []; i = 0
+    out = []; i = 0; b = 0; seq = cycle(bank)
     while i < len(toks):
         t = toks[i]
+        if t['v'] == '{': b += 1
+        if t['v'] == '}': b -= 1
         out.append(t)
-        if t['v'] == '{' and i > 0:
+        if t['v'] == '{' and i > 0 and b >= 3:
             prev = toks[i-1]['v']
             v = prev in ('else', 'do', 'try', 'finally', '{')
             if prev == ')':
@@ -605,7 +640,7 @@ def inject(toks, used):
                     j -= 1
                 v = j >= 0 and toks[j]['v'] != 'switch'
             if v:
-                out.extend(bank[0](used)); out.extend(bank[1](used))
+                out.extend(next(seq)(used)); out.extend(next(seq)(used))
         i += 1
     return out
 
@@ -633,7 +668,9 @@ def alias(toks, used):
                              tok('id',p), tok('op','='), tok('pun','('), tok('num',hex(u|w)), tok('op','&'), tok('num',hex(u)), tok('pun',')'), tok('pun',','),
                              tok('id',q), tok('op','='), tok('id',p), tok('op','^'), tok('id',z), tok('pun',';')])
                 g = False; continue
-        if t['v'] == '}' and depth > 0: depth -= 1
+        if t['v'] == '}' and depth > 0:
+            depth -= 1
+            if depth == 0: g = False
         out.append(t); i += 1
     return out
 
@@ -662,7 +699,7 @@ def morph(toks, used):
         if t['v'] in (')',']'): p -= 1
         if t['v'] == '{': b += 1
         if t['v'] == '}': b -= 1
-        if t['t'] == 'id' and t['v'] == 'return' and p == 0 and b >= 1 and i > 0 and toks[i-1]['v'] in (';','{'):
+        if t['t'] == 'id' and t['v'] == 'return' and p == 0 and b >= 2 and i > 0 and toks[i-1]['v'] in (';','{'):
             g = fresh(used); r = random.randint(1,0xfe); u = random.randint(1,0xfe)
             out.extend([tok('id','var'), tok('id',g), tok('op','='), tok('num',hex(r|u)), tok('op','^'), tok('num',hex(r)), tok('pun',';')])
         if b >= 3: out.extend(tangle([tok('pun',';')], used)[1:])
@@ -677,7 +714,7 @@ def cloak(toks, used):
         if t['v'] in (')',']'): p -= 1
         if t['v'] == '{': b += 1
         if t['v'] == '}': b -= 1
-        if t['t'] == 'id' and t['v'] == 'const' and p == 0 and b >= 1 and i > 0 and toks[i-1]['v'] in (';','{'):
+        if t['t'] == 'id' and t['v'] == 'const' and p == 0 and b >= 2 and i > 0 and toks[i-1]['v'] in (';','{'):
             r = fresh(used); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
             out.extend([tok('id','var'), tok('id',r), tok('op','='), tok('num',hex(u|w)), tok('pun',';')])
         out.append(t); i += 1
@@ -804,7 +841,7 @@ def comma(toks, used):
         if t['v'] == '{': b += 1
         if t['v'] == '}': b -= 1
         out.append(t)
-        if t['v'] == ';' and p == 0 and b >= 1 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
+        if t['v'] == ';' and p == 0 and b >= 3 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
             r = random.randint(1,0xfe); u = random.randint(1,0xfe); g = fresh(used)
             out.extend([tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',';')])
         i += 1
@@ -861,8 +898,9 @@ def lit(toks):
     return out
 
 def encode(toks):
-    conv = lambda v: ''.join('\\u{:04x}'.format(ord(c)) for c in v)
-    return [tok('id', conv(t['v'])) if t['t']=='id' and t['v'].startswith('_0x') else t for t in toks]
+    def conv(v):
+        return v[:2] + '\\u{:04x}'.format(ord(v[2])) + v[3:]
+    return [tok('id', conv(t['v'])) if t['t'] == 'id' and t['v'].startswith('_0x') else t for t in toks]
 
 def word(c): return c.isalnum() or c in '_$\\' or ord(c) > 127
 
@@ -873,12 +911,12 @@ def gap(a, b):
     return False
 
 def emit(toks):
-    out = ''
+    parts = []; prev = ''
     for t in toks:
         v = t['v']
-        if out and gap(out[-1], v): out += ' '
-        out += v
-    return out
+        if prev and gap(prev[-1], v): parts.append(' ')
+        parts.append(v); prev = v
+    return ''.join(parts)
 
 def chars(s):
     return 'String.fromCharCode(' + ','.join(str(ord(c)) for c in s) + ')'
@@ -1206,7 +1244,9 @@ def scatter(toks, used):
                              tok('id',q), tok('op','='), tok('num',hex(u^w)), tok('op','^'), tok('num',hex(w)), tok('pun',','),
                              tok('id',z), tok('op','='), tok('pun','('), tok('pun','~'), tok('id',q), tok('op','+'), tok('num','0x1'), tok('pun',')'), tok('op','+'), tok('id',q), tok('pun',';')])
                 g = False; continue
-        if t['v'] == '}' and depth > 0: depth -= 1
+        if t['v'] == '}' and depth > 0:
+            depth -= 1
+            if depth == 0: g = False
         out.append(t); i += 1
     return out
 
@@ -1219,7 +1259,7 @@ def inflate(toks, used):
         if t['v'] == '{': b += 1
         if t['v'] == '}': b -= 1
         out.append(t)
-        if t['v'] == ';' and p == 0 and b >= 1 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
+        if t['v'] == ';' and p == 0 and b >= 3 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
             g = fresh(used); r = fresh(used); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
             out.extend([tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(u)), tok('op','>>>'), tok('num','0x0'), tok('pun',')'), tok('op','|'), tok('num',hex(w^w)), tok('pun',';')])
             out.extend([tok('id','var'), tok('id',r), tok('op','='), tok('pun','~'), tok('pun','('), tok('pun','~'), tok('id',g), tok('pun',')'), tok('op','+'), tok('num','0x0'), tok('pun',';')])
@@ -1238,7 +1278,7 @@ def hurl(toks, used):
         if t['v'] == '{': b += 1
         if t['v'] == '}': b -= 1
         out.append(t)
-        if t['v'] == ';' and p == 0 and b >= 2 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
+        if t['v'] == ';' and p == 0 and b >= 3 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
             g = fresh(used); r = fresh(used); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
             out.extend([tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(u)), tok('op','&'), tok('num',hex(u)), tok('pun',')'), tok('pun',';')])
             out.extend([tok('id','var'), tok('id',r), tok('op','='), tok('pun','('), tok('id',g), tok('op','^'), tok('num',hex(w^w)), tok('op','|'), tok('num',hex(0)), tok('pun',')'), tok('pun',';')])
@@ -1257,7 +1297,7 @@ def jolt(toks, used):
         if t['v'] in (')',']'): p -= 1
         if t['v'] == '{': b += 1
         if t['v'] == '}': b -= 1
-        if t['t'] == 'id' and t['v'] == 'return' and p == 0 and b >= 1 and i > 0 and toks[i-1]['v'] in (';','{'):
+        if t['t'] == 'id' and t['v'] == 'return' and p == 0 and b >= 2 and i > 0 and toks[i-1]['v'] in (';','{'):
             g = fresh(used); r = fresh(used); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
             out.extend([tok('id','var'), tok('id',g), tok('op','='), tok('num',hex(u^w)), tok('op','|'), tok('num','0x0'), tok('pun',';'),
                         tok('id','var'), tok('id',r), tok('op','='), tok('pun','~'), tok('pun','('), tok('id',g), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',';')])
@@ -1266,7 +1306,7 @@ def jolt(toks, used):
 
 
 def smear(toks, d, idx, used):
-    out = []; i = 0; p = 0; b = 0; c = 0; vals = list(idx.values())
+    out = []; i = 0; p = 0; b = 0; vals = list(idx.values())
     while i < len(toks):
         t = toks[i]
         if t['v'] in ('(','['): p += 1
@@ -1274,10 +1314,9 @@ def smear(toks, d, idx, used):
         if t['v'] == '{': b += 1
         if t['v'] == '}': b -= 1
         out.append(t)
-        if t['v']==';' and p==0 and b>=1 and i+1<len(toks) and toks[i+1]['v'] not in skip and c%5==0 and vals:
-            x = vals[c//5 % len(vals)]
+        if t['v']==';' and p==0 and b>=3 and i+1<len(toks) and toks[i+1]['v'] not in skip and vals:
+            x = vals[0]
             out.extend([tok('id','void'), tok('pun','('), tok('id',d), tok('pun','('), tok('num',str(x)), tok('pun',')'), tok('pun',')'), tok('pun',';')])
-        if t['v']==';': c += 1
         i += 1
     return out
 
@@ -1304,23 +1343,20 @@ def tame(toks):
     return out
 
 def lash(toks, d, idx, used):
-    out = []; i = 0; vals = list(idx.values()); c = 0
+    out = []; i = 0; vals = list(idx.values())
     while i < len(toks):
         t = toks[i]
-        if t['t']=='id' and t['v']==d and i+3<len(toks) and toks[i+1]['v']=='(' and toks[i+2]['t']=='num' and toks[i+3]['v']==')':
+        if t['t'] == 'id' and t['v'] == d and i+3 < len(toks) and toks[i+1]['v'] == '(' and toks[i+2]['t'] == 'num' and toks[i+3]['v'] == ')':
             try:
                 n = int(toks[i+2]['v'], 0)
                 alt = [v for v in vals if v != n]
                 if alt:
-                    xa = alt[n % len(alt)]
-                    rest = [v for v in alt if v != xa] or alt
-                    xb = rest[(n+1) % len(rest)]
-                    out.extend([tok('pun','('), tok('id',d), tok('pun','('), tok('num',str(xa)), tok('pun',')'),
-                                 tok('op',','), tok('id',d), tok('pun','('), tok('num',str(xb)), tok('pun',')'),
-                                 tok('op',','), tok('id',d), tok('pun','('), tok('num',str(n)), tok('pun',')'), tok('pun',')')])
-                    i += 4; c += 1; continue
+                    x = alt[0]
+                    out.extend([tok('pun','('), tok('id',d), tok('pun','('), tok('num',str(x)), tok('pun',')'),
+                                tok('op',','), tok('id',d), tok('pun','('), tok('num',str(n)), tok('pun',')'), tok('pun',')')])
+                    i += 4; continue
             except: pass
-        out.append(t); i += 1; c += 1
+        out.append(t); i += 1
     return out
 
 def build(pool, keys, a, k):
@@ -1350,7 +1386,7 @@ def build(pool, keys, a, k):
 def weave(n):
     k = random.randint(1, 0xfe); r = random.randint(1, 0xfe)
     s = random.randint(1, 0xfe); q = random.randint(1, 0xfe)
-    return [0, n^k, 1, k, 1, r, 1, r, 2, s, 3, s, 1, q, 1, q]
+    return [0, n^k, 1, k, 5, 0, 4, 0x7fffffff, 6, 0, 7, 0, 7, 0, 2, s, 3, s, 1, q, 1, q]
 
 def forge(name):
     stk = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -1587,6 +1623,24 @@ def spall():
     t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     return ('(function(){try{var ' + s + '=new Map();' + s + '.set((0x1|0x0),(0x2|0x0));var ' + t + '=' + s + '.get((0x1|0x0));if(' + t + '!==(0x2|0x0))throw new Error();}catch(e){}}());')
 
+def press(toks):
+    out = []; i = 0; n = len(toks)
+    while i < n:
+        t = toks[i]
+        if t['t'] == 'id' and t['v'] == 'var' and i+1 < n and toks[i+1]['t'] == 'id' and toks[i+1]['v'].startswith('_0x'):
+            out.append(t); i += 1
+            while i < n:
+                while i < n and toks[i]['v'] != ';': out.append(toks[i]); i += 1
+                if i < n and toks[i]['v'] == ';':
+                    j = i + 1
+                    if j < n and toks[j]['t'] == 'id' and toks[j]['v'] == 'var' and j+1 < n and toks[j+1]['t'] == 'id' and toks[j+1]['v'].startswith('_0x'):
+                        out.append(tok('pun', ',')); i = j + 1
+                    else:
+                        out.append(tok('pun', ';')); i += 1; break
+        else:
+            out.append(t); i += 1
+    return out
+
 def strip(code):
     m = re.match(r'(// ==UserScript==.*?// ==/UserScript==\s*)', code, re.DOTALL)
     if m: return m.group(1), code[m.end():]
@@ -1621,18 +1675,21 @@ def obf(src):
     toks = scan(body)
     if toks:
         toks = tpl(toks)
-        toks = name(toks)
+        used = set()
+        toks = name(toks, used)
+        toks = nums(toks)
+        toks = bools(toks)
         toks, pool, keys, d, a, k, idx = cipher(toks)
         snap = dict(idx)
         toks = props(toks, d, snap)
         toks = chain(toks, d, snap)
-        toks = smear(toks, d, snap, set())
+        toks = smear(toks, d, snap, used)
         toks = tame(toks)
         toks, v, l, e, b, m, y = cipher(toks)
         size = dict(y)
         toks = chain(toks, e, size)
         toks = lash(toks, e, size, set())
-        used = {t['v'] for t in toks if t['t'] == 'id' and t['v'].startswith('_0x')}
+        used |= {t['v'] for t in toks if t['t'] == 'id' and t['v'].startswith('_0x')}
         if used:
             toks = chalk(toks, d, snap, used)
             toks = flat(toks, used)
@@ -1651,6 +1708,7 @@ def obf(src):
             toks = vex(toks, used)
             toks = cloud(toks, used)
             toks = brew(toks, used)
+            toks = comma(toks, used)
         grain(pool, keys, idx)
         z = pairs(pool, keys, idx, snap)
         if z:
@@ -1661,8 +1719,6 @@ def obf(src):
         v, l, w = shuffle(v, l)
         toks = map(toks, w, e)
         toks = nest(toks, used)
-        toks = nums(toks)
-        toks = bools(toks)
         pool, keys, c = spin(pool, keys, a, k)
         v, l, f = twist(v, l, b, m)
         def pick(): x = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]; used.add(x); return x
@@ -1679,6 +1735,7 @@ def obf(src):
         toks = run(toks, tab, vm)
         toks = lit(toks)
         toks = noop(used) + toks
+        toks = press(toks)
         toks = encode(toks)
         code = emit(toks)
         r = build(pool, keys, a, k)
@@ -1686,12 +1743,11 @@ def obf(src):
         j = rolling(d, a, k)
         u = dec(e, b, m)
         work = forge(vm)
-        seed = fresh(used); arr = fresh(used); fun = fresh(used)
+        seed = fresh(used); arr = fresh(used); fn = fresh(used)
         lure = ['\\x68\\x65\\x6c\\x6c\\x6f', '\\x77\\x6f\\x72\\x6c\\x64', '\\x74\\x65\\x73\\x74']
-        lkey = [random.randint(1,62), random.randint(1,62), random.randint(1,62)]
-        part = 'var ' + arr + '=[' + ','.join('"'+s+'"' for s in lure) + '];var ' + seed + '=[' + ','.join(str(x) for x in lkey) + '];'
-        call = decoy(fun, arr, seed)
-        anchor = 'if(false){GM_xmlhttpRequest({});' + fun + '(0x0);}'
+        part = 'var ' + arr + '=[' + ','.join('"'+s+'"' for s in lure) + '];var ' + seed + '=[' + ','.join(str(random.randint(1,62)) for _ in range(3)) + '];'
+        call = decoy(fn, arr, seed)
+        anchor = 'if(false){GM_xmlhttpRequest({});' + fn + '(0x0);}'
         text = emit(math(scan(prot())))
         return header + anchor + part + call + work + r + q + j + u + c + f + proxy + x + text + code
     return src
