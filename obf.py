@@ -586,6 +586,24 @@ def hatch(used):
             tok('id','break'), tok('pun',';'),
             tok('pun','}')]
 
+def rack(used):
+    a = fresh(used); b = fresh(used); c = fresh(used); d = fresh(used); e = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('pun','['), tok('num',hex(r)), tok('pun',','), tok('num',hex(u)), tok('pun',','), tok('num',hex(w)), tok('pun',']'), tok('pun',','),
+            tok('id',b), tok('op','='), tok('pun','('), tok('id',a), tok('pun','['), tok('num','0x0'), tok('pun',']'), tok('op','&'), tok('id',a), tok('pun','['), tok('num','0x1'), tok('pun',']'), tok('pun',')'), tok('op','^'), tok('num','0x0'), tok('pun',','),
+            tok('id',c), tok('op','='), tok('pun','('), tok('pun','~'), tok('id',b), tok('op','+'), tok('num','0x1'), tok('pun',')'), tok('op','+'), tok('id',b), tok('pun',','),
+            tok('id',d), tok('op','='), tok('id',c), tok('op','|'), tok('id',a), tok('pun','['), tok('num','0x2'), tok('pun',']'), tok('op','&'), tok('num','0x0'), tok('pun',','),
+            tok('id',e), tok('op','='), tok('pun','('), tok('id',d), tok('op','>>'), tok('num','0x10'), tok('op','<<'), tok('num','0x10'), tok('pun',')'), tok('op','^'), tok('id',b), tok('op','&'), tok('num','0x0'), tok('pun',';')]
+
+def coil(used):
+    a = fresh(used); b = fresh(used); c = fresh(used); d = fresh(used); e = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('pun','('), tok('num',hex(r)), tok('op','<<'), tok('num','0x0'), tok('op','|'), tok('num','0x0'), tok('pun',')'), tok('pun',','),
+            tok('id',b), tok('op','='), tok('pun','('), tok('id',a), tok('op','>>>'), tok('num','0x1'), tok('pun',')'), tok('op','|'), tok('num','0x0'), tok('pun',','),
+            tok('id',c), tok('op','='), tok('id',b), tok('op','^'), tok('id',a), tok('op','&'), tok('num','0x0'), tok('pun',','),
+            tok('id',d), tok('op','='), tok('pun','('), tok('id',a), tok('op','*'), tok('num','0x1'), tok('op','+'), tok('num',hex(u^u)), tok('pun',')'), tok('pun',','),
+            tok('id',e), tok('op','='), tok('id',d), tok('op','-'), tok('id',b), tok('op','&'), tok('num','0x0'), tok('pun',';')]
+
 def snarl(used):
     a = fresh(used); b = fresh(used); c = fresh(used); d = fresh(used); e = fresh(used)
     r = random.randint(1,0xfe); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
@@ -603,7 +621,7 @@ def grit(used):
             tok('id',c), tok('op','='), tok('pun','('), tok('id',b), tok('op','>>'), tok('num','0x10'), tok('op','<<'), tok('num','0x10'), tok('pun',')'), tok('pun',','),
             tok('id',d), tok('op','='), tok('pun','('), tok('pun','~'), tok('id',c), tok('op','^'), tok('pun','~'), tok('id',a), tok('pun',')'), tok('op','&'), tok('num','0x0'), tok('pun',';')]
 
-bank = [dead, ghost, hush, flux, echo, knot, tinge, glaze, hooke, kane, shine, quirk, wisp, surge, blip, hatch, snarl, grit]
+bank = [dead, ghost, hush, flux, echo, knot, tinge, glaze, hooke, kane, shine, quirk, wisp, surge, blip, hatch, snarl, grit, rack, coil]
 
 def fill(toks, used):
     out = []; i = 0; p = 0; b = 0; seq = cycle(bank)
@@ -661,8 +679,11 @@ def alias(toks, used):
                 x = fresh(used); y = fresh(used); z = fresh(used); r = fresh(used)
                 u = random.randint(1,0xfe); w = random.randint(1,0xfe)
                 p = fresh(used); q = fresh(used)
+                n = fresh(used); s = fresh(used)
                 out.extend([tok('id','var'), tok('id',x), tok('op','='), tok('id','globalThis'), tok('pun',','),
                              tok('id',y), tok('op','='), tok('id','Math'), tok('pun',','),
+                             tok('id',n), tok('op','='), tok('id','Number'), tok('pun',','),
+                             tok('id',s), tok('op','='), tok('id','String'), tok('pun',','),
                              tok('id',z), tok('op','='), tok('num',hex(random.randint(1,0xfe)^random.randint(1,0xfe))), tok('pun',','),
                              tok('id',r), tok('op','='), tok('pun','('), tok('num',hex(u^w)), tok('op','^'), tok('num',hex(w)), tok('pun',')'), tok('pun',','),
                              tok('id',p), tok('op','='), tok('pun','('), tok('num',hex(u|w)), tok('op','&'), tok('num',hex(u)), tok('pun',')'), tok('pun',','),
@@ -873,7 +894,7 @@ def chain(toks, d, idx):
                 n = int(toks[i+2]['v'], 0)
                 alt = [v for v in vals if v != n]
                 if alt:
-                    x = alt[n % len(alt)]
+                    x = alt[0]
                     out.extend([tok('pun','('), tok('id',d), tok('pun','('), tok('num',str(x)), tok('pun',')'),
                                  tok('op',','), tok('id',d), tok('pun','('), tok('num',str(n)), tok('pun',')'), tok('pun',')')])
                     i += 4; continue
@@ -1659,12 +1680,38 @@ def chord(toks, d, used):
         i += 1
     return out
 
+def fork(toks, used):
+    out = list(toks); i = 0
+    while i < len(out):
+        t = out[i]
+        if t['t'] == 'id' and t['v'] == 'if' and i+1 < len(out) and out[i+1]['v'] == '(':
+            j = i + 2; dep = 1
+            while j < len(out) and dep > 0:
+                if out[j]['v'] == '(': dep += 1
+                if out[j]['v'] == ')': dep -= 1
+                j += 1
+            if j < len(out) and out[j]['v'] == '{':
+                k = j + 1; dep = 1
+                while k < len(out) and dep > 0:
+                    if out[k]['v'] == '{': dep += 1
+                    if out[k]['v'] == '}': dep -= 1
+                    k += 1
+                if k >= len(out) or out[k]['v'] != 'else':
+                    g = fresh(used); r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+                    ins = [tok('id','else'), tok('pun','{'),
+                           tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',';'),
+                           tok('pun','}')]
+                    out = out[:k] + ins + out[k:]
+                    i = k + len(ins); continue
+        i += 1
+    return out
+
 def brew(toks, used):
     out = []; i = 0
     while i < len(toks):
         t = toks[i]
         out.append(t)
-        if t['v'] == 'case' and i > 0 and toks[i-1]['v'] == ':' and i+3 < len(toks):
+        if t['v'] == ':' and i >= 2 and toks[i-2]['v'] == 'case' and i+1 < len(toks) and toks[i+1]['v'] not in skip:
             g = fresh(used); r = random.randint(1,0xfe); u = random.randint(1,0xfe)
             out.extend([tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',';')])
         i += 1
@@ -1697,6 +1744,7 @@ def obf(src):
             toks = chord(toks, d, used)
             toks = alias(toks, used)
             toks = scatter(toks, used)
+            toks = fork(toks, used)
             toks = extra(toks, used)
             toks = morph(toks, used)
             toks = jolt(toks, used)
