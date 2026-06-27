@@ -539,10 +539,10 @@ def shine(used):
 def quirk(used):
     f = fresh(used); g = fresh(used); h = fresh(used); x = fresh(used)
     r = random.randint(1,0xfe); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
-    return [tok('id','do'), tok('pun','{'), tok('id','var'), tok('id',f), tok('op','='), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',','),
+    return [tok('id','do'), tok('pun','{'), tok('id','var'), tok('id',f), tok('op','='), tok('pun','('), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',','),
             tok('id',g), tok('op','='), tok('pun','('), tok('id',f), tok('op','>>'), tok('num','0x1'), tok('op','<<'), tok('num','0x1'), tok('pun',')'), tok('pun',','),
             tok('id',h), tok('op','='), tok('id',f), tok('op','-'), tok('id',g), tok('pun',','),
-            tok('id',x), tok('op','='), tok('pun','('), tok('id',g), tok('op','^'), tok('id',h), tok('op','|'), tok('num','0x0'), tok('pun',')'), tok('pun',';'),
+            tok('id',x), tok('op','='), tok('pun','('), tok('id',g), tok('op','^'), tok('id',h), tok('op','|'), tok('num',hex(w^w)), tok('pun',')'), tok('pun',';'),
             tok('pun','}'), tok('id','while'), tok('pun','('), tok('num','0x0'), tok('pun',')'), tok('pun',';')]
 
 def wisp(used):
@@ -667,7 +667,7 @@ def molt(used):
     return [tok('id','var'), tok('id',a), tok('op','='), tok('pun','('), tok('num',hex(r)), tok('op','<<'), tok('num','0x1'), tok('op','>>'), tok('num','0x1'), tok('pun',')'), tok('pun',','),
             tok('id',b), tok('op','='), tok('pun','('), tok('id',a), tok('op','>>>'), tok('num','0x0'), tok('pun',')'), tok('op','&'), tok('num',hex(u)), tok('pun',','),
             tok('id',c), tok('op','='), tok('id',b), tok('op','^'), tok('pun','('), tok('id',a), tok('op','&'), tok('num','0xff'), tok('pun',')'), tok('pun',','),
-            tok('id',d), tok('op','='), tok('pun','('), tok('id',c), tok('op','+'), tok('num','0x0'), tok('pun',')'), tok('op','|'), tok('num','0x0'), tok('pun',','),
+            tok('id',d), tok('op','='), tok('pun','('), tok('id',c), tok('op','+'), tok('num','0x0'), tok('pun',')'), tok('op','|'), tok('num',hex(w^w)), tok('pun',','),
             tok('id',e), tok('op','='), tok('id',d), tok('op','>>'), tok('num','0x0'), tok('op','^'), tok('id',d), tok('pun',','),
             tok('id',f), tok('op','='), tok('pun','~'), tok('pun','('), tok('id',e), tok('op','+'), tok('num','0x1'), tok('pun',')'), tok('op','+'), tok('id',e), tok('op','+'), tok('num','0x1'), tok('pun',';')]
 
@@ -688,7 +688,7 @@ def fend(used):
     return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r|u)), tok('op','>>>'), tok('num','0x0'), tok('pun',','),
             tok('id',b), tok('op','='), tok('pun','('), tok('id',a), tok('op','^'), tok('num',hex(r)), tok('pun',')'), tok('op','&'), tok('num','0xff'), tok('pun',','),
             tok('id',c), tok('op','='), tok('pun','('), tok('id',b), tok('op','|'), tok('id',a), tok('pun',')'), tok('op','^'), tok('id',a), tok('pun',','),
-            tok('id',d), tok('op','='), tok('id',c), tok('op','>>'), tok('num','0x0'), tok('op','&'), tok('num','0x0'), tok('pun',','),
+            tok('id',d), tok('op','='), tok('id',c), tok('op','>>'), tok('num','0x0'), tok('op','&'), tok('num',hex(w^w)), tok('pun',','),
             tok('id',e), tok('op','='), tok('pun','~'), tok('id',d), tok('op','+'), tok('num','0x1'), tok('op','+'), tok('id',d), tok('pun',';')]
 
 def sway(used):
@@ -731,7 +731,243 @@ def dray(used):
             tok('id',e), tok('op','='), tok('pun','~'), tok('pun','('), tok('id',d), tok('op','+'), tok('num','0x1'), tok('pun',')'), tok('op','+'), tok('id',d), tok('op','+'), tok('num','0x1'), tok('pun',','),
             tok('id',f), tok('op','='), tok('pun','('), tok('id',e), tok('op','*'), tok('num','0x1'), tok('op','+'), tok('num','0x0'), tok('pun',')'), tok('op','&'), tok('num','0x0'), tok('pun',';')]
 
-bank = [dead, ghost, hush, flux, echo, knot, tinge, glaze, hooke, kane, shine, quirk, wisp, surge, blip, hatch, snarl, grit, rack, coil, rune, meld, pike, lure, molt, weld, fend, sway, hulk, bray, dray]
+def shirk(used):
+    a = fresh(used); b = fresh(used); c = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('pun','('), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',','),
+            tok('id',b), tok('op','='), tok('pun','('), tok('num',hex(w)), tok('op','<<'), tok('num','0x2'), tok('op','|'), tok('num','0x0'), tok('pun',')'), tok('pun',','),
+            tok('id',c), tok('op','='), tok('pun','('), tok('id',a), tok('op','&'), tok('id',b), tok('op','|'), tok('id',a), tok('pun',')'), tok('pun',';')]
+
+def spurn(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','try'), tok('pun','{'),
+            tok('id','var'), tok('id',a), tok('op','='), tok('pun','('), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',';'),
+            tok('id','try'), tok('pun','{'),
+            tok('id','var'), tok('id',b), tok('op','='), tok('id',a), tok('op','>>>'), tok('num','0x1'), tok('pun',';'),
+            tok('pun','}'), tok('id','catch'), tok('pun','('), tok('id','e'), tok('pun',')'), tok('pun','{'), tok('pun','}'),
+            tok('pun','}'), tok('id','catch'), tok('pun','('), tok('id','e'), tok('pun',')'), tok('pun','{'), tok('pun','}')]
+
+def chide(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','for'), tok('pun','('), tok('id','var'), tok('id',a), tok('op','='), tok('num','0x0'), tok('pun',';'),
+            tok('id',a), tok('op','<'), tok('num','0x1'), tok('pun',';'), tok('id',a), tok('op','++'), tok('pun',')'), tok('pun','{'),
+            tok('id','var'), tok('id',b), tok('op','='), tok('pun','('), tok('num',hex(r^u)), tok('op','|'), tok('num',hex(u)), tok('pun',')'), tok('pun',';'),
+            tok('pun','}')]
+
+def taunt(used):
+    a = fresh(used); b = fresh(used); c = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('pun','['), tok('num',hex(r)), tok('pun',','), tok('num',hex(u)), tok('pun',']'), tok('pun',','),
+            tok('id',b), tok('op','='), tok('id',a), tok('pun','['), tok('num','0x0'), tok('pun',']'), tok('op','^'), tok('id',a), tok('pun','['), tok('num','0x1'), tok('pun',']'), tok('pun',','),
+            tok('id',c), tok('op','='), tok('pun','('), tok('id',b), tok('op','<<'), tok('num','0x1'), tok('op','|'), tok('id',b), tok('pun',')'), tok('pun',';')]
+
+def flout(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','switch'), tok('pun','('), tok('num',hex(r)), tok('pun',')'), tok('pun','{'),
+            tok('id','case'), tok('num',hex(r)), tok('pun',':'),
+            tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(u)), tok('pun',';'),
+            tok('id','var'), tok('id',b), tok('op','='), tok('id',a), tok('op','^'), tok('num',hex(u)), tok('pun',';'),
+            tok('id','break'), tok('pun',';'),
+            tok('pun','}')]
+
+def scoff(used):
+    a = fresh(used); b = fresh(used); c = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('num',hex(u)), tok('pun',','),
+            tok('id',c), tok('op','='), tok('pun','('), tok('id',a), tok('op','>'), tok('id',b),
+            tok('op','&&'), tok('id',b), tok('op','<'), tok('id',a), tok('pun',')'), tok('pun',';')]
+
+def sneer(used):
+    a = fresh(used); b = fresh(used); c = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('pun','('), tok('id','function'), tok('pun','('), tok('id',b), tok('pun',')'), tok('pun','{'),
+            tok('id','var'), tok('id',c), tok('op','='), tok('id',b), tok('op','^'), tok('num',hex(r)), tok('pun',';'),
+            tok('id','return'), tok('id',c), tok('pun',';'),
+            tok('pun','}'), tok('pun','('), tok('num',hex(u)), tok('pun',')'), tok('pun',')'), tok('pun',';')]
+
+def jeer(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('pun','{'), tok('id','x'), tok('pun',':'), tok('num',hex(r)), tok('pun','}'), tok('pun',','),
+            tok('id',b), tok('op','='), tok('id',a), tok('pun','['), tok('str','\'x\''), tok('pun',']'), tok('op','^'), tok('num',hex(u)), tok('pun',';')]
+
+def mock(used):
+    a = fresh(used); b = fresh(used); c = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('num',hex(u)), tok('pun',','),
+            tok('id',c), tok('op','='), tok('pun','~'), tok('pun','('), tok('id',a), tok('op','|'), tok('id',b), tok('pun',')'), tok('op','&'), tok('num','0xff'), tok('pun',';')]
+
+def gibe(used):
+    a = fresh(used); b = fresh(used); c = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('pun','['), tok('num',hex(r)), tok('op',','), tok('num',hex(u)), tok('pun',']'), tok('pun',','),
+            tok('id',b), tok('op','='), tok('id',a), tok('pun','['), tok('num','0x0'), tok('pun',']'), tok('pun',','),
+            tok('id',c), tok('op','='), tok('id',a), tok('pun','['), tok('num','0x1'), tok('pun',']'), tok('op','+'), tok('id',b), tok('pun',';')]
+
+def grin(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('pun','('), tok('num',hex(r)), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',','),
+            tok('id',b), tok('op','='), tok('pun','('), tok('id',a), tok('op','&'), tok('num','0xff'), tok('pun',')'), tok('pun',';')]
+
+def weep(used):
+    a = fresh(used); b = fresh(used); c = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('num',hex(u)), tok('pun',','),
+            tok('id',c), tok('op','='), tok('id',a), tok('op','-'), tok('id',b), tok('op','|'), tok('num','0x0'), tok('pun',';')]
+
+def wail(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('pun','~'), tok('id',a), tok('op','+'), tok('num','0x1'), tok('pun',';')]
+
+def moan(used):
+    a = fresh(used); b = fresh(used); c = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('num',hex(u)), tok('pun',','),
+            tok('id',c), tok('op','='), tok('pun','('), tok('id',a), tok('op','*'), tok('id',b), tok('pun',')'), tok('op','&'), tok('num','0xffffffff'), tok('pun',';')]
+
+def puff(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('pun','('), tok('id',a), tok('op','<<'), tok('num','0x1'), tok('pun',')'), tok('op','^'), tok('id',a), tok('pun',';')]
+
+def sniff(used):
+    a = fresh(used); b = fresh(used); c = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('num',hex(u)), tok('pun',','),
+            tok('id',c), tok('op','='), tok('pun','('), tok('id',a), tok('op','^'), tok('id',b), tok('pun',')'), tok('op','>>>'), tok('num','0x0'), tok('pun',';')]
+
+def groan(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('pun','('), tok('id',a), tok('op','&'), tok('num',hex(u)), tok('pun',')'), tok('op','|'), tok('num','0x0'), tok('pun',';')]
+
+def mutter(used):
+    a = fresh(used); b = fresh(used); c = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('num',hex(u)), tok('pun',','),
+            tok('id',c), tok('op','='), tok('pun','('), tok('id',a), tok('op','+'), tok('id',b), tok('pun',')'), tok('op','^'), tok('id',a), tok('pun',';')]
+
+def whisper(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('pun','('), tok('id',a), tok('op','|'), tok('num',hex(u)), tok('pun',')'), tok('op','^'), tok('num',hex(u)), tok('pun',';')]
+
+def shout(used):
+    a = fresh(used); b = fresh(used); c = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('num',hex(u)), tok('pun',','),
+            tok('id',c), tok('op','='), tok('pun','('), tok('id',a), tok('op','>>'), tok('num','0x1'), tok('pun',')'), tok('op','^'), tok('id',b), tok('pun',';')]
+
+def sob(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('pun','('), tok('id',a), tok('op','>>>'), tok('num','0x2'), tok('pun',')'), tok('pun',';')]
+
+def chirp(used):
+    a = fresh(used); b = fresh(used); c = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('num',hex(u)), tok('pun',','),
+            tok('id',c), tok('op','='), tok('pun','('), tok('id',a), tok('op','^'), tok('id',b), tok('pun',')'), tok('op','|'), tok('num','0x0'), tok('pun',';')]
+
+def screech(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1, 0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('pun','~'), tok('id',a), tok('pun',';')]
+
+def squeak(used):
+    a = fresh(used); b = fresh(used); c = fresh(used)
+    r = random.randint(1, 0xfe); u = random.randint(1, 0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('num',hex(u)), tok('pun',','),
+            tok('id',c), tok('op','='), tok('pun','('), tok('id',a), tok('op','&'), tok('id',b), tok('pun',')'), tok('op','|'), tok('num','0x0'), tok('pun',';')]
+
+def yelp(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1, 0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('pun','('), tok('id',a), tok('op','<<'), tok('num','0x2'), tok('pun',')'), tok('pun',';')]
+
+def chuckle(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1, 0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('pun','('), tok('id',a), tok('op','^'), tok('num','0x0'), tok('pun',')'), tok('pun',';')]
+
+def snicker(used):
+    a = fresh(used); b = fresh(used); c = fresh(used)
+    r = random.randint(1, 0xfe); u = random.randint(1, 0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('num',hex(u)), tok('pun',','),
+            tok('id',c), tok('op','='), tok('pun','('), tok('id',a), tok('op','|'), tok('id',b), tok('pun',')'), tok('op','&'), tok('num','0xff'), tok('pun',';')]
+
+def giggle(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1, 0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('pun','~'), tok('id',a), tok('pun',';')]
+
+def titter(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1, 0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('pun','~'), tok('id',a), tok('pun',';')]
+
+def prattle(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','while'), tok('pun','('), tok('num','0x0'), tok('pun',')'), tok('pun','{'),
+            tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('pun','~'), tok('id',a), tok('pun',';'),
+            tok('pun','}')]
+
+def mumble(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','try'), tok('pun','{'),
+            tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('id',a), tok('op','^'), tok('num',hex(u)), tok('op','&'), tok('num','0x0'), tok('pun',';'),
+            tok('pun','}'), tok('id','catch'), tok('pun','('), tok('id','e'), tok('pun',')'), tok('pun','{'), tok('pun','}')]
+
+def babble(used):
+    a = fresh(used); b = fresh(used); c = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('pun','['), tok('num',hex(r)), tok('pun',','), tok('num',hex(u)), tok('pun',']'), tok('pun',','),
+            tok('id',b), tok('op','='), tok('id',a), tok('pun','['), tok('num','0x0'), tok('pun',']'), tok('op','^'), tok('id',a), tok('pun','['), tok('num','0x1'), tok('pun',']'), tok('pun',','),
+            tok('id',c), tok('op','='), tok('id',b), tok('op','&'), tok('num','0x0'), tok('pun',';')]
+
+def natter(used):
+    a = fresh(used); b = fresh(used)
+    r = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('pun','{'), tok('id','x'), tok('pun',':'), tok('num',hex(r)), tok('pun','}'), tok('pun',','),
+            tok('id',b), tok('op','='), tok('id',a), tok('pun','['), tok('str',"'x'"), tok('pun',']'), tok('op','|'), tok('num','0x0'), tok('pun',';')]
+
+def jabber(used):
+    a = fresh(used); b = fresh(used); c = fresh(used)
+    r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+    return [tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',','),
+            tok('id',b), tok('op','='), tok('num',hex(u)), tok('pun',','),
+            tok('id',c), tok('op','='), tok('pun','('), tok('id',a), tok('op','+'), tok('id',b), tok('op','-'), tok('id',b), tok('pun',')'), tok('op','&'), tok('num','0x0'), tok('pun',';')]
+
+bank = [dead, ghost, hush, flux, echo, knot, tinge, glaze, hooke, kane, shine, quirk, wisp, surge, blip, hatch, snarl, grit, rack, coil, rune, meld, pike, lure, molt, weld, fend, sway, hulk, bray, dray, shirk, spurn, chide, taunt, flout, scoff, sneer, jeer, mock, gibe, grin, weep, wail, moan, puff, sniff, groan, mutter, whisper, shout, sob, chirp, screech, squeak, yelp, chuckle, snicker, giggle, titter, prattle, mumble, babble, natter, jabber]
 
 def fill(toks, used):
     out = []; i = 0; p = 0; b = 0; seq = cycle(bank)
@@ -742,7 +978,7 @@ def fill(toks, used):
         if t['v'] == '{': b += 1
         if t['v'] == '}': b -= 1
         out.append(t)
-        if t['v'] == ';' and p == 0 and b >= 3 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
+        if t['v'] == ';' and p == 0 and b >= 5 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
             out.extend(next(seq)(used)); out.extend(next(seq)(used))
             r = random.randint(1,0xfe); u = random.randint(1,0xfe); g = fresh(used)
             out.extend([tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',';')])
@@ -992,7 +1228,7 @@ def bury(n):
     if n <= 3: return mba(n)
     a = random.randint(1, n - 2); b = random.randint(1, n - a - 1); c = n - a - b
     r = random.randint(1, 0xff); s = random.randint(1, 0xff)
-    return '(((' + mba(a) + '+' + mba(b) + '+' + mba(c) + ')^' + hex(r) + ')^' + hex(r) + ')'
+    return '((((' + mba(a) + '+' + mba(b) + '+' + mba(c) + ')^' + hex(r) + ')^' + hex(s) + ')^' + hex(r^s) + ')'
 
 def mask(toks):
     out = []; i = 0
@@ -1525,7 +1761,7 @@ def abuf():
 def volt():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     sc = chars('structuredClone')
-    return ('(function(){try{if(typeof ' + sc + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+    return ('(function(){try{var ' + s + '=typeof ' + sc + ';if(' + s + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
 
 def wire():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -1671,8 +1907,90 @@ def eve():
     every = chars('every')
     return ('(function(){try{var ' + s + '=[2,4,6][' + every + '](function(x){return x%2===0;});var ' + t + '=' + s + ';if(!' + t + ')throw new Error();}catch(e){}}());')
 
+def gasp():
+    s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    return ('(function(){try{var ' + s + '=Promise.prototype;var ' + t + '=typeof ' + s + '.then;if(' + t + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+
+def glare():
+    s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    mark = val('[native code]')
+    return ('(function(){try{var ' + s + '=Object.prototype.toString;var ' + t + '=' + s + '.toString();if(' + t + '.indexOf(' + mark + ')===-1)throw new Error();}catch(e){}}());')
+
+def stare():
+    s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    return ('(function(){try{var ' + s + '=typeof Proxy;var ' + t + '=s;if(' + t + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+
+def blink():
+    s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    loc = chars('location'); undef = chars('undefined')
+    return ('(function(){try{var ' + s + '=typeof window!==' + undef + '?window[' + loc + ']:null;var ' + t + '=s;if(' + t + '===null)return;}catch(e){}}());')
+
+def sough():
+    s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    capture = chars('captureStackTrace')
+    return ('(function(){try{var ' + s + '=Error[' + capture + '];var ' + t + '=typeof ' + s + ';if(' + t + '!=='+chars('undefined')+'&&' + t + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+
+def pant():
+    s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    return ('(function(){try{var ' + s + '=Date.now();for(var ' + t + '=0;' + t + '<1000;' + t + '++);if(Date.now()-' + s + '>500)throw new Error();}catch(e){}}());')
+
+def scream():
+    s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    return ('(function(){try{var ' + s + '=function*(){};var ' + t + '=Object.getPrototypeOf(' + s + ').constructor;if(typeof ' + t + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+
+def bark():
+    s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    return ('(function(){try{var ' + s + '=async function(){};var ' + t + '=Object.getPrototypeOf(' + s + ').constructor;if(typeof ' + t + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+
+def growl():
+    s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    push = chars('push')
+    return ('(function(){try{var ' + s + '=Array.prototype[' + push + '];var ' + t + '=typeof ' + s + ';if(' + t + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+
+def snort():
+    s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    split = chars('split')
+    return ('(function(){try{var ' + s + '=String.prototype[' + split + '];var ' + t + '=typeof ' + s + ';if(' + t + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+
+def grunt():
+    s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    fixed = chars('toFixed')
+    return ('(function(){try{var ' + s + '=Number.prototype[' + fixed + '];var ' + t + '=typeof ' + s + ';if(' + t + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+
+def purr():
+    s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    seal = chars('seal')
+    return ('(function(){try{var ' + s + '=Object[' + seal + '];var ' + t + '=typeof ' + s + ';if(' + t + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+
+def hiss():
+    s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    return ('(function(){try{var ' + s + '=typeof setTimeout;var ' + t + '=s;if(' + t + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+
+def croak():
+    s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    return ('(function(){try{var ' + s + '=typeof setInterval;var ' + t + '=s;if(' + t + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+
+def quack():
+    s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
+    return ('(function(){try{var ' + s + '=typeof clearTimeout;var ' + t + '=s;if(' + t + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+
 def prot():
-    traps = [probe(),snare(),guard(),cage(),leak(),save(),tamper(),block(),dom(),timing(),hooks(),detect(),watch(),frame(),net(),crypt(),loop(),seal(),drift(),score(),pixel(),flare(),pulse(),spark(),trace(),glow(),frost(),haze(),burn(),stealth(),bench(),lock(),shield(),vault(),spike(),glint(),ridge(),veil(),smelt(),crimp(),smog(),blaze(),draft(),shard(),flint(),loom(),bane(),mire(),yoke(),tang(),jade(),pith(),raze(),snag(),damp(),warp(),seep(),blot(),comet(),orbit(),reek(),ember(),sinew(),knell(),sieve(),crux(),gripe(),notch(),troth(),scour(),prong(),girth(),whirl(),wrack(),spall(),breve(),grove(),crown(),rivet(),quill(),chisel(),sling(),stave(),keel(),gale(),tarn(),furl(),dune(),rook(),mast(),brim(),knap(),gill(),dais(),celt(),swag(),pave(),lisp(),welt(),fizz(),tump(),luff(),bulb(),fawn(),nave(),spur(),limb(),twig(),abuf(),volt(),wire(),mote(),burl(),cult(),dolt(),fret(),gust(),harp(),itch(),jest(),kink(),lank(),form(),rind(),serf(),toll(),prow(),dart(),wren(),geld(),raft(),apex(),bask(),wmap(),dawn(),dusk(),eve()]
+    traps = [probe(),snare(),guard(),cage(),leak(),save(),tamper(),block(),dom(),timing(),hooks(),detect(),watch(),frame(),net(),crypt(),loop(),seal(),drift(),score(),pixel(),flare(),pulse(),spark(),trace(),glow(),frost(),haze(),burn(),stealth(),bench(),lock(),shield(),vault(),spike(),glint(),ridge(),veil(),smelt(),crimp(),smog(),blaze(),draft(),shard(),flint(),loom(),bane(),mire(),yoke(),tang(),jade(),pith(),raze(),snag(),damp(),warp(),seep(),blot(),comet(),orbit(),reek(),ember(),sinew(),knell(),sieve(),crux(),gripe(),notch(),troth(),scour(),prong(),girth(),whirl(),wrack(),spall(),breve(),grove(),crown(),rivet(),quill(),chisel(),sling(),stave(),keel(),gale(),tarn(),furl(),dune(),rook(),mast(),brim(),knap(),gill(),dais(),celt(),swag(),pave(),lisp(),welt(),fizz(),tump(),luff(),bulb(),fawn(),nave(),spur(),limb(),twig(),abuf(),volt(),wire(),mote(),burl(),cult(),dolt(),fret(),gust(),harp(),itch(),jest(),kink(),lank(),form(),rind(),serf(),toll(),prow(),dart(),wren(),geld(),raft(),apex(),bask(),wmap(),dawn(),dusk(),eve(),gasp(),glare(),stare(),blink(),sough(),pant(),scream(),bark(),growl(),snort(),grunt(),purr(),hiss(),croak(),quack()]
     random.shuffle(traps); wrapped = ['try{' + t + '}catch(e){}' for t in traps]; delay = hex(random.randint(30, 80))
     return 'setTimeout(function(){' + ''.join(wrapped) + '},' + delay + ');'
 
@@ -1686,7 +2004,7 @@ def inflate(toks, used):
         if t['v'] == '{': b += 1
         if t['v'] == '}': b -= 1
         out.append(t)
-        if t['v'] == ';' and p == 0 and b >= 3 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
+        if t['v'] == ';' and p == 0 and b >= 5 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
             g = fresh(used); r = fresh(used); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
             out.extend([tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(u)), tok('op','>>>'), tok('num','0x0'), tok('pun',')'), tok('op','|'), tok('num',hex(w^w)), tok('pun',';')])
             out.extend([tok('id','var'), tok('id',r), tok('op','='), tok('pun','~'), tok('pun','('), tok('pun','~'), tok('id',g), tok('pun',')'), tok('op','+'), tok('num','0x0'), tok('pun',';')])
@@ -1708,7 +2026,7 @@ def hurl(toks, used):
         if t['v'] == '{': b += 1
         if t['v'] == '}': b -= 1
         out.append(t)
-        if t['v'] == ';' and p == 0 and b >= 3 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
+        if t['v'] == ';' and p == 0 and b >= 5 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
             g = fresh(used); r = fresh(used); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
             out.extend([tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(u)), tok('op','&'), tok('num',hex(u)), tok('pun',')'), tok('pun',';')])
             out.extend([tok('id','var'), tok('id',r), tok('op','='), tok('pun','('), tok('id',g), tok('op','^'), tok('num',hex(w^w)), tok('op','|'), tok('num',hex(0)), tok('pun',')'), tok('pun',';')])
@@ -1785,7 +2103,7 @@ def build(pool, keys, a, k):
 def weave(n):
     k = random.randint(1, 0xfe); r = random.randint(1, 0xfe)
     s = random.randint(1, 0xfe); q = random.randint(1, 0xfe)
-    return [0, n^k, 1, k, 5, 0, 4, 0x7fffffff, 6, 0, 7, 0, 7, 0, 2, s, 3, s, 1, q, 1, q]
+    return [0, n^k, 1, k, 5, 0, 4, 0x7fffffff, 6, r^r, 7, 0, 7, 0, 2, s, 3, s, 1, q, 1, q]
 
 def forge(name):
     stk = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -1826,7 +2144,7 @@ def raze():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     undef = chars('undefined'); perf = chars('performance')
-    return ('(function(){try{if(typeof performance===' + undef + ')return;var ' + s + '=performance.now();for(var ' + t + '=0;' + t + '<1e4;' + t + '++);if(performance.now()-' + s + '>3000)throw new Error();}catch(e){}}());')
+    return ('(function(){try{if(typeof globalThis[' + perf + ']===' + undef + ')return;var ' + s + '=globalThis[' + perf + '].now();for(var ' + t + '=0;' + t + '<1e4;' + t + '++);if(globalThis[' + perf + '].now()-' + s + '>3000)throw new Error();}catch(e){}}());')
 
 def snag():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -1842,7 +2160,7 @@ def damp():
 def warp():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     tof = chars('toString'); mark = val('[native code]')
-    return ('(function(){try{var ' + s + '=Array.prototype[' + tof + '].call([]);if(typeof ' + s + '!=='+val('string')+')throw new Error();}catch(e){}}());')
+    return ('(function(){try{var ' + s + '=Array.prototype[' + tof + '][' + tof + ']();if(' + s + '.indexOf(' + mark + ')===-1)throw new Error();}catch(e){}}());')
 
 def seep():
     tfn = chars('function'); tbl = chars('table')
@@ -1955,7 +2273,7 @@ def reek():
 def ember():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    return ('(function(){try{var ' + s + '=Object.freeze({});Object.defineProperty(' + s + ','+chars('x')+',{value:(0x1|0x0)});throw new Error();}catch(e){if(e instanceof TypeError)return;throw new Error();}}());')
+    return ('(function(){try{var ' + s + '=Object.freeze({});Object.defineProperty(' + s + ','+chars('x')+',{value:(0x1|0x0)});throw new Error();}catch(' + t + '){if(' + t + ' instanceof TypeError)return;throw new Error();}}());')
 
 def sinew():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -1970,7 +2288,7 @@ def sieve():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     parse = chars('parse'); f = chars('stringify')
-    return ('(function(){try{var ' + s + '=JSON[' + parse + '](JSON[' + f + ']({a:(0x1|0x0),b:(0x2|0x0)}));if(' + s + '.a+(0x0|0x0)!==(0x1|0x0))throw new Error();}catch(e){}}());')
+    return ('(function(){try{var ' + t + '=JSON[' + f + ']({a:(0x1|0x0),b:(0x2|0x0)});var ' + s + '=JSON[' + parse + '](' + t + ');if(' + s + '.a+(0x0|0x0)!==(0x1|0x0))throw new Error();}catch(e){}}());')
 
 def crux():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -1990,7 +2308,7 @@ def troth():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     f = chars('sqrt')
-    return ('(function(){try{var ' + s + '=Math[' + f + ']((0x4|0x0));if(' + s + '!==(0x2|0x0))throw new Error();}catch(e){}}());')
+    return ('(function(){try{var ' + t + '=Math[' + f + '];var ' + s + '=' + t + '((0x4|0x0));if(' + s + '!==(0x2|0x0))throw new Error();}catch(e){}}());')
 
 def scour():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -2166,7 +2484,7 @@ def wrap(toks, used):
                 if toks[j]['v'] == ')': pd -= 1
                 j += 1
             if j >= len(toks) or toks[j]['v'] != '{': out.append(t); i += 1; continue
-            k = j+1; bd = 1; be = j+1
+            bd = 1; be = j+1
             while be < len(toks) and bd > 0:
                 if toks[be]['v'] == '{': bd += 1
                 if toks[be]['v'] == '}': bd -= 1
@@ -2255,9 +2573,9 @@ def twin(toks, used):
                 and i+4 < len(toks) and toks[i+1]['t'] == 'id'
                 and toks[i+2]['v'] == '=' and toks[i+3]['t'] == 'num'
                 and toks[i+4]['v'] == ';'):
-            nm = toks[i+1]['v']; val = toks[i+3]['v']
+            nm = toks[i+1]['v']
             a = fresh(used); r = random.randint(1,0xfe)
-            out.extend([tok('id',a), tok('op','='), tok('id',nm), tok('op','^'), tok('pun','('), tok('num',val), tok('op','^'), tok('num',val), tok('pun',')'), tok('pun',',')])
+            out.extend([tok('id',a), tok('op','='), tok('id',nm), tok('op','^'), tok('pun','('), tok('num',hex(r)), tok('op','^'), tok('num',hex(r)), tok('pun',')'), tok('pun',',')])
         i += 1
     return out
 
@@ -2352,7 +2670,7 @@ def knit(toks, used):
         if t['v'] == '{': b += 1
         if t['v'] == '}': b -= 1
         out.append(t)
-        if t['v'] == ';' and p == 0 and b >= 4 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
+        if t['v'] == ';' and p == 0 and b >= 6 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
             lb = fresh(used); a = fresh(used); c = fresh(used); d = fresh(used); e = fresh(used)
             r = random.randint(1,0xfe); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
             out.extend([tok('id',lb), tok('pun',':'), tok('pun','{'),
@@ -2422,6 +2740,14 @@ def obf(src):
             toks = sift(toks, used)
             toks = limn(toks, used)
             toks = vex(toks, used)
+            toks = grow(toks, used)
+            toks = crawl(toks, used)
+            toks = climb(toks, used)
+            toks = walk(toks, used)
+            toks = rush(toks, used)
+            toks = fold(toks, used)
+            toks = tuck(toks, used)
+            toks = leap(toks, used)
             if len(toks):
                 toks = fill(toks, used)
                 toks = inflate(toks, used)
@@ -2564,6 +2890,150 @@ def vex(toks, used):
             out.extend([tok('id','var'), tok('id',g), tok('op','='), tok('pun','('), tok('num',hex(u^w)), tok('op','^'), tok('num',hex(w)), tok('op','>>'), tok('num','0x0'), tok('pun',')'), tok('pun',';')])
             out.extend([tok('id','var'), tok('id',r), tok('op','='), tok('pun','('), tok('num',hex(u|w)), tok('op','&'), tok('num',hex(w^w)), tok('op','|'), tok('id',g), tok('pun',')'), tok('pun',';')])
         i += 1
+    return out
+
+def grow(toks, used):
+    out = []; i = 0; p = 0; b = 0; state = 0
+    while i < len(toks):
+        t = toks[i]
+        if t['v'] in ('(','['): p += 1
+        if t['v'] in (')',']'): p -= 1
+        if t['v'] == '{': b += 1
+        if t['v'] == '}': b -= 1
+        out.append(t)
+        if t['v'] == ';' and p == 0 and b >= 4 and i+1 < len(toks) and toks[i+1]['v'] not in skip:
+            if state == 0:
+                a = fresh(used); r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+                out.extend([tok('id','var'), tok('id',a), tok('op','='), tok('pun','('), tok('num',hex(r^u)), tok('op','==='), tok('num',hex(r)), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',';')])
+            elif state == 1:
+                a = fresh(used); r = random.randint(1, 0xfe)
+                out.extend([tok('id','if'), tok('pun','('), tok('num',hex(r)), tok('op','==='), tok('num',hex(r)), tok('pun',')'), tok('pun','{'),
+                            tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',';'),
+                            tok('pun','}')])
+            elif state == 2:
+                a = fresh(used); r = random.randint(1, 0xfe)
+                out.extend([tok('id','switch'), tok('pun','('), tok('num',hex(r)), tok('pun',')'),
+                            tok('pun','{'), tok('id','case'), tok('num',hex(r)), tok('pun',':'),
+                            tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)),
+                            tok('pun',';'), tok('id','break'), tok('pun',';'),
+                            tok('pun','}')])
+            elif state == 3:
+                a = fresh(used); r = random.randint(1, 0xfe); u = random.randint(1, 0xfe)
+                out.extend([tok('id','var'), tok('id',a), tok('op','='), tok('pun','('), tok('num',hex(r^u)), tok('op','==='), tok('pun','('), tok('num',hex(r^u)), tok('op','|'), tok('num','0x0'), tok('pun',')'), tok('pun','?'), tok('num',hex(r)), tok('op','^'), tok('num',hex(r)), tok('pun',':'), tok('num',hex(u)), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',';')])
+            elif state == 4:
+                a = fresh(used); c = fresh(used); r = random.randint(1,0xfe); u = random.randint(1,0xfe)
+                out.extend([tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('op','|'), tok('num','0x0'), tok('pun',','),
+                            tok('id',c), tok('op','='), tok('pun','('), tok('id',a), tok('op','^'), tok('num',hex(u^u)), tok('op','|'), tok('num','0x0'), tok('pun',')'), tok('pun',';')])
+            state = (state + 1) % 5
+        i += 1
+    return out
+
+def crawl(toks, used):
+    out = []; i = 0; p = 0; b = 0
+    while i < len(toks):
+        t = toks[i]
+        if t['v'] in ('(','['): p += 1
+        if t['v'] in (')',']'): p -= 1
+        if t['v'] == '{': b += 1
+        if t['v'] == '}': b -= 1
+        if t['t'] == 'id' and t['v'] == 'return' and p == 0 and b >= 3:
+            a = fresh(used); r = random.randint(1, 0xfe)
+            out.extend([tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',';')])
+        out.append(t); i += 1
+    return out
+
+def climb(toks, used):
+    out = []; i = 0; p = 0; b = 0
+    while i < len(toks):
+        t = toks[i]
+        if t['v'] in ('(','['): p += 1
+        if t['v'] in (')',']'): p -= 1
+        if t['v'] == '{': b += 1
+        if t['v'] == '}': b -= 1
+        if t['t'] == 'id' and t['v'] == 'if' and p == 0 and b >= 3:
+            a = fresh(used); r = random.randint(1, 0xfe)
+            out.extend([tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',';')])
+        out.append(t); i += 1
+    return out
+
+def walk(toks, used):
+    out = []; i = 0; p = 0; b = 0
+    while i < len(toks):
+        t = toks[i]
+        if t['v'] in ('(','['): p += 1
+        if t['v'] in (')',']'): p -= 1
+        if t['v'] == '{': b += 1
+        if t['v'] == '}': b -= 1
+        if t['t'] == 'id' and t['v'] == 'for' and p == 0 and b >= 3:
+            a = fresh(used); r = random.randint(1, 0xfe)
+            out.extend([tok('id','try'), tok('pun','{'),
+                        tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',';'),
+                        tok('pun','}'), tok('id','catch'), tok('pun','('), tok('id','e'), tok('pun',')'),
+                        tok('pun','{'), tok('pun','}')])
+        out.append(t); i += 1
+    return out
+
+def rush(toks, used):
+    out = []; i = 0; p = 0; b = 0
+    while i < len(toks):
+        t = toks[i]
+        if t['v'] in ('(','['): p += 1
+        if t['v'] in (')',']'): p -= 1
+        if t['v'] == '{': b += 1
+        if t['v'] == '}': b -= 1
+        if t['t'] == 'id' and t['v'] == 'var' and p == 0 and b >= 3:
+            a = fresh(used); r = random.randint(1, 0xfe)
+            out.extend([tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r)), tok('pun',';')])
+        out.append(t); i += 1
+    return out
+
+def fold(toks, used):
+    out = []; i = 0; p = 0; b = 0
+    while i < len(toks):
+        t = toks[i]
+        if t['v'] in ('(','['): p += 1
+        if t['v'] in (')',']'): p -= 1
+        if t['v'] == '{': b += 1
+        if t['v'] == '}': b -= 1
+        if t['t'] == 'id' and t['v'] == 'while' and p == 0 and b >= 4 and (i == 0 or toks[i-1]['v'] != '}'):
+            a = fresh(used); r = random.randint(1, 0xfe); u = random.randint(1, 0xfe)
+            out.extend([tok('id','var'), tok('id',a), tok('op','='), tok('pun','('), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',';')])
+        out.append(t); i += 1
+    return out
+
+def tuck(toks, used):
+    out = []; i = 0; p = 0; b = 0
+    while i < len(toks):
+        t = toks[i]
+        if t['v'] in ('(','['): p += 1
+        if t['v'] in (')',']'): p -= 1
+        if t['v'] == '{': b += 1
+        if t['v'] == '}': b -= 1
+        out.append(t)
+        if t['v'] == '{' and p == 0 and b >= 4 and i >= 1 and toks[i-1]['v'] == 'else':
+            a = fresh(used); r = random.randint(1, 0xfe); u = random.randint(1, 0xfe)
+            out.extend([tok('id','var'), tok('id',a), tok('op','='), tok('pun','('), tok('num',hex(r)), tok('op','|'), tok('num',hex(u)), tok('pun',')'), tok('pun',';')])
+        i += 1
+    return out
+
+def leap(toks, used):
+    out = []; i = 0
+    while i < len(toks):
+        t = toks[i]
+        if t['t'] == 'num':
+            try:
+                v = t['v']
+                if not (v.endswith('n') or '.' in v or 'e' in v.lower()):
+                    n = int(v, 0)
+                    if 1 <= n <= 255:
+                        if i > 0 and toks[i-1]['v'] not in ('(', '[', ',', ':'):
+                            a = fresh(used)
+                            expr = ('(function(){var ' + a + '=' + hex(n) + ';return ' + a + ';}())')
+                            out.extend(scan(expr))
+                            i += 1
+                            continue
+            except: pass
+        out.append(t); i += 1
     return out
 
 def read(path):
