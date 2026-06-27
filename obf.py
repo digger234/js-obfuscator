@@ -1,4 +1,4 @@
-import re, random, sys, os
+import re, random, sys, os, ast
 from itertools import cycle
 
 def tok(t, v): return {'t': t, 'v': v}
@@ -172,13 +172,19 @@ def raw(s):
     try:
         q = s[0]
         if q not in ('"', "'"): return None
-        r = s[1:-1].encode('raw_unicode_escape').decode('unicode_escape')
-        return r if all(ord(c) < 128 for c in r) else None
-    except: return None
+        return ast.literal_eval(s)
+    except:
+        try: return s[1:-1]
+        except: return None
 
 def enc(s, k):
+    if isinstance(s, str):
+        b = s.encode('utf-16-le')
+        u = [b[i] + (b[i+1] << 8) for i in range(0, len(b), 2)]
+    else:
+        u = s
     q = (k * 31 + 7) & 0x7f
-    return ''.join(chr(ord(c) ^ ((k+i)&0x7f) ^ ((q+i*3)&0x7f)) for i,c in enumerate(s))
+    return ''.join(chr(c ^ ((k+i)&0x7f) ^ ((q+i*3)&0x7f)) for i, c in enumerate(u))
 
 def roll(s, k):
     r = (k ^ 0x5a) & 0x7f; q = (k * 17 + 3) & 0x7f; out = []
@@ -355,6 +361,7 @@ def chop(toks):
 
 def machine(stmts, used):
     if not stmts: return []
+    if len(stmts) < 3 or len(stmts) > 100: return None
     key = random.randint(0x1000, 0x9fff)
     states = []
     while len(states) < len(stmts)+2:
@@ -1266,19 +1273,30 @@ def chain(toks, d, idx, used=None):
     return out
 
 def lit(toks):
-    out = []
-    for t in toks:
+    out = []; i = 0
+    while i < len(toks):
+        t = toks[i]
         if t['t'] == 'str':
             r = raw(t['v'])
-            if r and len(r) >= 2 and all(ord(c) < 128 for c in r):
-                k = random.randint(1, 0x3f)
-                enc = [ord(c)^k for c in r]
+            if r is not None and len(r) >= 1:
+                if r == 'use strict':
+                    out.append(t); i += 1; continue
+                if i+1 < len(toks) and toks[i+1]['v'] == ':':
+                    if i > 0 and toks[i-1]['v'] != '?':
+                        out.append(t); i += 1; continue
+                if i > 0 and toks[i-1]['v'] == 'from':
+                    out.append(t); i += 1; continue
+                k = random.randint(1, 0xffff)
+                b = r.encode('utf-16-le')
+                u = [b[i] + (b[i+1] << 8) for i in range(0, len(b), 2)]
+                enc = [c^k for c in u]
                 v = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-                code = ('(' + chars('fromCharCode') + ')' if False else
-                        '(function(){var ' + v + '=[' + ','.join(str(x) for x in enc) + '];return ' + v +
+                code = ('(function(){var ' + v + '=[' + ','.join(str(x) for x in enc) + '];return ' + v +
                         '.map(function(c){return String.fromCharCode(c^' + str(k) + ');}).join(\'\');}())')
-                out.extend(scan(code)); continue
-        out.append(t)
+                out.extend(scan(code))
+                i += 1
+                continue
+        out.append(t); i += 1
     return out
 
 def encode(toks):
@@ -1317,7 +1335,7 @@ def probe():
 
 def snare():
     d = chars('debugger')
-    return ('(function(){var t=Date.now(),f=function(){(new Function(' + d + '))();if(Date.now()-t>600)throw new Error();t=Date.now();};f();var timer=setInterval(f,500);if(timer&&timer.unref)timer.unref();}());')
+    return ('(function(){var t=Date.now(),f=function(){(new Function(' + d + '))();if(Date.now()-t>15000)throw new Error();t=Date.now();};f();var timer=setInterval(f,500);if(timer&&timer.unref)timer.unref();}());')
 
 def guard():
     mark = val('[native code]')
@@ -1340,7 +1358,7 @@ def tamper():
     t = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
     u = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
     d = chars('debugger')
-    return ('(function(){var ' + s + '=Date.now();var ' + t + '=function(){return Date.now()-' + s + ';};var ' + u + '=new Function(' + d + ');try{' + u + '();}catch(e){}if(' + t + '()>800)throw new Error();}());')
+    return ('(function(){var ' + s + '=Date.now();var ' + t + '=function(){return Date.now()-' + s + ';};var ' + u + '=new Function(' + d + ');try{' + u + '();}catch(e){}if(' + t + '()>15000)throw new Error();}());')
 
 def block():
     type = chars('function'); cx = chars('clear')
@@ -1353,7 +1371,7 @@ def dom():
 def timing():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    return ('(function(){var ' + s + '=Date.now();for(var ' + t + '=(0x0|0x0);' + t + '<(0x186a0|0x0);' + t + '++);if(Date.now()-' + s + '>800)throw new Error();}());')
+    return ('(function(){var ' + s + '=Date.now();for(var ' + t + '=(0x0|0x0);' + t + '<(0x186a0|0x0);' + t + '++);if(Date.now()-' + s + '>15000)throw new Error();}());')
 
 def hooks():
     name = chars('name')
@@ -1444,7 +1462,7 @@ def haze():
 def bench():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    return ('(function(){try{var ' + s + '=Date.now();for(var ' + t + '=(0x0|0x0);' + t + '<(0x3e8|0x0);' + t + '++)(0x1|0x0);if(Date.now()-' + s + '>2000)throw new Error();}catch(e){}}());')
+    return ('(function(){try{var ' + s + '=Date.now();for(var ' + t + '=(0x0|0x0);' + t + '<(0x3e8|0x0);' + t + '++)(0x1|0x0);if(Date.now()-' + s + '>15000)throw new Error();}catch(e){}}());')
 
 def lock():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
@@ -1938,7 +1956,7 @@ def sough():
 def pant():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    return ('(function(){try{var ' + s + '=Date.now();for(var ' + t + '=0;' + t + '<1000;' + t + '++);if(Date.now()-' + s + '>500)throw new Error();}catch(e){}}());')
+    return ('(function(){try{var ' + s + '=Date.now();for(var ' + t + '=0;' + t + '<1000;' + t + '++);if(Date.now()-' + s + '>15000)throw new Error();}catch(e){}}());')
 
 def scream():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -2049,7 +2067,7 @@ def smear(toks, d, idx, used):
         if t['v'] == '}': b -= 1
         out.append(t)
         if t['v']==';' and p==0 and b>=4 and i+1<len(toks) and toks[i+1]['v'] not in skip and vals:
-            x = vals[0]
+            x = random.choice(vals)
             out.extend([tok('id','void'), tok('pun','('), tok('id',d), tok('pun','('), tok('num',str(x)), tok('pun',')'), tok('pun',')'), tok('pun',';')])
         i += 1
     return out
@@ -2495,10 +2513,11 @@ def wrap(toks, used):
             out.extend([tok('id','var'), tok('id',pn), tok('op','='),
                          tok('id','new'), tok('id','Proxy'), tok('pun','('), tok('id',nm), tok('pun',','), tok('pun','{'),
                          tok('id','apply'), tok('pun',':'), tok('id','function'), tok('pun','('), tok('id',h), tok('pun',','), tok('id',ctx), tok('pun',','), tok('id',ap), tok('pun',')'), tok('pun','{'),
-                         tok('id','return'), tok('id',h), tok('pun','.'), tok('id','apply'), tok('pun','('), tok('id',ctx), tok('pun',','), tok('id',ap), tok('pun',')'), tok('pun',';'),
-                         tok('pun','}'), tok('pun','}'), tok('pun',')'), tok('pun',';'),
-                         tok('id','if'), tok('pun','('), tok('id','typeof'), tok('id',pn), tok('op','!=='), tok('str','\'function\''), tok('pun',')'),
-                         tok('id','throw'), tok('id','new'), tok('id','Error'), tok('pun','('), tok('pun',')'), tok('pun',';')])
+                         tok('id','return'), tok('id','Reflect'), tok('pun','.'), tok('id','apply'), tok('pun','('), tok('id',h), tok('pun',','), tok('id',ctx), tok('pun',','), tok('id',ap), tok('pun',')'), tok('pun',';'),
+                         tok('pun','}'), tok('pun','}'), tok('pun',')'), tok('pun',';')])
+            out.extend([tok('id','if'), tok('pun','('), tok('id','typeof'), tok('id',pn), tok('op','!==')])
+            out.extend(scan(chars('function')))
+            out.extend([tok('pun',')'), tok('id','throw'), tok('id','new'), tok('id','Error'), tok('pun','('), tok('pun',')'), tok('pun',';')])
             continue
         out.append(t); i += 1
     return out
@@ -2708,8 +2727,10 @@ def obf(src):
     toks = scan(body)
     if toks:
         toks = tpl(toks)
+        toks = tpls(toks)
         used = set()
         toks = name(toks, used)
+        toks = hide(toks)
         toks = nums(toks)
         toks = bools(toks)
         toks, pool, keys, d, a, k, idx = cipher(toks)
@@ -2721,6 +2742,7 @@ def obf(src):
         toks, v, l, e, b, m, y = cipher(toks)
         size = dict(y)
         toks = chain(toks, e, size, used)
+        toks = lit(toks)
         used |= {t['v'] for t in toks if t['t'] == 'id' and t['v'].startswith('_0x')}
         if used:
             toks = chalk(toks, d, snap, used)
@@ -2785,7 +2807,11 @@ def obf(src):
         toks = route(toks, {g: 0, h: 1, shell: 2}, tab)
         vm = fresh(used)
         toks = run(toks, tab, vm)
+        toks = props(toks, d, snap)
+        toks = slots(toks)
+        toks = hide(toks)
         toks = lit(toks)
+        toks = math(toks)
         toks = noop(used) + toks
         toks = press(toks)
         toks = encode(toks)
@@ -2800,8 +2826,18 @@ def obf(src):
         part = 'var ' + arr + '=[' + ','.join('"'+s+'"' for s in lure) + '];var ' + seed + '=[' + ','.join(str(random.randint(1,62)) for _ in range(3)) + '];'
         call = decoy(fn, arr, seed)
         anchor = 'if(false){GM_xmlhttpRequest({});' + fn + '(0x0);}'
-        text = emit(math(scan(prot())))
-        return header + anchor + part + call + work + r + q + j + u + c + f + proxy + x + text + code
+        text = emit(math(lit(hide(scan(prot())))))
+        iife = part + call + work + r + q + j + u + c + f + proxy + x + text
+        iife += ('var glob=typeof globalThis!=="undefined"?globalThis:'
+                 'typeof window!=="undefined"?window:'
+                 'typeof global!=="undefined"?global:this;'
+                 'glob["' + d + '"]=' + d + ';glob["' + e + '"]=' + e + ';'
+                 'glob["' + tab + '"]=' + tab + ';')
+        wrapper = '(function(){' + iife + '}());'
+        declarations = ('var ' + d + '=globalThis["' + d + '"],'
+                        + e + '=globalThis["' + e + '"],'
+                        + tab + '=globalThis["' + tab + '"];')
+        return header + anchor + wrapper + declarations + code
     return src
 
 
@@ -2833,7 +2869,7 @@ def math(toks):
                 n = int(v, 0)
                 if 2 <= n <= 0xffff:
                     a = random.randint(1, 0xff); b = random.randint(1, 0xff)
-                    expr = '(((' + hex(n^a) + '^' + hex(a) + ')^' + hex(b) + ')^' + hex(b) + ')'
+                    expr = '(((' + hex(n^a) + '+0x2*' + hex(n&a) + '-' + hex(a) + ')^' + hex(b) + ')^' + hex(b) + ')'
                     out.extend(scan(expr)); continue
             except: pass
             out.append(t)
@@ -3034,6 +3070,118 @@ def leap(toks, used):
                             continue
             except: pass
         out.append(t); i += 1
+    return out
+
+def hide(toks):
+    gobs = {
+        'document', 'window', 'console', 'String', 'Math', 'Number', 'Boolean', 
+        'Date', 'RegExp', 'Error', 'Promise', 'Map', 'Set', 'WeakMap', 'WeakSet', 
+        'Proxy', 'Reflect', 'Symbol', 'navigator', 'performance', 'setTimeout', 
+        'setInterval', 'clearTimeout', 'clearInterval', 'parseInt', 'parseFloat', 
+        'isNaN', 'isFinite', 'encodeURIComponent', 'decodeURIComponent', 'JSON', 
+        'Array', 'Object', 'Function', 'localStorage', 'sessionStorage', 'location', 
+        'history', 'fetch', 'XMLHttpRequest', 'alert'
+    }
+    out = []; i = 0
+    while i < len(toks):
+        t = toks[i]
+        prop = False
+        if i > 0 and toks[i-1]['v'] == '.':
+            prop = True
+        if i+1 < len(toks) and toks[i+1]['v'] == ':':
+            if i > 0 and toks[i-1]['v'] != '?':
+                prop = True
+        if t['t'] == 'id' and t['v'] in gobs and not prop:
+            out.extend([
+                tok('id', 'globalThis'),
+                tok('pun', '['),
+                tok('str', '"' + t['v'] + '"'),
+                tok('pun', ']')
+            ])
+        else:
+            out.append(t)
+        i += 1
+    return out
+
+def slots(toks):
+    out = []
+    stack = []
+    i = 0
+    while i < len(toks):
+        t = toks[i]
+        if t['v'] == '{':
+            obj = False
+            if i > 0:
+                prev = toks[i-1]['v']
+                if prev in ('=', '+', '-', '*', '/', '%', '^', '&', '|', '&&', '||', '?', ':', ',', '(', '[', 'return', 'throw', 'yield', 'await'):
+                    obj = True
+            stack.append(obj)
+            out.append(t)
+        elif t['v'] == '}':
+            if stack: stack.pop()
+            out.append(t)
+        else:
+            if len(stack) > 0 and stack[-1] and i+1 < len(toks) and toks[i+1]['v'] == ':':
+                if t['t'] == 'id':
+                    out.extend([
+                        tok('pun', '['),
+                        tok('str', '"' + t['v'] + '"'),
+                        tok('pun', ']')
+                    ])
+                else:
+                    out.append(t)
+            else:
+                out.append(t)
+        i += 1
+    return out
+
+def cut(s):
+    content = s[1:-1]
+    i = 0; n = len(content); start = 0
+    parts = []
+    while i < n:
+        if content[i:i+2] == '${':
+            if i > start:
+                parts.append(('str', content[start:i]))
+            j = i + 2; depth = 1
+            while j < n and depth > 0:
+                c = content[j]
+                if c == '{':
+                    depth += 1; j += 1
+                elif c == '}':
+                    depth -= 1; j += 1
+                elif c in ('"', "'", '`'):
+                    q = c; j += 1
+                    while j < n:
+                        if content[j] == '\\': j += 2
+                        elif content[j] == q: j += 1; break
+                        else: j += 1
+                else:
+                    j += 1
+            parts.append(('expr', content[i+2:j-1]))
+            i = j; start = i
+        else:
+            i += 1
+    if start < n:
+        parts.append(('str', content[start:]))
+    result = []
+    for idx, (kind, item) in enumerate(parts):
+        if kind == 'str':
+            escaped = item.replace('\\', '\\\\').replace('"', '\\"').replace('\n', '\\n').replace('\r', '\\r')
+            result.append(tok('str', '"' + escaped + '"'))
+        elif kind == 'expr':
+            result.extend(scan(item))
+        if idx < len(parts) - 1:
+            result.append(tok('op', '+'))
+    return result
+
+def tpls(toks):
+    out = []
+    for t in toks:
+        if t['t'] == 'tpl':
+            out.extend(cut(t['v']))
+        else:
+            out.append(t)
     return out
 
 def read(path):
