@@ -731,7 +731,7 @@ def dray(used):
             tok('id',e), tok('op','='), tok('pun','~'), tok('pun','('), tok('id',d), tok('op','+'), tok('num','0x1'), tok('pun',')'), tok('op','+'), tok('id',d), tok('op','+'), tok('num','0x1'), tok('pun',','),
             tok('id',f), tok('op','='), tok('pun','('), tok('id',e), tok('op','*'), tok('num','0x1'), tok('op','+'), tok('num','0x0'), tok('pun',')'), tok('op','&'), tok('num','0x0'), tok('pun',';')]
 
-bank = [dead, ghost, hush, flux, echo, knot, tinge, glaze, hooke, kane, shine, quirk, wisp, surge, blip, hatch, snarl, grit, rack, coil, rune, pike, lure, molt, weld, fend, sway, hulk, bray, dray]
+bank = [dead, ghost, hush, flux, echo, knot, tinge, glaze, hooke, kane, shine, quirk, wisp, surge, blip, hatch, snarl, grit, rack, coil, rune, meld, pike, lure, molt, weld, fend, sway, hulk, bray, dray]
 
 def fill(toks, used):
     out = []; i = 0; p = 0; b = 0; seq = cycle(bank)
@@ -1005,7 +1005,7 @@ def mask(toks):
         out.append(t); i += 1
     return out
 
-def chain(toks, d, idx):
+def chain(toks, d, idx, used=None):
     out = []; i = 0; vals = list(idx.values())
     while i < len(toks):
         t = toks[i]
@@ -1015,8 +1015,15 @@ def chain(toks, d, idx):
                 alt = [v for v in vals if v != n]
                 if alt:
                     x = alt[0]
-                    out.extend([tok('pun','('), tok('id',d), tok('pun','('), tok('num',str(x)), tok('pun',')'),
-                                 tok('op',','), tok('id',d), tok('pun','('), tok('num',str(n)), tok('pun',')'), tok('pun',')')])
+                    if used is not None:
+                        v = fresh(used)
+                        out.extend([tok('pun','('), tok('pun','('), tok('id','function'), tok('pun','('), tok('pun',')'), tok('pun','{'),
+                                    tok('id','var'), tok('id',v), tok('op','='), tok('id',d), tok('pun','('), tok('num',str(x)), tok('pun',')'), tok('pun',';'),
+                                    tok('id','return'), tok('id',d), tok('pun','('), tok('num',str(n)), tok('pun',')'), tok('pun',';'),
+                                    tok('pun','}'), tok('pun','('), tok('pun',')'), tok('pun',')'), tok('pun',')')])
+                    else:
+                        out.extend([tok('pun','('), tok('id',d), tok('pun','('), tok('num',str(x)), tok('pun',')'),
+                                    tok('op',','), tok('id',d), tok('pun','('), tok('num',str(n)), tok('pun',')'), tok('pun',')')])
                     i += 4; continue
             except: pass
         out.append(t); i += 1
@@ -1086,8 +1093,8 @@ def cage():
 
 def save():
     f = hex((0x7a|0x1)^0x2); c = hex(0x40|0x9); g = hex(0x40|0xa); h = hex(0x50|0x15)
-    evk = chars('keydown')
-    return ('(function(){document.addEventListener(' + evk + ',function(e){if(e.keyCode===' + f + '||(e.ctrlKey&&e.shiftKey&&(e.keyCode===' + c + '||e.keyCode===' + g + '))||(e.ctrlKey&&e.keyCode===' + h + ')){e.preventDefault();e.stopPropagation();}});}());')
+    key = chars('keydown')
+    return ('(function(){document.addEventListener(' + key + ',function(e){if(e.keyCode===' + f + '||(e.ctrlKey&&e.shiftKey&&(e.keyCode===' + c + '||e.keyCode===' + g + '))||(e.ctrlKey&&e.keyCode===' + h + ')){e.preventDefault();e.stopPropagation();}});}());')
 
 def leak():
     return ('(function(){var r=function(){try{r();}catch(e){var a=[];for(var i=(0x0|0x0);i<(0x2000|0x710);i++)a.push(i);}};try{r();}catch(e){}}());')
@@ -1235,8 +1242,8 @@ def ridge():
 
 def veil():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    name = chars('named'); nk = chars('name')
-    return ('(function(){try{var ' + s + '=(function named(){}).name;if(' + s + '!==' + name + ')throw new Error();}catch(e){}}());')
+    name = chars('named'); prop = chars('name')
+    return ('(function(){try{var ' + s + '=(function named(){})[' + prop + '];if(' + s + '!==' + name + ')throw new Error();}catch(e){}}());')
 
 def smelt():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -1285,7 +1292,7 @@ def stealth():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
     pat = val('^([^ ]+( +[^ ]+)+)+[^ ]}')
-    return ('(function(){try{var ' + s + '=new RegExp(' + pat + ');' + s + '[' + chars('constructor') + '](' + chars('') + ');throw new Error();}catch(e){if(e instanceof TypeError)return;throw new Error();}}());')
+    return ('(function(){try{var ' + t + '=new RegExp(' + pat + ');var ' + s + '=' + t + '[' + chars('constructor') + '](' + chars('') + ');throw new Error();}catch(e){if(e instanceof TypeError)return;throw new Error();}}());')
 
 def burn():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
@@ -1294,9 +1301,9 @@ def burn():
 
 def bane():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
-    cxs = chars('cookieEnabled'); nav = chars('navigator')
+    cook = chars('cookieEnabled'); nav = chars('navigator')
     bool = val('boolean')
-    return ('(function(){try{var ' + s + '=typeof navigator!==' + chars('undefined') + '?navigator:{};if(typeof ' + s + '[' + cxs + ']!==' + bool + ')throw new Error();}catch(e){}}());')
+    return ('(function(){try{var ' + s + '=typeof globalThis[' + nav + ']!==' + chars('undefined') + '?globalThis[' + nav + ']:{};if(typeof ' + s + '[' + cook + ']!==' + bool + ')throw new Error();}catch(e){}}());')
 
 def mire():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
@@ -1305,8 +1312,8 @@ def mire():
 
 def yoke():
     s = '_0x' + hex(random.randint(0xaaaa, 0xffff))[2:]
-    nav = chars('navigator'); plt = chars('platform'); wbd = chars('webdriver')
-    return ('(function(){try{var ' + s + '=typeof ' + nav + '!==' + chars('undefined') + '?' + nav + '[' + plt + ']:null;}catch(e){}}());')
+    nav = chars('navigator'); plat = chars('platform'); web = chars('webdriver')
+    return ('(function(){try{var ' + s + '=typeof globalThis[' + nav + ']!==' + chars('undefined') + '?(globalThis[' + nav + '][' + plat + ']||globalThis[' + nav + '][' + web + ']):null;}catch(e){}}());')
 
 def tang():
     s = '_0x' + hex(random.randint(0xaaaa,0xffff))[2:]
@@ -1340,7 +1347,7 @@ def crown():
 def rivet():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    return ('(function(){try{var ' + s + '=(0xffffffff>>>0x0);if(' + s + '!==(0xffffffff|0x0))throw new Error();}catch(e){}}());')
+    return ('(function(){try{var ' + t + '=(0xffffffff>>>0x0);var ' + s + '=' + t + ';if(' + s + '!==(0xffffffff|0x0))throw new Error();}catch(e){}}());')
 
 def quill():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -1512,8 +1519,8 @@ def reap(toks, used):
 def abuf():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    bf = chars('buffer'); bl = chars('byteLength')
-    return ('(function(){try{var ' + s + '=new ArrayBuffer((0x8|0x0));if(' + s + '[' + bl + ']!==(0x8|0x0))throw new Error();}catch(e){}}());')
+    buf = chars('buffer'); size = chars('byteLength')
+    return ('(function(){try{var ' + s + '=new ArrayBuffer((0x8|0x0));var ' + t + '=new Uint8Array(' + s + ');if(' + t + '[' + buf + '][' + size + ']!==(0x8|0x0))throw new Error();}catch(e){}}());')
 
 def volt():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -1523,13 +1530,13 @@ def volt():
 def wire():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    gc = chars('groupCollapsed')
-    return ('(function(){try{var ' + s + '=typeof console[' + gc + '];if(' + s + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+    group = chars('groupCollapsed')
+    return ('(function(){try{var ' + t + '=typeof console[' + group + '];var ' + s + '=' + t + ';if(' + s + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
 
 def mote():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    qm = chars('queueMicrotask')
-    return ('(function(){try{if(typeof ' + qm + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+    task = chars('queueMicrotask')
+    return ('(function(){try{var ' + s + '=typeof globalThis[' + task + '];if(' + s + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
 
 def burl():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -1558,18 +1565,18 @@ def gust():
 
 def harp():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    tc = chars('toSorted')
-    return ('(function(){try{if(typeof [1,3,2][' + tc + ']!=='+chars('function')+')throw new Error();}catch(e){}}());')
+    sort = chars('toSorted')
+    return ('(function(){try{var ' + s + '=typeof [1,3,2][' + sort + '];if(' + s + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
 
 def itch():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    tr = chars('toReversed')
-    return ('(function(){try{if(typeof [1,2,3][' + tr + ']!=='+chars('function')+')throw new Error();}catch(e){}}());')
+    rev = chars('toReversed')
+    return ('(function(){try{var ' + s + '=typeof [1,2,3][' + rev + '];if(' + s + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
 
 def jest():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    wt = chars('with')
-    return ('(function(){try{if(typeof [1,2,3][' + wt + ']!=='+chars('function')+')throw new Error();}catch(e){}}());')
+    wth = chars('with')
+    return ('(function(){try{var ' + s + '=typeof [1,2,3][' + wth + '];if(' + s + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
 
 def kink():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -1625,8 +1632,8 @@ def geld():
 def raft():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    fc = chars('filter'); lc = chars('length')
-    return ('(function(){try{var ' + s + '=[1,2,3,4,5][' + fc + '](function(x){return x%2===0;});if(' + s + '[' + lc + ']!==(0x2|0x0))throw new Error();}catch(e){}}());')
+    select = chars('filter'); size = chars('length')
+    return ('(function(){try{var ' + s + '=[1,2,3,4,5][' + select + '](function(x){return x%2===0;});var ' + t + '=' + s + '[' + size + '];if(' + t + '!==(0x2|0x0))throw new Error();}catch(e){}}());')
 
 def apex():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -1649,20 +1656,20 @@ def wmap():
 def dawn():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    nc = chars('now')
-    return ('(function(){try{var ' + s + '=typeof Date[' + nc + '];if(' + s + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+    now = chars('now')
+    return ('(function(){try{var ' + t + '=typeof Date[' + now + '];var ' + s + '=' + t + ';if(' + s + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
 
 def dusk():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    ac = chars('assign')
-    return ('(function(){try{var ' + s + '=Object[' + ac + ']({},{a:1,b:2});if(' + s + '.a!==(0x1|0x0)||' + s + '.b!==(0x2|0x0))throw new Error();}catch(e){}}());')
+    assign = chars('assign')
+    return ('(function(){try{var ' + s + '=Object[' + assign + ']({},{a:1,b:2});var ' + t + '=' + s + '.a;if(' + t + '!==(0x1|0x0)||' + s + '.b!==(0x2|0x0))throw new Error();}catch(e){}}());')
 
 def eve():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    ec = chars('every')
-    return ('(function(){try{var ' + s + '=[2,4,6][' + ec + '](function(x){return x%2===0;});if(!' + s + ')throw new Error();}catch(e){}}());')
+    every = chars('every')
+    return ('(function(){try{var ' + s + '=[2,4,6][' + every + '](function(x){return x%2===0;});var ' + t + '=' + s + ';if(!' + t + ')throw new Error();}catch(e){}}());')
 
 def prot():
     traps = [probe(),snare(),guard(),cage(),leak(),save(),tamper(),block(),dom(),timing(),hooks(),detect(),watch(),frame(),net(),crypt(),loop(),seal(),drift(),score(),pixel(),flare(),pulse(),spark(),trace(),glow(),frost(),haze(),burn(),stealth(),bench(),lock(),shield(),vault(),spike(),glint(),ridge(),veil(),smelt(),crimp(),smog(),blaze(),draft(),shard(),flint(),loom(),bane(),mire(),yoke(),tang(),jade(),pith(),raze(),snag(),damp(),warp(),seep(),blot(),comet(),orbit(),reek(),ember(),sinew(),knell(),sieve(),crux(),gripe(),notch(),troth(),scour(),prong(),girth(),whirl(),wrack(),spall(),breve(),grove(),crown(),rivet(),quill(),chisel(),sling(),stave(),keel(),gale(),tarn(),furl(),dune(),rook(),mast(),brim(),knap(),gill(),dais(),celt(),swag(),pave(),lisp(),welt(),fizz(),tump(),luff(),bulb(),fawn(),nave(),spur(),limb(),twig(),abuf(),volt(),wire(),mote(),burl(),cult(),dolt(),fret(),gust(),harp(),itch(),jest(),kink(),lank(),form(),rind(),serf(),toll(),prow(),dart(),wren(),geld(),raft(),apex(),bask(),wmap(),dawn(),dusk(),eve()]
@@ -1751,23 +1758,6 @@ def tame(toks):
         out.append(t); i += 1
     return out
 
-def lash(toks, d, idx, used):
-    out = []; i = 0; vals = list(idx.values())
-    while i < len(toks):
-        t = toks[i]
-        if t['t'] == 'id' and t['v'] == d and i+3 < len(toks) and toks[i+1]['v'] == '(' and toks[i+2]['t'] == 'num' and toks[i+3]['v'] == ')':
-            try:
-                n = int(toks[i+2]['v'], 0)
-                alt = [v for v in vals if v != n]
-                if alt:
-                    x = alt[0]
-                    out.extend([tok('pun','('), tok('id',d), tok('pun','('), tok('num',str(x)), tok('pun',')'),
-                                tok('op',','), tok('id',d), tok('pun','('), tok('num',str(n)), tok('pun',')'), tok('pun',')')])
-                    i += 4; continue
-            except: pass
-        out.append(t); i += 1
-    return out
-
 def build(pool, keys, a, k):
     if not pool:
         return 'var ' + a + '=[];var ' + k + '=[];'
@@ -1818,7 +1808,7 @@ def forge(name):
             '}'
             'return ' + stk + '.pop();}')
 
-def run(toks, d, vmn):
+def run(toks, d, vm):
     out = []; i = 0
     while i < len(toks):
         t = toks[i]
@@ -1841,8 +1831,8 @@ def raze():
 def snag():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    nln = chars('\n')
-    return ('(function(){try{var ' + s + '=new Error().stack||' + chars('') + ';var ' + t + '=' + s + '.split(' + nln + ').length;if(' + t + '>(' + hex(10) + '|0x0))throw new Error();}catch(e){}}());')
+    feed = chars('\n')
+    return ('(function(){try{var ' + s + '=new Error().stack||' + chars('') + ';var ' + t + '=' + s + '.split(' + feed + ').length;if(' + t + '>(' + hex(10) + '|0x0))throw new Error();}catch(e){}}());')
 
 def damp():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -1950,12 +1940,12 @@ def decoy(d, a, k):
 def comet():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    return ('(function(){try{var ' + s + '=typeof Proxy;if(' + s + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+    return ('(function(){try{var ' + t + '=typeof Proxy;var ' + s + '=' + t + ';if(' + s + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
 
 def orbit():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    return ('(function(){try{var ' + s + '=typeof Map;if(' + s + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+    return ('(function(){try{var ' + t + '=typeof Map;var ' + s + '=' + t + ';if(' + s + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
 
 def reek():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -1994,7 +1984,7 @@ def gripe():
 def notch():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    return ('(function(){try{var ' + s + '=new Set([(0x1|0x0),(0x2|0x0),(0x1|0x0)]);if(' + s + '.size!==(0x2|0x0))throw new Error();}catch(e){}}());')
+    return ('(function(){try{var ' + s + '=new Set([(0x1|0x0),(0x2|0x0),(0x1|0x0)]);var ' + t + '=' + s + '.size;if(' + t + '!==(0x2|0x0))throw new Error();}catch(e){}}());')
 
 def troth():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -2004,8 +1994,8 @@ def troth():
 
 def scour():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    r = chars('replace'); x = val('\\x20')
-    return ('(function(){try{var ' + s + '=' + chars('a b') + '[' + r + '](/ /g,' + chars('_') + ');if(' + s + '!=='+chars('a_b')+')throw new Error();}catch(e){}}());')
+    replace = chars('replace'); space = val(' ')
+    return ('(function(){try{var ' + s + '=' + chars('a b') + '[' + replace + '](new RegExp(' + space + ',"g"),' + chars('_') + ');if(' + s + '!=='+chars('a_b')+')throw new Error();}catch(e){}}());')
 
 def prong():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -2024,8 +2014,8 @@ def whirl():
 def wrack():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
     t = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
-    bind = chars('bind'); cl = chars('call')
-    return ('(function(){try{var ' + s + '=function(){};var ' + t + '=' + s + '[' + bind + ']({});if(typeof ' + t + '!=='+chars('function')+')throw new Error();}catch(e){}}());')
+    bind = chars('bind'); call = chars('call')
+    return ('(function(){try{var ' + s + '=function(){};var ' + t + '=' + s + '[' + bind + ']({});if(typeof ' + t + '[' + call + ']!==' + chars('function') + ')throw new Error();}catch(e){}}());')
 
 def spall():
     s = '_0x'+hex(random.randint(0xaaaa,0xffff))[2:]
@@ -2188,7 +2178,9 @@ def wrap(toks, used):
                          tok('id','new'), tok('id','Proxy'), tok('pun','('), tok('id',nm), tok('pun',','), tok('pun','{'),
                          tok('id','apply'), tok('pun',':'), tok('id','function'), tok('pun','('), tok('id',h), tok('pun',','), tok('id',ctx), tok('pun',','), tok('id',ap), tok('pun',')'), tok('pun','{'),
                          tok('id','return'), tok('id',h), tok('pun','.'), tok('id','apply'), tok('pun','('), tok('id',ctx), tok('pun',','), tok('id',ap), tok('pun',')'), tok('pun',';'),
-                         tok('pun','}'), tok('pun','}'), tok('pun',')'), tok('pun',';')])
+                         tok('pun','}'), tok('pun','}'), tok('pun',')'), tok('pun',';'),
+                         tok('id','if'), tok('pun','('), tok('id','typeof'), tok('id',pn), tok('op','!=='), tok('str','\'function\''), tok('pun',')'),
+                         tok('id','throw'), tok('id','new'), tok('id','Error'), tok('pun','('), tok('pun',')'), tok('pun',';')])
             continue
         out.append(t); i += 1
     return out
@@ -2246,7 +2238,7 @@ def drip(toks, used):
                 r = random.randint(1,0xfe); u = random.randint(1,0xfe); w = random.randint(1,0xfe)
                 out.extend([tok('id','var'), tok('id',a), tok('op','='), tok('pun','('), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',','),
                              tok('id',c), tok('op','='), tok('pun','('), tok('id',a), tok('op','&'), tok('num','0x0'), tok('pun',')'), tok('op','|'), tok('id',a), tok('pun',','),
-                             tok('id',d), tok('op','='), tok('pun','~'), tok('id',c), tok('op','+'), tok('num','0x1'), tok('op','+'), tok('id',c), tok('pun',';')])
+                             tok('id',d), tok('op','='), tok('pun','~'), tok('id',c), tok('op','+'), tok('num','0x1'), tok('op','+'), tok('id',c), tok('op','+'), tok('pun','('), tok('num',hex(w)), tok('op','^'), tok('num',hex(w)), tok('pun',')'), tok('pun',';')])
         i += 1
     return out
 
@@ -2265,7 +2257,7 @@ def twin(toks, used):
                 and toks[i+4]['v'] == ';'):
             nm = toks[i+1]['v']; val = toks[i+3]['v']
             a = fresh(used); r = random.randint(1,0xfe)
-            out.extend([tok('id',a), tok('op','='), tok('pun','('), tok('id',nm), tok('op','^'), tok('num',hex(r^r)), tok('pun',')'), tok('op','^'), tok('num',hex(r^r)), tok('pun',',')])
+            out.extend([tok('id',a), tok('op','='), tok('id',nm), tok('op','^'), tok('pun','('), tok('num',val), tok('op','^'), tok('num',val), tok('pun',')'), tok('pun',',')])
         i += 1
     return out
 
@@ -2285,7 +2277,7 @@ def sift(toks, used):
             out.extend([tok('pun',':'), tok('id','var'), tok('id',a), tok('op','='), tok('pun','('), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',')'), tok('pun',','),
                         tok('id',c), tok('op','='), tok('pun','('), tok('id',a), tok('op','>>'), tok('num','0x0'), tok('pun',')'), tok('op','|'), tok('num','0x0'), tok('pun',','),
                         tok('id',d), tok('op','='), tok('id',c), tok('op','^'), tok('id',a), tok('op','&'), tok('num','0x0'), tok('pun',','),
-                        tok('id',e), tok('op','='), tok('pun','~'), tok('id',d), tok('op','+'), tok('num','0x1'), tok('op','+'), tok('id',d), tok('pun',';')])
+                        tok('id',e), tok('op','='), tok('pun','~'), tok('id',d), tok('op','+'), tok('num','0x1'), tok('op','+'), tok('id',d), tok('op','+'), tok('pun','('), tok('num',hex(w)), tok('op','^'), tok('num',hex(w)), tok('pun',')'), tok('pun',';')])
             i += 2; continue
         i += 1
     return out
@@ -2307,7 +2299,7 @@ def limn(toks, used):
             out.extend([tok('id','void'), tok('pun','('), tok('id','function'), tok('pun','('), tok('pun',')'), tok('pun','{'),
                         tok('id','var'), tok('id',a), tok('op','='), tok('num',hex(r^u)), tok('op','^'), tok('num',hex(u)), tok('pun',','),
                         tok('id',c), tok('op','='), tok('pun','('), tok('id',a), tok('op','&'), tok('num','0x0'), tok('pun',')'), tok('op','^'), tok('id',a), tok('pun',','),
-                        tok('id',d), tok('op','='), tok('pun','~'), tok('id',c), tok('op','+'), tok('num','0x1'), tok('op','+'), tok('id',c), tok('pun',','),
+                        tok('id',d), tok('op','='), tok('pun','~'), tok('id',c), tok('op','+'), tok('num','0x1'), tok('op','+'), tok('id',c), tok('op','+'), tok('pun','('), tok('num',hex(w)), tok('op','^'), tok('num',hex(w)), tok('pun',')'), tok('pun',','),
                         tok('id',e), tok('op','='), tok('id',d), tok('op','*'), tok('num','0x1'), tok('op','&'), tok('num','0x0'), tok('pun',';'),
                         tok('id','return'), tok('id',e), tok('op','&'), tok('num','0x0'), tok('pun',';'),
                         tok('pun','}'), tok('pun','('), tok('pun',')'), tok('pun',')'), tok('pun',';')])
@@ -2410,8 +2402,7 @@ def obf(src):
         toks = tame(toks)
         toks, v, l, e, b, m, y = cipher(toks)
         size = dict(y)
-        toks = chain(toks, e, size)
-        toks = lash(toks, e, size, set())
+        toks = chain(toks, e, size, used)
         used |= {t['v'] for t in toks if t['t'] == 'id' and t['v'].startswith('_0x')}
         if used:
             toks = chalk(toks, d, snap, used)
@@ -2426,6 +2417,11 @@ def obf(src):
             toks = morph(toks, used)
             toks = cloak(toks, used)
             toks = lodge(toks, used)
+            toks = drip(toks, used)
+            toks = twin(toks, used)
+            toks = sift(toks, used)
+            toks = limn(toks, used)
+            toks = vex(toks, used)
             if len(toks):
                 toks = fill(toks, used)
                 toks = inflate(toks, used)
