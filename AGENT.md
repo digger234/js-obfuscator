@@ -1,7 +1,3 @@
----
-trigger: always_on
----
-
 # QUY TẮC BẮT BUỘC
 
 1. **KHÔNG thêm comments**
@@ -15,6 +11,6 @@ trigger: always_on
 9. **Xóa file temp** - Khi chỉnh sửa xong phải xóa file temp
 10. **KHÔNG tự ý hành động** - Mọi thứ phải qua ý user
 11. **CẤM random làm yếu tool** - Không được viết kiểu tỉ lệ %, lúc có lúc không, tất cả mọi thứ phải được gộp lại và sử dụng, không được có tỉ lệ
-12. **KHÔNG chạy python** - Dùng path C:/Users/XZ/AppData/Local/Python/pythoncore-3.12-64/python.exe thay vì python vì environment của user đang bị trục trặc
+12. **LUÔN chạy test** - Sau khi kết thúc edit hoặc bất kì chỉnh sửa nào liên quan đến obf.js đều phải obfuscate lại file test.js
 13. **Cách xử lý khi có unused/duplicate functions** - Nếu có unused thì hãy tận dụng triệt để tất cả hàm unused đó, chỉ được xóa khi hàm đó không thể tận dụng vào đâu khác. Nếu có hàm duplicate thì hãy gộp những hàm duplicate lại, "gộp" không phải "chọn" cái mạnh nhất hay "thay thế". Lưu ý : Dù làm gì thì mục đích tối thượng vẫn là biến tool trở nên mạnh hơn chứ không phải yếu đi.
     **LƯU Ý:** User không biết code - giải thích đơn giản!\*\*
