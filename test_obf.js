@@ -1,2113 +1,1128 @@
-"use strict";var ko=['\x70\x75\x73\x68','','\x6b\x65\x79\x73','\x6f\x62\x6a\x65\x63\x74','\x2e','\x68\x61\x73','\x67\x65\x74','\x73\x65\x74','\x6d\x61\x70','\x61','\x69\x6e\x63','\x71\x71','\x70\x70','\x72\x65\x64\x75\x63\x65','\x61\x62\x73','\x66\x6c\x6f\x6f\x72','\x6d\x65','\x62\x61\x73\x65','\x68\x61\x6c\x66','\x6d','\x61\x6e\x69\x6d\x61\x6c\x69\x61','\x6e\x61\x6d\x65','\x6c\x65\x67\x73','\x20\x6d\x61\x6b\x65\x73\x20\x61\x20\x73\x6f\x75\x6e\x64','\x73\x70\x65\x61\x6b','\x20\x77\x69\x74\x68\x20','\x20\x6c\x65\x67\x73','\x6b\x69\x6e\x67\x64\x6f\x6d','\x20\x2f\x20\x63\x61\x6e\x69\x64\x61\x65','\x20\x62\x61\x72\x6b\x73','\x63\x75\x74\x65','\x64\x65\x73\x63\x72\x69\x62\x65','\x20\x61\x6e\x64\x20\x69\x73\x20','\x6e\x6f\x74','\x6d\x61\x6b\x65','\x73\x77\x61\x70','\x73\x75\x6d','\x52\x65\x78','\x74\x61\x67','\x65\x78\x74\x72\x61','\x78','\x4d\x41\x58','\x72\x65\x61\x64','\x73\x74\x61\x72\x74','\x6f\x6e\x65','\x74\x77\x6f','\x74\x77\x6f\x2d\x6e\x75\x6d','\x6a\x6f\x69\x6e','\x2c','\x61\x72\x72','\x6f\x74\x68\x65\x72','\x6e\x75\x6d\x62\x65\x72','\x6c\x65\x6e\x67\x74\x68','\x3a\x62\x69\x67','\x3a\x73\x6d\x61\x6c\x6c','\x3a\x6d\x69\x64','\x68\x65\x6c\x6c\x6f','\x72\x6e','\x62\x61\x64','\x72\x65','\x65\x61\x72\x6c\x79','\x6e\x75\x6c','\x6f\x62\x6a','\x65\x72\x72','\x74\x79\x70\x65','\x6f\x6b','\x69\x6e\x6e\x65\x72\x2d\x66\x69\x6e\x61\x6c\x6c\x79','\x65\x61\x72\x6c\x79\x2b\x66\x69\x6e\x61\x6c\x6c\x79','\x69\x6e\x6e\x65\x72\x2d\x63\x61\x74\x63\x68\x3a','\x6d\x65\x73\x73\x61\x67\x65','\x6f\x75\x74\x65\x72\x2d\x66\x69\x6e\x61\x6c\x6c\x79','\x7c','\x62\x6f\x6f\x6d','\x3a','\x30','\x66\x61\x6c\x73\x65','\x20','\x37','\x62','\x7b','\x62\x61\x63\x6b\x5c\x73\x6c\x61\x73\x68\x5c\x6e\x65\x77\x6c\x69\x6e\x65\x20\x61\x6e\x64\x20\x6c\x6f\x74\x73\x20\x6d\x6f\x72\x65','\x69\x74\x27\x73\x20\x61\x20\x22\x71\x75\x6f\x74\x65\x22','\x62\x61\x63\x6b\x5c\x73\x6c\x61\x73\x68\x20\x61\x6e\x64\x20\x27\x71\x75\x6f\x74\x65\x27','\x5c\x75\x30\x30\x34\x31\x20\x5c\x78\x34\x32\x20\x5c\x30\x20\x5c\x76\x20\x5c\x66','\x61\x00\x62','\x61\x62','\x41\u2693\ud83d\ude80','\x60\x74\x69\x63\x6b\x60\x20\x61\x6e\x64\x20\x24\x7b\x6e\x6f\x74\x65\x78\x7d','\x4c\x6f\x72\x65\x6d\x20\x69\x70\x73\x75\x6d\x20\x64\x6f\x6c\x6f\x72\x20\x73\x69\x74\x20\x61\x6d\x65\x74\x2c\x20\x63\x6f\x6e\x73\x65\x63\x74\x65\x74\x75\x72\x20\x61\x64\x69\x70\x69\x73\x63\x69\x6e\x67\x20\x65\x6c\x69\x74\x2c\x20\x73\x65\x64\x20\x64\x6f\x20\x65\x69\x75\x73\x6d\x6f\x64\x20\x74\x65\x6d\x70\x6f\x72\x20\x69\x6e\x63\x69\x64\x69\x64\x75\x6e\x74\x20\x75\x74\x20\x6c\x61\x62\x6f\x72\x65\x20\x65\x74\x20\x64\x6f\x6c\x6f\x72\x65\x20\x6d\x61\x67\x6e\x61\x20\x61\x6c\x69\x71\x75\x61\x2e\x20\x55\x74\x20\x65\x6e\x69\x6d\x20\x61\x64\x20\x6d\x69\x6e\x69\x6d\x20\x76\x65\x6e\x69\x61\x6d\x2e','\u00e6\u2022\u00b2\u00e5\u2021\u00bb\u00e6\u00b1\u2030\u00e5\u00ad\u2014\u00e6\u00b5\u2039\u00e8\u00af\u2022\u00ef\u00bc\u0152\u00e5\u0152\u2026\u00e5\u0090\u00ab\u00e8\u00b9\u2021\u00e8\u2030\u00b0\u00e5\u00ad\u2014\u00e4\u00b8\u017d\u00e6\u00a0\u2021\u00e7\u201a\u00b9\u00e7\u00ac\u00a6\u00e5\u008f\u00b7\u00ef\u00bc\u0081\u00ef\u00bc\u00a0\u00ef\u00bc\u0192\u00ef\u00bf\u00a5\u00e2\u20ac\u00a6\u00e2\u20ac\u00a6\x26\x2a\u00ef\u00bc\u02c6\u00ef\u00bc\u2030\u00e2\u20ac\u201d\u00e2\u20ac\u201d\x2b\x3d\u00e3\u20ac\u0090\u00e3\u20ac\u2018\u00ef\u00bc\u0161\u00ef\u00bc\u203a\u00e2\u20ac\u0153\u00e2\u20ac\u009d\u00e2\u20ac\u02dc\u00e2\u20ac\u2122\u00e3\u20ac\u0160\u00e3\u20ac\u2039\u00ef\u00bc\u0152\u00e3\u20ac\u201a\u00e3\u20ac\u0081\u00ef\u00bc\u0178\u00ef\u00bd\u0153\u00ef\u00bc\u008f','\x62\x61\x73\x65\x36\x34\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x3d\x3d\x42\x42\x42\x42\x42\x42\x42\x42\x42\x42\x42\x42\x42\x42\x42\x42','\x61\x62\x62\x62\x63\x20\x41\x42\x42\x43\x20\x78\x61\x62\x79\x63\x20\x31\x32\x33\x2d\x34\x35\x2d\x36\x37\x38\x39\x20\x63\x6f\x6e\x74\x61\x63\x74\x40\x65\x78\x61\x6d\x70\x6c\x65\x2e\x63\x6f\x6d\x20\x34\x32\x20\x75\x6e\x69\x74\x73\x20\x63\x61\x6d\x65\x6c\x33\x34\x43\x61\x73\x65','\x75\x73\x65\x72\x2e\x6e\x61\x6d\x65\x2b\x74\x61\x67\x40\x73\x75\x62\x2e\x64\x6f\x6d\x61\x69\x6e\x2e\x63\x6f','\x6d\x61\x74\x63\x68','\x41\x62\x63\x20\x78\x79\x5a','\x65\x78\x65\x63','\x32\x30\x32\x34\x2d\x30\x33\x2d\x33\x30','\x6b\x65\x79\x3a\x31\x32\x33','\x67\x72\x6f\x75\x70\x73','\x66\x72\x6f\x6d\x43\x6f\x64\x65\x50\x6f\x69\x6e\x74','\x78\x78\x78\x79','\x72\x65\x70\x6c\x61\x63\x65','\x5f','\x61\x2c\x62\x2c\x63\x2c\x2c\x64','\x73\x70\x6c\x69\x74','\x62\x61\x6e\x61\x6e\x61','\x69\x6e\x64\x65\x78\x4f\x66','\x6e\x61','\x6c\x61\x73\x74\x49\x6e\x64\x65\x78\x4f\x66','\x61\x62\x63\x64\x65\x66','\x73\x6c\x69\x63\x65','\x73\x75\x62\x73\x74\x72\x69\x6e\x67','\x70\x61\x64\x53\x74\x61\x72\x74','\x38','\x70\x61\x64\x45\x6e\x64','\x72\x65\x70\x65\x61\x74','\x68\x65\x6c\x6c\x6f\x20\x77\x6f\x72\x6c\x64','\x69\x6e\x63\x6c\x75\x64\x65\x73','\x6c\x6f\x20\x77','\x73\x74\x61\x72\x74\x73\x57\x69\x74\x68','\x68\x65','\x65\x6e\x64\x73\x57\x69\x74\x68','\x6c\x6f','\x20\x20\x78\x20\x20','\x74\x72\x69\x6d','\x61\x62\x63','\x74\x6f\x55\x70\x70\x65\x72\x43\x61\x73\x65','\x58\x59\x5a','\x74\x6f\x4c\x6f\x77\x65\x72\x43\x61\x73\x65','\x63\x68\x61\x72\x43\x6f\x64\x65\x41\x74','\x66\x72\x6f\x6d\x43\x68\x61\x72\x43\x6f\x64\x65','\x63\x6f\x64\x65\x50\x6f\x69\x6e\x74\x41\x74','\x61\x74','\x66\x69\x6c\x74\x65\x72','\x72\x65\x64\x75\x63\x65\x52\x69\x67\x68\x74','\x66\x6c\x61\x74','\x66\x6c\x61\x74\x4d\x61\x70','\x73\x6f\x72\x74','\x41','\x42','\x73\x6f\x6d\x65','\x65\x76\x65\x72\x79','\x66\x69\x6e\x64','\x66\x69\x6e\x64\x49\x6e\x64\x65\x78','\x2d','\x73\x70\x6c\x69\x63\x65','\x66\x72\x6f\x6d','\x6f\x66','\x66\x69\x6c\x6c','\x76\x61\x6c\x75\x65\x73','\x65\x6e\x74\x72\x69\x65\x73','\x66\x72\x6f\x6d\x45\x6e\x74\x72\x69\x65\x73','\x61\x73\x73\x69\x67\x6e','\x69\x73\x41\x72\x72\x61\x79','\x66\x72\x65\x65\x7a\x65','\x69\x73\x46\x72\x6f\x7a\x65\x6e','\x73\x65\x61\x6c','\x69\x73\x53\x65\x61\x6c\x65\x64','\x67\x65\x74\x4f\x77\x6e\x50\x72\x6f\x70\x65\x72\x74\x79\x4e\x61\x6d\x65\x73','\x70\x72\x6f\x74\x6f\x74\x79\x70\x65','\x67\x65\x74\x50\x72\x6f\x74\x6f\x74\x79\x70\x65\x4f\x66','\x31','\x32','\x66\x61\x6c\x6c\x62\x61\x63\x6b','\x6e','\x73\x69\x7a\x65','\x62\x61\x73\x65\x2d\x68\x69','\x63\x72\x65\x61\x74\x65','\x68\x69','\x6d\x69\x64\x3a','\x63\x61\x6c\x6c','\x68\x61\x73\x4f\x77\x6e\x50\x72\x6f\x70\x65\x72\x74\x79','\x6f\x6e\x65\x20\x74\x77\x6f\x20\x74\x68\x72\x65\x65\x20\x66\x6f\x75\x72','\x63\x65\x69\x6c','\x72\x6f\x75\x6e\x64','\x74\x72\x75\x6e\x63','\x6d\x61\x78','\x6d\x69\x6e','\x70\x6f\x77','\x73\x71\x72\x74','\x63\x62\x72\x74','\x73\x69\x67\x6e','\x63','\x7a','\x64\x65\x6c\x65\x74\x65','\x6c\x6f\x67','\x61\x73\x69\x6e','\x4d\x41\x58\x5f\x56\x41\x4c\x55\x45','\x4d\x49\x4e\x5f\x56\x41\x4c\x55\x45','\x45\x50\x53\x49\x4c\x4f\x4e','\x4d\x41\x58\x5f\x53\x41\x46\x45\x5f\x49\x4e\x54\x45\x47\x45\x52','\x69\x73\x49\x6e\x74\x65\x67\x65\x72','\x69\x73','\x50\x49','\x65\x78\x70','\x73\x69\x6e','\x63\x6f\x73','\x74\x61\x6e','\x61\x63\x6f\x73','\x61\x74\x61\x6e\x32','\x61\x74\x61\x6e','\x73\x69\x6e\x68','\x63\x6f\x73\x68','\x74\x61\x6e\x68','\x61\x73\x69\x6e\x68','\x61\x63\x6f\x73\x68','\x61\x74\x61\x6e\x68','\x65\x78\x70\x6d\x31','\x6c\x6f\x67\x32','\x6c\x6f\x67\x31\x30','\x6c\x6f\x67\x31\x70','\x45','\x68\x79\x70\x6f\x74','\x69\x6d\x75\x6c','\x63\x6c\x7a\x33\x32','\x66\x72\x6f\x75\x6e\x64','\x4c\x4e\x32','\x4c\x4e\x31\x30','\x4c\x4f\x47\x32\x45','\x4c\x4f\x47\x31\x30\x45','\x53\x51\x52\x54\x32','\x53\x51\x52\x54\x31\x5f\x32','\x74\x6f\x53\x74\x72\x69\x6e\x67','\x30\x78\x31\x66\x66\x66\x66\x66\x66\x66\x66\x66\x66\x66\x66\x66','\x61\x73\x49\x6e\x74\x4e','\x61\x73\x55\x69\x6e\x74\x4e','\x31\x32\x33\x2e\x34\x35','\x70\x61\x72\x73\x65\x49\x6e\x74','\x66\x66','\x31\x30\x70\x78','\x33\x2e\x31\x34\x61\x62\x63','\x30\x62\x31\x30\x31\x31','\x30\x6f\x31\x37','\x31\x65\x33','\x34\x32','\x31\x2e\x35','\x69\x73\x4e\x61\x4e','\x69\x73\x46\x69\x6e\x69\x74\x65','\x69\x73\x53\x61\x66\x65\x49\x6e\x74\x65\x67\x65\x72','\x74\x6f\x46\x69\x78\x65\x64','\x74\x6f\x50\x72\x65\x63\x69\x73\x69\x6f\x6e','\x74\x6f\x45\x78\x70\x6f\x6e\x65\x6e\x74\x69\x61\x6c','\x31\x30','\x30\x31\x30','\x30\x78\x31\x30','\u00f0\u0178\u0090\u00b6\u00f0\u0178\u0090\u00b1','\x68\u00c3\u00a9\x6c\x6c\x6f\x20\x57\u00c3\u2013\x52\x4c\x44','\x48\u00c3\u2030\x4c\x4c\x4f\x20\x77\u00c3\u00b6\x72\x6c\x64','\x61\x62\x63\x64\x65\x66\x67\x68\x69\x6a','\x73\x75\x62\x73\x74\x72','\x70\x72\x65\x66\x69\x78\x2d\x78','\x70\x72\x65','\x78\x2d\x73\x75\x66\x66\x69\x78','\x73\x75\x66','\x6c\x65\x6e\x61','\x61\x62\x61\x62\x61\x62','\x61\x2d\x62\x2d\x63','\x61\x31\x62\x32\x32\x63\x33\x33\x33','\x78\x31\x79\x32\x7a\x33','\x6b\x31\x76\x39\x6a\x32','\x6d\x61\x74\x63\x68\x41\x6c\x6c','\x61\x2d\x62\x5f\x63\x2e\x64','\x20\x58\x20','\x61\x62\x63\x31\x32\x33','\x61\x3d\x62\x3d\x63','\x3d','\x2b','\x34','\x66\u00c3\u00b6\u00c3\u00b6','\x63\x68\x61\x72\x41\x74','\x41\x42\x43','\u00f0\u0178\u02dc\u20ac\x61','\x20\x09\x20\x61\x20\x62\x20\x0a','\x74\x72\x69\x6d\x53\x74\x61\x72\x74','\x74\x72\x69\x6d\x45\x6e\x64','\u00c3\u2026','\x6e\x6f\x72\x6d\x61\x6c\x69\x7a\x65','\x4e\x46\x44','\x41\u030a','\x4e\x46\x43','\x65\u0301','\x4e\x46\x4b\x43','\x63\x6f\x6e\x63\x61\x74','\x41\x62\x43\x64','\x79','\x73\x75\x6e','\x75\x6e\x73','\x67\x75\x6e','\x67','\x65\x64\x67\x65\x20\x63\x61\x73\x65','\x20\x63\x61\x73\x65','\x61\u200b\x42\u200b\x43','\u200b','\x78\x79','\x41\x42\x43\x6d\x69\x6c\x69','\x41\x42','\x09\x41\x0d\x0a','\x2a\x2a\x61\x62','\x2a','\x74\x65\x73\x74','\x32\x30\x32\x34\x2d\x31\x33\x2d\x39\x39','\x61\x40\x62\x2e\x63\x6f','\x6e\x6f\x70\x65','\x32\x30\x32\x34\x2d\x30\x35\x2d\x30\x36','\x48\x45\x4c\x4c\x4f','\u00f0\u0178\u02dc\u20ac','\x61\x0a\x62','\x61\x61\x62\x62\x61\x61','\x61\x62\x61\x62','\x68\x65\x6c\x6c\x6f\x0a\x77\x6f\x72\x6c\x64','\x6c\x61\x73\x74\x49\x6e\x64\x65\x78','\x62\x61\x61','\u00ce\u00b1\u00ce\u00b2\u00ce\u00b3','\x31\x32\x33','\x31\x32\x33\x34\x35','\x66\x6f\x6f\x62\x61\x72','\x66\x6f\x6f\x21','\x61\x31\x62\x32\x63','\x66\x6c\x61\x67\x73','\x73\x6f\x75\x72\x63\x65','\x66\x6f\x6f','\x31\x32\x61\x62','\x61\x61\x61','\x0a','\x66\x6f\x6f\x5f\x31','\x20\x0a\x09','\x35','\x61\x62\x63\x64\x61\x62','\x41\x20\x42','\x68\u00c3\u00a9\x6c\x6c\x6f','\x61\x62\x62\x62\x62','\x79\x79\x79\x79','\x31\x39\x32\x2e\x31\x36\x38\x2e\x31\x2e\x31','\x39\x39\x39\x2e\x31\x2e\x31\x2e\x31','\x6c\x6f\x63\x61\x6c\x65\x43\x6f\x6d\x70\x61\x72\x65','\x72\x65\x76\x65\x72\x73\x65','\x66\x69\x6e\x64\x4c\x61\x73\x74','\x66\x69\x6e\x64\x4c\x61\x73\x74\x49\x6e\x64\x65\x78','\x73\x68\x69\x66\x74','\x75\x6e\x73\x68\x69\x66\x74','\x70\x6f\x70','\x63\x6f\x70\x79\x57\x69\x74\x68\x69\x6e','\x77\x69\x74\x68','\x74\x6f\x53\x6f\x72\x74\x65\x64','\x74\x6f\x52\x65\x76\x65\x72\x73\x65\x64','\x74\x6f\x53\x70\x6c\x69\x63\x65\x64','\x67\x72\x6f\x75\x70\x42\x79','\x65\x76\x65\x6e','\x6f\x64\x64','\x33','\x31\x30\x20\x39\x20\x38','\x61\x61\x62','\x61\x64\x64','\x6b','\x6a','\x66\x6f\x75\x6e\x64','\x63\x6c\x65\x61\x72','\x73\x75\x62\x61\x72\x72\x61\x79','\x62\x79\x74\x65\x4c\x65\x6e\x67\x74\x68','\x73\x65\x74\x55\x69\x6e\x74\x38','\x73\x65\x74\x49\x6e\x74\x31\x36','\x73\x65\x74\x55\x69\x6e\x74\x33\x32','\x73\x65\x74\x46\x6c\x6f\x61\x74\x36\x34','\x67\x65\x74\x55\x69\x6e\x74\x38','\x67\x65\x74\x49\x6e\x74\x31\x36','\x67\x65\x74\x55\x69\x6e\x74\x33\x32','\x67\x65\x74\x46\x6c\x6f\x61\x74\x36\x34','\x67\x65\x74\x46\x6c\x6f\x61\x74\x33\x32','\x68\x69\u00f0\u0178\u02dc\u20ac','\x72\x65\x61\x64\x55\x49\x6e\x74\x33\x32\x42\x45','\x72\x65\x61\x64\x55\x49\x6e\x74\x31\x36\x4c\x45','\x73\x77\x61\x70\x31\x36','\x68\x65\x78','\x75\x74\x66\x38','\x66\x66\x30\x30\x38\x30','\x79\x6f','\x62\x61\x73\x65\x36\x34','\x61\x6c\x6c\x6f\x63','\x64\x65\x66\x69\x6e\x65\x50\x72\x6f\x70\x65\x72\x74\x79','\x68\x69\x64\x64\x65\x6e','\x61\x63\x63\x65\x73\x73','\x78\x73\x74\x6f\x72\x65','\x67\x65\x74\x4f\x77\x6e\x50\x72\x6f\x70\x65\x72\x74\x79\x44\x65\x73\x63\x72\x69\x70\x74\x6f\x72','\x69\x73\x50\x72\x6f\x74\x6f\x74\x79\x70\x65\x4f\x66','\x76\x61\x6c\x75\x65','\x65\x6e\x75\x6d\x65\x72\x61\x62\x6c\x65','\x63\x6f\x6e\x66\x69\x67\x75\x72\x61\x62\x6c\x65','\x77\x72\x69\x74\x61\x62\x6c\x65','\x69\x73\x45\x78\x74\x65\x6e\x73\x69\x62\x6c\x65','\x70\x72\x65\x76\x65\x6e\x74\x45\x78\x74\x65\x6e\x73\x69\x6f\x6e\x73','\x71','\x67\x65\x74\x4f\x77\x6e\x50\x72\x6f\x70\x65\x72\x74\x79\x53\x79\x6d\x62\x6f\x6c\x73','\x62\x69\x6e\x64','\x73','\x6e\x6f\x6e\x65\x3a','\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72','\x62\x61\x64\x20\x73\x79\x6e\x74\x61\x78','\x73\x65\x6c\x66','\x73\x74\x72\x69\x6e\x67\x69\x66\x79','\x69\x6e\x6e\x65\x72','\x6d\x69\x6e\x65','\x72','\x67\x65\x74\x3a','\x73\x65\x74\x3a','\x68\x61\x73\x3a','\x73\x31','\x73\x32','\x54\x57\x4f','\x69\x74\x65\x72\x61\x74\x6f\x72','\x66\x6f\x72','\x6b\x65\x79\x46\x6f\x72','\x6e\x65\x78\x74','\x72\x65\x74\x75\x72\x6e','\x64\x6f\x6e\x65','\x74\x61\x72\x67\x65\x74','\x66\x75\x6e\x63\x74\x69\x6f\x6e','\x70\x6c\x61\x69\x6e','\x76','\x63\x6f\x75\x6e\x74','\x68\x69\x20','\x66\x6f\x6f\x64','\x66\x65\x65\x64','\x21','\x67\x72\x65\x65\x74','\x21\x21\x21','\x74\x6f\x53\x74\x72\x69\x6e\x67\x54\x61\x67','\x44\x32','\x64','\x73\x65\x63\x72\x65\x74','\x67\x72\x65\x65\x74\x69\x6e\x67\x73','\x32\x30\x32\x34\x2d\x30\x31\x2d\x30\x32\x54\x30\x33\x3a\x30\x34\x3a\x30\x35\x2e\x36\x37\x38\x5a','\x55\x54\x43','\x67\x65\x74\x54\x69\x6d\x65','\x74\x6f\x49\x53\x4f\x53\x74\x72\x69\x6e\x67','\x74\x6f\x55\x54\x43\x53\x74\x72\x69\x6e\x67','\x67\x65\x74\x55\x54\x43\x46\x75\x6c\x6c\x59\x65\x61\x72','\x67\x65\x74\x55\x54\x43\x4d\x6f\x6e\x74\x68','\x67\x65\x74\x55\x54\x43\x44\x61\x74\x65','\x67\x65\x74\x55\x54\x43\x48\x6f\x75\x72\x73','\x67\x65\x74\x55\x54\x43\x4d\x69\x6e\x75\x74\x65\x73','\x67\x65\x74\x55\x54\x43\x53\x65\x63\x6f\x6e\x64\x73','\x67\x65\x74\x55\x54\x43\x4d\x69\x6c\x6c\x69\x73\x65\x63\x6f\x6e\x64\x73','\x67\x65\x74\x55\x54\x43\x44\x61\x79','\x70\x61\x72\x73\x65','\x67\x65\x74\x44\x61\x74\x65','\x67\x65\x74\x4d\x6f\x6e\x74\x68','\x68\x74\x74\x70\x73\x3a\x2f\x2f\x75\x73\x65\x72\x3a\x70\x61\x73\x73\x40\x65\x78\x61\x6d\x70\x6c\x65\x2e\x63\x6f\x6d\x3a\x38\x30\x38\x30\x2f\x61\x2f\x62\x3f\x78\x3d\x31\x26\x79\x3d\x32\x23\x66\x72\x61\x67','\x2f\x72\x65\x6c','\x68\x74\x74\x70\x73\x3a\x2f\x2f\x62\x61\x73\x65\x2e\x65\x78\x61\x6d\x70\x6c\x65\x2f\x70\x2f\x71\x3f\x7a\x3d\x39','\x70\x72\x6f\x74\x6f\x63\x6f\x6c','\x68\x6f\x73\x74','\x68\x6f\x73\x74\x6e\x61\x6d\x65','\x70\x6f\x72\x74','\x70\x61\x74\x68\x6e\x61\x6d\x65','\x73\x65\x61\x72\x63\x68','\x73\x65\x61\x72\x63\x68\x50\x61\x72\x61\x6d\x73','\x68\x61\x73\x68','\x75\x73\x65\x72\x6e\x61\x6d\x65','\x70\x61\x73\x73\x77\x6f\x72\x64','\x68\x72\x65\x66','\x65\x6e\x63\x6f\x64\x65','\x64\x65\x63\x6f\x64\x65','\x61\x47\x6b\x3d','\x61\u00f0\u0178\u02dc\u20ac\x62','\x61\x47\x56\x73\x62\x47\x38\x3d','\x72\x61\x77','\x7a\x65\x72\x6f','\x6c\x6f\x77','\x77','\x6f\x6e\x63\x65','\x66','\x66\x69\x6c\x6c\x65\x64','\x65\x6c\x73\x65','\x61\x6e\x64','\x61\x6c\x6c','\x72\x65\x73\x6f\x6c\x76\x65','\x61\x6c\x6c\x53\x65\x74\x74\x6c\x65\x64','\x72\x65\x6a\x65\x63\x74','\x6e\x6f','\x61\x6e\x79','\x72\x61\x63\x65','\x6c\x61\x74\x65\x72','\x74\x68\x65\x6e','\x63\x61\x74\x63\x68','\x66\x69\x6e\x61\x6c\x6c\x79','\x63\x61\x75\x67\x68\x74\x3a','\x74\x69\x63\x6b','\x73\x74\x61\x74\x75\x73','\x72\x65\x61\x73\x6f\x6e','\x5b\x5b\x31\x2c\x32\x5d\x2c\x5b\x33\x2c\x34\x5d\x5d','\x7b\x22\x62\x22\x3a\x31\x2c\x22\x61\x22\x3a\x32\x2c\x22\x63\x22\x3a\x33\x7d','\x6c','\x74\x68\x65\x20\x71\x75\x69\x63\x6b\x20\x62\x72\x6f\x77\x6e\x20\x66\x6f\x78\x20\x6a\x75\x6d\x70\x73\x20\x6f\x76\x65\x72\x20\x74\x68\x65\x20\x6c\x61\x7a\x79\x20\x64\x6f\x67','\x6f\x6e\x65\x20\x74\x77\x6f\x20\x74\x68\x72\x65\x65','\x6c\x65\x6e','\x61\x70\x70\x6c\x79','\x74\x68\x72\x6f\x77','\x76\x78','\x75\x70','\x76\x61\x6c','\x39','\x66\x6e','\x61\x72\x72\x6f\x77','\x72\x65\x44\x6f\x74','\x48\x65\x6c\x6c\x6f\x20\x57\x6f\x72\x6c\x64\x21','\x4b\x68\x6f\x6f\x72\x20\x5a\x72\x75\x6f\x67\x21','\x6f\x6e','\x65\x6d\x69\x74','\x72\x61\x63\x65\x63\x61\x72','\x74\x68\x72\x65\x65','\x66\x6f\x75\x72','\x66\x69\x76\x65','\x6d\x61\x6e\x79','\x6d\x69\x64','\x6e\x65\x67','\x3c','\x3e','\x3c\x2f','\x70','\x64\x69\x76','\x73\x70\x61\x6e','\x23\x61\x62\x63\x31\x32\x33','\x23\x67\x67\x67','\x6f\x6e\x65\x20\x74\x77\x6f\x20\x20\x74\x68\x72\x65\x65','\x61\x31\x62\x32\x63\x33','\x23','\x5b\x6c\x5d','\x6d\x61\x74\x63\x68\x20\x6d\x65','\x61\x42\x63','\x64\x65\x65\x70','\x65','\x65\x31','\x66\x69\x72\x73\x74','\x73\x65\x63\x6f\x6e\x64','\x61\x2c\x62\x3b\x7c\x63','\x3b','\x74','\x6d\x69\x73\x73\x69\x6e\x67','\x62\x72\x6f\x6b\x65\x6e','\x75\x6e\x6b\x6e\x6f\x77\x6e','\x73\x75\x62','\x6d\x75\x6c','\x61\x64\x64\x20\x34\x20\x35','\x6d\x75\x6c\x20\x33\x20\x37','\x77\x61\x74\x20\x31\x20\x31'];var kp={v:function(z){return ko[z]}};
-const aa=(2615779285^2615779285);
-const ac=(387276917^387276912);
-const ad=-(1401181143^1401181136);
-const ae=3.14159;
-const af=6.02e23;
-const ag=1.0e-6;
-const ah=0.1+0.2;
-const ai=(2654435761^2654435760)/(3668339987^3668339984);
-const aj=0xDEADBEEF;
-const al=(2659873168^2655686270);
-const am=(2975013878^2975013152);
-const an=(3501975631^3501975984);
-const ao=(4238151232^4237446144);
-const ap=9007199254740991;
-const aq=9007199254740991n;
-const ar=12345678901234567890n;
-const au=-(2615779285^2615779285);
-const av=0.5;
-const aw=(387276917^387276912);
-const ax=(3788015616^2654435327);
-const ay=[];
-for(let i=(2615779285^2615779285);i<(352355708^352355648);i++)ay[kp.v(0)](i*(3724842645^3724842672));
-function clamp(v,lo,hi){
-return v<lo?lo:v>hi?hi:v;
+"use strict";
+const N0=0;
+const P1=5;
+const P2=(-7);
+const P3=3.14159;
+const P4=6.02e23;
+const P5=1.0e-6;
+const P6=((0.1+0.2));
+const P7=((1/3));
+const HX=0xDEADBEEF;
+const HC=0xC0FFEE;
+const BN=0b1011010110;
+const OC=0o777;
+const US=1_000_000;
+const LD=9007199254740991;
+const LS=9007199254740991n;
+const BI=12345678901234567890n;
+const NB=(-0);
+const ZD=0.5;
+const TD=5.0;
+const HUGESAFE=2147483647;
+const SPL=([]);
+for (let i=0;(i<60);i++)(SPL.push((i*37)));
+function clamp(v,lo,hi){return ((((v<lo))?lo:((((v>hi))?hi:v))));
 }
-function az(ba,pre=kp.v(1)){
-let bb={};
-for(const k of Object[kp.v(2)](ba)){
-const v=ba[k];
-bb[pre+k]=typeof v===kp.v(3)&&v!==null?az(v,pre+k+kp.v(4)):v;
+function flatten(obj,pre=""){let o=({});
+for (const k of (Object.keys(obj))){const v=(obj[k]);
+(((o[(pre+k)])=(((((((typeof v)==="object"))&&((v!==null))))?(flatten(v,(((pre+k))+"."))):v))));
 }
-return bb;
+return o;
 }
-function bc(fn){
-const bd=new Map();
-return(x)=>{
-if(bd[kp.v(5)](x))return bd[kp.v(6)](x);
-const r=fn(x);
-bd[kp.v(7)](x,r);
+function memo1(fn){const cache=(new Map());
+return ((x)=>{if((cache.has(x)))return (cache.get(x));
+const r=(fn(x));
+(cache.set(x,r));
 return r;
-};
+});
 }
-function bf(){
-const f=(n)=>(n<=(2654435761^2654435760)?(2654435761^2654435760):n*f(n-(2654435761^2654435760)));
+function mkFact(){const f=((n)=>(((n<=1))?1:((n*(f((n-1)))))));
 return f;
 }
-const bg=bf();
-const bh=bc(bg);
-function bj(){
-let a=(2615779285^2615779285);
-let b=(2654435761^2654435760);
-return()=>{
-const t=a;
-a=b;
-b=t+b;
-return{a,b};
-};
+const factN=(mkFact());
+const factMem=(memo1(factN));
+function twin(){let a=0;
+let b=1;
+return (()=>{const t=a;
+((a=b));
+((b=((t+b))));
+return ({a:a,b:b});
+});
 }
-const bk=bj();
-const bl=[bk(),bk(),bk(),bk(),bk(),bk(),bk(),bk(),bk(),bk()][kp.v(8)]((r)=>r[kp.v(9)]);
-function bm(){
-let n=(2615779285^2615779285);
-return{
-inc(times){
-for(let k=(2615779285^2615779285);k<times;k++)n+=(2654435761^2654435760);
-return++n;
-},
-};
+const fibPair=(twin());
+const fibonacci=(([fibPair(),fibPair(),fibPair(),fibPair(),fibPair(),fibPair(),fibPair(),fibPair(),fibPair(),fibPair()]).map((r)=>r.a));
+function freshCount(){let n=0;
+return ({inc(times){for (let k=0;(k<times);k++)((n+=1));
+return (++n);
+}});
 }
-const bo=bm();
-const counter=[bo[kp.v(10)]((2615779285^2615779285)),bo[kp.v(10)]((2654435761^2654435760)),bo[kp.v(10)]((1013904226^1013904224)),bo[kp.v(10)]((2615779285^2615779285))];
-function bp({x,y=(3428989595^3428989584),z:{deep=(3668339987^3668339984),deeper:[w1=(2654435761^2654435760),w2]=[]}={},...other}){
-return{x,y,deep,w1,w2,other};
+const fct=(freshCount());
+const counter=([fct.inc(0),fct.inc(1),fct.inc(2),fct.inc(0)]);
+function destructureMe({x:x,y=11,z:{deep=3,deeper:[w1=1,w2]=([])}=({}),...other}){return ({x:x,y:y,deep:deep,w1:w1,w2:w2,other:other});
 }
-const dm1=bp({x:(2654435761^2654435760),z:{deep:(2415085369^2415085360),deeper:[(1401181143^1401181136),(4055616904^4055616896),(2415085369^2415085360)]},q:kp.v(11),w:(4112119562^4112119584)});
-const dm2=bp({x:(1013904226^1013904224),extra:true});
-const dm3=bp({x:(3668339987^3668339984),z:(387276917^387276912)});
-function bq([a,b=(387276917^387276912),...rest],{p,q=(2415085369^2415085360)}={p:(2615779285^2615779285)}){
-return{a,b,rest,p,q};
+const dm1=(destructureMe({x:1,z:({deep:9,deeper:([7,8,9])}),q:"qq",w:42}));
+const dm2=(destructureMe({x:2,extra:true}));
+const dm3=(destructureMe({x:3,z:5}));
+function arrDestr([a,b=5,...rest],{p:p,q=9}=({p:0})){return ({a:a,b:b,rest:rest,p:p,q:q});
 }
-const am1=bq([(2654435761^2654435760),undefined,(3668339987^3668339984),(2027808452^2027808448),(387276917^387276912)],{p:kp.v(12),q:(1788458060^1788458048)});
-const am2=bq([(1401181143^1401181136)]);
-const am3=bq([(2415085369^2415085360),(4055616904^4055616896),(1401181143^1401181136)],undefined);
-function br(a=(2654435761^2654435760),b=a+(2654435761^2654435760),c=a+b,d=(()=>a+b+c)()){
-return{a,b,c,d};
+const am1=(arrDestr([1,undefined,3,4,5],{p:"pp",q:12}));
+const am2=(arrDestr([7]));
+const am3=(arrDestr([9,8,7],undefined));
+function defaults(a=1,b=((a+1)),c=((a+b)),d=((()=>(((a+b))+c))())){return ({a:a,b:b,c:c,d:d});
 }
-const dfl=br();
-const dfl2=br((774553834^774553824),(1549107668^1549107648),(2323661502^2323661472),(3098215336^3098215296));
-function*bs(stop){
-let n=(2615779285^2615779285);
-outer:while(n<stop){
-n++;
-for(let k=(2615779285^2615779285);k<n;k++){
-if(k===(2615779285^2615779285))continue;
+const dfl=(defaults());
+const dfl2=(defaults(10,20,30,40));
+function* multiGen(stop){let n=0;
+outer:while(((n<stop))){(n++);
+for (let k=0;(k<n);k++){if(((k===0)))continue;
 }
-yield n;
+(yield n);
 }
 }
-const genA=[...bs((3041712678^3041712672))];
-const genB=[];
-for(const v of bs((2027808452^2027808448)))genB[kp.v(0)](v*(774553834^774553824));
-const bt=(...bu)=>(v)=>bu[kp.v(13)]((acc,fn)=>fn(acc),v);
-const bv=bt(
-(x)=>x+(2654435761^2654435760),
-(x)=>x*(1013904226^1013904224),
-(x)=>x-(387276917^387276912),
-Math[kp.v(14)],
-(x)=>Math[kp.v(15)](x/(1013904226^1013904224)),
-);
-const pipeOut=bv(-(3668339987^3668339984));
-const idfn=(x)=>x;
-const ba={
-base:(774553834^774553824),
-arr:[(2654435761^2654435760),(1013904226^1013904224),[(3668339987^3668339984),[(2027808452^2027808448),[(387276917^387276912)]]]],
-fn:function bw(){
-return kp.v(16);
-},
-arrow:(x)=>x*x,
-get half(){
-return this[kp.v(17)]/(1013904226^1013904224);
-},
-set half(v){
-this[kp.v(17)]=v*(1013904226^1013904224);
-},
-m(a,b){
-return{sum:a+b,diff:a-b,prod:a*b,quot:a/b};
-},
-};
-ba[kp.v(18)]=(1549107668^1549107648);
-const bx=ba[kp.v(19)]((2415085369^2415085360),(2027808452^2027808448));
-class Animal{
-static kingdom(){
-return kp.v(20);
+const genA=([...(multiGen(6))]);
+const genB=([]);
+for (const v of (multiGen(4)))(genB.push((v*10)));
+const compose=((...fns)=>(v)=>fns.reduce((acc,fn)=>fn(acc),v));
+const pipeline=(compose((x)=>(x+1),(x)=>(x*2),(x)=>(x-5),Math.abs,(x)=>Math.floor((x/2))));
+const pipeOut=(pipeline(-3));
+const idfn=((x)=>x);
+const obj=({base:10,arr:([1,2,[3,[4,[5]]]]),fn:(function me(){return "me";
+}),arrow:((x)=>(x*x)),get half(){return (((this.base)/2));
+},set half(v){(((this.base)=((v*2))));
+},m(a,b){return ({sum:((a+b)),diff:((a-b)),prod:((a*b)),quot:((a/b))});
+}});
+(((obj.half)=20));
+const OM=(obj.m(9,4));
+class Animal{static kingdom(){return "animalia";
 }
-constructor(name){
-this[kp.v(21)]=name;
-this[kp.v(22)]=(2615779285^2615779285);
+constructor(name){(((this.name)=name));
+(((this.legs)=0));
 }
-speak(){
-return this[kp.v(21)]+kp.v(23);
+speak(){return (((this.name)+" makes a sound"));
 }
-describe(){
-return this[kp.v(24)]()+kp.v(25)+this[kp.v(22)]+kp.v(26);
+describe(){return (((((((this.speak())+" with "))+(this.legs)))+" legs"));
 }
 }
-class Dog extends Animal{
-static kingdom(){
-return super[kp.v(27)]()+kp.v(28);
+class Dog extends Animal{static kingdom(){return (((super.kingdom())+" / canidae"));
 }
-constructor(name){
-super(name);
-this[kp.v(22)]=(2027808452^2027808448);
+constructor(name){(super(name));
+(((this.legs)=4));
 }
-speak(){
-return this[kp.v(21)]+kp.v(29);
+speak(){return (((this.name)+" barks"));
 }
 }
-class Puppy extends Dog{
-constructor(name){
-super(name);
-this[kp.v(30)]=true;
+class Puppy extends Dog{constructor(name){(super(name));
+(((this.cute)=true));
 }
-describe(){
-return super[kp.v(31)]()+kp.v(32)+(this[kp.v(30)]?'cute':kp.v(33));
+describe(){return (((((super.describe())+" and is "))+(((this.cute)?"cute":"not"))));
 }
 }
-class Sigmoid{
-#a;
-#b;
-constructor(a,b){
-this.#a=a;
-this.#b=b;
+class Sigmoid{#a
+#b
+constructor(a,b){(((this.#a)=a));
+(((this.#b)=b));
 }
-get sum(){
-return this.#a+this.#b;
+get sum(){return (((this.#a)+(this.#b)));
 }
-swap(){
-const t=this.#a;
-this.#a=this.#b;
-this.#b=t;
+swap(){const t=(this.#a);
+(((this.#a)=(this.#b)));
+(((this.#b)=t));
 return this;
 }
-static make(a,b){
-return new Sigmoid(a,b);
+static make(a,b){return (new Sigmoid(a,b));
 }
 }
-const by=Sigmoid[kp.v(34)]((3668339987^3668339984),(2027808452^2027808448))[kp.v(35)]()[kp.v(35)]();
-const sigSum=by[kp.v(36)];
-const doge=new Puppy(kp.v(37));
-const bz=doge[kp.v(31)]();
-const ca=Dog[kp.v(27)]();
-class WithField{
-static MAX=(3450571044^3450571072);
-tag=kp.v(38);
-#priv=(1401181143^1401181136);
-constructor(){
-this[kp.v(39)]=kp.v(40);
+const sig=(((Sigmoid.make(3,4)).swap()).swap());
+const sigSum=(sig.sum);
+const doge=(new Puppy("Rex"));
+const dDesc=(doge.describe());
+const dKhu=(Dog.kingdom());
+class WithField{static MAX=100
+tag="tag"
+#priv=7
+constructor(){(((this.extra)="x"));
 }
-read(){
-return this[kp.v(38)]+this.#priv+WithField[kp.v(41)]+this[kp.v(39)];
+read(){return (((((((this.tag)+(this.#priv)))+(WithField.MAX)))+(this.extra)));
 }
 }
-const cb=new WithField();
-const wfOut=cb[kp.v(42)]();
-function cd(x){
-let ce=kp.v(43);
-switch(x){
-case(2654435761^2654435760):
-ce=kp.v(44);
-break;
-case'two':
-ce=kp.v(45);
-break;
-case(2654435761^2654435760)+(2654435761^2654435760):
-ce=kp.v(46);
-break;
-case[(3668339987^3668339984),(2027808452^2027808448)][kp.v(47)](kp.v(48)):
-ce=kp.v(49);
-break;
-default:
-ce=kp.v(50);
+const wf=(new WithField());
+const wfOut=(wf.read());
+function deepSwitch(x){let out="start";
+switch(x){case 1:{((out="one"));
+break;}case "two":{((out="two"));
+break;}case (1+1):{((out="two-num"));
+break;}case ([3,4]).join(","):{((out="arr"));
+break;}default:{((out="other"));}}
+if(((x==="two")))return out;
+const n=(((((typeof x)==="number"))?x:(x.length)));
+switch(true){case (n>10):{return ((out+":big"));}case (n===2):{return ((out+":small"));}default:{return ((out+":mid"));}}
 }
-if(x===kp.v(45))return ce;
-const n=typeof x===kp.v(51)?x:x[kp.v(52)];
-switch(true){
-case n>(774553834^774553824):
-return ce+kp.v(53);
-case n===(1013904226^1013904224):
-return ce+kp.v(54);
-default:
-return ce+kp.v(55);
+const dsw=([deepSwitch(1),deepSwitch("two"),deepSwitch(2),deepSwitch([1,2]),deepSwitch(99),deepSwitch("hello")]);
+function tryNest(v){const log=([]);
+try{try{if(((v==="rn")))throw (new RangeError("bad"));
+if(((v==="re")))return "early";
+if(((v===0)))throw 0;
+if(((v==="nul")))throw null;
+if(((v==="obj")))throw ({code:5});
+if(((v==="err")))throw (new TypeError("type"));
+(log.push("ok"));
+}finally{(log.push("inner-finally"));
+if(((v==="re")))return "early+finally";
 }
+}catch(e){(log.push(("inner-catch:"+((((e&&(((e.message)!==undefined))))?(e.message):(String(e)))))));
+if(((v==="err")))throw e;
+}finally{(log.push("outer-finally"));
 }
-const dsw=[cd((2654435761^2654435760)),cd(kp.v(45)),cd((1013904226^1013904224)),cd([(2654435761^2654435760),(1013904226^1013904224)]),cd((796135283^796135184)),cd(kp.v(56))];
-function cg(v){
-const log=[];
-try{
-try{
-if(v===kp.v(57))throw new RangeError(kp.v(58));
-if(v===kp.v(59))return kp.v(60);
-if(v===(2615779285^2615779285))throw(2615779285^2615779285);
-if(v===kp.v(61))throw null;
-if(v===kp.v(62))throw{code:(387276917^387276912)};
-if(v===kp.v(63))throw new TypeError(kp.v(64));
-log[kp.v(0)](kp.v(65));
-}finally{
-log[kp.v(0)](kp.v(66));
-if(v===kp.v(59))return kp.v(67);
+return (log.join("|"));
 }
-}catch(e){
-log[kp.v(0)](kp.v(68)+(e&&e[kp.v(69)]!==undefined?e[kp.v(69)]:String(e)));
-if(v===kp.v(63))throw e;
-}finally{
-log[kp.v(0)](kp.v(70));
-}
-return log[kp.v(47)](kp.v(71));
-}
-const tns=[
-cg(kp.v(57)),
-cg(kp.v(59)),
-cg((2615779285^2615779285)),
-cg(kp.v(61)),
-cg(kp.v(62)),
-cg(kp.v(65)),
-];
-function ch(){
-try{
-throw new Error(kp.v(72));
-}catch(e){
-return e instanceof Error&&e[kp.v(69)]===kp.v(72);
+const tns=([tryNest("rn"),tryNest("re"),tryNest(0),tryNest("nul"),tryNest("obj"),tryNest("ok")]);
+function tryErr(){try{throw (new Error("boom"));
+}catch(e){return ((((e instanceof Error))&&(((e.message)==="boom"))));
 }
 }
-const isErr=ch();
-function ci(){
-const r=[];
-let i=(2615779285^2615779285);
-outer:while(i<(387276917^387276912)){
-i++;
-for(let cj=(2615779285^2615779285);cj<(387276917^387276912);cj++){
-if(cj===i)continue outer;
-if(i===(2027808452^2027808448)&&cj===(1013904226^1013904224))break outer;
-r[kp.v(0)](i+kp.v(73)+cj);
+const isErr=(tryErr());
+function loops(){const r=([]);
+let i=0;
+outer:while(((i<5))){(i++);
+for (let j=0;(j<5);j++){if(((j===i)))continue outer;
+if(((((i===4))&&((j===2)))))break outer;
+(r.push((((i+":"))+j)));
 }
 }
 return r;
 }
-const lps=ci();
-function ck(){
-let acc=(2615779285^2615779285);
-for(let a=(2615779285^2615779285);a<(3668339987^3668339984);a++){
-for(let b=(2615779285^2615779285);b<(3668339987^3668339984);b++){
-for(let c=(2615779285^2615779285);c<(3668339987^3668339984);c++){
-if((a+b+c)%(3668339987^3668339984)===(2615779285^2615779285)&&!(a===(2654435761^2654435760)&&b===(2654435761^2654435760)))acc+=a*(3450571044^3450571072)+b*(774553834^774553824)+c;
+const lps=(loops());
+function combos(){let acc=0;
+for (let a=0;(a<3);a++){for (let b=0;(b<3);b++){for (let c=0;(c<3);c++){if(((((((((((a+b))+c))%3))===0))&&(!((((a===1))&&((b===1))))))))((acc+=((((((a*100))+((b*10))))+c))));
 }
 }
 }
 return acc;
 }
-const cbo=ck();
-function cl(){
-const vals=[kp.v(1),(2615779285^2615779285),-(2615779285^2615779285),NaN,null,undefined,false,[],{},kp.v(74),kp.v(75),kp.v(76)];
-return vals[kp.v(8)]((v)=>({
-v,
-t:!!v,
-eq:v==(2615779285^2615779285),
-se:v===(2615779285^2615779285),
-nul:v==null,
-nan:v!==v,
+const cbo=(combos());
+function trickyBool(){const vals=(["",0,-0,NaN,null,undefined,false,[],{},"0","false"," "]);
+return (vals.map((v)=>({v:v,t:(!(!v)),eq:((v==0)),se:((v===0)),nul:((v==null)),nan:((v!==v))})));
+}
+const tbv=(trickyBool());
+const NEG=(-0);
+function castOps(){const s="7";
+const x=3;
+return ({plus:((s+x)),concat:((((""+x))+s)),num:(+s),bit:((s|0)),str:(String(x)),bool:(Boolean(s)),raw:(`${x}${s}`),back:(`a${("b"+s)}c`)});
+}
+const cast=(castOps());
+const teng=(`t${"0"}`);
+const tpl=((a,b)=>`sum=${(a+b)};prod=${(a*b)};both=${`${a}${b}`}`);
+const tplOut=(tpl(3,4));
+const tricky=(`\${not}`);
+const tricky2=(`$${"{"}bracket`);
+const escapes3="back\\slash\\newline and lots more";
+const strMix=({single:"it's a \"quote\"",double:"back\\slash and 'quote'",escaped:"\\u0041 \\x42 \\0 \\v \\f",nulbyte:"a\u0000b",oct:"ab",unicode:"A⚓",backticks:"`tick` and ${notex}",long:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",long2:"æ•²å‡»æ±‰å­—æµ‹è¯•ï¼ŒåŒ…å«è¹‡è‰°å­—ä¸Žæ ‡ç‚¹ç¬¦å·ï¼ï¼ ï¼ƒï¿¥â€¦â€¦&*ï¼ˆï¼‰â€”â€”+=ã€ã€‘ï¼šï¼›â€œâ€â€˜â€™ã€Šã€‹ï¼Œã€‚ã€ï¼Ÿï½œï¼",long3:"base64AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==BBBBBBBBBBBBBBBB"});
+const regexes=([/ab+c/gi,/^[\w-]+@[\w-]+\.[a-z]{2,}$/i,/\d{2,4}[-/]\d{2}[-/]\d{2,4}/,/[a-z]+@[a-z]+/g,/(\d+)(\s*)([a-z]+)/,/\u{1F600}-\u{1F64F}/u,/(?<name>\w+):(?<value>\d+)/,/a.b.*c?d+e{2,3}/s,/(?=lookahead)\w+/,/(?!x)x|(y)/y]);
+function regexFx(){const text="abbbc ABBC xabyc 123-45-6789 contact@example.com 42 units camel34Case";
+const mail="user.name+tag@sub.domain.co";
+return ({matchA:(text.match(regexes[0])),matchM:(mail.match(regexes[3])),matchAddr:(text.match(regexes[1])),matchRep:("Abc xyZ".match(regexes[3])),exec1:((regexes[2]).exec("2024-03-30")),named:(((regexes[6]).exec("key:123")).groups),unicode:((((String.fromCodePoint(0x1F600)).match(regexes[5]))!==null)),sticky:((regexes[9]).exec("xxxy")),replace:(text.replace(/[\\/]/g,"_")),split:("a,b,c,,d".split(",")),idx:("banana".indexOf("na")),last:("banana".lastIndexOf("na")),slice:("abcdef".slice(1,4)),sub:("abcdef".substring(3)),pad:((("7".padStart(3,"0"))+("8".padEnd(3,".")))),rep:("ab".repeat(4)),inc:("hello world".includes("lo w")),sw:("hello".startsWith("he")),ew:("hello".endsWith("lo")),trim:("  x  ".trim()),up:("abc".toUpperCase()),low:("XYZ".toLowerCase()),chr:("a".charCodeAt(0)),code:(String.fromCharCode(97,98,99)),cp:((String.fromCodePoint(0x1F600)).codePointAt(0)),at:("abcdef".at(-1))});
+}
+const rfx=(regexFx());
+const arrays=({map:(([1,2,3]).map((x)=>(x*x))),filter:(([1,2,3,4,5]).filter((x)=>(((x%2))===1))),reduce:(([1,2,3,4]).reduce((a,b)=>(a+b),0)),reduceR:(([1,2,3,4]).reduceRight((a,b)=>(((a*10))+b),0)),flat:(([1,[2,[3,[4]]]]).flat(2)),flatM:(([1,2,3,4]).flatMap((x)=>[x,(x*2)])),sort:(([3,1,2]).sort((a,b)=>(a-b))),sortS:((["b","A","a","B"]).sort()),someAE:(([1,2,3]).some((x)=>(x>2))),every:(([2,4,6]).every((x)=>(((x%2))===0))),find:(([5,12,8,130,44]).find((x)=>(x>10))),findIdx:(([5,12,8,130,44]).findIndex((x)=>(x>100))),incl:(([1,2,3]).includes(2)),iof:((["a","b"]).indexOf("b")),join:(([1,2,3]).join("-")),slice:(([1,2,3,4,5]).slice(1,4)),splice:((()=>{const a=([1,2,3,4,5]);
+(a.splice(1,2,9,8,7));
+return a;
+})()),from:(Array.from("abc")),of:(Array.of(1,2,3)),fill:((new Array(3)).fill(7)),key:(Object.keys({a:1,b:2})),val:(Object.values({a:1,b:2})),ent:(Object.entries({a:1,b:2})),fromE:(Object.fromEntries([["a",1],["b",2]])),assign:(Object.assign({},{a:1},{b:2})),is:(Array.isArray([]))});
+const objOps=({keys:(Object.keys(destructureMe)),vals:((Object.keys(obj)).length),freeze:((()=>{const o=({a:1});
+(Object.freeze(o));
+return (Object.isFrozen(o));
+})()),seal:((()=>{const o=({a:1});
+(Object.seal(o));
+return (Object.isSealed(o));
+})()),getOwn:(Object.getOwnPropertyNames(Dog.prototype)),proto:(((Object.getPrototypeOf(Puppy.prototype))===(Dog.prototype)))});
+function equality(){return ({loose:((1=="1")),strict:((1==="1")),notLoose:((1!="2")),notStrict:((1!=="1")),lt:((3<4)),lte:((4<=4)),gt:((3>2)),gte:((2>=3)),and:((true&&"x")),or:((""||"fallback")),nul:(("a"??"b")),not:(!0),dblNot:(!(!1)),tern:((((5>4))?"y":"n"))});
+}
+const eq=(equality());
+const ovf=({add:((HUGESAFE+1)),mul:((HUGESAFE*3)),div:(((-1)/0)),mod:((7%3)),pow:((2**10)),neg:(-((2**2))),inv:((1/4)),and:((0b1100&0b1010)),or:((0b1100|0b0011)),xor:((0b1100^0b1010)),not:(~0),shl:((1<<5)),shr:((256>>3)),ushr:(((-1)>>>28)),u32:((0xFFFFFFFF>>>0))});
+function closures(){let total=0;
+const adders=([]);
+for (let i=0;(i<4);i++){(((j)=>{(adders.push((v)=>{((total+=((j*v))));
+return total;
 }));
+})(i));
 }
-const tbv=cl();
-const cm=-(2615779285^2615779285);
-function cn(){
-const s=kp.v(77);
-const x=(3668339987^3668339984);
-return{
-plus:s+x,
-concat:kp.v(1)+x+s,
-num:+s,
-bit:s|(2615779285^2615779285),
-str:String(x),
-bool:Boolean(s),
-raw:`${x}${s}`,
-back:`a${kp.v(78)+s}c`,
-};
+return ({totalAfter:(adders.map((a)=>a(2))),final:total});
 }
-const cast=cn();
-const teng=`t${kp.v(74)}`;
-const co=(a,b)=>`sum=${a+b};prod=${a*b};both=${`${a}${b}`}`;
-const tplOut=co((3668339987^3668339984),(2027808452^2027808448));
-const tricky=`\${not}`;
-const tricky2=`$${kp.v(79)}bracket`;
-const escapes3=kp.v(80);
-const strMix={
-single:kp.v(81),
-double:kp.v(82),
-escaped:kp.v(83),
-nulbyte:kp.v(84),
-oct:kp.v(85),
-unicode:kp.v(86),
-backticks:kp.v(87),
-long:kp.v(88),
-long2:kp.v(89),
-long3:kp.v(90),
-};
-const cq=[
-/ab+c/gi,
-/^[\w-]+@[\w-]+\.[a-z]{2,}$/i,
-/\d{2,4}[-/]\d{2}[-/]\d{2,4}/,
-/[a-z]+@[a-z]+/g,
-/(\d+)(\s*)([a-z]+)/,
-/\u{1F600}-\u{1F64F}/u,
-/(?<name>\w+):(?<value>\d+)/,
-/a.b.*c?d+e{2,3}/s,
-/(?=lookahead)\w+/,
-/(?!x)x|(y)/y,
-];
-function cr(){
-const cs=kp.v(91);
-const ct=kp.v(92);
-return{
-matchA:cs[kp.v(93)](cq[(2615779285^2615779285)]),
-matchM:ct[kp.v(93)](cq[(3668339987^3668339984)]),
-matchAddr:cs[kp.v(93)](cq[(2654435761^2654435760)]),
-matchRep:kp.v(94)[kp.v(93)](cq[(3668339987^3668339984)]),
-exec1:cq[(1013904226^1013904224)][kp.v(95)](kp.v(96)),
-named:cq[(3041712678^3041712672)][kp.v(95)](kp.v(97))[kp.v(98)],
-unicode:String[kp.v(99)]((3366000128^3365986304))[kp.v(93)](cq[(387276917^387276912)])!==null,
-sticky:cq[(2415085369^2415085360)][kp.v(95)](kp.v(100)),
-replace:cs[kp.v(101)](/[\\/]/g,kp.v(102)),
-split:kp.v(103)[kp.v(104)](kp.v(48)),
-idx:kp.v(105)[kp.v(106)](kp.v(107)),
-last:kp.v(105)[kp.v(108)](kp.v(107)),
-slice:kp.v(109)[kp.v(110)]((2654435761^2654435760),(2027808452^2027808448)),
-sub:kp.v(109)[kp.v(111)]((3668339987^3668339984)),
-pad:kp.v(77)[kp.v(112)]((3668339987^3668339984),kp.v(74))+kp.v(113)[kp.v(114)]((3668339987^3668339984),kp.v(4)),
-rep:kp.v(85)[kp.v(115)]((2027808452^2027808448)),
-inc:kp.v(116)[kp.v(117)](kp.v(118)),
-sw:kp.v(56)[kp.v(119)](kp.v(120)),
-ew:kp.v(56)[kp.v(121)](kp.v(122)),
-trim:kp.v(123)[kp.v(124)](),
-up:kp.v(125)[kp.v(126)](),
-low:kp.v(127)[kp.v(128)](),
-chr:kp.v(9)[kp.v(129)]((2615779285^2615779285)),
-code:String[kp.v(130)]((4077198353^4077198448),(2436666818^2436666784),(796135283^796135184)),
-cp:String[kp.v(99)]((3366000128^3365986304))[kp.v(131)]((2615779285^2615779285)),
-at:kp.v(109)[kp.v(132)](-(2654435761^2654435760)),
-};
-}
-const rfx=cr();
-const arrays={
-map:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)][kp.v(8)]((x)=>x*x),
-filter:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448),(387276917^387276912)][kp.v(133)]((x)=>x%(1013904226^1013904224)===(2654435761^2654435760)),
-reduce:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448)][kp.v(13)]((a,b)=>a+b,(2615779285^2615779285)),
-reduceR:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448)][kp.v(134)]((a,b)=>a*(774553834^774553824)+b,(2615779285^2615779285)),
-flat:[(2654435761^2654435760),[(1013904226^1013904224),[(3668339987^3668339984),[(2027808452^2027808448)]]]][kp.v(135)]((1013904226^1013904224)),
-flatM:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448)][kp.v(136)]((x)=>[x,x*(1013904226^1013904224)]),
-sort:[(3668339987^3668339984),(2654435761^2654435760),(1013904226^1013904224)][kp.v(137)]((a,b)=>a-b),
-sortS:[kp.v(78),kp.v(138),kp.v(9),kp.v(139)][kp.v(137)](),
-someAE:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)][kp.v(140)]((x)=>x>(1013904226^1013904224)),
-every:[(1013904226^1013904224),(2027808452^2027808448),(3041712678^3041712672)][kp.v(141)]((x)=>x%(1013904226^1013904224)===(2615779285^2615779285)),
-find:[(387276917^387276912),(1788458060^1788458048),(4055616904^4055616896),(1479265250^1479265120),(831056492^831056448)][kp.v(142)]((x)=>x>(774553834^774553824)),
-findIdx:[(387276917^387276912),(1788458060^1788458048),(4055616904^4055616896),(1479265250^1479265120),(831056492^831056448)][kp.v(143)]((x)=>x>(3450571044^3450571072)),
-incl:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)][kp.v(117)]((1013904226^1013904224)),
-iof:[kp.v(9),kp.v(78)][kp.v(106)](kp.v(78)),
-join:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)][kp.v(47)](kp.v(144)),
-slice:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448),(387276917^387276912)][kp.v(110)]((2654435761^2654435760),(2027808452^2027808448)),
-splice:(()=>{const a=[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448),(387276917^387276912)];a[kp.v(145)]((2654435761^2654435760),(1013904226^1013904224),(2415085369^2415085360),(4055616904^4055616896),(1401181143^1401181136));return a;})(),
-from:Array[kp.v(146)](kp.v(125)),
-of:Array[kp.v(147)]((2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)),
-fill:new Array((3668339987^3668339984))[kp.v(148)]((1401181143^1401181136)),
-key:Object[kp.v(2)]({a:(2654435761^2654435760),b:(1013904226^1013904224)}),
-val:Object[kp.v(149)]({a:(2654435761^2654435760),b:(1013904226^1013904224)}),
-ent:Object[kp.v(150)]({a:(2654435761^2654435760),b:(1013904226^1013904224)}),
-fromE:Object[kp.v(151)]([[kp.v(9),(2654435761^2654435760)],[kp.v(78),(1013904226^1013904224)]]),
-assign:Object[kp.v(152)]({},{a:(2654435761^2654435760)},{b:(1013904226^1013904224)}),
-is:Array[kp.v(153)]([]),
-};
-const objOps={
-keys:Object[kp.v(2)](bp),
-vals:Object[kp.v(2)](ba)[kp.v(52)],
-freeze:(()=>{const bb={a:(2654435761^2654435760)};Object[kp.v(154)](bb);return Object[kp.v(155)](bb);})(),
-seal:(()=>{const bb={a:(2654435761^2654435760)};Object[kp.v(156)](bb);return Object[kp.v(157)](bb);})(),
-getOwn:Object[kp.v(158)](Dog[kp.v(159)]),
-proto:Object[kp.v(160)](Puppy[kp.v(159)])===Dog[kp.v(159)],
-};
-function cu(){
-return{
-loose:(2654435761^2654435760)==kp.v(161),
-strict:(2654435761^2654435760)===kp.v(161),
-notLoose:(2654435761^2654435760)!=kp.v(162),
-notStrict:(2654435761^2654435760)!==kp.v(161),
-lt:(3668339987^3668339984)<(2027808452^2027808448),
-lte:(2027808452^2027808448)<=(2027808452^2027808448),
-gt:(3668339987^3668339984)>(1013904226^1013904224),
-gte:(1013904226^1013904224)>=(3668339987^3668339984),
-and:true&&kp.v(40),
-or:kp.v(1)||kp.v(163),
-nul:kp.v(9)??kp.v(78),
-not:!(2615779285^2615779285),
-dblNot:!!(2654435761^2654435760),
-tern:(387276917^387276912)>(2027808452^2027808448)?'y':kp.v(164),
-};
-}
-const eq=cu();
-const ovf={
-add:ax+(2654435761^2654435760),
-mul:ax*(3668339987^3668339984),
-div:-(2654435761^2654435760)/(2615779285^2615779285),
-mod:(1401181143^1401181136)%(3668339987^3668339984),
-pow:(1013904226^1013904224)**(774553834^774553824),
-neg:-((1013904226^1013904224)**(1013904226^1013904224)),
-inv:(2654435761^2654435760)/(2027808452^2027808448),
-and:(1788458060^1788458048)&(774553834^774553824),
-or:(1788458060^1788458048)|(3668339987^3668339984),
-xor:(1788458060^1788458048)^(774553834^774553824),
-not:~(2615779285^2615779285),
-shl:(2654435761^2654435760)<<(387276917^387276912),
-shr:(930722048^930721792)>>(3668339987^3668339984),
-ushr:-(2654435761^2654435760)>>>(1309757276^1309757248),
-u32:0xFFFFFFFF>>>(2615779285^2615779285),
-};
-function cv(){
-let cw=(2615779285^2615779285);
-const cx=[];
-for(let i=(2615779285^2615779285);i<(2027808452^2027808448);i++){
-((cj)=>{
-cx[kp.v(0)]((v)=>{
-cw+=cj*v;
-return cw;
-});
-})(i);
-}
-return{totalAfter:cx[kp.v(8)]((a)=>a((1013904226^1013904224))),final:cw};
-}
-const clo=cv();
-function cy(cz){
-const bd=new Map();
-function get(k){
-if(bd[kp.v(5)](k))return bd[kp.v(6)](k);
-const v=cz(k);
-bd[kp.v(7)](k,v);
+const clo=(closures());
+function modulePattern(priv){const cache=(new Map());
+function get(k){if((cache.has(k)))return (cache.get(k));
+const v=(priv(k));
+(cache.set(k,v));
 return v;
 }
-return{
-get,
-size:()=>bd[kp.v(165)],
-};
+return ({get:get,size:(()=>cache.size)});
 }
-const lookup=cy((k)=>k[kp.v(126)]());
-const lookupOut=[lookup[kp.v(6)](kp.v(9)),lookup[kp.v(6)](kp.v(9)),lookup[kp.v(6)](kp.v(78)),lookup[kp.v(165)]()];
-function db(){
-const base={
-hi(){
-return kp.v(166);
-},
-};
-const mid=Object[kp.v(167)](base,{extra:{value:(4112119562^4112119584),enumerable:true}});
-mid[kp.v(168)]=function(){
-return kp.v(169)+Object[kp.v(160)](mid)[kp.v(168)][kp.v(170)](this);
-};
-const child=Object[kp.v(167)](mid);
-return{
-base:base[kp.v(168)](),
-mid:mid[kp.v(168)](),
-child:child[kp.v(168)](),
-extra:child[kp.v(39)],
-own:Object[kp.v(159)][kp.v(171)][kp.v(170)](mid,kp.v(39)),
-constructorIs:child instanceof Object,
-};
+const lookup=(modulePattern((k)=>k.toUpperCase()));
+const lookupOut=([lookup.get("a"),lookup.get("a"),lookup.get("b"),lookup.size()]);
+function protoChain(){const base=({hi(){return "base-hi";
+}});
+const mid=(Object.create(base,{extra:({value:42,enumerable:true})}));
+(((mid.hi)=(function(){return (("mid:"+(((Object.getPrototypeOf(mid)).hi).call(this))));
+})));
+const child=(Object.create(mid));
+return ({base:(base.hi()),mid:(mid.hi()),child:(child.hi()),extra:(child.extra),own:(((Object.prototype).hasOwnProperty).call(mid,"extra")),constructorIs:((child instanceof Object))});
 }
-const pro=db();
-function dc(){
-const base={a:(2654435761^2654435760),b:(1013904226^1013904224),c:(3668339987^3668339984)};
-const{a,...rest}=base;
-const merged={...base,d:(2027808452^2027808448),b:(796135283^796135184)};
-const dd=[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)];
-const[head,...tail]=dd;
-const arrMerged=[...dd,(2027808452^2027808448),...tail];
-const de=(x,y,z)=>x+y+z;
-return{a,rest,merged,head,tail,arrMerged,spreadArg:de(...dd)};
+const pro=(protoChain());
+function spreadDestructure(){const base=({a:1,b:2,c:3});
+const {a:a,...rest}=base;
+const merged=({...base,d:4,b:99});
+const arrBase=([1,2,3]);
+const [head,...tail]=arrBase;
+const arrMerged=([...arrBase,,4,...tail]);
+const fnSpread=((x,y,z)=>(((x+y))+z));
+return ({a:a,rest:rest,merged:merged,head:head,tail:tail,arrMerged:arrMerged,spreadArg:(fnSpread(...arrBase))});
 }
-const sprd=dc();
-function df(){
-return kp.v(172)[kp.v(101)](/(\w+)/g,(m)=>m[(2615779285^2615779285)][kp.v(126)]());
+const sprd=(spreadDestructure());
+function regexReplaceCallbacks(){return ("one two three four".replace(/(\w+)/g,(m)=>(m[0]).toUpperCase()));
 }
-const rrc=df();
-function dg(){
-const di={
-intDiv:Math[kp.v(15)]((1401181143^1401181136)/(1013904226^1013904224)),
-ceil:Math[kp.v(173)]((1401181143^1401181136)/(1013904226^1013904224)),
-round:Math[kp.v(174)](2.5),
-round2:Math[kp.v(174)](-2.5),
-trunc:Math[kp.v(175)](-2.7),
-abs:Math[kp.v(14)](-(3668339987^3668339984)),
-max:Math[kp.v(176)]((2654435761^2654435760),(387276917^387276912),(3668339987^3668339984)),
-min:Math[kp.v(177)]((2654435761^2654435760),(387276917^387276912),(3668339987^3668339984)),
-pow:Math[kp.v(178)]((1013904226^1013904224),(4055616904^4055616896)),
-sqrt:Math[kp.v(179)]((260931841^260931920)),
-cbrt:Math[kp.v(180)]((2950288811^2950288816)),
-sign:[Math[kp.v(181)](-(387276917^387276912)),Math[kp.v(181)]((2615779285^2615779285)),Math[kp.v(181)]((387276917^387276912))],
-floorDiv:((2175734977^2175734992)-((2175734977^2175734992)%(387276917^387276912)))/(387276917^387276912),
-minZero:Math[kp.v(177)]((2654435761^2654435760),-(2615779285^2615779285)),
-};
-for(const k in di){
-const v=di[k];
-di[k]=v===undefined?'undef':v;
+const rrc=(regexReplaceCallbacks());
+function trickyNumbers(){const results=({intDiv:(Math.floor((7/2))),ceil:(Math.ceil((7/2))),round:(Math.round(2.5)),round2:(Math.round(-2.5)),trunc:(Math.trunc(-2.7)),abs:(Math.abs(-3)),max:(Math.max(1,5,3)),min:(Math.min(1,5,3)),pow:(Math.pow(2,8)),sqrt:(Math.sqrt(81)),cbrt:(Math.cbrt(27)),sign:([Math.sign(-5),Math.sign(0),Math.sign(5)]),floorDiv:((((17-((17%5))))/5)),minZero:(Math.min(1,-0))});
+for (const k in results){const v=(results[k]);
+(((results[k])=((((v===undefined))?"undef":v))));
 }
-return di;
+return results;
 }
-const tnu=dg();
-const guardInit=(()=>{
-let n=(2615779285^2615779285);
-const f=()=>++n;
-return[f(),f(),f()];
-})();
-const gsp=(()=>{
-const s=new Set([(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(1013904226^1013904224)]);
-const m=new Map([[kp.v(9),(2654435761^2654435760)],[kp.v(78),(1013904226^1013904224)],[kp.v(182),(3668339987^3668339984)]]);
-return{
-sArr:[...s],
-sLen:s[kp.v(165)],
-mArr:[...m],
-mGet:m[kp.v(6)](kp.v(78)),
-mHas:m[kp.v(5)](kp.v(183)),
-mDel:(()=>{const x=new Map(m);x[kp.v(184)](kp.v(9));return x[kp.v(165)];})(),
-};
-})();
-const dj=[(2615779285^2615779285),(2654435761^2654435760),-(2654435761^2654435760),(1013904226^1013904224),-(1013904226^1013904224),(1401181143^1401181136),(4055616904^4055616896),(1161830751^1161830736),(3816266512^3816266496),(683129967^683129968),(3337565728^3337565696),(2105892559^2105892528),(465361024^465360896),(2571253583^2571253680),(930722048^930721792),(1861444096^1861443584),(145972072^145971328),(3722888192^3722887168),(513869391^513898928),(3168305152^3168272384),(3682174543^3682171312),(2041643008^2041577472),(3788015616^2654435327),-2147483648,4294967295];
-const dk=[0.5,-0.5,1.25,-1.25,3.14159,2.71828,1e-5,(1712305312^1712206336),1e21,123.456,-0.001,0.1+0.2,9007199254740992];
-const dl={
-add:(3788015616^2654435327)+(2654435761^2654435760),
-sub:-2147483648-(2654435761^2654435760),
-mul:4294967295*(3668339987^3668339984),
-xor:(1161830751^1161830736)^(1409422832^1409422592),
-shl31:(2654435761^2654435760)<<(683129967^683129968),
-shlN:-(2654435761^2654435760)<<(2654435761^2654435760),
-shrN:-(4055616904^4055616896)>>(2654435761^2654435760),
-ushrN:-(2654435761^2654435760)>>>(2615779285^2615779285),
-ushr28:-(2654435761^2654435760)>>>(1309757276^1309757248),
-not5:~(387276917^387276912),
-band:(2571253583^2571253680)&(1161830751^1161830736),
-bor:(4055616904^4055616896)|(3668339987^3668339984),
-combine:((774553834^774553824)<<(2027808452^2027808448))|(387276917^387276912),
-mask:(0xffff0000>>>(3816266512^3816266496))&(2571253583^2571253680),
-swapb:(((164833780^164838336)&(2571253583^2571253680))<<(4055616904^4055616896))|(((164833780^164838336)&(1110920960^1110945792))>>(4055616904^4055616896)),
-mul2:(2146089088^2024895893)*(2403929088^3046597809),
-addF:0.1+0.2,
-mulF:1.1*(3450571044^3450571072),
-divs:(2563011894^2563011872)/(1401181143^1401181136),
-modNeg:-(1401181143^1401181136)%(3668339987^3668339984),
-modF:5.5%(1013904226^1013904224),
-powNeg:Math[kp.v(178)](-(1013904226^1013904224),(3668339987^3668339984)),
-powF:(1013904226^1013904224)**0.5,
-root:Math[kp.v(179)](-(2654435761^2654435760)),
-ln1:Math[kp.v(185)](-(2654435761^2654435760)),
-asin2:Math[kp.v(186)]((1013904226^1013904224)),
-huge:Number[kp.v(187)]*(1013904226^1013904224),
-tiny:Number[kp.v(188)]/(1013904226^1013904224),
-ep1:(2654435761^2654435760)+Number[kp.v(189)],
-ep0:(2654435761^2654435760)+Number[kp.v(189)]/(1013904226^1013904224),
-safeHi:Number[kp.v(190)],
-safeLo:-Number[kp.v(190)],
-isInt:Number[kp.v(191)]((2654435761^2654435760)),
-isIntBig:Number[kp.v(191)](1e100),
-z1:0.30000000000000004===0.1+0.2,
-z2:0.1+0.2+0.3+0.4+0.5+0.6+0.7+0.8+0.9,
-neg0a:-(2615779285^2615779285)===(2615779285^2615779285),
-neg0b:Object[kp.v(192)](-(2615779285^2615779285),(2615779285^2615779285)),
-neg0c:Object[kp.v(192)](-(2615779285^2615779285),-(2615779285^2615779285)),
-inc1:((2654435761^2654435760)+(2654435761^2654435760)),
-dec1:((387276917^387276912)-(2654435761^2654435760)),
-twoPow:(1013904226^1013904224)**(774553834^774553824),
-gold:((2654435761^2654435760)+Math[kp.v(179)]((387276917^387276912)))/(1013904226^1013904224),
-tau:Math[kp.v(193)]*(1013904226^1013904224),
-deg:((1057067124^1057067200)*Math[kp.v(193)])/(1057067124^1057067200),
-euler:Math[kp.v(194)]((2654435761^2654435760)),
-cubic:(387276917^387276912)**(3668339987^3668339984)%(1401181143^1401181136),
-};
-const dm={
-sin:Math[kp.v(195)](0.5),
-cos:Math[kp.v(196)](0.5),
-tan:Math[kp.v(197)]((2615779285^2615779285)),
-asin1:Math[kp.v(186)]((2654435761^2654435760)),
-acos1:Math[kp.v(198)](-(2654435761^2654435760)),
-atan2:Math[kp.v(199)]((2654435761^2654435760),(2654435761^2654435760)),
-atan1:Math[kp.v(200)]((2654435761^2654435760)),
-sinh1:Math[kp.v(201)]((2654435761^2654435760)),
-cosh1:Math[kp.v(202)]((2654435761^2654435760)),
-tanh1:Math[kp.v(203)]((2615779285^2615779285)),
-asinh1:Math[kp.v(204)]((2654435761^2654435760)),
-acosh2:Math[kp.v(205)]((1013904226^1013904224)),
-atanh05:Math[kp.v(206)](0.5),
-exp3:Math[kp.v(194)]((1013904226^1013904224)),
-expm1:Math[kp.v(207)]((2654435761^2654435760)),
-log2g:Math[kp.v(208)]((4055616904^4055616896)),
-log10g:Math[kp.v(209)]((145972072^145971328)),
-log1p:Math[kp.v(210)](Math[kp.v(211)]-(2654435761^2654435760)),
-cbrt64:Math[kp.v(180)]((2380164160^2380164096)),
-cbrtN:Math[kp.v(180)](-(4055616904^4055616896)),
-hypot34:Math[kp.v(212)]((3668339987^3668339984),(2027808452^2027808448)),
-imul3:Math[kp.v(213)]((3788015616^2654435327),(3668339987^3668339984)),
-clz32:Math[kp.v(214)](0x80000000),
-fround2:Math[kp.v(215)](1.337),
-trunc2:Math[kp.v(175)](-1.9),
-ceil2:Math[kp.v(173)](-0.9),
-floor2:Math[kp.v(15)](-0.1),
-roundP:Math[kp.v(174)](1.5),
-roundM:Math[kp.v(174)](-0.5),
-roundS:Math[kp.v(174)](-1.5),
-roundZ:Math[kp.v(174)](0.4),
-min0:Math[kp.v(177)]((2654435761^2654435760),-(2615779285^2615779285)),
-max0:Math[kp.v(176)]((2654435761^2654435760),-(2615779285^2615779285)),
-signA:[Math[kp.v(181)](-(387276917^387276912)),Math[kp.v(181)](-(2615779285^2615779285)),Math[kp.v(181)]((2615779285^2615779285)),Math[kp.v(181)](0.001),Math[kp.v(181)](NaN)],
-pi:Math[kp.v(193)],
-e:Math[kp.v(211)],
-ln2:Math[kp.v(216)],
-ln10:Math[kp.v(217)],
-log2e:Math[kp.v(218)],
-log10e:Math[kp.v(219)],
-sqrt2:Math[kp.v(220)],
-sqrthalf:Math[kp.v(221)],
-max3:Math[kp.v(176)](-(2654435761^2654435760),-(387276917^387276912),(3668339987^3668339984),(774553834^774553824),-(1013904226^1013904224)),
-min3:Math[kp.v(177)](-(2654435761^2654435760),-(387276917^387276912),(3668339987^3668339984),(774553834^774553824),-(1013904226^1013904224)),
-sum1k:(()=>{let s=(2615779285^2615779285);for(let i=(2654435761^2654435760);i<(145972072^145971328);i++)s+=(2654435761^2654435760)/(i*i);return s;})(),
-fact20:(()=>{let p=(2654435761^2654435760);for(let i=(1013904226^1013904224);i<=(1549107668^1549107648);i++)p*=i;return p;})(),
-lei:(()=>{let s=(2615779285^2615779285);for(let i=(2615779285^2615779285);i<(2323661502^2323661472);i++)s+=Math[kp.v(195)](i)*Math[kp.v(196)](i);return s;})(),
-};
-const dn={
-a:(2n**100n)[kp.v(222)](),
-b:(12345678901234567890n*9876543210n)[kp.v(222)](),
-c:(7n%3n)[kp.v(222)](),
-d:((2n**64n-9n)>>2n)[kp.v(222)](),
-e:(BigInt(kp.v(223))>>1n)[kp.v(222)](),
-f:(9007199254740991n/3n)[kp.v(222)](),
-g:(9007199254740991n+1n)[kp.v(222)](),
-i:(10n**30n/7n)[kp.v(222)](),
-as8:BigInt[kp.v(224)]((4055616904^4055616896),200n)[kp.v(222)](),
-asu8:BigInt[kp.v(225)]((4055616904^4055616896),200n)[kp.v(222)](),
-as16:BigInt[kp.v(224)]((3816266512^3816266496),-1n)[kp.v(222)](),
-as64:BigInt[kp.v(225)]((2380164160^2380164096),-1n)[kp.v(222)](),
-mix:Number(9007199254740993n)*0.5,
-neg:(-123n)[kp.v(222)](),
-zero:(0n)[kp.v(222)](),
-bits:((1n<<80n)|(3n<<4n))[kp.v(222)](),
-sq:(299792458n**2n)[kp.v(222)](),
-cmplx:((2n+3n)*4n-5n)[kp.v(222)](),
-};
-const dp={
-num:Number(kp.v(226)),
-parseHex:Number[kp.v(227)](kp.v(228),(3816266512^3816266496)),
-parseInt2:parseInt(kp.v(229)),
-parseFloat3:parseFloat(kp.v(230)),
-parseBin:Number(kp.v(231)),
-parseOct:Number(kp.v(232)),
-parseExp:Number(kp.v(233)),
-nanNum:Number(kp.v(125)),
-blank:Number(kp.v(1)),
-plusStr:+kp.v(234),
-minusStr:-kp.v(235),
-isNaNum:Number[kp.v(236)](kp.v(40)),
-isNaStr:isNaN(kp.v(40)),
-isFin:Number[kp.v(237)](Infinity),
-isFinS:Number[kp.v(237)](0.5),
-intSel:[Number[kp.v(191)]((2654435761^2654435760)),Number[kp.v(191)](1.5),Number[kp.v(191)](NaN),Number[kp.v(191)](1e308)],
-safeSel:[Number[kp.v(238)]((1013904226^1013904224)**(3246141861^3246141840)-(2654435761^2654435760)),Number[kp.v(238)]((1013904226^1013904224)**(3246141861^3246141840))],
-toStr16:((2571253583^2571253680))[kp.v(222)]((3816266512^3816266496)),
-toStr2:((387276917^387276912))[kp.v(222)]((1013904226^1013904224)),
-toStr36:((1567433303^1568666832))[kp.v(222)]((1070406884^1070406848)),
-toFix:(3.14159)[kp.v(239)]((1013904226^1013904224)),
-toFixZ:((3668339987^3668339984))[kp.v(239)]((2027808452^2027808448)),
-toPre:(3.14159)[kp.v(240)]((3668339987^3668339984)),
-toExp:((2703968361^2703980624))[kp.v(241)]((1013904226^1013904224)),
-bStr:[String((78084107^78084208)),String(null),String(undefined),String([(2654435761^2654435760),(1013904226^1013904224)]),String({a:(2654435761^2654435760)}),(true)[kp.v(222)]()],
-bNum:[Boolean((2615779285^2615779285)),Boolean(kp.v(1)),Boolean(kp.v(74)),Boolean(NaN),Boolean([]),Boolean(kp.v(76)),Boolean(-(2615779285^2615779285))],
-ctor:[Number(kp.v(242))+(387276917^387276912),+kp.v(243),Number(kp.v(244))],
-unplus:+kp.v(9)+(2654435761^2654435760),
-hexid:0xDEADBEEF,
-binhuge:0b11111111111111111111111111111111,
-octhuge:(2548598351^2549578160),
-};
-const dq={
-len:kp.v(245)[kp.v(52)],
-cplen:[...kp.v(245)][kp.v(52)],
-cat:kp.v(9)+kp.v(78)+(1401181143^1401181136)+true+null,
-up:kp.v(246)[kp.v(126)](),
-low:kp.v(247)[kp.v(128)](),
-sl:kp.v(248)[kp.v(110)](-(3668339987^3668339984)),
-sb:kp.v(248)[kp.v(249)]((1013904226^1013904224),(3668339987^3668339984)),
-sw:kp.v(250)[kp.v(119)](kp.v(251)),
-ew:kp.v(252)[kp.v(121)](kp.v(253)),
-inc3:kp.v(254)[kp.v(117)](kp.v(107)),
-idx3:kp.v(255)[kp.v(108)](kp.v(85)),
-spi:kp.v(256)[kp.v(104)](kp.v(144)),
-spr:kp.v(257)[kp.v(104)](/\d+/),
-sprKeep:kp.v(257)[kp.v(104)](/(\d+)/),
-mat:kp.v(258)[kp.v(93)](/\d/g),
-mall:[...kp.v(259)[kp.v(260)](/[a-z](\d)/g)][kp.v(8)](m=>m[(2615779285^2615779285)]+kp.v(73)+m[(2654435761^2654435760)]),
-spy:kp.v(261)[kp.v(101)](/_/g,kp.v(262)),
-spyFn:kp.v(263)[kp.v(101)](/\d+/g,(d)=>Number(d)*(1013904226^1013904224)),
-scy:kp.v(264)[kp.v(101)](kp.v(265),kp.v(266)),
-rep2:kp.v(85)[kp.v(115)]((3668339987^3668339984)),
-padS:kp.v(267)[kp.v(112)]((3668339987^3668339984),kp.v(74)),
-padE:kp.v(113)[kp.v(114)]((1013904226^1013904224),kp.v(4)),
-chAt:kp.v(268)[kp.v(269)]((2654435761^2654435760)),
-code:kp.v(270)[kp.v(129)]((2654435761^2654435760)),
-codeP:kp.v(271)[kp.v(131)]((2654435761^2654435760)),
-fromCode:String[kp.v(130)]((2140813768^2140813696),(3837847961^3837848048)),
-fromCP:String[kp.v(99)]((3366000128^3365986304),(4161228285^4161236464),(1865153429^1865027248)),
-at:kp.v(109)[kp.v(132)]((2654435761^2654435760)),
-atNeg:kp.v(109)[kp.v(132)](-(1013904226^1013904224)),
-trim:kp.v(272)[kp.v(124)](),
-trimL:kp.v(123)[kp.v(273)](),
-trimR:kp.v(123)[kp.v(274)](),
-normNFD:kp.v(275)[kp.v(276)](kp.v(277))[kp.v(52)],
-normNFC:kp.v(278)[kp.v(276)](kp.v(279))===kp.v(275),
-normNKF:kp.v(280)[kp.v(276)](kp.v(281)),
-cc:kp.v(9)[kp.v(282)](kp.v(78),kp.v(182)),
-lc2:kp.v(283)[kp.v(128)](),
-uc2:kp.v(283)[kp.v(126)](),
-olderIdx:kp.v(40)[kp.v(106)](kp.v(284)),
-noEnd:kp.v(285)[kp.v(121)](kp.v(286)),
-noStart:kp.v(287)[kp.v(119)](kp.v(288)),
-sedg:kp.v(289)[kp.v(121)](kp.v(290)),
-zws:kp.v(291)[kp.v(104)](kp.v(292)),
-nullCh:kp.v(125)[kp.v(129)]((796135283^796135184)),
-emptyS:kp.v(1)[kp.v(112)]((1013904226^1013904224),kp.v(293)),
-wrap:kp.v(294),
-octal:kp.v(295),
-hextab:kp.v(296)+kp.v(78),
-fillV:kp.v(40)[kp.v(115)]((1013904226^1013904224))+kp.v(284)[kp.v(115)]((3668339987^3668339984)),
-idxStar:kp.v(297)[kp.v(106)](kp.v(298)),
-lidxNof:kp.v(125)[kp.v(108)](kp.v(183)),
-};
-const dr={
-date:/^\d{4}-\d{2}-\d{2}$/[kp.v(299)](kp.v(300)),
-email:/^[^@]+@[^@]+\.[^@]+$/[kp.v(299)](kp.v(301)),
-emailB:/^[^@]+@[^@]+\.[^@]+$/[kp.v(299)](kp.v(302)),
-group:/(?<y>\d{4})-(?<m>\d{2})-(?<d>\d{2})/[kp.v(95)](kp.v(303))[kp.v(98)],
-flaggy:/hello/i[kp.v(299)](kp.v(304)),
-unicode2:/^\p{Emoji_Presentation}$/u[kp.v(299)](kp.v(305)),
-sflag:/a.b/s[kp.v(299)](kp.v(306)),
-backref:/^(a+)(b+)\1$/[kp.v(299)](kp.v(307)),
-namedBack:/^(?<w>ab)\k<w>$/[kp.v(299)](kp.v(308)),
-zero:/a|b/[kp.v(95)](kp.v(78))[(2615779285^2615779285)],
-multiline:/^world$/m[kp.v(299)](kp.v(309)),
-sticky2:(()=>{const r=/a/y;r[kp.v(310)]=(2654435761^2654435760);const m=r[kp.v(95)](kp.v(311));return m?m[(2615779285^2615779285)]:null;})(),
-greek:/^[\u0370-\u03FF]+$/[kp.v(299)](kp.v(312)),
-quant:/^[0-9]{2,4}$/[kp.v(299)](kp.v(313)),
-quantNg:/^[0-9]{2,4}$/[kp.v(299)](kp.v(314)),
-lookA:/foo(?=bar)/[kp.v(95)](kp.v(315))[(2615779285^2615779285)],
-lookB:/foo(?!bar)/[kp.v(95)](kp.v(316))[(2615779285^2615779285)],
-allSplit:kp.v(317)[kp.v(104)](/\d/),
-toStringR:/x/g[kp.v(222)](),
-flagsR:/ab+c/gi[kp.v(318)],
-sourceR:/a[b-d]e/[kp.v(319)],
-lastIdxR:(()=>{const r=/o/g;r[kp.v(95)](kp.v(320));return r[kp.v(310)];})(),
-idxArr:/(\d+)/[kp.v(95)](kp.v(321))[(2654435761^2654435760)],
-greedy:kp.v(322)[kp.v(93)](/a*/)[(2615779285^2615779285)],
-lazy:kp.v(322)[kp.v(93)](/a*?/)[(2615779285^2615779285)],
-dotAll:/./s[kp.v(299)](kp.v(323)),
-noDot:/./[kp.v(299)](kp.v(323)),
-word:/^\w+$/[kp.v(299)](kp.v(324)),
-space:/^\s*$/[kp.v(299)](kp.v(325)),
-digit:/^\d$/[kp.v(299)](kp.v(326)),
-pub:/^(?:ab|cd)+$/[kp.v(299)](kp.v(327)),
-anchor:kp.v(328)[kp.v(101)](/\b/g,kp.v(71)),
-emoji2:/^\p{L}+$/u[kp.v(299)](kp.v(329)),
-quant2:kp.v(330)[kp.v(93)](/ab{2,4}c/),
-negClass:/^[^x]+$/[kp.v(299)](kp.v(331)),
-raww:/\\/,
-flagY:/a/y[kp.v(318)],
-complex:/^(\d{1,3}\.){3}\d{1,3}$/[kp.v(299)](kp.v(332)),
-complexBAD:/^(\d{1,3}\.){3}\d{1,3}$/[kp.v(299)](kp.v(333)),
-splitSub:kp.v(256)[kp.v(104)](/-/)[kp.v(47)](kp.v(102)),
-};
-const ds={
-map:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448)][kp.v(8)]((x,i)=>x*(774553834^774553824)+i),
-flt:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448),(387276917^387276912),(3041712678^3041712672)][kp.v(133)](x=>x%(3668339987^3668339984)===(2615779285^2615779285)),
-fltIdx:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448)][kp.v(133)]((x,i)=>i%(1013904226^1013904224)===(2615779285^2615779285)),
-red:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448)][kp.v(13)]((a,b,i)=>a+b*(774553834^774553824)**i,(2615779285^2615779285)),
-redRn:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)][kp.v(134)]((a,b)=>a-b,(2615779285^2615779285)),
-flat3:[(2654435761^2654435760),[(1013904226^1013904224),[(3668339987^3668339984),[(2027808452^2027808448),[(387276917^387276912)]]]]][kp.v(135)]((3668339987^3668339984)),
-flatDf:[(2654435761^2654435760),[(1013904226^1013904224),[(3668339987^3668339984)]]][kp.v(135)](),
-flatMap1:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)][kp.v(136)](x=>[x,-x]),
-sort:[(2415085369^2415085360),(1013904226^1013904224),(387276917^387276912),(2654435761^2654435760),(1401181143^1401181136)][kp.v(137)]((a,b)=>a-b),
-sortStr:[kp.v(78),kp.v(139),kp.v(9),kp.v(138)][kp.v(137)]((a,b)=>a[kp.v(334)](b)),
-rev:[...[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)]][kp.v(335)](),
-some:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)][kp.v(140)](x=>x%(1013904226^1013904224)===(2615779285^2615779285)),
-every:[(1013904226^1013904224),(2027808452^2027808448)][kp.v(141)](x=>x%(1013904226^1013904224)===(2615779285^2615779285)),
-find:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448),(387276917^387276912)][kp.v(142)](x=>x>(3668339987^3668339984)),
-findI:[kp.v(9),kp.v(78),kp.v(182)][kp.v(143)](x=>x===kp.v(182)),
-findL:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448)][kp.v(336)](x=>x%(1013904226^1013904224)===(2654435761^2654435760)),
-findLi:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448)][kp.v(337)](x=>x%(1013904226^1013904224)===(2654435761^2654435760)),
-incl:[(2654435761^2654435760),(1013904226^1013904224),NaN][kp.v(117)](NaN),
-inclF:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)][kp.v(117)]((2027808452^2027808448)),
-idx:[kp.v(9),kp.v(78),kp.v(9)][kp.v(106)](kp.v(9)),
-lidx:[kp.v(9),kp.v(78),kp.v(9)][kp.v(108)](kp.v(9)),
-join:[(2654435761^2654435760),kp.v(9),true,null][kp.v(47)](kp.v(71)),
-con:[(2654435761^2654435760),(1013904226^1013904224)][kp.v(282)]([(3668339987^3668339984)],(2027808452^2027808448),[(387276917^387276912),[(3041712678^3041712672)]]),
-sla:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448),(387276917^387276912)][kp.v(110)]((2654435761^2654435760),-(2654435761^2654435760)),
-sp:(()=>{const a=[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448),(387276917^387276912)];a[kp.v(145)]((2654435761^2654435760),(1013904226^1013904224),kp.v(40));return a;})(),
-spr:(()=>{const a=[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448),(387276917^387276912)];const r=a[kp.v(145)]((2654435761^2654435760),(1013904226^1013904224));return[r,a];})(),
-sh:(()=>{const a=[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)];return[a[kp.v(338)](),a];})(),
-unsh:(()=>{const a=[(1013904226^1013904224),(3668339987^3668339984)];a[kp.v(339)]((2615779285^2615779285),(2654435761^2654435760));return a;})(),
-pop:(()=>{const a=[(2654435761^2654435760)];return[a[kp.v(340)](),a];})(),
-push:(()=>{const a=[];const l=a[kp.v(0)]((2654435761^2654435760),(1013904226^1013904224));return[l,a];})(),
-copyW:(()=>{const a=[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448)];a[kp.v(341)]((2615779285^2615779285),(1013904226^1013904224));return a;})(),
-fillA:(()=>Array((387276917^387276912))[kp.v(148)]((1401181143^1401181136))[kp.v(8)]((v,i)=>v+i))(),
-atIdx:[(774553834^774553824),(1549107668^1549107648),(2323661502^2323661472)][kp.v(132)](-(2654435761^2654435760)),
-keysA:[...[(774553834^774553824),(1549107668^1549107648)][kp.v(2)]()],
-valsA:[...[(774553834^774553824),(1549107668^1549107648)][kp.v(149)]()],
-entA:[...[(774553834^774553824),(1549107668^1549107648)][kp.v(150)]()],
-withA:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)][kp.v(342)]((2654435761^2654435760),(2415085369^2415085360)),
-toS:[(3668339987^3668339984),(2654435761^2654435760),(1013904226^1013904224)][kp.v(343)](),
-toR:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)][kp.v(344)](),
-toSp:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448),(387276917^387276912)][kp.v(345)]((2654435761^2654435760),(1013904226^1013904224),(4055616904^4055616896)),
-group:(()=>{const bb=Object[kp.v(346)]([(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448),(387276917^387276912)],x=>x%(1013904226^1013904224)?'odd':kp.v(347));return[bb[kp.v(348)],bb[kp.v(347)]];})(),
-idxParam:[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)][kp.v(8)]((v,i,arr)=>v+i+arr[kp.v(52)]),
-cmpr:[kp.v(349),(3668339987^3668339984),(2323661502^2323661472)][kp.v(137)](),
-lex:kp.v(350)[kp.v(104)](kp.v(76))[kp.v(137)](),
-node:[(2654435761^2654435760),[(1013904226^1013904224)]][kp.v(52)],
-del:(()=>{const a=[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)];delete a[(2654435761^2654435760)];return[a[kp.v(52)],a[(2654435761^2654435760)],(2654435761^2654435760)in a];})(),
-expand:[(2615779285^2615779285),...[(2654435761^2654435760),(1013904226^1013904224)],(3668339987^3668339984),...[(2027808452^2027808448)]],
-spliceAdd:(()=>{const a=[(2654435761^2654435760),(387276917^387276912)];a[kp.v(145)]((2654435761^2654435760),(2615779285^2615779285),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448));return a;})(),
-twoDim:[[(2654435761^2654435760),(1013904226^1013904224)],[(3668339987^3668339984),(2027808452^2027808448)]][kp.v(8)](dt=>dt[kp.v(8)](x=>x*(774553834^774553824))[kp.v(47)](kp.v(144))),
-reverse2:[kp.v(9),kp.v(78),kp.v(182)][kp.v(335)](),
-stable:[(2654435761^2654435760),(3668339987^3668339984),(1013904226^1013904224),(1013904226^1013904224),(2654435761^2654435760)][kp.v(137)](),
-};
-const du={
-setArr:[...new Set([(3668339987^3668339984),(2654435761^2654435760),(1013904226^1013904224),(2654435761^2654435760)])],
-setSz:new Set(kp.v(351))[kp.v(165)],
-setHas:new Set([(2654435761^2654435760)])[kp.v(5)]((2654435761^2654435760)),
-setAdd:(()=>{const s=new Set();s[kp.v(352)]((2654435761^2654435760))[kp.v(352)]((2654435761^2654435760))[kp.v(352)]((1013904226^1013904224));return[...s];})(),
-setDel:(()=>{const s=new Set([kp.v(9),kp.v(78)]);s[kp.v(184)](kp.v(9));return[...s];})(),
-setIter:(()=>{const s=new Set([kp.v(40),kp.v(284)]);let acc=kp.v(1);for(const v of s)acc+=v;return acc;})(),
-sKeys:[...new Set([(387276917^387276912),(3041712678^3041712672)])[kp.v(2)]()],
-sVals:[...new Set([(387276917^387276912),(3041712678^3041712672)])[kp.v(149)]()],
-sEnts:[...new Set([(387276917^387276912),(3041712678^3041712672)])[kp.v(150)]()],
-mapArr:[...new Map([[kp.v(9),(2654435761^2654435760)],[kp.v(78),(1013904226^1013904224)]])],
-mapGet:new Map([[kp.v(40),(2415085369^2415085360)]])[kp.v(6)](kp.v(40)),
-mapMiss:new Map()[kp.v(6)](kp.v(183)),
-mapHas:new Map([[kp.v(9),(2654435761^2654435760)]])[kp.v(5)](kp.v(9)),
-mapSet:(()=>{const m=new Map();m[kp.v(7)](kp.v(353),(2654435761^2654435760))[kp.v(7)](kp.v(353),(1013904226^1013904224))[kp.v(7)](kp.v(354),(3668339987^3668339984));return[m[kp.v(6)](kp.v(353)),[...m]];})(),
-mapDel:(()=>{const m=new Map([[kp.v(9),(2654435761^2654435760)],[kp.v(78),(1013904226^1013904224)]]);m[kp.v(184)](kp.v(9));return[...m];})(),
-wm:(()=>{const w=new WeakMap();const bb={};w[kp.v(7)](bb,(387276917^387276912));return w[kp.v(5)](bb)&&w[kp.v(6)](bb)===(387276917^387276912);})(),
-ws:(()=>{const w=new WeakSet();const bb={};w[kp.v(352)](bb);return w[kp.v(5)](bb);})(),
-mapSize:new Map([[kp.v(9),(2654435761^2654435760)],[kp.v(78),(1013904226^1013904224)],[kp.v(182),(3668339987^3668339984)]])[kp.v(165)],
-mapLoop:(()=>{const m=new Map([[kp.v(9),(2654435761^2654435760)],[kp.v(78),(1013904226^1013904224)]]);let s=kp.v(1);for(const[k,v]of m)s+=k+v;return s;})(),
-chain:new Map()[kp.v(7)]((2654435761^2654435760),kp.v(44))[kp.v(6)]((2654435761^2654435760)),
-mapKeyObj:(()=>{const bb={id:(2654435761^2654435760)};const m=new Map();m[kp.v(7)](bb,kp.v(355));return m[kp.v(6)](bb);})(),
-setClear:(()=>{const s=new Set([(2654435761^2654435760),(1013904226^1013904224)]);s[kp.v(356)]();return s[kp.v(165)];})(),
-mapValues:[...new Map([[kp.v(9),(2654435761^2654435760)],[kp.v(78),(1013904226^1013904224)]])[kp.v(149)]()],
-};
-const dw=(()=>{
-const u8=new Uint8Array([(3668339987^3668339984),(2654435761^2654435760),(2027808452^2027808448),(2654435761^2654435760),(387276917^387276912),(2415085369^2415085360)]);
-const i16=new Int16Array([-(2654435761^2654435760),(2615779285^2615779285),(2654435761^2654435760),(513869391^513898928),-(3168305152^3168272384)]);
-const i8=new Int8Array([(2105892559^2105892528),-(465361024^465360896),-(2654435761^2654435760),(2654435761^2654435760)]);
-const u16=new Uint16Array([(3682174543^3682171312),(2615779285^2615779285),(930722048^930721792)]);
-const u32=new Uint32Array([(2615779285^2615779285),4294967295,(16625216^16534528)]);
-const f32=new Float32Array([0.1,0.2,(2654435761^2654435760)/(3668339987^3668339984)]);
-const f64=new Float64Array([1.5,-2.5]);
-const u8c=new Uint8ClampedArray([-(387276917^387276912),(2615779285^2615779285),(2571253583^2571253680),(1761778540^1761778240)]);
-const bi64=new BigInt64Array([1n,-1n,9007199254740993n]);
-const ubi64=new BigUint64Array([1n,18446744073709551615n]);
-const a=new Uint8Array([(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448)]);
-const sub=a[kp.v(357)]((2654435761^2654435760),(3668339987^3668339984));
-sub[(2615779285^2615779285)]=(2415085369^2415085360);
-const f=new Float64Array((3668339987^3668339984));
-f[kp.v(148)](2.5);
-const cp=new Int32Array([(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448),(387276917^387276912)]);
-cp[kp.v(341)]((2654435761^2654435760),(3668339987^3668339984));
-return{
-u8:[...u8],
-i16:[...i16],
-i8:[...i8],
-u16:[...u16],
-u32:[...u32],
-f32:[...f32],
-f64:[...f64],
-u8c:[...u8c],
-bi64:[...bi64][kp.v(8)](String),
-ubi64:[...ubi64][kp.v(8)](String),
-len:u8[kp.v(52)]+kp.v(73)+u8[kp.v(358)],
-sub:[...a,...sub],
-fill:[...f],
-cp:[...cp],
-set:(()=>{const x=new Uint8Array((2027808452^2027808448));x[kp.v(7)]([(2415085369^2415085360),(4055616904^4055616896)],(2654435761^2654435760));return[...x];})(),
-sorted:[...new Float32Array([3.5,1.25,(1013904226^1013904224)])][kp.v(137)](),
-reverse:[...new Int8Array([(2654435761^2654435760),-(1013904226^1013904224),(3668339987^3668339984)])][kp.v(335)](),
-index:new Int8Array([(2027808452^2027808448),(387276917^387276912),(3041712678^3041712672)])[kp.v(106)]((387276917^387276912)),
-sum:[...u8][kp.v(13)]((a,b)=>a+b,(2615779285^2615779285)),
-cplen:[...new Uint8Array([(2654435761^2654435760),(1013904226^1013904224)])][kp.v(52)],
-};
-})();
-const dx=(()=>{
-const dy=new ArrayBuffer((3816266512^3816266496));
-const dz=new DataView(dy);
-dz[kp.v(359)]((2615779285^2615779285),(2571253583^2571253680));
-dz[kp.v(360)]((1013904226^1013904224),-(2808649522^2808648672),true);
-dz[kp.v(361)]((2027808452^2027808448),0xDEADBEEF,true);
-dz[kp.v(362)]((4055616904^4055616896),Math[kp.v(193)],true);
-const back=new Uint8Array(dy);
-const d2=new DataView(new ArrayBuffer((1013904226^1013904224)));
-d2[kp.v(360)]((2615779285^2615779285),-(2654435761^2654435760),false);
-return{
-abLen:dy[kp.v(358)],
-u8:dz[kp.v(363)]((2615779285^2615779285)),
-i16:dz[kp.v(364)]((1013904226^1013904224),true),
-u32:dz[kp.v(365)]((2027808452^2027808448),true),
-f64:dz[kp.v(366)]((4055616904^4055616896),true),
-be:d2[kp.v(364)]((2615779285^2615779285),false),
-t00:dz[kp.v(367)]((2027808452^2027808448),true),
-slice:[...back[kp.v(110)]((2027808452^2027808448),(4055616904^4055616896))],
-bytes:[...back],
-};
-})();
-const ea=(()=>{
-const b=Buffer[kp.v(146)]([(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448)]);
-const s=Buffer[kp.v(146)](kp.v(368));
-return{
-u32be:b[kp.v(369)]((2615779285^2615779285)),
-u16le:b[kp.v(370)]((1013904226^1013904224)),
-sw:[...b[kp.v(371)]()],
-cat:Buffer[kp.v(282)]([Buffer[kp.v(146)]([(2415085369^2415085360)]),Buffer[kp.v(146)]([(4055616904^4055616896)])])[kp.v(222)](kp.v(372)),
-str:s[kp.v(222)](kp.v(373)),
-hex:Buffer[kp.v(146)](kp.v(374),kp.v(372))[kp.v(222)](kp.v(372)),
-b64:Buffer[kp.v(146)](kp.v(375))[kp.v(222)](kp.v(376)),
-json:Buffer[kp.v(146)]([(1183412200^1183412096),(3837847961^3837848048)])[kp.v(222)](),
-alloc:[...Buffer[kp.v(377)]((3668339987^3668339984),(387276917^387276912))],
-fill:[...Buffer[kp.v(146)]([(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)])[kp.v(148)]((1401181143^1401181136),(2654435761^2654435760))],
-lens:Buffer[kp.v(146)](kp.v(125))[kp.v(52)]+kp.v(73)+Buffer[kp.v(146)](kp.v(125))[kp.v(358)],
-};
-})();
-const eb=(()=>{
-const bb={};
-Object[kp.v(378)](bb,kp.v(379),{value:(796135283^796135184),enumerable:false,configurable:false,writable:false});
-Object[kp.v(378)](bb,kp.v(380),{get(){return this[kp.v(381)]*(1013904226^1013904224);},set(v){this[kp.v(381)]=v;},enumerable:true});
-bb[kp.v(380)]=(4203543429^4203543440);
-const ec=Object[kp.v(382)](bb,kp.v(379));
-Object[kp.v(154)]({});
-Object[kp.v(156)]({});
-return{
-hidden:bb[kp.v(379)],
-acc:bb[kp.v(380)],
-names:Object[kp.v(158)](bb),
-keys:Object[kp.v(2)](bb),
-hasOwn:bb[kp.v(171)](kp.v(379)),
-inProto:kp.v(222)in bb,
-proto:Object[kp.v(159)][kp.v(383)](bb),
-descr:{value:ec[kp.v(384)],en:ec[kp.v(385)],cfg:ec[kp.v(386)],wr:ec[kp.v(387)]},
-getDesc:(()=>{const d=Object[kp.v(382)](bb,kp.v(380));return typeof d[kp.v(6)];})(),
-entries:Object[kp.v(150)]({x:(2654435761^2654435760),y:(1013904226^1013904224)}),
-values:Object[kp.v(149)]({x:(2654435761^2654435760),y:(1013904226^1013904224)}),
-from:Object[kp.v(151)]([[kp.v(9),(2654435761^2654435760)],[kp.v(78),(1013904226^1013904224)]]),
-assign:Object[kp.v(152)]({base:(2654435761^2654435760)},{mid:(1013904226^1013904224)},{base:(3668339987^3668339984),last:(2027808452^2027808448)}),
-spread:{...{a:(2654435761^2654435760)},...{b:(1013904226^1013904224),a:(2415085369^2415085360)}},
-keys2:Object[kp.v(2)](Object[kp.v(167)](null)),
-isFrozen:Object[kp.v(155)](bb),
-isSealed:Object[kp.v(157)](bb),
-isExt:Object[kp.v(388)](bb),
-precoping:Object[kp.v(389)]({})instanceof Object,
-stringtag:Object[kp.v(159)][kp.v(222)][kp.v(170)]([])+kp.v(71)+Object[kp.v(159)][kp.v(222)][kp.v(170)](null),
-createProto:Object[kp.v(167)]({q:(2654435761^2654435760)})[kp.v(390)],
-own:Object[kp.v(391)]([])[kp.v(52)],
-lookup:bb[kp.v(171)][kp.v(392)]?bb[kp.v(171)](kp.v(379)):false,
-};
-})();
-const ed=(()=>{const bb={a:(2654435761^2654435760),b:(1013904226^1013904224)};delete bb[kp.v(9)];return[bb[kp.v(9)],bb[kp.v(78)],kp.v(9)in bb];})();
-const ee={
-typeofs:[typeof kp.v(393),typeof(2654435761^2654435760),typeof true,typeof undefined,typeof{},typeof[],typeof(()=>{}),typeof null,typeof Symbol(),typeof new Date()],
-};
-const ef=(()=>{
-const eg=(fn)=>{
-try{
-const v=fn();
-return kp.v(394)+v;
-}catch(e){
-return e[kp.v(395)][kp.v(21)]+kp.v(73)+e[kp.v(69)];
+const tnu=(trickyNumbers());
+const guardInit=((()=>{let n=0;
+const f=(()=>++n);
+return ([f(),f(),f()]);
+})());
+const gsp=((()=>{const s=(new Set([1,2,3,2]));
+const m=(new Map([["a",1],["b",2],["c",3]]));
+return ({sArr:([...s]),sLen:(s.size),mArr:([...m]),mGet:(m.get("b")),mHas:(m.has("z")),mDel:((()=>{const x=(new Map(m));
+(x.delete("a"));
+return (x.size);
+})())});
+})());
+const NUMS=([0,1,-1,2,-2,7,8,15,16,31,32,127,128,255,256,512,1000,1024,32767,32768,65535,65536,2147483647,-2147483648,4294967295]);
+const DEC=([0.5,-0.5,1.25,-1.25,3.14159,2.71828,1e-5,1e5,1e21,123.456,-0.001,(0.1+0.2),9007199254740992]);
+const BITS=({add:((2147483647+1)),sub:(((-2147483648)-1)),mul:((4294967295*3)),xor:((0x0f^0xf0)),shl31:((1<<31)),shlN:(((-1)<<1)),shrN:(((-8)>>1)),ushrN:(((-1)>>>0)),ushr28:(((-1)>>>28)),not5:(~5),band:((0xff&0x0f)),bor:((8|3)),combine:((((0b1010<<4))|0b0101)),mask:((((0xffff0000>>>16))&0x00ff)),swapb:((((((0x1234&0x00ff))<<8))|((((0x1234&0xff00))>>8)))),mul2:((123456789*987654321)),addF:((0.1+0.2)),mulF:((1.1*100)),divs:((22/7)),modNeg:(((-7)%3)),modF:((5.5%2)),powNeg:(Math.pow(-2,3)),powF:((2**0.5)),root:(Math.sqrt(-1)),ln1:(Math.log(-1)),asin2:(Math.asin(2)),huge:(((Number.MAX_VALUE)*2)),tiny:(((Number.MIN_VALUE)/2)),ep1:((1+(Number.EPSILON))),ep0:((1+(((Number.EPSILON)/2)))),safeHi:(Number.MAX_SAFE_INTEGER),safeLo:(-(Number.MAX_SAFE_INTEGER)),isInt:(Number.isInteger(1.0)),isIntBig:(Number.isInteger(1e100)),z1:((0.30000000000000004===((0.1+0.2)))),z2:((((((((((((((((0.1+0.2))+0.3))+0.4))+0.5))+0.6))+0.7))+0.8))+0.9)),neg0a:(((-0)===0)),neg0b:(Object.is(-0,0)),neg0c:(Object.is(-0,-0)),inc1:((1+1)),dec1:((5-1)),twoPow:((2**10)),gold:((((1+(Math.sqrt(5))))/2)),tau:(((Math.PI)*2)),deg:((((180*(Math.PI)))/180)),euler:(Math.exp(1)),cubic:((((5**3))%7))});
+const MATHS=({sin:(Math.sin(0.5)),cos:(Math.cos(0.5)),tan:(Math.tan(0)),asin1:(Math.asin(1)),acos1:(Math.acos(-1)),atan2:(Math.atan2(1,1)),atan1:(Math.atan(1)),sinh1:(Math.sinh(1)),cosh1:(Math.cosh(1)),tanh1:(Math.tanh(0)),asinh1:(Math.asinh(1)),acosh2:(Math.acosh(2)),atanh05:(Math.atanh(0.5)),exp3:(Math.exp(2)),expm1:(Math.expm1(1)),log2g:(Math.log2(8)),log10g:(Math.log10(1000)),log1p:(Math.log1p(((Math.E)-1))),cbrt64:(Math.cbrt(64)),cbrtN:(Math.cbrt(-8)),hypot34:(Math.hypot(3,4)),imul3:(Math.imul(0x7fffffff,3)),clz32:(Math.clz32(0x80000000)),fround2:(Math.fround(1.337)),trunc2:(Math.trunc(-1.9)),ceil2:(Math.ceil(-0.9)),floor2:(Math.floor(-0.1)),roundP:(Math.round(1.5)),roundM:(Math.round(-0.5)),roundS:(Math.round(-1.5)),roundZ:(Math.round(0.4)),min0:(Math.min(1,-0)),max0:(Math.max(1,-0)),signA:([Math.sign(-5),Math.sign(-0),Math.sign(0),Math.sign(0.001),Math.sign(NaN)]),pi:(Math.PI),e:(Math.E),ln2:(Math.LN2),ln10:(Math.LN10),log2e:(Math.LOG2E),log10e:(Math.LOG10E),sqrt2:(Math.SQRT2),sqrthalf:(Math.SQRT1_2),max3:(Math.max(-1,-5,3,10,-2)),min3:(Math.min(-1,-5,3,10,-2)),sum1k:((()=>{let s=0;
+for (let i=1;(i<1000);i++)((s+=((1/((i*i))))));
+return s;
+})()),fact20:((()=>{let p=1;
+for (let i=2;(i<=20);i++)((p*=i));
+return p;
+})()),lei:((()=>{let s=0;
+for (let i=0;(i<30);i++)((s+=(((Math.sin(i))*(Math.cos(i))))));
+return s;
+})())});
+const BIGS=({a:(((2n**100n)).toString()),b:(((12345678901234567890n*9876543210n)).toString()),c:(((7n%3n)).toString()),d:(((((((2n**64n))-9n))>>2n)).toString()),e:((((BigInt("0x1fffffffffffff"))>>1n)).toString()),f:(((9007199254740991n/3n)).toString()),g:(((9007199254740991n+1n)).toString()),i:(((((10n**30n))/7n)).toString()),as8:((BigInt.asIntN(8,200n)).toString()),asu8:((BigInt.asUintN(8,200n)).toString()),as16:((BigInt.asIntN(16,-1n)).toString()),as64:((BigInt.asUintN(64,-1n)).toString()),mix:(((Number(9007199254740993n))*0.5)),neg:((-123n).toString()),zero:((0n).toString()),bits:(((((1n<<80n))|((3n<<4n)))).toString()),sq:(((299792458n**2n)).toString()),cmplx:(((((((2n+3n))*4n))-5n)).toString())});
+const CNV=({num:(Number("123.45")),parseHex:(Number.parseInt("ff",16)),parseInt2:(parseInt("10px")),parseFloat3:(parseFloat("3.14abc")),parseBin:(Number("0b1011")),parseOct:(Number("0o17")),parseExp:(Number("1e3")),nanNum:(Number("abc")),blank:(Number("")),plusStr:(+"42"),minusStr:(-"1.5"),isNaNum:(Number.isNaN("x")),isNaStr:(isNaN("x")),isFin:(Number.isFinite(Infinity)),isFinS:(Number.isFinite(0.5)),intSel:([Number.isInteger(1),Number.isInteger(1.5),Number.isInteger(NaN),Number.isInteger(1e308)]),safeSel:([Number.isSafeInteger((((2**53))-1)),Number.isSafeInteger((2**53))]),toStr16:((255).toString(16)),toStr2:((5).toString(2)),toStr36:((1234567).toString(36)),toFix:((3.14159).toFixed(2)),toFixZ:((3).toFixed(4)),toPre:((3.14159).toPrecision(3)),toExp:((12345).toExponential(2)),bStr:([String(123),String(null),String(undefined),String([1,2]),String({a:1}),true.toString()]),bNum:([Boolean(0),Boolean(""),Boolean("0"),Boolean(NaN),Boolean([]),Boolean(" "),Boolean(-0)]),ctor:([((Number("10"))+5),+"010",Number("0x10")]),unplus:(((+"a")+1)),hexid:0xDEADBEEF,binhuge:0b11111111111111111111111111111111,octhuge:0o7777777});
+const STRFX=({len:("ðŸ¶ðŸ±".length),cplen:(([..."ðŸ¶ðŸ±"]).length),cat:(((((((("a"+"b"))+7))+true))+null)),up:("hÃ©llo WÃ–RLD".toUpperCase()),low:("HÃ‰LLO wÃ¶rld".toLowerCase()),sl:("abcdefghij".slice(-3)),sb:("abcdefghij".substr(2,3)),sw:("prefix-x".startsWith("pre")),ew:("x-suffix".endsWith("suf")),inc3:("lena".includes("na")),idx3:("ababab".lastIndexOf("ab")),spi:("a-b-c".split("-")),spr:("a1b22c333".split(/\d+/)),sprKeep:("a1b22c333".split(/(\d+)/)),mat:("x1y2z3".match(/\d/g)),mall:(([...("k1v9j2".matchAll(/[a-z](\d)/g))]).map((m)=>((((m[0])+":"))+(m[1])))),spy:("a-b_c.d".replace(/_/g," X ")),spyFn:("abc123".replace(/\d+/g,(d)=>((Number(d))*2))),scy:("a=b=c".replace("=","+")),rep2:("ab".repeat(3)),padS:("4".padStart(3,"0")),padE:("8".padEnd(2,".")),chAt:("fÃ¶Ã¶".charAt(1)),code:("ABC".charCodeAt(1)),codeP:("ðŸ˜€a".codePointAt(1)),fromCode:(String.fromCharCode(72,105)),fromCP:(String.fromCodePoint(0x1F600,0x200D,0x1F525)),at:("abcdef".at(1)),atNeg:("abcdef".at(-2)),trim:(" \t a b \n".trim()),trimL:("  x  ".trimStart()),trimR:("  x  ".trimEnd()),normNFD:(("Ã…".normalize("NFD")).length),normNFC:((("Å".normalize("NFC"))==="Ã…")),normNKF:("é".normalize("NFKC")),cc:("a".concat("b","c")),lc2:("AbCd".toLowerCase()),uc2:("AbCd".toUpperCase()),olderIdx:("x".indexOf("y")),noEnd:("sun".endsWith("uns")),noStart:("gun".startsWith("g")),sedg:("edge case".endsWith(" case")),zws:("a​B​C".split("​")),nullCh:("abc".charCodeAt(99)),emptyS:("".padStart(2,"xy")),wrap:"ABCmili",octal:"AB",hextab:(("\tA\r\n"+"b")),fillV:((("x".repeat(2))+("y".repeat(3)))),idxStar:("**ab".indexOf("*")),lidxNof:("abc".lastIndexOf("z"))});
+const RGX=({date:(/^\d{4}-\d{2}-\d{2}$/.test("2024-13-99")),email:(/^[^@]+@[^@]+\.[^@]+$/.test("a@b.co")),emailB:(/^[^@]+@[^@]+\.[^@]+$/.test("nope")),group:((/(?<y>\d{4})-(?<m>\d{2})-(?<d>\d{2})/.exec("2024-05-06")).groups),flaggy:(/hello/i.test("HELLO")),unicode2:(/^\p{Emoji_Presentation}$/u.test("ðŸ˜€")),sflag:(/a.b/s.test("a\nb")),backref:(/^(a+)(b+)\1$/.test("aabbaa")),namedBack:(/^(?<w>ab)\k<w>$/.test("abab")),zero:((/a|b/.exec("b"))[0]),multiline:(/^world$/m.test("hello\nworld")),sticky2:((()=>{const r=/a/y;
+(((r.lastIndex)=1));
+const m=(r.exec("baa"));
+return ((m?(m[0]):null));
+})()),greek:(/^[\u0370-\u03FF]+$/.test("Î±Î²Î³")),quant:(/^[0-9]{2,4}$/.test("123")),quantNg:(/^[0-9]{2,4}$/.test("12345")),lookA:((/foo(?=bar)/.exec("foobar"))[0]),lookB:((/foo(?!bar)/.exec("foo!"))[0]),allSplit:("a1b2c".split(/\d/)),toStringR:(/x/g.toString()),flagsR:(/ab+c/gi.flags),sourceR:(/a[b-d]e/.source),lastIdxR:((()=>{const r=/o/g;
+(r.exec("foo"));
+return (r.lastIndex);
+})()),idxArr:((/(\d+)/.exec("12ab"))[1]),greedy:(("aaa".match(/a*/))[0]),lazy:(("aaa".match(/a*?/))[0]),dotAll:(/./s.test("\n")),noDot:(/./.test("\n")),word:(/^\w+$/.test("foo_1")),space:(/^\s*$/.test(" \n\t")),digit:(/^\d$/.test("5")),pub:(/^(?:ab|cd)+$/.test("abcdab")),anchor:("A B".replace(/\b/g,"|")),emoji2:(/^\p{L}+$/u.test("hÃ©llo")),quant2:("abbbb".match(/ab{2,4}c/)),negClass:(/^[^x]+$/.test("yyyy")),raww:/\\/,flagY:(/a/y.flags),complex:(/^(\d{1,3}\.){3}\d{1,3}$/.test("192.168.1.1")),complexBAD:(/^(\d{1,3}\.){3}\d{1,3}$/.test("999.1.1.1")),splitSub:(("a-b-c".split(/-/)).join("_"))});
+const ARRX=({map:(([1,2,3,4]).map((x,i)=>(((x*10))+i))),flt:(([1,2,3,4,5,6]).filter((x)=>(((x%3))===0))),fltIdx:(([1,2,3,4]).filter((x,i)=>(((i%2))===0))),red:(([1,2,3,4]).reduce((a,b,i)=>(a+((b*((10**i))))),0)),redRn:(([1,2,3]).reduceRight((a,b)=>(a-b),0)),flat3:(([1,[2,[3,[4,[5]]]]]).flat(3)),flatDf:(([1,[2,[3]]]).flat()),flatMap1:(([1,2,3]).flatMap((x)=>[x,-x])),sort:(([9,2,5,1,7]).sort((a,b)=>(a-b))),sortStr:((["b","B","a","A"]).sort((a,b)=>a.localeCompare(b))),rev:(([...([1,2,3])]).reverse()),some:(([1,2,3]).some((x)=>(((x%2))===0))),every:(([2,4]).every((x)=>(((x%2))===0))),find:(([1,2,3,4,5]).find((x)=>(x>3))),findI:((["a","b","c"]).findIndex((x)=>(x==="c"))),findL:(([1,2,3,4]).findLast((x)=>(((x%2))===1))),findLi:(([1,2,3,4]).findLastIndex((x)=>(((x%2))===1))),incl:(([1,2,NaN]).includes(NaN)),inclF:(([1,2,3]).includes(4)),idx:((["a","b","a"]).indexOf("a")),lidx:((["a","b","a"]).lastIndexOf("a")),join:(([1,"a",true,null]).join("|")),con:(([1,2]).concat([3],4,[5,[6]])),sla:(([1,2,3,4,5]).slice(1,-1)),sp:((()=>{const a=([1,2,3,4,5]);
+(a.splice(1,2,"x"));
+return a;
+})()),spr:((()=>{const a=([1,2,3,4,5]);
+const r=(a.splice(1,2));
+return ([r,a]);
+})()),sh:((()=>{const a=([1,2,3]);
+return ([a.shift(),a]);
+})()),unsh:((()=>{const a=([2,3]);
+(a.unshift(0,1));
+return a;
+})()),pop:((()=>{const a=([1]);
+return ([a.pop(),a]);
+})()),push:((()=>{const a=([]);
+const l=(a.push(1,2));
+return ([l,a]);
+})()),copyW:((()=>{const a=([1,2,3,4]);
+(a.copyWithin(0,2));
+return a;
+})()),fillA:((()=>((Array(5)).fill(7)).map((v,i)=>(v+i)))()),atIdx:(([10,20,30]).at(-1)),keysA:([...(([10,20]).keys())]),valsA:([...(([10,20]).values())]),entA:([...(([10,20]).entries())]),withA:(([1,2,3]).with(1,9)),toS:(([3,1,2]).toSorted()),toR:(([1,2,3]).toReversed()),toSp:(([1,2,3,4,5]).toSpliced(1,2,8)),group:((()=>{const o=(Object.groupBy([1,2,3,4,5],(x)=>(((x%2))?"odd":"even")));
+return ([o.odd,o.even]);
+})()),idxParam:(([1,2,3]).map((v,i,arr)=>(((v+i))+(arr.length)))),cmpr:((["3",3,30]).sort()),lex:(("10 9 8".split(" ")).sort()),node:(([1,[2]]).length),del:((()=>{const a=([1,2,3]);
+(delete (a[1]));
+return ([a.length,a[1],(1 in a)]);
+})()),expand:([0,...([1,2]),,3,...([4])]),spliceAdd:((()=>{const a=([1,5]);
+(a.splice(1,0,2,3,4));
+return a;
+})()),twoDim:(([[1,2],[3,4]]).map((row)=>(row.map((x)=>(x*10))).join("-"))),reverse2:((["a","b","c"]).reverse()),stable:(([1,3,2,2,1]).sort())});
+const COLL=({setArr:([...(new Set([3,1,2,1]))]),setSz:((new Set("aab")).size),setHas:((new Set([1])).has(1)),setAdd:((()=>{const s=(new Set());
+(((s.add(1)).add(1)).add(2));
+return ([...s]);
+})()),setDel:((()=>{const s=(new Set(["a","b"]));
+(s.delete("a"));
+return ([...s]);
+})()),setIter:((()=>{const s=(new Set(["x","y"]));
+let acc="";
+for (const v of s)((acc+=v));
+return acc;
+})()),sKeys:([...((new Set([5,6])).keys())]),sVals:([...((new Set([5,6])).values())]),sEnts:([...((new Set([5,6])).entries())]),mapArr:([...(new Map([["a",1],["b",2]]))]),mapGet:((new Map([["x",9]])).get("x")),mapMiss:((new Map()).get("z")),mapHas:((new Map([["a",1]])).has("a")),mapSet:((()=>{const m=(new Map());
+(((m.set("k",1)).set("k",2)).set("j",3));
+return ([m.get("k"),[...m]]);
+})()),mapDel:((()=>{const m=(new Map([["a",1],["b",2]]));
+(m.delete("a"));
+return ([...m]);
+})()),wm:((()=>{const w=(new WeakMap());
+const o=({});
+(w.set(o,5));
+return (((w.has(o))&&(((w.get(o))===5))));
+})()),ws:((()=>{const w=(new WeakSet());
+const o=({});
+(w.add(o));
+return (w.has(o));
+})()),mapSize:((new Map([["a",1],["b",2],["c",3]])).size),mapLoop:((()=>{const m=(new Map([["a",1],["b",2]]));
+let s="";
+for (const [k,v] of m)((s+=((k+v))));
+return s;
+})()),chain:(((new Map()).set(1,"one")).get(1)),mapKeyObj:((()=>{const o=({id:1});
+const m=(new Map());
+(m.set(o,"found"));
+return (m.get(o));
+})()),setClear:((()=>{const s=(new Set([1,2]));
+(s.clear());
+return (s.size);
+})()),mapValues:([...((new Map([["a",1],["b",2]])).values())])});
+const TARR=((()=>{const u8=(new Uint8Array([3,1,4,1,5,9]));
+const i16=(new Int16Array([-1,0,1,32767,-32768]));
+const i8=(new Int8Array([127,-128,-1,1]));
+const u16=(new Uint16Array([65535,0,256]));
+const u32=(new Uint32Array([0,4294967295,123456]));
+const f32=(new Float32Array([0.1,0.2,(1/3)]));
+const f64=(new Float64Array([1.5,-2.5]));
+const u8c=(new Uint8ClampedArray([-5,0,255,300]));
+const bi64=(new BigInt64Array([1n,-1n,9007199254740993n]));
+const ubi64=(new BigUint64Array([1n,18446744073709551615n]));
+const a=(new Uint8Array([1,2,3,4]));
+const sub=(a.subarray(1,3));
+(((sub[0])=9));
+const f=(new Float64Array(3));
+(f.fill(2.5));
+const cp=(new Int32Array([1,2,3,4,5]));
+(cp.copyWithin(1,3));
+return ({u8:([...u8]),i16:([...i16]),i8:([...i8]),u16:([...u16]),u32:([...u32]),f32:([...f32]),f64:([...f64]),u8c:([...u8c]),bi64:(([...bi64]).map(String)),ubi64:(([...ubi64]).map(String)),len:(((((u8.length)+":"))+(u8.byteLength))),sub:([...a,,...sub]),fill:([...f]),cp:([...cp]),set:((()=>{const x=(new Uint8Array(4));
+(x.set([9,8],1));
+return ([...x]);
+})()),sorted:(([...(new Float32Array([3.5,1.25,2.0]))]).sort()),reverse:(([...(new Int8Array([1,-2,3]))]).reverse()),index:((new Int8Array([4,5,6])).indexOf(5)),sum:(([...u8]).reduce((a,b)=>(a+b),0)),cplen:(([...(new Uint8Array([1,2]))]).length)});
+})());
+const ABV=((()=>{const ab=(new ArrayBuffer(16));
+const dv=(new DataView(ab));
+(dv.setUint8(0,255));
+(dv.setInt16(2,-1234,true));
+(dv.setUint32(4,0xDEADBEEF,true));
+(dv.setFloat64(8,Math.PI,true));
+const back=(new Uint8Array(ab));
+const d2=(new DataView(new ArrayBuffer(2)));
+(d2.setInt16(0,-1,false));
+return ({abLen:(ab.byteLength),u8:(dv.getUint8(0)),i16:(dv.getInt16(2,true)),u32:(dv.getUint32(4,true)),f64:(dv.getFloat64(8,true)),be:(d2.getInt16(0,false)),t00:(dv.getFloat32(4,true)),slice:([...(back.slice(4,8))]),bytes:([...back])});
+})());
+const BUF=((()=>{const b=(Buffer.from([1,2,3,4]));
+const s=(Buffer.from("hiðŸ˜€"));
+return ({u32be:(b.readUInt32BE(0)),u16le:(b.readUInt16LE(2)),sw:([...(b.swap16())]),cat:((Buffer.concat([Buffer.from([9]),Buffer.from([8])])).toString("hex")),str:(s.toString("utf8")),hex:((Buffer.from("ff0080","hex")).toString("hex")),b64:((Buffer.from("yo")).toString("base64")),json:((Buffer.from([104,105])).toString()),alloc:([...(Buffer.alloc(3,5))]),fill:([...((Buffer.from([1,2,3])).fill(7,1))]),lens:((((((Buffer.from("abc")).length)+":"))+((Buffer.from("abc")).byteLength)))});
+})());
+const OBD=((()=>{const o=({});
+(Object.defineProperty(o,"hidden",{value:99,enumerable:false,configurable:false,writable:false}));
+(Object.defineProperty(o,"access",{get(){return (((this.xstore)*2));
+},set(v){(((this.xstore)=v));
+},enumerable:true}));
+(((o.access)=21));
+const dh=(Object.getOwnPropertyDescriptor(o,"hidden"));
+(Object.freeze({}));
+(Object.seal({}));
+return ({hidden:(o.hidden),acc:(o.access),names:(Object.getOwnPropertyNames(o)),keys:(Object.keys(o)),hasOwn:(o.hasOwnProperty("hidden")),inProto:(("toString" in o)),proto:((Object.prototype).isPrototypeOf(o)),descr:({value:(dh.value),en:(dh.enumerable),cfg:(dh.configurable),wr:(dh.writable)}),getDesc:((()=>{const d=(Object.getOwnPropertyDescriptor(o,"access"));
+return (typeof (d.get));
+})()),entries:(Object.entries({x:1,y:2})),values:(Object.values({x:1,y:2})),from:(Object.fromEntries([["a",1],["b",2]])),assign:(Object.assign({base:1},{mid:2},{base:3,last:4})),spread:({...({a:1}),...({b:2,a:9})}),keys2:(Object.keys(Object.create(null))),isFrozen:(Object.isFrozen(o)),isSealed:(Object.isSealed(o)),isExt:(Object.isExtensible(o)),precoping:(((Object.preventExtensions({})) instanceof Object)),stringtag:(((((((Object.prototype).toString).call([]))+"|"))+(((Object.prototype).toString).call(null)))),createProto:((Object.create({q:1})).q),own:((Object.getOwnPropertySymbols([])).length),lookup:((((o.hasOwnProperty).bind)?(o.hasOwnProperty("hidden")):false))});
+})());
+const DELX=((()=>{const o=({a:1,b:2});
+(delete (o.a));
+return ([o.a,o.b,("a" in o)]);
+})());
+const TSOF=({typeofs:([typeof "s",typeof 1,typeof true,typeof undefined,typeof ({}),typeof ([]),typeof (()=>{
+}),typeof null,typeof (Symbol()),typeof (new Date())])});
+const ERRS=((()=>{const mk=((fn)=>{try{const v=(fn());
+return (("none:"+v));
+}catch(e){return ((((((e.constructor).name)+":"))+(e.message)));
 }
-};
-return{
-type:eg(()=>{const a=null;return a[kp.v(40)];}),
-ref:eg(()=>{return undeclaredzz;}),
-syn:eg(()=>{throw new SyntaxError(kp.v(396));}),
-range:eg(()=>{return(new Array((1013904226^1013904224)**(3337565728^3337565696)))[kp.v(110)]((2615779285^2615779285));}),
-tofix:eg(()=>{return((78084107^78084208))[kp.v(239)]((1810039509^1810039472));}),
-circ:eg(()=>{const bb={a:(2654435761^2654435760)};bb[kp.v(397)]=bb;return JSON[kp.v(398)](bb);}),
-finn:eg(()=>{let ran=false;try{throw new Error(kp.v(78));}finally{ran=true;}return ran;}),
-nest:eg(()=>{
-try{try{throw new Error(kp.v(399));}finally{}}catch(e){return e[kp.v(69)];}
-}),
-errCls:eg(()=>{class MyE extends Error{}throw new MyE(kp.v(400));}),
-eor:eg(()=>{throw{code:(2654435761^2654435760)};}),
-protoErr:eg(()=>{return TypeError[kp.v(159)][kp.v(21)];}),
-strictim:eg(()=>{
-const ba={};Object[kp.v(378)](ba,kp.v(401),{value:(2654435761^2654435760),writable:false});
-try{
-ba[kp.v(401)]=(1013904226^1013904224);
-return kp.v(65);
-}catch(e){
-return e[kp.v(395)][kp.v(21)];
-}
-}),
-};
-})();
-const eh=(()=>{
-const target={a:(2654435761^2654435760),b:(1013904226^1013904224)};
-const seen=[];
-const p=new Proxy(target,{
-get(t,k,r){seen[kp.v(0)](kp.v(402)+String(k));return t[k];},
-set(t,k,v){seen[kp.v(0)](kp.v(403)+String(k));t[k]=v*(1013904226^1013904224);return true;},
-has(t,k){seen[kp.v(0)](kp.v(404)+String(k));return k in t;},
 });
-p[kp.v(182)]=(3668339987^3668339984);
-const got=p[kp.v(9)];
-return{got,a2:p[kp.v(9)],hasB:kp.v(78)in p,tgt:target,seen};
-})();
-const ei=(()=>{
-const s1=Symbol(kp.v(405));
-const s2=Symbol(kp.v(406));
-const bb={[s1]:kp.v(44),[s2]:kp.v(45)};
-bb[s2]=kp.v(407);
-const ej={};
-ej[Symbol[kp.v(408)]]=function*ek(){yield(2654435761^2654435760);yield(1013904226^1013904224);};
-const desc=Object[kp.v(391)](bb)[(2615779285^2615779285)];
-return{
-s1:bb[s1],
-s2:bb[s2],
-fromIter:[...ej],
-desc:String(desc),
-keys:Object[kp.v(391)](bb)[kp.v(52)]+kp.v(73)+Object[kp.v(2)](bb)[kp.v(52)],
-named:Symbol[kp.v(409)](kp.v(40))===Symbol[kp.v(409)](kp.v(40)),
-keyFor:Symbol[kp.v(410)](Symbol[kp.v(409)](kp.v(40))),
-descr:Object[kp.v(382)](bb,s1)[kp.v(384)],
-well:Symbol[kp.v(408)][kp.v(222)](),
-typeofSym:typeof Symbol(kp.v(390)),
-};
-})();
-const em=(()=>{
-function*eo(){let i=(2615779285^2615779285);while(true){yield i++;}}
-function*skip(stop){let n=(2615779285^2615779285);while(n<stop){yield n;n+=(1013904226^1013904224);}}
-function*nest(){yield(2654435761^2654435760);yield*skip((2027808452^2027808448));yield(2415085369^2415085360);}
-const g=eo();
-g[kp.v(411)]();
-g[kp.v(411)]();
-g[kp.v(411)]();
-return{
-next:g[kp.v(411)]()[kp.v(384)],
-skip:[...skip((1401181143^1401181136))],
-nest:[...nest()],
-first:eo()[kp.v(411)]()[kp.v(384)]===(2615779285^2615779285)?'ok':kp.v(58),
-back:(()=>{const ep=skip((774553834^774553824));const a=ep[kp.v(411)]();const b=ep[kp.v(412)]((796135283^796135184));return[a[kp.v(413)],a[kp.v(384)],b[kp.v(413)],b[kp.v(384)]];})(),
-manual:(()=>{
-const er=skip((387276917^387276912));
-const vals=[];
+return ({type:(mk(()=>{const a=null;
+return (a.x);
+})),ref:(mk(()=>{return undeclaredzz;
+})),syn:(mk(()=>{throw (new SyntaxError("bad syntax"));
+})),range:(mk(()=>{return ((new Array((2**32))).slice(0));
+})),tofix:(mk(()=>{return ((123).toFixed(101));
+})),circ:(mk(()=>{const o=({a:1});
+(((o.self)=o));
+return (JSON.stringify(o));
+})),finn:(mk(()=>{let ran=false;
+try{throw (new Error("b"));
+}finally{((ran=true));
+}
+return ran;
+})),nest:(mk(()=>{try{try{throw (new Error("inner"));
+}finally{
+}
+}catch(e){return (e.message);
+}
+})),errCls:(mk(()=>{class MyE extends Error{}
+throw (new MyE("mine"));
+})),eor:(mk(()=>{throw ({code:1});
+})),protoErr:(mk(()=>{return ((TypeError.prototype).name);
+})),strictim:(mk(()=>{const obj=({});
+(Object.defineProperty(obj,"r",{value:1,writable:false}));
+try{(((obj.r)=2));
+return "ok";
+}catch(e){return ((e.constructor).name);
+}
+}))});
+})());
+const PROX=((()=>{const target=({a:1,b:2});
+const seen=([]);
+const p=(new Proxy(target,{get(t,k,r){(seen.push(("get:"+(String(k)))));
+return (t[k]);
+},set(t,k,v){(seen.push(("set:"+(String(k)))));
+(((t[k])=((v*2))));
+return true;
+},has(t,k){(seen.push(("has:"+(String(k)))));
+return ((k in t));
+}}));
+(((p.c)=3));
+const got=(p.a);
+return ({got:got,a2:(p.a),hasB:(("b" in p)),tgt:target,seen:seen});
+})());
+const SYMS=((()=>{const s1=(Symbol("s1"));
+const s2=(Symbol("s2"));
+const o=({[s1]:"one",[s2]:"two"});
+(((o[s2])="TWO"));
+const iterable=({});
+(((iterable[Symbol.iterator])=(function* iterfn(){(yield 1);
+(yield 2);
+})));
+const desc=((Object.getOwnPropertySymbols(o))[0]);
+return ({s1:(o[s1]),s2:(o[s2]),fromIter:([...iterable]),desc:(String(desc)),keys:((((((Object.getOwnPropertySymbols(o)).length)+":"))+((Object.keys(o)).length))),named:(((Symbol.for("x"))===(Symbol.for("x")))),keyFor:(Symbol.keyFor(Symbol.for("x"))),descr:((Object.getOwnPropertyDescriptor(o,s1)).value),well:((Symbol.iterator).toString()),typeofSym:(typeof (Symbol("q")))});
+})());
+const GITZ=((()=>{function* naturals(){let i=0;
+while(true){(yield (i++));
+}
+}
+function* skip(stop){let n=0;
+while(((n<stop))){(yield n);
+((n+=2));
+}
+}
+function* nest(){(yield 1);
+(yield* (skip(4)));
+(yield 9);
+}
+const g=(naturals());
+(g.next());
+(g.next());
+(g.next());
+return ({next:((g.next()).value),skip:([...(skip(7))]),nest:([...(nest())]),first:(((((((naturals()).next()).value)===0))?"ok":"bad")),back:((()=>{const it=(skip(10));
+const a=(it.next());
+const b=(it.return(99));
+return ([a.done,a.value,b.done,b.value]);
+})()),manual:((()=>{const iter=(skip(5));
+const vals=([]);
 let r;
-while(!(r=er[kp.v(411)]())[kp.v(413)])vals[kp.v(0)](r[kp.v(384)]);
+while((!(((r=(iter.next()))).done)))(vals.push(r.value));
 return vals;
-})(),
-near:(()=>{const ep=eo();ep[kp.v(411)]();ep[kp.v(411)]();return ep[kp.v(411)]()[kp.v(384)];})(),
-};
-})();
-function es(n){if(n<=(2654435761^2654435760))return n;return es(n-(2654435761^2654435760))+es(n-(1013904226^1013904224));}
-function et(n){return n===(2615779285^2615779285)?(2615779285^2615779285):eu(n-(2654435761^2654435760));}
-function eu(n){return n===(2615779285^2615779285)?(2654435761^2654435760):et(n-(2654435761^2654435760));}
-function ev(){return[...arguments];}
-function ex(ey,...vals){
-return ey[kp.v(8)]((s,i)=>s+(i<vals[kp.v(52)]?kp.v(79)+vals[i]+'}':kp.v(1)))[kp.v(47)](kp.v(1));
+})()),near:((()=>{const it=(naturals());
+(it.next());
+(it.next());
+return ((it.next()).value);
+})())});
+})());
+function RECN(n){if(((n<=1)))return n;
+return (((RECN((n-1)))+(RECN((n-2)))));
 }
-const ez={fib:es((535203442^535203424)),mut:[et((774553834^774553824)),eu((774553834^774553824))],arg:ev((2654435761^2654435760),kp.v(45),true)};
-function fa(){return typeof new.target===kp.v(415)?'constructed':kp.v(416);}
-class ChildN{
-constructor(){this[kp.v(417)]=new.target===ChildN?'child':kp.v(50);}
+function MUTA(n){return ((((n===0))?0:(MUTB((n-1)))));
 }
-class Mother2{
-static count=(2615779285^2615779285);
-constructor(name){this[kp.v(21)]=name;Mother2[kp.v(418)]++;}
-greet(){return kp.v(419)+this[kp.v(21)];}
-static feed(){return kp.v(420);}
+function MUTB(n){return ((((n===0))?1:(MUTA((n-1)))));
 }
-class Daughter2 extends Mother2{
-#seed;
-constructor(name,fb){super(name);this.#seed=fb;}
-get secret(){return this.#seed;}
-set secret(v){this.#seed=v;}
-static feed(){return super[kp.v(421)]()+kp.v(422);}
-greetings(){return super[kp.v(423)]()+kp.v(424);}
-get[Symbol[kp.v(425)]](){return kp.v(426);}
+function ARGX(){return ([...arguments]);
 }
-const fc=new Mother2(kp.v(19));
-const fd=new Daughter2(kp.v(427),(4112119562^4112119584));
-fd[kp.v(428)]=(796135283^796135184);
-const fe={
-cnt:Mother2[kp.v(418)],
-greetM:fc[kp.v(423)](),
-greetD:fd[kp.v(423)](),
-greetings:fd[kp.v(429)](),
-secret:fd[kp.v(428)],
-feedD:Daughter2[kp.v(421)](),
-inst:fd instanceof Mother2&&!(fc instanceof Daughter2),
-tag:Object[kp.v(159)][kp.v(222)][kp.v(170)](fd),
-ntd:{plain:fa(),constructed:new fa(),child:new ChildN()[kp.v(417)]},
-};
-const ff=(()=>{
-const fg=new Date((2615779285^2615779285));
-const fh=new Date(kp.v(430));
-const d2=new Date(Date[kp.v(431)]((1214424503^1214423632),(387276917^387276912),(1161830751^1161830736),(774553834^774553824),(1549107668^1549107648),(2323661502^2323661472),(3098215336^3098215296)));
-return{
-t0:fg[kp.v(432)](),
-iso:fh[kp.v(433)](),
-utc:fh[kp.v(434)](),
-y:fh[kp.v(435)](),
-mo:fh[kp.v(436)](),
-da:fh[kp.v(437)](),
-h:fh[kp.v(438)](),
-mi:fh[kp.v(439)](),
-se:fh[kp.v(440)](),
-ms:fh[kp.v(441)](),
-wk:fh[kp.v(442)](),
-parse:Date[kp.v(443)](kp.v(430)),
-epoch:Date[kp.v(431)]((291944144^291942656),(2615779285^2615779285),(2654435761^2654435760)),
-leaps:new Date((3868860264^3868858496),(2654435761^2654435760),(3964193037^3964193040))[kp.v(444)]()+kp.v(73)+new Date((1214424503^1214423632),(2654435761^2654435760),(3964193037^3964193040))[kp.v(445)](),
-d2:d2[kp.v(432)](),
-milli:new Date(1704150245678)[kp.v(432)](),
-};
-})();
-const fi=(()=>{
-const u=new URL(kp.v(446));
-const fj=new URL(kp.v(447),kp.v(448));
-return{
-proto:u[kp.v(449)],
-host:u[kp.v(450)],
-hostname:u[kp.v(451)],
-port:u[kp.v(452)],
-path:u[kp.v(453)],
-q:u[kp.v(454)],
-qp:u[kp.v(455)][kp.v(6)](kp.v(40)),
-qs:[...u[kp.v(455)]],
-hash:u[kp.v(456)],
-user:u[kp.v(457)],
-pass:u[kp.v(458)],
-toString:u[kp.v(459)],
-rel:fj[kp.v(459)],
-};
-})();
-const fk=(()=>{
-const fl=new TextEncoder();
-const td=new TextDecoder();
-const b=fl[kp.v(460)](kp.v(329));
-return{
-bytes:[...b],
-back:td[kp.v(461)](b),
-astral:[...td[kp.v(461)](fl[kp.v(460)](kp.v(305)))][kp.v(52)],
-b64:Buffer[kp.v(146)](kp.v(368))[kp.v(222)](kp.v(376)),
-b64d:Buffer[kp.v(146)](kp.v(462),kp.v(376))[kp.v(222)](kp.v(373)),
-b64dd:Buffer[kp.v(146)](kp.v(462),kp.v(376))[kp.v(222)](kp.v(372)),
-hex:Buffer[kp.v(146)]([(2571253583^2571253680),(2615779285^2615779285),(465361024^465360896)])[kp.v(222)](kp.v(372)),
-uni:String[kp.v(99)]((3366000128^3365986304),(3831361152^3831240704)),
-len:kp.v(463)[kp.v(52)],
-clen:[...kp.v(463)][kp.v(52)],
-atob1:atob(kp.v(464)),
-btoa1:btoa(kp.v(56)),
-codeunits:fl[kp.v(460)](kp.v(463))[kp.v(52)],
-};
-})();
-const fm={
-tag:ex`a${(2654435761^2654435760)}d${(1013904226^1013904224)}c${kp.v(40)}`,
-tagRaw:String[kp.v(465)]`a\nb`,
-cooked:`a\nb`===kp.v(306)?'cooked':kp.v(465),
-expr:`${kp.v(40)+(2654435761^2654435760)}${(1013904226^1013904224)*(3668339987^3668339984)}`,
-nest:`${`${`inner`}`}`,
-multiline:`line1\nline2`,
-many:`${kp.v(9)}${kp.v(78)}${kp.v(182)}`,
-};
-const fo=(()=>{
-const r=[];
-outer:for(let i=(2615779285^2615779285);i<(2027808452^2027808448);i++){
-for(let cj=(2615779285^2615779285);cj<(2027808452^2027808448);cj++){
-if(cj===(2654435761^2654435760))continue;
-if(i===(1013904226^1013904224)&&cj===(1013904226^1013904224))break outer;
-if(i===(3668339987^3668339984))continue outer;
-r[kp.v(0)](i+kp.v(73)+cj);
+function TAG(strings,...vals){return ((strings.map((s,i)=>(s+((((i<(vals.length)))?(((("{"+(vals[i])))+"}")):""))))).join(""));
+}
+const RECS=({fib:(RECN(18)),mut:([MUTA(10),MUTB(10)]),arg:(ARGX(1,"two",true))});
+function NTC(){return (((((typeof new.target)==="function"))?"constructed":"plain"));
+}
+class ChildN{constructor(){(((this.v)=((((new.target===ChildN))?"child":"other"))));
 }
 }
-for(let i=(2615779285^2615779285);i<(774553834^774553824);i++){
-if(i===(3668339987^3668339984))continue;
-if(i===(1401181143^1401181136))break;
-switch(i){
-case(2615779285^2615779285):
-r[kp.v(0)](kp.v(466));
-break;
-case(2654435761^2654435760):
-case(1013904226^1013904224):
-r[kp.v(0)](kp.v(467));
-break;
-default:
-r[kp.v(0)](i);
+class Mother2{static count=0
+constructor(name){(((this.name)=name));
+((Mother2.count)++);
+}
+greet(){return (("hi "+(this.name)));
+}
+static feed(){return "food";
 }
 }
-let n=(2615779285^2615779285);
-while(n<(3668339987^3668339984)){r[kp.v(0)](kp.v(468)+n);n++;}
+class Daughter2 extends Mother2{#seed
+constructor(name,seed){(super(name));
+(((this.#seed)=seed));
+}
+get secret(){return (this.#seed);
+}
+set secret(v){(((this.#seed)=v));
+}
+static feed(){return (((super.feed())+"!"));
+}
+greetings(){return (((super.greet())+"!!!"));
+}
+get [(Symbol.toStringTag)](){return "D2";
+}
+}
+const motherx=(new Mother2("m"));
+const daughterx=(new Daughter2("d",42));
+(((daughterx.secret)=99));
+const CLSX=({cnt:(Mother2.count),greetM:(motherx.greet()),greetD:(daughterx.greet()),greetings:(daughterx.greetings()),secret:(daughterx.secret),feedD:(Daughter2.feed()),inst:((((daughterx instanceof Mother2))&&(!((motherx instanceof Daughter2))))),tag:(((Object.prototype).toString).call(daughterx)),ntd:({plain:(NTC()),constructed:(new NTC()),child:((new ChildN()).v)})});
+const DTS=((()=>{const d0=(new Date(0));
+const d1=(new Date("2024-01-02T03:04:05.678Z"));
+const d2=(new Date(Date.UTC(2023,5,15,10,20,30,40)));
+return ({t0:(d0.getTime()),iso:(d1.toISOString()),utc:(d1.toUTCString()),y:(d1.getUTCFullYear()),mo:(d1.getUTCMonth()),da:(d1.getUTCDate()),h:(d1.getUTCHours()),mi:(d1.getUTCMinutes()),se:(d1.getUTCSeconds()),ms:(d1.getUTCMilliseconds()),wk:(d1.getUTCDay()),parse:(Date.parse("2024-01-02T03:04:05.678Z")),epoch:(Date.UTC(2000,0,1)),leaps:((((((new Date(2024,1,29)).getDate())+":"))+((new Date(2023,1,29)).getMonth()))),d2:(d2.getTime()),milli:((new Date(1704150245678)).getTime())});
+})());
+const URLX=((()=>{const u=(new URL("https://user:pass@example.com:8080/a/b?x=1&y=2#frag"));
+const u2=(new URL("/rel","https://base.example/p/q?z=9"));
+return ({proto:(u.protocol),host:(u.host),hostname:(u.hostname),port:(u.port),path:(u.pathname),q:(u.search),qp:((u.searchParams).get("x")),qs:([...(u.searchParams)]),hash:(u.hash),user:(u.username),pass:(u.password),toString:(u.href),rel:(u2.href)});
+})());
+const ENCD=((()=>{const te=(new TextEncoder());
+const td=(new TextDecoder());
+const b=(te.encode("hÃ©llo"));
+return ({bytes:([...b]),back:(td.decode(b)),astral:(([...(td.decode(te.encode("ðŸ˜€")))]).length),b64:((Buffer.from("hiðŸ˜€")).toString("base64")),b64d:((Buffer.from("aGk=","base64")).toString("utf8")),b64dd:((Buffer.from("aGk=","base64")).toString("hex")),hex:((Buffer.from([255,0,128])).toString("hex")),uni:(String.fromCodePoint(0x1F600,0x1F680)),len:("aðŸ˜€b".length),clen:(([..."aðŸ˜€b"]).length),atob1:(atob("aGVsbG8=")),btoa1:(btoa("hello")),codeunits:((te.encode("aðŸ˜€b")).length)});
+})());
+const TAGG=({tag:(TAG`a${1}d${2}c${"x"}`),tagRaw:(String.raw`a\nb`),cooked:(((((`a\nb`)==="a\nb"))?"cooked":"raw")),expr:(`${("x"+1)}${(2*3)}`),nest:(`${`${`inner`}`}`),multiline:(`line1\nline2`),many:(`${"a"}${"b"}${"c"}`)});
+const FLOW=((()=>{const r=([]);
+outer:for (let i=0;(i<4);i++){for (let j=0;(j<4);j++){if(((j===1)))continue;
+if(((((i===2))&&((j===2)))))break outer;
+if(((i===3)))continue outer;
+(r.push((((i+":"))+j)));
+}
+}
+for (let i=0;(i<10);i++){if(((i===3)))continue;
+if(((i===7)))break;
+switch(i){case 0:{(r.push("zero"));
+break;}case 1:{}case 2:{(r.push("low"));
+break;}default:{(r.push(i));}}
+}
+let n=0;
+while(((n<3))){(r.push(("w"+n)));
+(n++);
+}
 return r;
-})();
-const fp=(()=>{
-const r=[];
-let n=(2615779285^2615779285);
-do{r[kp.v(0)](n);n++;}while(n<(3668339987^3668339984));
-const r2=[];
-do{r2[kp.v(0)](kp.v(469));}while(false);
-const dbl=(()=>{let x=(2615779285^2615779285);do{x++;}while(x<-(387276917^387276912));return x;})();
-return{r,r2,dbl};
-})();
-const fq={
-q:(()=>{const bb={x:{y:(2654435761^2654435760)}};return bb?.[kp.v(40)]?.[kp.v(284)];})(),
-miss:(()=>{const bb={};return bb?.[kp.v(9)]?.[kp.v(78)];})(),
-call:(()=>{const bb={f:(x)=>x*(1013904226^1013904224)};return bb[kp.v(470)]?.((4203543429^4203543440));})(),
-nullCall:(()=>{const bb={};return bb[kp.v(470)]?.();})(),
-idx:(()=>{const bb={a:{b:(387276917^387276912)}};return bb?.[kp.v(9)]?.[kp.v(78)];})(),
-orEq:(()=>{
-let a=null;
-a??=kp.v(471);
-let b=kp.v(1);
-b||=kp.v(472);
-let c=kp.v(40);
-c&&=kp.v(473);
-return[a,b,c];
-})(),
-deep:(()=>{const bb={a:{b:{c:{d:(4112119562^4112119584)}}}};return bb[kp.v(9)]?.[kp.v(78)]?.[kp.v(182)]?.[kp.v(427)];})(),
-mix:(()=>{const bb={arr:[(2654435761^2654435760),{v:(2415085369^2415085360)}]};return bb?.[kp.v(49)]?.[(2654435761^2654435760)]?.[kp.v(417)];})(),
-};
-const fr=(()=>{
-const r=[];
-for(const[k,v]of new Map([[kp.v(9),(2654435761^2654435760)],[kp.v(78),(1013904226^1013904224)]]))r[kp.v(0)](k+v);
-for(const i of[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)])r[kp.v(0)](i);
-for(const c of kp.v(125))r[kp.v(0)](c);
-for(const x of new Set([(2654435761^2654435760),(2654435761^2654435760),(1013904226^1013904224)]))r[kp.v(0)](x);
+})());
+const DOW=((()=>{const r=([]);
+let n=0;
+do{(r.push(n));
+(n++);
+}while(((n<3)))
+const r2=([]);
+do{(r2.push("once"));
+}while(false)
+const dbl=((()=>{let x=0;
+do{(x++);
+}while(((x<(-5))))
+return x;
+})());
+return ({r:r,r2:r2,dbl:dbl});
+})());
+const OPTCH=({q:((()=>{const o=({x:({y:1})});
+return ((o?.x)?.y);
+})()),miss:((()=>{const o=({});
+return ((o?.a)?.b);
+})()),call:((()=>{const o=({f:((x)=>(x*2))});
+return ((o.f)?.(21));
+})()),nullCall:((()=>{const o=({});
+return ((o.f)?.());
+})()),idx:((()=>{const o=({a:({b:5})});
+return ((o?.["a"])?.["b"]);
+})()),orEq:((()=>{let a=null;
+((a??="filled"));
+let b="";
+((b||="else"));
+let c="x";
+((c&&="and"));
+return ([a,b,c]);
+})()),deep:((()=>{const o=({a:({b:({c:({d:42})})})});
+return ((((o.a)?.b)?.c)?.d);
+})()),mix:((()=>{const o=({arr:([1,{v:9}])});
+return (((o?.arr)?.[1])?.v);
+})())});
+const FORX=((()=>{const r=([]);
+for (const [k,v] of (new Map([["a",1],["b",2]])))(r.push((k+v)));
+for (const i of ([1,2,3]))(r.push(i));
+for (const c of "abc")(r.push(c));
+for (const x of (new Set([1,1,2])))(r.push(x));
 return r;
-})();
-const fs=(async()=>{
-const ce=[];
-async function*ft(){yield(2654435761^2654435760);yield(1013904226^1013904224);yield(3668339987^3668339984);}
-for await(const v of ft())ce[kp.v(0)](v*(774553834^774553824));
-for await(const v of[(2027808452^2027808448),(387276917^387276912)])ce[kp.v(0)](v);
-return ce;
-})();
-const fu=(async()=>{
-const all=await Promise[kp.v(474)]([Promise[kp.v(475)]((2654435761^2654435760)),Promise[kp.v(475)]((1013904226^1013904224))]);
-const settled=await Promise[kp.v(476)]([Promise[kp.v(475)](kp.v(65)),Promise[kp.v(477)](kp.v(478))]);
-const any=await Promise[kp.v(479)]([Promise[kp.v(477)]((2654435761^2654435760)),Promise[kp.v(475)]((1013904226^1013904224))]);
-const race=await Promise[kp.v(480)]([Promise[kp.v(475)]((2654435761^2654435760)),Promise[kp.v(475)](kp.v(481))]);
-const fin=await Promise[kp.v(475)]((387276917^387276912))[kp.v(482)](x=>x+(2654435761^2654435760))[kp.v(483)](()=>(2615779285^2615779285))[kp.v(484)](()=>{});
-const rej=await Promise[kp.v(477)](kp.v(58))[kp.v(483)](e=>kp.v(485)+e);
-const up=await Promise[kp.v(475)]((4203543429^4203543440))[kp.v(482)](async v=>{const w=await Promise[kp.v(475)](v*(1013904226^1013904224));return w;});
-const when=await new Promise(r=>setTimeout(r,(2654435761^2654435760)))[kp.v(482)](()=>kp.v(486));
-return{
-all,
-settled:settled[kp.v(8)](s=>s[kp.v(487)]+(s[kp.v(384)]!==undefined?kp.v(73)+s[kp.v(384)]:kp.v(73)+s[kp.v(488)])),
-any,
-race,
-fin,
-rej,
-up,
-when,
-asyncObj:await(async()=>{
-const a=await Promise[kp.v(475)]((387276917^387276912));
-const b=await Promise[kp.v(475)]((1401181143^1401181136));
-return{a,b,sum:a+b};
-})(),
-};
-})();
-const fv={
-parse:JSON[kp.v(443)](JSON[kp.v(398)]({a:[(2654435761^2654435760),(1013904226^1013904224),{b:kp.v(40)}]})),
-deep:JSON[kp.v(443)](kp.v(489)),
-str:JSON[kp.v(398)]({x:[(2654435761^2654435760),kp.v(9),true,null]}),
-num:JSON[kp.v(398)](1e21),
-bool:JSON[kp.v(398)]({u:undefined,f:function fw(){},n:null}),
-repl:JSON[kp.v(398)]({a:(2654435761^2654435760),b:(1013904226^1013904224)},[kp.v(9)]),
-keysOrd:Object[kp.v(2)](JSON[kp.v(443)](kp.v(490))),
-};
-const fx={
-reDot:/a+/[kp.v(95)](kp.v(322)),
-};
-const fy=(3722888192^3722887168)*(1013904226^1013904224)+(930722048^930721792);
-const fz=(()=>{
-const n=(2606174792^2606174848);
-const ga=new Uint8Array(n+(2654435761^2654435760))[kp.v(148)]((2654435761^2654435760));
-ga[(2615779285^2615779285)]=(2615779285^2615779285);
-ga[(2654435761^2654435760)]=(2615779285^2615779285);
-for(let i=(1013904226^1013904224);i*i<=n;i++){
-if(ga[i]){
-for(let cj=i*i;cj<=n;cj+=i)ga[cj]=(2615779285^2615779285);
+})());
+const FAW=((async ()=>{const out=([]);
+async function* tick(){(yield 1);
+(yield 2);
+(yield 3);
+}
+for await (const v of (tick()))(out.push((v*10)));
+for await (const v of ([4,5]))(out.push(v));
+return out;
+})());
+const PASY=((async ()=>{const all=(await (Promise.all([Promise.resolve(1),Promise.resolve(2)])));
+const settled=(await (Promise.allSettled([Promise.resolve("ok"),Promise.reject("no")])));
+const any=(await (Promise.any([Promise.reject(1),Promise.resolve(2)])));
+const race=(await (Promise.race([Promise.resolve(1),Promise.resolve("later")])));
+const fin=(await ((((Promise.resolve(5)).then((x)=>(x+1))).catch(()=>0)).finally(()=>{
+})));
+const rej=(await ((Promise.reject("bad")).catch((e)=>("caught:"+e))));
+const up=(await ((Promise.resolve(21)).then(async (v)=>{const w=(await (Promise.resolve((v*2))));
+return w;
+})));
+const when=(await ((new Promise((r)=>setTimeout(r,1))).then(()=>"tick")));
+return ({all:all,settled:(settled.map((s)=>((s.status)+(((((s.value)!==undefined))?((":"+(s.value))):((":"+(s.reason)))))))),any:any,race:race,fin:fin,rej:rej,up:up,when:when,asyncObj:(await ((async ()=>{const a=(await (Promise.resolve(5)));
+const b=(await (Promise.resolve(7)));
+return ({a:a,b:b,sum:((a+b))});
+})()))});
+})());
+const JSONX=({parse:(JSON.parse(JSON.stringify({a:([1,2,{b:"x"}])}))),deep:(JSON.parse("[[1,2],[3,4]]")),str:(JSON.stringify({x:([1,"a",true,null])})),num:(JSON.stringify(1e21)),bool:(JSON.stringify({u:undefined,f:(function ident(){
+}),n:null})),repl:(JSON.stringify({a:1,b:2},["a"])),keysOrd:(Object.keys(JSON.parse("{\"b\":1,\"a\":2,\"c\":3}")))});
+const RGXS2=({reDot:(/a+/.exec("aaa"))});
+const GZLN=((((1024*2))+256));
+const SIEVE=((()=>{const n=200;
+const marks=((new Uint8Array((n+1))).fill(1));
+(((marks[0])=0));
+(((marks[1])=0));
+for (let i=2;(((i*i))<=n);i++){if((marks[i])){for (let j=((i*i));(j<=n);(j+=i))(((marks[j])=0));
 }
 }
-const primes=[];
-for(let i=(2615779285^2615779285);i<=n;i++)if(ga[i])primes[kp.v(0)](i);
-return{primes,count:primes[kp.v(52)],last:primes[primes[kp.v(52)]-(2654435761^2654435760)]};
-})();
-function gb(s){
-let h=2166136261;
-for(let i=(2615779285^2615779285);i<s[kp.v(52)];i++){
-h^=s[kp.v(129)](i);
-h=Math[kp.v(213)](h,(3260322208^3277099059));
+const primes=([]);
+for (let i=0;(i<=n);i++)if((marks[i]))(primes.push(i));
+return ({primes:primes,count:(primes.length),last:(primes[((primes.length)-1)])});
+})());
+function HASHZ(s){let h=2166136261;
+for (let i=0;(i<(s.length));i++){((h^=(s.charCodeAt(i))));
+((h=(Math.imul(h,16777619))));
 }
-return(h>>>(2615779285^2615779285))[kp.v(222)]((3816266512^3816266496));
+return (((h>>>0)).toString(16));
 }
-const gc={a:gb(kp.v(1)),b:gb(kp.v(56)),c:gb(kp.v(9)[kp.v(115)]((3450571044^3450571072)))};
-function gd(v){this[kp.v(417)]=v;this[kp.v(491)]=null;this[kp.v(401)]=null;}
-function ge(root,v){
-if(!root)return new gd(v);
-if(v<root[kp.v(417)])root[kp.v(491)]=ge(root[kp.v(491)],v);
-else if(v>root[kp.v(417)])root[kp.v(401)]=ge(root[kp.v(401)],v);
+const HASHR=({a:(HASHZ("")),b:(HASHZ("hello")),c:(HASHZ("a".repeat(100)))});
+function BNode(v){(((this.v)=v));
+(((this.l)=null));
+(((this.r)=null));
+}
+function BIns(root,v){if((!root))return (new BNode(v));
+if(((v<(root.v))))(((root.l)=(BIns(root.l,v))));else if(((v>(root.v))))(((root.r)=(BIns(root.r,v))));
 return root;
 }
-function gf(n,acc){
-if(!n)return acc;
-gf(n[kp.v(491)],acc);
-acc[kp.v(0)](n[kp.v(417)]);
-gf(n[kp.v(401)],acc);
+function BCollect(n,acc){if((!n))return acc;
+(BCollect(n.l,acc));
+(acc.push(n.v));
+(BCollect(n.r,acc));
 return acc;
 }
-function gg(n){
-if(!n)return(2615779285^2615779285);
-return(2654435761^2654435760)+Math[kp.v(176)](gg(n[kp.v(491)]),gg(n[kp.v(401)]));
+function BHeight(n){if((!n))return 0;
+return ((1+(Math.max(BHeight(n.l),BHeight(n.r)))));
 }
-const gh=(()=>{
-let root=null;
-const fb=[(387276917^387276912),(3668339987^3668339984),(4055616904^4055616896),(2654435761^2654435760),(2027808452^2027808448),(1401181143^1401181136),(2415085369^2415085360),(1013904226^1013904224),(3041712678^3041712672),(2615779285^2615779285)];
-for(const v of fb)root=ge(root,v);
-return{sorted:gf(root,[]),height:gg(root),rootv:root[kp.v(417)]};
-})();
-function gi(a){
-const b=[...a];
-for(let i=(2615779285^2615779285);i<b[kp.v(52)];i++){
-for(let cj=i+(2654435761^2654435760);cj<b[kp.v(52)];cj++){
-if(b[cj]<b[i]){
-const t=b[i];
-b[i]=b[cj];
-b[cj]=t;
+const TREE=((()=>{let root=null;
+const seed=([5,3,8,1,4,7,9,2,6,0]);
+for (const v of seed)((root=(BIns(root,v))));
+return ({sorted:(BCollect(root,[])),height:(BHeight(root)),rootv:(root.v)});
+})());
+function BSort(a){const b=([...a]);
+for (let i=0;(i<(b.length));i++){for (let j=((i+1));(j<(b.length));j++){if((((b[j])<(b[i])))){const t=(b[i]);
+(((b[i])=(b[j])));
+(((b[j])=t));
 }
 }
 }
 return b;
 }
-const gj={bubble:gi([(2415085369^2415085360),(2027808452^2027808448),(1401181143^1401181136),(2654435761^2654435760),(4055616904^4055616896),(3668339987^3668339984),(1013904226^1013904224),(387276917^387276912),(3041712678^3041712672),(2615779285^2615779285)])};
-const gk=[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448),(387276917^387276912),(3041712678^3041712672),(1401181143^1401181136),(4055616904^4055616896),(2415085369^2415085360),(774553834^774553824)]
-[kp.v(133)](x=>x%(1013904226^1013904224)===(2615779285^2615779285))
-[kp.v(8)](x=>x*x)
-[kp.v(13)]((a,x)=>a+(kp.v(144)+x),kp.v(1));
-const gl=(()=>{
-const s=kp.v(492);
-const m=new Map();
-for(const c of s)m[kp.v(7)](c,(m[kp.v(6)](c)||(2615779285^2615779285))+(2654435761^2654435760));
-return[...m][kp.v(8)](([c,n])=>c+n)[kp.v(47)](kp.v(76));
-})();
-const gm=(()=>{
-const gn=[[(2654435761^2654435760),(1013904226^1013904224)],[(3668339987^3668339984),(2027808452^2027808448)]];
-const go=[[(387276917^387276912),(3041712678^3041712672)],[(1401181143^1401181136),(4055616904^4055616896)]];
-return gn[kp.v(8)]((dt,i)=>go[(2615779285^2615779285)][kp.v(8)]((z,cj)=>dt[kp.v(13)]((s,x,k)=>s+x*go[k][cj],(2615779285^2615779285))));
-})();
-const gp=(()=>{
-const m=new Map();
-function gq(a,b){
-const k=a+kp.v(73)+b;
-if(m[kp.v(5)](k))return m[kp.v(6)](k);
+const SORTS=({bubble:(BSort([9,4,7,1,8,3,2,5,6,0]))});
+const CHAIN=(((([1,2,3,4,5,6,7,8,9,10]).filter((x)=>(((x%2))===0))).map((x)=>(x*x))).reduce((a,x)=>(a+(("-"+x))),""));
+const FCOUN=((()=>{const s="the quick brown fox jumps over the lazy dog";
+const m=(new Map());
+for (const c of s)(m.set(c,((((m.get(c))||0))+1)));
+return ((([...m]).map(([c,n])=>(c+n))).join(" "));
+})());
+const MATRIX=((()=>{const A=([[1,2],[3,4]]);
+const B=([[5,6],[7,8]]);
+return (A.map((row,i)=>(B[0]).map((z,j)=>row.reduce((s,x,k)=>(s+((x*((B[k])[j])))),0))));
+})());
+const AMEM=((()=>{const m=(new Map());
+function ak(a,b){const k=((((a+":"))+b));
+if((m.has(k)))return (m.get(k));
 let r;
-if(a===(2615779285^2615779285))r=b+(2654435761^2654435760);
-else if(b===(2615779285^2615779285))r=gq(a-(2654435761^2654435760),(2654435761^2654435760));
-else r=gq(a-(2654435761^2654435760),gq(a,b-(2654435761^2654435760)));
-m[kp.v(7)](k,r);
+if(((a===0)))((r=((b+1))));else if(((b===0)))((r=(ak((a-1),1))));else ((r=(ak((a-1),ak(a,(b-1))))));
+(m.set(k,r));
 return r;
 }
-return[gq((2654435761^2654435760),(387276917^387276912)),gq((1013904226^1013904224),(3668339987^3668339984)),gq((3668339987^3668339984),(1013904226^1013904224))];
-})();
-const gr=(()=>{
-const add=(a)=>(b)=>(c)=>a+b+c;
-return add((2654435761^2654435760))((1013904226^1013904224))((3668339987^3668339984));
-})();
-const gs=(f,g)=>(x)=>f(g(x));
-const gu=[gs((x)=>x*(1013904226^1013904224),(x)=>x+(2654435761^2654435760))((387276917^387276912)),[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)][kp.v(8)](gs((x)=>x+(2654435761^2654435760),(x)=>x*(1013904226^1013904224)))];
-const gv=(()=>{
-function gw(n,b){
-if(n===(2615779285^2615779285))return kp.v(1);
-const d=n%b;
-return gw(Math[kp.v(15)](n/b),b)+(d<(774553834^774553824)?d:String[kp.v(130)]((739632625^739632560)+d-(774553834^774553824)));
+return ([ak(1,5),ak(2,3),ak(3,2)]);
+})());
+const CURRY=((()=>{const add=((a)=>(b)=>(c)=>(((a+b))+c));
+return (((add(1))(2))(3));
+})());
+const comp2=((f,g)=>(x)=>f(g(x)));
+const COMP=([(comp2((x)=>(x*2),(x)=>(x+1)))(5),([1,2,3]).map(comp2((x)=>(x+1),(x)=>(x*2)))]);
+const BASE=((()=>{function toB(n,b){if(((n===0)))return "";
+const d=((n%b));
+return (((toB(Math.floor((n/b)),b))+((((d<10))?d:(String.fromCharCode((((65+d))-10)))))));
 }
-return{b2:gw((2571253583^2571253680),(1013904226^1013904224)),b16:gw((2357817423^2357819824),(3816266512^3816266496))};
-})();
-const gx=(()=>{
-const words=kp.v(493)[kp.v(104)](kp.v(76))[kp.v(8)](w=>({w,len:w[kp.v(52)]}));
-return words[kp.v(8)](bb=>bb[kp.v(468)]+kp.v(73)+bb[kp.v(494)])[kp.v(47)](kp.v(71));
-})();
-function gy(a,b){return a*b;}
-const gz={
-call:gy[kp.v(170)](null,(3041712678^3041712672),(1401181143^1401181136)),
-apply:gy[kp.v(495)](null,[(3041712678^3041712672),(1401181143^1401181136)]),
-bound:gy[kp.v(392)](null,(3041712678^3041712672))((1401181143^1401181136)),
-ctx:(function(){return this[kp.v(40)];})[kp.v(170)]({x:(4112119562^4112119584)}),
-partial:((a,b,c)=>a+b+c)[kp.v(392)](null,(2654435761^2654435760),(1013904226^1013904224))((3668339987^3668339984)),
-};
-const ha=(()=>{
-let s=kp.v(1);
-for(let i=(2615779285^2615779285);i<(2380164160^2380164096);i++)s+=i;
+return ({b2:(toB(255,2)),b16:(toB(2559,16))});
+})());
+const PARSEB=((()=>{const words=(("one two three".split(" ")).map((w)=>({w:w,len:(w.length)})));
+return ((words.map((o)=>((((o.w)+":"))+(o.len)))).join("|"));
+})());
+function MULT(a,b){return ((a*b));
+}
+const BINDS=({call:(MULT.call(null,6,7)),apply:(MULT.apply(null,[6,7])),bound:((MULT.bind(null,6))(7)),ctx:((function(){return (this.x);
+}).call({x:42})),partial:((((a,b,c)=>(((a+b))+c)).bind(null,1,2))(3))});
+const BIGSTR=((()=>{let s="";
+for (let i=0;(i<64);i++)((s+=i));
 return s;
-})();
-const hb=(()=>{
-const bb={a:(2654435761^2654435760)};
-Object[kp.v(154)](bb);
-try{
-bb[kp.v(9)]=(1013904226^1013904224);
-return[bb[kp.v(9)],Object[kp.v(155)](bb)];
-}catch(e){
-return[kp.v(496),Object[kp.v(155)](bb)];
+})());
+const FRZ=((()=>{const o=({a:1});
+(Object.freeze(o));
+try{(((o.a)=2));
+return ([o.a,Object.isFrozen(o)]);
+}catch(e){return (["throw",Object.isFrozen(o)]);
 }
-})();
-function hd(first,...rest){return first+kp.v(73)+rest[kp.v(47)](kp.v(266));}
-const he=[hd((2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448)),hd((2415085369^2415085360))];
-const hf=(()=>{
-const{a,b:{c},arr:[x,,y]}={a:(2654435761^2654435760),b:{c:(1013904226^1013904224)},arr:[(3668339987^3668339984),(2027808452^2027808448),(387276917^387276912)]};
-const[p,...tail]=[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448)];
-return{a,c,x,y,p,tail};
-})();
-const hg=(()=>{
-function w(a=(387276917^387276912),b=a*(1013904226^1013904224)){return a+b;}
-const arrow=(a=(774553834^774553824))=>a+(2654435761^2654435760);
-return{w0:w(),w1:w((2654435761^2654435760)),w2:w((2654435761^2654435760),undefined),arr:arrow()};
-})();
-const hh=(()=>{
-const bb={
-vx:(2654435761^2654435760),
-get v(){return this[kp.v(497)];},
-set v(n){this[kp.v(497)]=n*(774553834^774553824);},
-inc(){this[kp.v(497)]++;},
-};
-bb[kp.v(417)]=(2415085369^2415085360);
-bb[kp.v(10)]();
-return{v:bb[kp.v(417)],raw:bb[kp.v(497)]};
-})();
-const hj=(()=>{
-const eg=(acc)=>{
-let n=acc;
-return{
-up(){n++;return this;},
-val(){return n;},
-};
-};
-const c=eg((2615779285^2615779285));
-c[kp.v(498)]()[kp.v(498)]()[kp.v(498)]();
-return c[kp.v(499)]();
-})();
-const hk=(()=>{
-const bb={a:(2654435761^2654435760)};
-bb[kp.v(78)]=(1013904226^1013904224);
-const hl=[];
-for(const k in bb)hl[kp.v(0)](k);
-return hl;
-})();
-const hm={
-n2s:[(2654435761^2654435760)+kp.v(161),(2654435761^2654435760)+(2654435761^2654435760)+kp.v(162),kp.v(349)-(2654435761^2654435760),kp.v(349)*(1013904226^1013904224),kp.v(242)/kp.v(162),kp.v(9)*(2654435761^2654435760)],
-bool2:[kp.v(161)==(2654435761^2654435760),kp.v(161)===(2654435761^2654435760),kp.v(1)==(2615779285^2615779285),kp.v(1)===(2615779285^2615779285),null==undefined,null===undefined,[]==kp.v(1),[]==(2615779285^2615779285)],
-strORD:[kp.v(242)>kp.v(500),kp.v(242)>(2415085369^2415085360),(774553834^774553824)>kp.v(500)],
-plusArr:[(2654435761^2654435760)+[],(2654435761^2654435760)+[(1013904226^1013904224)],(2654435761^2654435760)+{}],
-eqArr:(kp.v(1)+{}==(kp.v(161)+(2654435761^2654435760)))?'x':kp.v(164),
-};
-const hn={
-same:NaN===NaN,
-self:Object[kp.v(192)](NaN,NaN),
-eq:NaN==NaN,
-bot:Number[kp.v(236)]((2615779285^2615779285)/(2615779285^2615779285)),
-pow:Math[kp.v(178)](NaN,(2615779285^2615779285)),
-};
-const ho={
-a:Infinity-Infinity,
-b:Infinity/Infinity,
-c:(2654435761^2654435760)/Infinity,
-d:Infinity*(2615779285^2615779285),
-e:(387276917^387276912)%Infinity,
-f:-Infinity+(387276917^387276912),
-g:Infinity<Infinity,
-};
-(async()=>{
-const asyncR=await Promise[kp.v(475)]((4112119562^4112119584))[kp.v(482)]((x)=>x*(1013904226^1013904224));
-const asyncOut=await(async()=>{
-const a=await Promise[kp.v(475)]((387276917^387276912));
-const b=await Promise[kp.v(475)]((1401181143^1401181136));
-return{a,b,sum:a+b};
-})();
-const hp=await fs;
-const hq=await fu;
-const hr={
-t0:aa,
-p1:ac,
-p2:ad,
-p3:ae,
-p4:af,
-p5:ag,
-p6:ah,
-p7:ai,
-hx:aj,
-hc:al,
-bn:am,
-oc:an,
-us:ao,
-ld:ap,
-ls:aq[kp.v(222)](),
-bi:ar[kp.v(222)](),
-nb:au,
-zd:av,
-td:aw,
-spLen:ay[kp.v(52)],
-splHead:ay[kp.v(110)]((2615779285^2615779285),(4055616904^4055616896)),
-splTail:ay[kp.v(110)]((591706100^591706048)),
-clamp:clamp((1161830751^1161830736),(2615779285^2615779285),(774553834^774553824)),
-cl2:clamp(-(2027808452^2027808448),(2615779285^2615779285),(774553834^774553824)),
-idfn:idfn((1401181143^1401181136)),
-fact:bh((387276917^387276912)),
-fib:bl,
-dm1:dm1,
-dm2:dm2,
-dm3:dm3,
-am1:am1,
-am2:am2,
-am3:am3,
-dfl:dfl,
-dfl2:dfl2,
-genA:genA,
-genB:genB,
-pipeOut:pipeOut,
-om:bx,
-oname:ba[kp.v(501)](),
-oa:ba[kp.v(502)]((3041712678^3041712672)),
-ohalf:ba[kp.v(18)],
-doge:bz,
-khu:ca,
-animal:Animal[kp.v(27)](),
-sigSum:sigSum,
-counter:counter,
-wfOut:wfOut,
-dsw:dsw,
-tns:tns,
-isErr:isErr,
-lps:lps,
-cbo:cbo,
-tbv:tbv,
-neg:cm,
-cast:cast,
-teng:teng,
-tplOut:tplOut,
-tricky:tricky,
-tricky2:tricky2,
-escapes3:escapes3,
-strMix:strMix,
-rfx:rfx,
-arrays:arrays,
-objOps:objOps,
-eq:eq,
-ovf:ovf,
-clo:clo,
-lookupOut:lookupOut,
-pro:pro,
-sprd:sprd,
-rrc:rrc,
-tnu:tnu,
-guardInit:guardInit,
-gsp:gsp,
-asyncR,
-asyncOut,
-nums:dj,
-dec:dk,
-bits:dl,
-maths:dm,
-bigs:dn,
-cnv:dp,
-strfx:dq,
-rgx:dr,
-arrx:ds,
-coll:du,
-tarr:dw,
-abv:dx,
-buf:ea,
-obd:eb,
-delx:ed,
-tsof:ee,
-errs:ef,
-prox:eh,
-syms:ei,
-gitz:em,
-recs:ez,
-clsx:fe,
-dts:ff,
-urlx:fi,
-encd:fk,
-tagg:fm,
-flow:fo,
-dow:fp,
-optch:fq,
-forx:fr,
-faw:hp,
-pasy:hq,
-jsonx:fv,
-sieve:fz,
-hashr:gc,
-tree:gh,
-sorts:gj,
-chain:gk,
-fcount:gl,
-matrix:gm,
-amem:gp,
-curry:gr,
-comp:gu,
-base:gv,
-parseb:gx,
-binds:gz,
-bigstr:ha,
-frz:hb,
-restr:he,
-dest:hf,
-def3:hg,
-objacc:hh,
-cf:hj,
-iter2:hk,
-coer:hm,
-nn:hn,
-inf:ho,
-rgxs2:fx[kp.v(503)][(2615779285^2615779285)],
-gzln:fy+(2654435761^2654435760),
-lcg:hs,
-mtable:ht,
-caes:hu,
-collatz:hv,
-pascal:hw,
-evt:hy,
-pal:hz,
-grow:ia,
-words:ib,
-tern:ic,
-packed:ie,
-node2:ig,
-rgx3:ih,
-grid:ii,
-big2:ij,
-flat2:ik,
-cmp2:il,
-pfact:im,
-deepobj:io,
-selfref:ip,
-valchain:iq,
-tryret:ir,
-recur2:iu,
-mapch:iv,
-spls:iw,
-asctbl:ix,
-chrloop:iy,
-reps:iz,
-seq:ja,
-sqrdif:jb,
-nestloop:jc,
-subseq:jd,
-zip:je,
-interleave:jf,
-rotl:jg,
-stack:jh,
-q:ji,
-fibarr:jj,
-tri:jk,
-doc:jl,
-branch:jm,
-opcode:jn,
-nop:jo,
-three:jp,
-modfn:jq,
-swapped:jr,
-avg:js,
-hist:jt,
-};
-console[kp.v(185)](JSON[kp.v(398)](hr));
-})();
-const hs=(()=>{
-let s=(2703968361^2703980624);
-const ce=[];
-for(let i=(2615779285^2615779285);i<(3450571044^3450571072);i++){
-s=(s*(1419296256^358543469)+(2703968361^2703980624))%2147483648;
-ce[kp.v(0)]((s>>(3816266512^3816266496))&(513869391^513898928));
+})());
+function REST(first,...rest){return ((((first+":"))+(rest.join("+"))));
 }
-return ce;
-})();
-const ht=(()=>{
-const ju=[];
-for(let i=(2654435761^2654435760);i<=(2415085369^2415085360);i++){
-const dt=[];
-for(let cj=(2654435761^2654435760);cj<=(2415085369^2415085360);cj++)dt[kp.v(0)](i*cj);
-ju[kp.v(0)](dt);
+const RESTR=([REST(1,2,3,4),REST(9)]);
+const DEST=((()=>{const {a:a,b:{c:c},arr:[x,,y]}=({a:1,b:({c:2}),arr:([3,4,5])});
+const [p,...tail]=([1,2,3,4]);
+return ({a:a,c:c,x:x,y:y,p:p,tail:tail});
+})());
+const DEF3=((()=>{function w(a=5,b=((a*2))){return ((a+b));
 }
-return ju;
-})();
-const hu=(()=>{
-const jv=(s,k)=>[...s][kp.v(8)](c=>{
-const cc=c[kp.v(129)]((2615779285^2615779285));
-if(cc>=(4077198353^4077198448)&&cc<=(1718615642^1718615584))return String[kp.v(130)]((4077198353^4077198448)+(((cc-(4077198353^4077198448)+k)%(295853050^295853024))+(295853050^295853024))%(295853050^295853024));
-if(cc>=(739632625^739632560)&&cc<=(2676017210^2676017248))return String[kp.v(130)]((739632625^739632560)+(((cc-(739632625^739632560)+k)%(295853050^295853024))+(295853050^295853024))%(295853050^295853024));
+const arrow=((a=10)=>(a+1));
+return ({w0:(w()),w1:(w(1)),w2:(w(1,undefined)),arr:(arrow())});
+})());
+const OBJACC=((()=>{const o=({vx:1,get v(){return (this.vx);
+},set v(n){(((this.vx)=((n*10))));
+},inc(){((this.vx)++);
+}});
+(((o.v)=9));
+(o.inc());
+return ({v:(o.v),raw:(o.vx)});
+})());
+const CF=((()=>{const mk=((acc)=>{let n=acc;
+return ({up(){(n++);
+return this;
+},val(){return n;
+}});
+});
+const c=(mk(0));
+(((c.up()).up()).up());
+return (c.val());
+})());
+const ITER=((()=>{const o=({a:1});
+(((o.b)=2));
+const ks=([]);
+for (const k in o)(ks.push(k));
+return ks;
+})());
+const COER=({n2s:([(1+"1"),(((1+1))+"2"),("3"-1),("3"*2),("10"/"2"),("a"*1)]),bool2:([("1"==1),("1"===1),(""==0),(""===0),(null==undefined),(null===undefined),(([])==""),(([])==0)]),strORD:([("10">"9"),("10">9),(10>"9")]),plusArr:([(1+([])),(1+([2])),(1+({}))]),eqArr:((((((""+({})))==(("1"+1))))?"x":"n"))});
+const NN=({same:((NaN===NaN)),self:(Object.is(NaN,NaN)),eq:((NaN==NaN)),bot:(Number.isNaN((0/0))),pow:(Math.pow(NaN,0))});
+const INF=({a:((Infinity-Infinity)),b:((Infinity/Infinity)),c:((1/Infinity)),d:((Infinity*0)),e:((5%Infinity)),f:(((-Infinity)+5)),g:((Infinity<Infinity))});
+((async ()=>{const asyncR=(await ((Promise.resolve(42)).then((x)=>(x*2))));
+const asyncOut=(await ((async ()=>{const a=(await (Promise.resolve(5)));
+const b=(await (Promise.resolve(7)));
+return ({a:a,b:b,sum:((a+b))});
+})()));
+const fawR=(await FAW);
+const pasyR=(await PASY);
+const ens=({t0:N0,p1:P1,p2:P2,p3:P3,p4:P4,p5:P5,p6:P6,p7:P7,hx:HX,hc:HC,bn:BN,oc:OC,us:US,ld:LD,ls:(LS.toString()),bi:(BI.toString()),nb:NB,zd:ZD,td:TD,spLen:(SPL.length),splHead:(SPL.slice(0,8)),splTail:(SPL.slice(52)),clamp:(clamp(15,0,10)),cl2:(clamp(-4,0,10)),idfn:(idfn(7)),fact:(factMem(5)),fib:fibonacci,dm1:dm1,dm2:dm2,dm3:dm3,am1:am1,am2:am2,am3:am3,dfl:dfl,dfl2:dfl2,genA:genA,genB:genB,pipeOut:pipeOut,om:OM,oname:(obj.fn()),oa:(obj.arrow(6)),ohalf:(obj.half),doge:dDesc,khu:dKhu,animal:(Animal.kingdom()),sigSum:sigSum,counter:counter,wfOut:wfOut,dsw:dsw,tns:tns,isErr:isErr,lps:lps,cbo:cbo,tbv:tbv,neg:NEG,cast:cast,teng:teng,tplOut:tplOut,tricky:tricky,tricky2:tricky2,escapes3:escapes3,strMix:strMix,rfx:rfx,arrays:arrays,objOps:objOps,eq:eq,ovf:ovf,clo:clo,lookupOut:lookupOut,pro:pro,sprd:sprd,rrc:rrc,tnu:tnu,guardInit:guardInit,gsp:gsp,asyncR:asyncR,asyncOut:asyncOut,nums:NUMS,dec:DEC,bits:BITS,maths:MATHS,bigs:BIGS,cnv:CNV,strfx:STRFX,rgx:RGX,arrx:ARRX,coll:COLL,tarr:TARR,abv:ABV,buf:BUF,obd:OBD,delx:DELX,tsof:TSOF,errs:ERRS,prox:PROX,syms:SYMS,gitz:GITZ,recs:RECS,clsx:CLSX,dts:DTS,urlx:URLX,encd:ENCD,tagg:TAGG,flow:FLOW,dow:DOW,optch:OPTCH,forx:FORX,faw:fawR,pasy:pasyR,jsonx:JSONX,sieve:SIEVE,hashr:HASHR,tree:TREE,sorts:SORTS,chain:CHAIN,fcount:FCOUN,matrix:MATRIX,amem:AMEM,curry:CURRY,comp:COMP,base:BASE,parseb:PARSEB,binds:BINDS,bigstr:BIGSTR,frz:FRZ,restr:RESTR,dest:DEST,def3:DEF3,objacc:OBJACC,cf:CF,iter2:ITER,coer:COER,nn:NN,inf:INF,rgxs2:((RGXS2.reDot)[0]),gzln:((GZLN+1)),lcg:LCG,mtable:MTABLE,caes:CAES,collatz:COLLATZ,pascal:PASCAL,evt:EVT,pal:PAL,grow:GROW,words:WORDS,tern:TERN,packed:PACKED,node2:NODE2,rgx3:RGX3,grid:GRID,big2:BIG2,flat2:FLAT2,cmp2:CMP2,pfact:PFACT,deepobj:DEEPOBJ,selfref:SELFREF,valchain:VALCHAIN,tryret:TRYRET,recur2:RECUR2,mapch:MAPCH,spls:SPLS,asctbl:ASCTBL,chrloop:CHRLOOP,reps:REPS,seq:SEQ,sqrdif:SQRDIF,nestloop:NESTLOOP,subseq:SUBSEQ,zip:ZIP,interleave:INTERLEAVE,rotl:ROTL,stack:STACK,q:Q,fibarr:FIBARR,tri:TRI,doc:DOC,branch:BRANCH,opcode:OPCODE,nop:NOP,three:THREE,modfn:MODFN,swapped:SWAPPED,avg:AVG,hist:HIST});
+(console.log(JSON.stringify(ens)));
+})());
+const LCG=((()=>{let s=12345;
+const out=([]);
+for (let i=0;(i<100);i++){((s=((((((s*1103515245))+12345))%2147483648))));
+(out.push((((s>>16))&0x7fff)));
+}
+return out;
+})());
+const MTABLE=((()=>{const rows=([]);
+for (let i=1;(i<=9);i++){const row=([]);
+for (let j=1;(j<=9);j++)(row.push((i*j)));
+(rows.push(row));
+}
+return rows;
+})());
+const CAES=((()=>{const enc=((s,k)=>(([...s]).map((c)=>{const cc=(c.charCodeAt(0));
+if(((((cc>=97))&&((cc<=122)))))return (String.fromCharCode((97+((((((((((cc-97))+k))%26))+26))%26)))));
+if(((((cc>=65))&&((cc<=90)))))return (String.fromCharCode((65+((((((((((cc-65))+k))%26))+26))%26)))));
 return c;
-})[kp.v(47)](kp.v(1));
-return{e:jv(kp.v(504),(3668339987^3668339984)),d:jv(kp.v(505),-(3668339987^3668339984))};
-})();
-const hv=(()=>{
-const fn=(n)=>{
-const seq=[n];
-while(n!==(2654435761^2654435760)){
-n=n%(1013904226^1013904224)?(3668339987^3668339984)*n+(2654435761^2654435760):n/(1013904226^1013904224);
-seq[kp.v(0)](n);
+})).join(""));
+return ({e:(enc("Hello World!",3)),d:(enc("Khoor Zruog!",-3))});
+})());
+const COLLATZ=((()=>{const fn=((n)=>{const seq=([n]);
+while(((n!==1))){((n=((((n%2))?((((3*n))+1)):((n/2))))));
+(seq.push(n));
 }
 return seq;
-};
-return{s27:fn((2950288811^2950288816))[kp.v(52)],s13:fn((147926525^147926512)),s6:fn((3041712678^3041712672))};
-})();
-const hw=(()=>{
-const n=(774553834^774553824);
-const ju=[];
-let jw=[];
-for(let i=(2615779285^2615779285);i<n;i++){
-const dt=[];
-for(let cj=(2615779285^2615779285);cj<=i;cj++)dt[kp.v(0)](cj===(2615779285^2615779285)||cj===i?(2654435761^2654435760):jw[cj-(2654435761^2654435760)]+jw[cj]);
-ju[kp.v(0)](dt);
-jw=dt;
+});
+return ({s27:((fn(27)).length),s13:(fn(13)),s6:(fn(6))});
+})());
+const PASCAL=((()=>{const n=10;
+const rows=([]);
+let prev=([]);
+for (let i=0;(i<n);i++){const row=([]);
+for (let j=0;(j<=i);j++)(row.push((((((j===0))||((j===i))))?1:(((prev[(j-1)])+(prev[j]))))));
+(rows.push(row));
+((prev=row));
 }
-return ju;
-})();
-const hy=(()=>{
-const h=new Map();
-const jx={
-on(k,fn){
-if(!h[kp.v(5)](k))h[kp.v(7)](k,[]);
-h[kp.v(6)](k)[kp.v(0)](fn);
-return jx;
-},
-emit(k,x){
-const a=h[kp.v(6)](k)||[];
-const r=[];
-for(const fn of a)r[kp.v(0)](fn(x));
+return rows;
+})());
+const EVT=((()=>{const h=(new Map());
+const api=({on(k,fn){if((!(h.has(k))))(h.set(k,[]));
+((h.get(k)).push(fn));
+return api;
+},emit(k,x){const a=(((h.get(k))||([])));
+const r=([]);
+for (const fn of a)(r.push(fn(x)));
 return r;
-},
-count(k){return(h[kp.v(6)](k)||[])[kp.v(52)];},
-};
-jx[kp.v(506)](kp.v(40),(v)=>v+(2654435761^2654435760))[kp.v(506)](kp.v(40),(v)=>v*(1013904226^1013904224))[kp.v(506)](kp.v(284),(v)=>v);
-return{onx:jx[kp.v(507)](kp.v(40),(387276917^387276912)),ony:jx[kp.v(507)](kp.v(284),(2415085369^2415085360)),cnt:jx[kp.v(418)](kp.v(40))};
-})();
-const hz=(()=>{
-const rev=(s)=>[...s][kp.v(335)]()[kp.v(47)](kp.v(1));
-return{rev:rev(kp.v(109)),pal:rev(kp.v(508))===kp.v(508)};
-})();
-const ia=(()=>{
-let v=(2654435761^2654435760);
-for(let i=(2615779285^2615779285);i<(1549107668^1549107648);i++)v=v*(3668339987^3668339984)+i;
+},count(k){return ((((h.get(k))||([]))).length);
+}});
+(((api.on("x",(v)=>(v+1))).on("x",(v)=>(v*2))).on("y",(v)=>v));
+return ({onx:(api.emit("x",5)),ony:(api.emit("y",9)),cnt:(api.count("x"))});
+})());
+const PAL=((()=>{const rev=((s)=>(([...s]).reverse()).join(""));
+return ({rev:(rev("abcdef")),pal:(((rev("racecar"))==="racecar"))});
+})());
+const GROW=((()=>{let v=1;
+for (let i=0;(i<20);i++)((v=((((v*3))+i))));
 return v;
-})();
-const ib=(n=>{
-const jy=[kp.v(466),kp.v(44),kp.v(45),kp.v(509),kp.v(510),kp.v(511)];
-if(n<(3041712678^3041712672))return jy[n];
-return kp.v(512);
-})((729860360^729864832));
-const ic=(()=>{
-const f=(x)=>x>(774553834^774553824)?(x>(1549107668^1549107648)?'big':(x===(1161830751^1161830736)?'fifteen':kp.v(513))):(x>(2615779285^2615779285)?'pos':(x===(2615779285^2615779285)?'zero':kp.v(514)));
-return[f((1936384585^1936384592)),f((1161830751^1161830736)),f((387276917^387276912)),f((2615779285^2615779285)),f(-(2654435761^2654435760))];
-})();
-const ie=(()=>{
-const bits=(712953105^712952944);
-return{
-lo:bits&(1401181143^1401181136),
-mid:(bits>>(3668339987^3668339984))&(1401181143^1401181136),
-hi:(bits>>(3041712678^3041712672))&(3668339987^3668339984),
-};
-})();
-const ig=(()=>{
-function jz(tag,attrs,ka){
-const a=Object[kp.v(150)](attrs||{})[kp.v(8)](([k,v])=>kp.v(76)+k+kp.v(265)+v)[kp.v(47)](kp.v(1));
-return kp.v(515)+tag+a+kp.v(516)+(ka||[])[kp.v(47)](kp.v(1))+kp.v(517)+tag+kp.v(516);
+})());
+const WORDS=(((n)=>{const ones=(["zero","one","two","three","four","five"]);
+if(((n<6)))return (ones[n]);
+return "many";
+})(5000));
+const TERN=((()=>{const f=((x)=>(((x>10))?((((x>20))?"big":((((x===15))?"fifteen":"mid")))):((((x>0))?"pos":((((x===0))?"zero":"neg"))))));
+return ([f(25),f(15),f(5),f(0),f(-1)]);
+})());
+const PACKED=((()=>{const bits=0b0101100001;
+return ({lo:((bits&0b111)),mid:((((bits>>3))&0b111)),hi:((((bits>>6))&0b11))});
+})());
+const NODE2=((()=>{function el(tag,attrs,kids){const a=(((Object.entries((attrs||({})))).map(([k,v])=>(((((" "+k))+"="))+v))).join(""));
+return (((((((((((((("<"+tag))+a))+">"))+(((kids||([]))).join(""))))+"</"))+tag))+">"));
 }
-return{
-p:jz(kp.v(518),{class:kp.v(40),id:kp.v(284)},[kp.v(168)]),
-deep:jz(kp.v(519),null,[jz(kp.v(520),{},[kp.v(9)]),jz(kp.v(520),{},[kp.v(78)])]),
-};
-})();
-const ih={
-hexOK:/^#[0-9a-fA-F]{3,8}$/[kp.v(299)](kp.v(521)),
-hexNo:/^#[0-9a-fA-F]{3,8}$/[kp.v(299)](kp.v(522)),
-words:kp.v(523)[kp.v(104)](/\s+/)[kp.v(133)](Boolean)[kp.v(52)],
-dig:kp.v(524)[kp.v(101)](/[0-9]/g,kp.v(525)),
-lwrap:kp.v(116)[kp.v(101)](/l+/g,kp.v(526)),
-border:kp.v(527)[kp.v(93)](/\b\w+\b/g),
-keepCase:kp.v(528)[kp.v(101)](/b/i,kp.v(139)),
-};
-const ii=(()=>{
-const g=[];
-for(let r=(2615779285^2615779285);r<(2027808452^2027808448);r++){
-const dt=[];
-for(let c=(2615779285^2615779285);c<(2027808452^2027808448);c++)dt[kp.v(0)](r*(2027808452^2027808448)+c);
-g[kp.v(0)](dt[kp.v(47)](kp.v(76)));
+return ({p:(el("p",{class:"x",id:"y"},["hi"])),deep:(el("div",null,[el("span",{},["a"]),el("span",{},["b"])]))});
+})());
+const RGX3=({hexOK:(/^#[0-9a-fA-F]{3,8}$/.test("#abc123")),hexNo:(/^#[0-9a-fA-F]{3,8}$/.test("#ggg")),words:((("one two  three".split(/\s+/)).filter(Boolean)).length),dig:("a1b2c3".replace(/[0-9]/g,"#")),lwrap:("hello world".replace(/l+/g,"[l]")),border:("match me".match(/\b\w+\b/g)),keepCase:("aBc".replace(/b/i,"B"))});
+const GRID=((()=>{const g=([]);
+for (let r=0;(r<4);r++){const row=([]);
+for (let c=0;(c<4);c++)(row.push((((r*4))+c)));
+(g.push(row.join(" ")));
 }
 return g;
-})();
-const ij=(()=>{
-let s=0n;
-for(let i=1n;i<=64n;i++)s+=i*i;
-return s[kp.v(222)]();
-})();
-const ik=(()=>{
-let a=(2654435761^2654435760);
-a++;
-a+=(1013904226^1013904224);
-a*=(3668339987^3668339984);
-a-=(2654435761^2654435760);
-a=a/(1013904226^1013904224);
-a%=(774553834^774553824);
-a**=(1013904226^1013904224);
-a<<=(2654435761^2654435760);
-a|=(4055616904^4055616896);
-a&=(1401181143^1401181136);
-a>>=(2654435761^2654435760);
+})());
+const BIG2=((()=>{let s=0n;
+for (let i=1n;(i<=64n);i++)((s+=((i*i))));
+return (s.toString());
+})());
+const FLAT2=((()=>{let a=1;
+(a++);
+((a+=2));
+((a*=3));
+((a-=1));
+((a=((a/2))));
+((a%=10));
+((a**=2));
+((a<<=1));
+((a|=8));
+((a&=7));
+((a>>=1));
 return a;
-})();
-const il=(()=>{
-const a=[(2654435761^2654435760),kp.v(161),true,null,(2615779285^2615779285),kp.v(1),kp.v(9)];
-const m=[];
-for(const x of a){
-const dt=[];
-for(const y of a)dt[kp.v(0)](x==y?(2654435761^2654435760):(2615779285^2615779285));
-m[kp.v(0)](dt);
+})());
+const CMP2=((()=>{const a=([1,"1",true,null,0,"","a"]);
+const m=([]);
+for (const x of a){const row=([]);
+for (const y of a)(row.push((((x==y))?1:0)));
+(m.push(row));
 }
 return m;
-})();
-const im=(()=>{
-const fn=(n)=>{
-const ce=[];
-let d=(1013904226^1013904224);
-while(n>(2654435761^2654435760)){
-if(n%d===(2615779285^2615779285)){
-ce[kp.v(0)](d);
-n/=d;
-}else{
-d++;
+})());
+const PFACT=((()=>{const fn=((n)=>{const out=([]);
+let d=2;
+while(((n>1))){if(((((n%d))===0))){(out.push(d));
+((n/=d));
+}else {(d++);
 }
 }
-return ce;
-};
-return{one:fn((3104502572^3104503744)),two:fn((4077198353^4077198448)),three:fn((2654435761^2654435760))};
-})();
-const io=(()=>{
-const bb={a:{b:{c:{d:{e:{f:[(2654435761^2654435760),(1013904226^1013904224),{g:kp.v(529)}]},h:[(2615779285^2615779285)]}}}},i:[]};
-return JSON[kp.v(398)](bb)+kp.v(71)+JSON[kp.v(398)](bb[kp.v(9)][kp.v(78)][kp.v(182)][kp.v(427)][kp.v(530)][kp.v(470)][(1013904226^1013904224)][kp.v(288)]);
-})();
-const ip=(()=>{
-const bb={name:kp.v(397)};
-bb[kp.v(397)]=bb;
-return bb[kp.v(397)][kp.v(21)]+kp.v(73)+(bb[kp.v(397)]===bb);
-})();
-const iq=(()=>{
-let x=(2654435761^2654435760);
-for(let i=(2615779285^2615779285);i<(774553834^774553824);i++){
-x=x+(2654435761^2654435760);
-x=x*(1013904226^1013904224);
-x=x-(3668339987^3668339984);
+return out;
+});
+return ({one:(fn(1260)),two:(fn(97)),three:(fn(1))});
+})());
+const DEEPOBJ=((()=>{const o=({a:({b:({c:({d:({e:({f:([1,2,{g:"deep"}])}),h:([0])})})})}),i:([])});
+return (((((JSON.stringify(o))+"|"))+(JSON.stringify((((((((o.a).b).c).d).e).f)[2]).g))));
+})());
+const SELFREF=((()=>{const o=({name:"self"});
+(((o.self)=o));
+return ((((((o.self).name)+":"))+(((o.self)===o))));
+})());
+const VALCHAIN=((()=>{let x=1;
+for (let i=0;(i<10);i++){((x=((x+1))));
+((x=((x*2))));
+((x=((x-3))));
 }
 return x;
-})();
-const ir=(()=>{
-let r=kp.v(1);
-try{
-try{
-r+=kp.v(9);
-throw kp.v(531);
-}catch(e){
-r+=kp.v(78)+e;
-}finally{
-r+=kp.v(182);
+})());
+const TRYRET=((()=>{let r="";
+try{try{((r+="a"));
+throw "e1";
+}catch(e){((r+=(("b"+e))));
+}finally{((r+="c"));
 }
-r+=kp.v(427);
-}catch(e){
-r+=kp.v(530);
+((r+="d"));
+}catch(e){((r+="e"));
 }
 return r;
-})();
-const iu=(()=>{
-const fib=(n,a=(2615779285^2615779285),b=(2654435761^2654435760))=>n===(2615779285^2615779285)?a:fib(n-(2654435761^2654435760),b,a+b);
-return{f30:fib((2323661502^2323661472)),f40:fib((3098215336^3098215296))};
-})();
-const iv=(()=>{
-const m=new Map();
-const kb={tag:(2654435761^2654435760)};
-const kc={tag:(1013904226^1013904224)};
-m[kp.v(7)](kb,kp.v(532));
-m[kp.v(7)](kc,kp.v(533));
-m[kp.v(6)](kb);
-m[kp.v(184)](kc);
-return{a:m[kp.v(6)](kb),b:m[kp.v(6)](kc),c:m[kp.v(165)],d:[...m[kp.v(2)]()][(2615779285^2615779285)][kp.v(38)]};
-})();
-const iw=(()=>{
-const s=kp.v(534);
-const r=[];
-r[kp.v(0)](...s[kp.v(104)](kp.v(48))[kp.v(136)](x=>x[kp.v(104)](kp.v(535))));
-return r[kp.v(136)](x=>x[kp.v(104)](kp.v(71)));
-})();
-const ix=(()=>{
-const r=[];
-for(let i=(739632625^739632560);i<=(2676017210^2676017248);i++)r[kp.v(0)](String[kp.v(130)](i));
-return r[kp.v(47)](kp.v(1));
-})();
-const iy=(()=>{
-let s=kp.v(1);
-for(let i=(2615779285^2615779285);i<(387276917^387276912);i++){
-s=s+String[kp.v(130)]((4077198353^4077198448)+i);
+})());
+const RECUR2=((()=>{const fib=((n,a=0,b=1)=>(((n===0))?a:(fib((n-1),b,(a+b)))));
+return ({f30:(fib(30)),f40:(fib(40))});
+})());
+const MAPCH=((()=>{const m=(new Map());
+const o1=({tag:1});
+const o2=({tag:2});
+(m.set(o1,"first"));
+(m.set(o2,"second"));
+(m.get(o1));
+(m.delete(o2));
+return ({a:(m.get(o1)),b:(m.get(o2)),c:(m.size),d:((([...(m.keys())])[0]).tag)});
+})());
+const SPLS=((()=>{const s="a,b;|c";
+const r=([]);
+(r.push(...((s.split(",")).flatMap((x)=>x.split(";")))));
+return (r.flatMap((x)=>x.split("|")));
+})());
+const ASCTBL=((()=>{const r=([]);
+for (let i=65;(i<=90);i++)(r.push(String.fromCharCode(i)));
+return (r.join(""));
+})());
+const CHRLOOP=((()=>{let s="";
+for (let i=0;(i<5);i++){((s=((s+(String.fromCharCode((97+i)))))));
 }
 return s;
-})();
-const iz=(()=>{
-const s=kp.v(293);
-let acc=kp.v(1);
-for(let i=(2615779285^2615779285);i<(4055616904^4055616896);i++)acc+=i%(1013904226^1013904224)?s[kp.v(126)]():s;
+})());
+const REPS=((()=>{const s="xy";
+let acc="";
+for (let i=0;(i<8);i++)((acc+=((((i%2))?(s.toUpperCase()):s))));
 return acc;
-})();
-const ja=(()=>{
-const a=[];
-for(let i=(2615779285^2615779285);i<(1549107668^1549107648);i++)a[kp.v(0)](i*i<(774553834^774553824)?i:i*i);
+})());
+const SEQ=((()=>{const a=([]);
+for (let i=0;(i<20);i++)(a.push((((((i*i))<10))?i:((i*i)))));
 return a;
-})();
-const jb=(()=>{
-const s1=[];
-const s2=[];
-for(let i=(2615779285^2615779285);i<(387276917^387276912);i++){
-s1[kp.v(0)](i);
-s2[kp.v(0)](i);
+})());
+const SQRDIF=((()=>{const s1=([]);
+const s2=([]);
+for (let i=0;(i<5);i++){(s1.push(i));
+(s2.push(i));
 }
-return[s1,s2];
-})();
-const jc=(()=>{
-let c=(2615779285^2615779285);
-for(let i=(2615779285^2615779285);i<(3668339987^3668339984);i++){
-for(let cj=(2615779285^2615779285);cj<(3668339987^3668339984);cj++){
-for(let k=(2615779285^2615779285);k<(3668339987^3668339984);k++){
-if(i+cj+k===(1013904226^1013904224))c++;
+return ([s1,s2]);
+})());
+const NESTLOOP=((()=>{let c=0;
+for (let i=0;(i<3);i++){for (let j=0;(j<3);j++){for (let k=0;(k<3);k++){if(((((((i+j))+k))===2)))(c++);
 }
 }
 }
 return c;
-})();
-const jd=(()=>{
-let c=(2615779285^2615779285);
-for(let a=(2615779285^2615779285);a<(387276917^387276912);a++){
-for(let b=a;b<(387276917^387276912);b++){
-for(let s=a;s<=b;s++)c+=s;
+})());
+const SUBSEQ=((()=>{let c=0;
+for (let a=0;(a<5);a++){for (let b=a;(b<5);b++){for (let s=a;(s<=b);s++)((c+=s));
 }
 }
 return c;
-})();
-const je=(()=>{
-const a=[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)];
-const b=[kp.v(40),kp.v(284),kp.v(183)];
-return a[kp.v(8)]((v,i)=>v+b[i])[kp.v(47)](kp.v(144));
-})();
-const jf=(()=>{
-const a=[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984)];
-const b=[(774553834^774553824),(1549107668^1549107648),(2323661502^2323661472)];
-const ce=[];
-for(let i=(2615779285^2615779285);i<a[kp.v(52)];i++)ce[kp.v(0)](a[i],b[i]);
-return ce;
-})();
-const jg=(()=>{
-const a=[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448)];
-const t=a[kp.v(338)]();
-a[kp.v(0)](t);
+})());
+const ZIP=((()=>{const a=([1,2,3]);
+const b=(["x","y","z"]);
+return ((a.map((v,i)=>(v+(b[i])))).join("-"));
+})());
+const INTERLEAVE=((()=>{const a=([1,2,3]);
+const b=([10,20,30]);
+const out=([]);
+for (let i=0;(i<(a.length));i++)(out.push(a[i],b[i]));
+return out;
+})());
+const ROTL=((()=>{const a=([1,2,3,4]);
+const t=(a.shift());
+(a.push(t));
 return a;
-})();
-const jh=(()=>{
-const kd=[];
-kd[kp.v(0)]((2654435761^2654435760));
-kd[kp.v(0)]((1013904226^1013904224));
-const ke=kd[kp.v(340)]();
-kd[kp.v(0)]((3668339987^3668339984));
-return[ke,kd];
-})();
-const ji=(()=>{
-const q=[];
-q[kp.v(0)]({v:(2654435761^2654435760),t:kp.v(9)});
-q[kp.v(0)]({v:(1013904226^1013904224),t:kp.v(78)});
-const first=q[kp.v(338)]();
-q[kp.v(0)]({v:(3668339987^3668339984),t:kp.v(182)});
-return[first[kp.v(417)],first[kp.v(536)],q[kp.v(8)](bb=>bb[kp.v(417)])];
-})();
-const jj=(()=>{
-const a=[(2615779285^2615779285),(2654435761^2654435760)];
-for(let i=(1013904226^1013904224);i<(1161830751^1161830736);i++)a[kp.v(0)](a[i-(2654435761^2654435760)]+a[i-(1013904226^1013904224)]);
+})());
+const STACK=((()=>{const box=([]);
+(box.push(1));
+(box.push(2));
+const top1=(box.pop());
+(box.push(3));
+return ([top1,box]);
+})());
+const Q=((()=>{const q=([]);
+(q.push({v:1,t:"a"}));
+(q.push({v:2,t:"b"}));
+const first=(q.shift());
+(q.push({v:3,t:"c"}));
+return ([first.v,first.t,q.map((o)=>o.v)]);
+})());
+const FIBARR=((()=>{const a=([0,1]);
+for (let i=2;(i<15);i++)(a.push(((a[(i-1)])+(a[(i-2)]))));
 return a;
-})();
-const jk=(()=>{
-const n=(774553834^774553824);
-return Array[kp.v(146)]({length:n},(kf,i)=>(i*(i+(2654435761^2654435760)))/(1013904226^1013904224));
-})();
-const jl=(()=>{
-const kg={off:(2615779285^2615779285),on:(2654435761^2654435760),auto:(1013904226^1013904224)};
-const kh=kp.v(506);
-return kg[kh];
-})();
-const jm=(()=>{
-const f=(code)=>{
-if(code===(2606174792^2606174848))return kp.v(65);
-if(code===(2945190740^2945190592))return kp.v(537);
-if(code===(72986036^72985664))return kp.v(538);
-return kp.v(539);
-};
-return[f((2606174792^2606174848)),f((2945190740^2945190592)),f((72986036^72985664)),f((2654435761^2654435760))];
-})();
-const jn=(()=>{
-const ki=new Map();
-ki[kp.v(7)]((2654435761^2654435760),kp.v(352));
-ki[kp.v(7)]((1013904226^1013904224),kp.v(540));
-ki[kp.v(7)]((3668339987^3668339984),kp.v(541));
-ki[kp.v(7)]((2027808452^2027808448),kp.v(519));
-const kj=(s)=>{
-const kk=s[kp.v(104)](kp.v(76));
-const x=parseInt(kk[(2654435761^2654435760)],(774553834^774553824));
-const y=parseInt(kk[(1013904226^1013904224)],(774553834^774553824));
-switch(kk[(2615779285^2615779285)]){
-case'add':return x+y;
-case'sub':return x-y;
-case'mul':return x*y;
-case'div':return x/y;
-default:return NaN;
+})());
+const TRI=((()=>{const n=10;
+return (Array.from({length:n},(_,i)=>(((i*((i+1))))/2)));
+})());
+const DOC=((()=>{const conf=({off:0,on:1,auto:2});
+const sel="on";
+return (conf[sel]);
+})());
+const BRANCH=((()=>{const f=((code)=>{if(((code===200)))return "ok";
+if(((code===404)))return "missing";
+if(((code===500)))return "broken";
+return "unknown";
+});
+return ([f(200),f(404),f(500),f(1)]);
+})());
+const OPCODE=((()=>{const ops=(new Map());
+(ops.set(1,"add"));
+(ops.set(2,"sub"));
+(ops.set(3,"mul"));
+(ops.set(4,"div"));
+const run=((s)=>{const parts=(s.split(" "));
+const x=(parseInt(parts[1],10));
+const y=(parseInt(parts[2],10));
+switch((parts[0])){case "add":{return ((x+y));}case "sub":{return ((x-y));}case "mul":{return ((x*y));}case "div":{return ((x/y));}default:{return NaN;}}
+});
+return ({m:(ops.get(3)),r:([run("add 4 5"),run("mul 3 7"),run("wat 1 1")])});
+})());
+const NOP=((()=>{let x=0;
+if(x){((x=((x+1))));
+}else {((x=((x+2))));
 }
-};
-return{m:ki[kp.v(6)]((3668339987^3668339984)),r:[kj(kp.v(542)),kj(kp.v(543)),kj(kp.v(544))]};
-})();
-const jo=(()=>{
-let x=(2615779285^2615779285);
-if(x){
-x=x+(2654435761^2654435760);
-}else{
-x=x+(1013904226^1013904224);
-}
-x=x?(774553834^774553824):(1549107668^1549107648);
+((x=((x?10:20))));
 return x;
-})();
-const jp=(()=>{
-const a=[];
-let i=(2615779285^2615779285);
-while(i<(387276917^387276912)){
-a[kp.v(0)](i++);
-if(i===(1013904226^1013904224))continue;
-if(i===(2027808452^2027808448))break;
+})());
+const THREE=((()=>{const a=([]);
+let i=0;
+while(((i<5))){(a.push(i++));
+if(((i===2)))continue;
+if(((i===4)))break;
 }
 return a;
-})();
-const jq=(()=>{
-const kl=(n)=>n%(1013904226^1013904224);
-const km=(n)=>n%(3668339987^3668339984);
-return[(2654435761^2654435760),(1013904226^1013904224),(3668339987^3668339984),(2027808452^2027808448),(387276917^387276912),(3041712678^3041712672),(1401181143^1401181136),(4055616904^4055616896),(2415085369^2415085360)][kp.v(8)](x=>kl(x)+km(x));
-})();
-const jr=(()=>{
-let x=(2654435761^2654435760);
-let y=(1013904226^1013904224);
+})());
+const MODFN=((()=>{const mod2=((n)=>(n%2));
+const mod3=((n)=>(n%3));
+return (([1,2,3,4,5,6,7,8,9]).map((x)=>((mod2(x))+(mod3(x)))));
+})());
+const SWAPPED=((()=>{let x=1;
+let y=2;
 const t=x;
-x=y;
-y=t;
-return[x,y];
-})();
-const js=(()=>{
-const a=[(774553834^774553824),(1549107668^1549107648),(2323661502^2323661472),(3098215336^3098215296),(3872769170^3872769184)];
-return a[kp.v(13)]((s,v)=>s+v,(2615779285^2615779285))/a[kp.v(52)];
-})();
-const jt=(()=>{
-const kn=new Map();
-for(const c of kp.v(105))kn[kp.v(7)](c,(kn[kp.v(6)](c)||(2615779285^2615779285))+(2654435761^2654435760));
-return[...kn][kp.v(8)](([c,n])=>c+kp.v(73)+n)[kp.v(47)](kp.v(76));
-})();
+((x=y));
+((y=t));
+return ([x,y]);
+})());
+const AVG=((()=>{const a=([10,20,30,40,50]);
+return (((a.reduce((s,v)=>(s+v),0))/(a.length)));
+})());
+const HIST=((()=>{const counts=(new Map());
+for (const c of "banana")(counts.set(c,((((counts.get(c))||0))+1)));
+return ((([...counts]).map(([c,n])=>(((c+":"))+n))).join(" "));
+})());
