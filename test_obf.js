@@ -1,1128 +1,2110 @@
-"use strict";
-const N0=0;
-const P1=5;
-const P2=(-7);
+var $3de=['2wYC6w==','COclyw==','','LF10dg==','WNvB7Nfe','qg==','+MJj','3dAH','CUMe','Y1n6','OQ==','tjqK','6g==','hg==','PA==','o5KA','ktQ=','L0k=','yi8R4ESZ','g/CK','RVCyuyU=','T1k=','q06kPA==','FDpq0Q==','UA==','Szki2Tc5zu8=','VCJ3Uw==','2dOEOw==','YiF4jro4yCRZygXl9TU=','DzGNIds=','ER2Mn1j9','1N70ADI=','IhfcfhBxbw==','vtB/AbWZr1+zMw==','uRcV4vEu','62Pwmw==','ZfkEUZbFbV8=','Mnf3io4W6u4=','QueM','QfRFpQ==','1JjxtA==','oTSs','qIpF','ShgX','C98n/tE=','FA==','ui83','21xh4g==','rVLHYZM=','J7jB','wh+r','BtKd18Gkww==','dsR6eQ==','Dg==','gtSD','4yZJi9c=','Yl/9aIA1','nU6fG4/P','ydAsyw==','enZkTpJu','q4Ox/g==','2HQLTnQ=','P5M=','BQ5o','VWs=','2k72zLI=','XB79','gC8C','uohq','sjOWdA==','6hQ=','fT7u6Ka7bDEdkxObHQ==','4+nK8L+cRAaJQTHSdQ==','7mK2EWT35CTyuOA7','gbtlcx16Nw==','FVueqEanyzuSycm7Ug==','jrAxTw==','hw==','8J3QLlw=','wA==','aA==','6g==','IA==','WBpswFSczhVjABy4n7zP/FYnEhp2ikLvKUl8IafalSY=','oHi0Mmj5C8CQlgDGcf4=','96jT/9lb+Fjdz8qNcbP786+vM0uJjw==','CHyWgSOEntFWmE0DVn6nNGODxgM=','wiMT','4sE=','tYQHEJX0J68=','DeSQC5+5nn6yCTgT7Zq6XIRq2Q==','ufYRZ3VbeatSymWJR9BKGVS2vKAS8vgQtnsLPvOH5isarTbaFfbPk1hLUpWwvtbFMpamWQS+L5b5pIJppHpEdAe98B4ShLutOo45qPUtHF7jA4e9tYcKRVrvxAj7cYzItfSwl97okW6MF2O5NmcoimfBwKVzvs341nPryGhB/IX8o5rweDs5fZF3g964wFoF/EkAfw==','vRKvRFiOyxclT7caVXdVVF0LO2/2mwjvxx4mxSB3OAMK81SIAq2WovjOpEKdrVGwip7L+uu3UpLv4E8NtY9+1kYVBtXAKua4X9Ek0du/HMVorV/7oud+ZqNiIz/aSgzpB0DHOsuQoZgZzWjV/fwkefStBW/WcFdC2rSbjjuuifqgL1pz5xrX4Nxt3q558ulee/Z4Ji3WcMUWd1YXKEGoWFb1xZu5iZ89fqg7z9AuvYTwmZzGhxX4PKE2/NRY/D/FKkhTMNBYZ6hB3lfUv6vOgrppu+nGbijx2plGeP11wqM+GOETRQkprat18MMhIw/ByHL6QvT7CUzAjZvtqugUFYmDwRrX/CGyBoJVnPVM1hBp/hcuny4enA6XqbqYpAg3q3IaTXiZABM=','5lYfneGE+Von9BS8CZFvlJJlXPjsxUvyDrWtYcIWZg+FCmBnDP7m1U3OzdgMAMtYJLoo7mmO','yjsY8c+l2g6nsjSna3cxElyNA2d1WU+VCHmno281ll+2t//jsAzCaYMuvlHY7hNblDI0kUf0Ajt1gNenp5ASxYwQr19j','sgtvbqTbvlLNM/rAOXFD+hh+X7RzE81JE9dp','q2lUTmo=','+9CNnyELpA==','GXfvvg==','qtW61oooGikwTg==','zyZj6j+Eag==','gS7pUrk8','gMAGTMkP6NQq1qKAGQ==','dgvSkA==','PAexHNAPgg==','Qg==','Ar9LahP96y4=','Yc4fmzY=','kmQqXIvu','k+BeKfpoqA==','pr0=','1GIOZnOurJaFtG8=','OK/nvt1t','dE49wO8=','3u693ELSFyhB','O6LkWqoqdrw=','lQ==','Xu4Wg6lU','kh5/0wd3','C5TwGteECm9L+S0=','FBet0bySTic=','8p366A==','CEdHWfIo/Dex+A==','cDU=','8s524ByJQW4=','ykU=','V7W2f3s=','ztkh0Q==','vVm0','EYNmBDxXYp7QDTY=','eD4R','3WtvMrJqqBz2A08=','16mrASRlPV5kvg==','EKExCK80Iir1HvCT','VNk++dp4yiuZg/w=','Wa8=','klcfjuEd','4aUO0WzEh7m8woQ=','8pXOcg==','8bfJ2nsQeg==','DjKOuw==','CA==','sg==','GDcqwg==','1zYJo6Q=','+EjrBg==','sQqqxe0yoiUz','xw==','96uqTBDI','APnVIA==','sEA=','aK1VZw==','jveZEB1+','CLFrKW6l6w==','PeDSAr1a+/y6z7s=','Two4J1//','Aao3P9epDg==','J2+p9+bQ','RnhCqSk9Wc0=','gPsWzw==','xmGMjp0EfOA=','ynNtx7nIKKJ2T1+6B9KbAfeDxw==','FBz7JObs5+lE','wwftBekSLyQqZ0zKU6Y=','3Q==','CNgZXu91BOs=','AQ==','Jg==','6obyIA==','RK7a8GMaEw==','6AEWeA7g','hcM=','aPo2uw==','Dg1MLw==','tlwARbntLY//qhwE1dU=','Aj7YbFx3h0301dLe6UYN6G6B','YK0+1Q==','30Ji3AA=','KgOaJOQ=','64R/','+1aY','7/S3','+UAitA==','1C9wgQ==','vi8luQ==','i2Yl/cY=','TA==','hA==','hBe5IVIs','7U3K','K5bFKQ==','rtH0frM1303r','qlkRCRX+W3K/','ALjpNonkjA==','3mx51FheLCOcBFWmVtg/5Q==','35iIvv3KXBHe','N94=','UJw=','OJaO','4APk','39DL','I2OL','dQCIyQ==','2tpWjyE=','fUEYgA==','1CdBBA==','8qZoCA==','2COaCw==','3THZzlA=','YPbHS1Q=','f0ksO6U=','G1wQ1vg=','//on9A==','+Mwm3Hg=','4jtRhW4=','FQ==','m0CpStM=','nGADAQ==','HicsvJA=','G6SRTZcG','JwPv','/ya4eg==','FIT2CxA=','/T3xXif+','AsQJ7fM=','Sbr7kqu87A==','+pqUhR5iATc=','i8Cibcjun/kiIn5CgmKhyQ==','I3YM9TnB','txEnOxICyg==','5VxilXer','FcLtdOZcOD0=','oWo=','JjU34g==','xsv3KdlKZA==','XmrVgA1V','DbM98A==','iZHH','Yt4=','Hpdz','9LanjHc=','5ptusKE0U9o=','lOiXS4bBkw1hPTA7SA==','LOeKO/r1Dw==','PXZTpXMaiNAWLDY=','MXVWFbDlAnyQo9YUNA==','J8M=','nVqY','lzJl1A==','dQfZ3YvOR+9+BSawm3qRyw==','YrVV15iwYZ0Y3H/n2e3yW8SI','8O4ijz3NVAmHWwSPE7eTmN/e','YPPm1MjIx84TFQ==','3gG2+Ub+','1CN5MyiA54c=','9wdB','2V9G702dodY=','C+cw','w3mkBA==','JlpsZ+um','VpTJpNc=','5d5idt5gYxyQ','6JJp7XX8','0YQF7i4w','F0ceXqGW9RQ=','bxXoWvZyjA==','eChD','5yTYwoDV','9wRkRw4=','iw==','Jg==','/g==','hWbLBCJJE9up','PFFNgqGj','+Qg2','ISI8SFOobAkE7w==','AzX9tXcYNRY=','Vk4AJYFhpVfw','vV2+NOMufg==','v9jkN78=','U0OvHGcCN2o4','ZBEP','e4+Q','+/Cg','J4CY','MgejAw==','UgWLiFGp','tdDSAw==','Ogvc','65Es','/gAa','7w==','ZPgQV8TPbkmn','MnX4ncs=','TWp4IrkVQcVn','zhWl','35Y=','kwOChpN+bg==','u60=','Nzh9xA==','RI0y7g==','Rg==','gwsc+A==','mwkysjiJNmuJnw==','v2bEPYRd','JrnUlQ==','hFj2/t8vDGJmkg==','OuC+tuA=','3xvWr3LVBYY9','Q2uW','gseTu5l/','7TBAjA==','ZE/8ZopNKL5o/x0=','nUqCCLLJpf7r','kdMk','g4vLnj2M8uDDciZP','oNzr','gSNUFi4=','K5J1Puay','AQBjPg==','Rj8af/M=','2UPlx7g=','QQTkZStV','iSIH','7sh5ew==','pyuH','jw==','cj/v0uU=','poKx','sg==','jbx1ZB1/','Ow6o','hBzd4Dv0x+0=','3CFi73g=','74XFJA==','0fzqgX9f5QZQrp4=','ZjxZCGVVTTbh','5J6se3vBA1ccvLnSMA==','KV0U7mts2g==','XBJhz0SO0QA=','r2X9JQT5WJaojQvXbA==','5qHZ8vE=','IWfV2X7Tyg==','00wB','4MxVEftt84/9vA==','gw/p6w==','Gf+qB4at23s=','gfYxZ24eYqhE2w==','CtsetJYlGrHk','40UDjafywQ==','xD0e','og5vcg==','9Q==','i4LOhnlK','HW7o','+YHs','zw==','jA==','gN0cT+4=','bR/PiEg=','PRejEcMehko=','fyPiwkO+AhiL3Q==','EPZdExm/s3I=','YdsHuywg8mg=','g2AwaIzh2XcU','ietOCu5IrwgFgQ==','r7mGDm5d4OA=','32YJW1S0+cU=','Pqjwj9FlGLEQ','YEcg5eazGffhkw==','yv6r6VrPHzIVJA==','I6pDuRvzz1R9j5M=','30Yc05jTp1nHmdLl','XOoTopJ5Zh/8hJeX','kwxuxlc1','C5Tk','CA2ohQ==','+JTqr3fj','Alw=','ejGkeKpc','9sx+/Cg=','wk/Z/EE2mFNxguC1J74=','H/yqOz48','28gr2d3D','pEijQ6wF','AolHOztcQK/eDjZ0S9CYhJHbzX4BoV/W','SRQbBNXSFJQQl9yM0w==','32VPKKA=','0a+/HgJ4OFlJrw==','FbwwA4U7NirXE/iT','QMQz6Ot1zyA=','UaierHcbLhAdvedv','hEwWjOEB+I/3GVRV2Irq7g4=','4g==','85zbSSAEUbEapJdmmN0e6blMQXkz','9bLGyg==','Dg==','J9drxIY=','k6ZEYDoADlmYG8k=','CTkjh8WS6Fx/9g==','wSUAtw==','7VX3C95r6yf1','vg2qxNY=','h4rShQ==','9g==','Ae7Odw==','71pM7vI=','faFNMQ==','kPeGXw==','Hu4=','KKA=','ei4E','Aa0TP8S8GI4=','J3K+','RG59nSk1','nfsP1w==','3Xerno4G','yXl37Q==','GQ==','whf3Nu8UNCU=','jPcXeLXyo1CMgjY=','HtUUW+M=','Dg==','K/+t5Hw=','+oD9K+o=','TqaJ','7RwcfQ==','i8/WdA==','JA==','Ch5FJi8=','/xxS','GT/uOFpphgrU3Mc=','R/o=','yQ==','LRSMOOIT','4ZdifrdG5S6h','pA/EozQ6jZASXWzBY/eHiPcGvGlI89Ws','ys+D','7VQklLbzNA==','wyJLptDFSaGfRDE=','uSkXg5kgBI2YvdA=','mW01zfR3Sq9FsmXrcUk=','SD0bjlcUfC1GgnI=','mVhC1N2YM1aing==','hxehEXIKB9d/P80=','5kfZteVjw1YWkU2l5w==','LYDYEjvTmH/ZxHbQXw==','hPXYdLE33nHCXCCgIN+o263e','gHUrAxf8U0aD','NYnIDKA=','9EhVz2prDw==','0Y61nebBTxw=','Ntk259PxvNauNyziubPwrpC288GaCgQ381K3SQLdv4Gr6o0yeh2ziRCLIjDNQ50KcguE','L6ddmQ==','NZqKqsrIzq9hctWhIzYKMIZELkmcA3Ce2Yfw+g==','4xjlgTLyAJI=','1NDLNA==','P22WTtebGfg=','ZAyVzg==','y89DiX2e1Wk=','b1AYnMih','1CtOHi82IexA4BQY','+ahoCA==','2TGREWC7+KA=','zCPD00+0FKM=','aefNXg==','e1MuOqnW','GkED1K01','8tIr+w==','9WDxKPDC5grPD/w=','7xNgx3wM0MA=','Im6F','kFa2TsLi','j2gEAg==','ESQh','Cg==','BCO+rw==','1Q==','PqLdVTBg','1B7FCg==','MPs/','e4fF','/JC0ngB9Cg==','2tT/WMv8jfMhIA==','MGAv/i77','uA0=','tQAo','F8L8Yg==','q208NE8=','Y20i9A==','loSyftA=','CGGK0VAIOQ==','Xr15oM1DFg==','zJ2Xcg==','JZgHXb0b','XdwntSyN','xp7YwQvH36K9arhDUg==','9MpK+/VsC50jbzNzCeVfcp2MSg==','kQ==','aPT9LrDsWO6a','PXFm92cMiMAUYzpkEG7M9ifFaNzwWPsZ1A49+coTxjgbxK8Ggj+xSGnUgw==','KnR2TbT9AzmKv80QPQ==','epbG','zBvYvuo=','0yImi3A=','wM8=','fwY=','zkzN','OA==','yxo=','xSNuOjY=','9RBgECQ=','6RdZ9kTbn8Fd1YfJ','M/o5zMPD/w3ozHCr','wHI=','IlVkcQ==','RdjI7NfLqA==','8IdyIYk=','9sxlrQ==','3NwFsg==','F0cERA==','bFHt','PhkF5GRLNA==','6y/f','5lZ1','2Bje','MQ==','9A==','34o=','Lw==','3CMD','keKYng==','AF2/t2ZIJg==','AVsOLw==','pkGyedI3dQKo4SCL4gY=','HWpkhXqt','Hg==','cTsW','VyJuVZ7NnXg=','1PSA','Jil8lQ==','GQ==','VFs=','ktvjFDU=','OhvRdhp6','/9M9WaiU','og==','/A==','MeBGTtbQPA==','f3/qnccR/g==','TvqXwp6Z','WftFrkrWkA==','1Jry','vzSt','m4tZSTD5Ig==','Uwwc7lr4fg==','GcYnrIGwRw==','9kJTRzs='];var $3df='';var $3e0=0x0;for($3e0=0x41;$3e0<0x5b;$3e0++)$3df+=String.fromCharCode($3e0);for($3e0=0x61;$3e0<0x7b;$3e0++)$3df+=String.fromCharCode($3e0);for($3e0=0x30;$3e0<0x3a;$3e0++)$3df+=String.fromCharCode($3e0);$3df+='+/';var $3e1=function($3e2){var $3e3=$3de[$3e2-0x0];var $3e4='';var $3e5=0x0;var $3e6=0x0;var $3e7=0x0;for($3e7=0x0;$3e7<$3e3.length;$3e7++){var $3e8=$3df.indexOf($3e3.charAt($3e7));if($3e8<0x0)continue;$3e5=($3e5<<0x6)|$3e8;$3e6+=0x6;if($3e6>=0x8){$3e6-=0x8;$3e4+=String.fromCharCode(($3e5>>$3e6)&0xff);}}var $3e9=[0x5a,0x37,0xc3,0x11,0x9e,0x2b,0x74,0xe8];for(var $3ea=0x0;$3ea<$3e9.length;$3ea++)$3e9[$3ea]=($3e9[$3ea]^$3e2)&0xff;var $3f5=[];for(var $3eb=0x0;$3eb<0x100;$3eb++)$3f5[$3eb]=$3eb;var $3ec=0x0;var $3ed=0x0;var $3ee=0x0;for($3ec=0x0;$3ec<0x100;$3ec++){$3ed=($3ed+$3f5[$3ec]+$3e9[$3ec%$3e9.length])&0xff;$3ee=$3f5[$3ec];$3f5[$3ec]=$3f5[$3ed];$3f5[$3ed]=$3ee;}$3ec=0x0;$3ed=0x0;var $3ef='';for($3e7=0x0;$3e7<$3e4.length;$3e7++){$3ec=($3ec+1)&0xff;$3ed=($3ed+$3f5[$3ec])&0xff;$3ee=$3f5[$3ec];$3f5[$3ec]=$3f5[$3ed];$3f5[$3ed]=$3ee;var $3f2=$3f5[($3f5[$3ec]+$3f5[$3ed])&0xff];$3ef+=String.fromCharCode($3e4.charCodeAt($3e7)^$3f2);}var $3f1='';var $3f2=0x0;var $3f3=0x0;while($3f2<$3ef.length){$3f3=$3ef.charCodeAt($3f2);if($3f3<0x80){$3f1+=String.fromCharCode($3f3);$3f2+=0x1;}else if(($3f3&0xe0)===0xc0){$3f1+=String.fromCharCode((($3f3&0x1f)<<0x6)|($3ef.charCodeAt($3f2+1)&0x3f));$3f2+=0x2;}else if(($3f3&0xf0)===0xe0){$3f1+=String.fromCharCode((($3f3&0x0f)<<0xc)|(($3ef.charCodeAt($3f2+1)&0x3f)<<0x6)|($3ef.charCodeAt($3f2+2)&0x3f));$3f2+=0x3;}else{var $3f4=((($3f3&0x07)<<0x12)|(($3ef.charCodeAt($3f2+1)&0x3f)<<0xc)|(($3ef.charCodeAt($3f2+2)&0x3f)<<0x6)|($3ef.charCodeAt($3f2+3)&0x3f))-0x10000;$3f1+=String.fromCharCode(0xd800+($3f4>>0xa),0xdc00+($3f4&0x3ff));$3f2+=0x4;}}return $3f1;};(function($3f6,$3f7){var $3f8=function($3f9){while(--$3f9){$3f6.push($3f6.shift());}};var $3fa=function(){var $3f0=$3e1(0x0);if($3f0!==String.fromCharCode(0x71,0x37,0x77,0x38,0x6b)){$3f8(0x2);$3fa();}};$3f8(++$3f7);$3fa();}($3de,0x22d));(function($3fb,$3fc,$3fd,$3fe,$3ff,$400,$401,$402,$403,$404,$405,$406,$407,$408,$409,$40a,$40b,$40c,$40d,$40e,$40f,$410,$411,$412,$413,$414,$415,$416,$417,$418,$419,$41a,$41b,$41c,$41d,$41e,$41f,$420,$421,$422,$423,$424,$425){"use strict";if(0x1>0x2){let $3db=$3e1(0x1);let $3dc=0x1d;for(let $3dd=0x0;$3dd<0x5;$3dd++){$3dc+=$3dd*0x7;if($3dc>0x63){break;}}}
+const N0=0x0;
+const P1=0x5;
+const P2=-0x7;
 const P3=3.14159;
 const P4=6.02e23;
 const P5=1.0e-6;
-const P6=((0.1+0.2));
-const P7=((1/3));
-const HX=0xDEADBEEF;
-const HC=0xC0FFEE;
-const BN=0b1011010110;
-const OC=0o777;
-const US=1_000_000;
-const LD=9007199254740991;
+const P6=0.1+0.2;
+const P7=0x1/0x3;
+const HX=((((((((((((((((((((0x1*0xb)+0x7)*0xd)+0x0)*0x5)+0x1)*0x7)+0x5)*0xb)+0x6)*0x7)+0x6)*0x7)+0x3)*0x5)+0x1)*0xd)+0x1)*0xd)+0xc);
+const HC=((((((((((((((((((0x3*0x7)+0x1)*0xb)+0x1)*0x5)+0x1)*0x3)+0x2)*0x7)+0x2)*0x5)+0x1)*0x3)+0x2)*0xb)+0x8)*0x3)+0x1);
+const BN=((((((0x4*0xb)+0x4)*0x3)+0x1)*0x5)+0x1);
+const OC=((((0xe*0x7)+0x4)*0x5)+0x1);
+const US=((((((((((((0x6*0x7)+0x0)*0x5)+0x1)*0xd)+0xb)*0xb)+0x9)*0xb)+0x0)*0x3)+0x1);
+const LD=((((((((((((((((((((((((((((((((((((((((0x3*0xb)+0x5)*0xb)+0x5)*0x7)+0x6)*0xb)+0x6)*0x5)+0x1)*0x7)+0x0)*0xb)+0x1)*0x3)+0x1)*0x3)+0x0)*0x3)+0x0)*0x5)+0x1)*0x3)+0x2)*0x3)+0x0)*0x5)+0x1)*0x3)+0x2)*0x5)+0x1)*0xd)+0x1)*0xb)+0x4)*0xb)+0xa)*0x5)+0x1);
 const LS=9007199254740991n;
 const BI=12345678901234567890n;
-const NB=(-0);
+const NB=-0x0;
 const ZD=0.5;
-const TD=5.0;
-const HUGESAFE=2147483647;
-const SPL=([]);
-for (let i=0;(i<60);i++)(SPL.push((i*37)));
-function clamp(v,lo,hi){return ((((v<lo))?lo:((((v>hi))?hi:v))));
+const TD=0x5;
+const HUGESAFE=((((((((((((((((((((((0x5*0x5)+0x1)*0x5)+0x1)*0x5)+0x1)*0xb)+0x7)*0x3)+0x1)*0x3)+0x0)*0x3)+0x0)*0xd)+0x9)*0xb)+0x9)*0xb)+0x0)*0x7)+0x1);
+const SPL=[];
+for(let i=0x0;i<((((0x6*0x3)+0x2)*0x3)+0x0);i++)SPL[$3e1(0x2)](i*((0x5*0x7)+0x2));
+function clamp($82,lo,$83){if(0x1>0x2){let $3d8=$3e1(0x1);let $3d9=0x1d;for(let $3da=0x0;$3da<0x5;$3da++){$3d9+=$3da*0x7;if($3d9>0x63){break;}}}
+return $82<lo?lo:$82>$83?$83:$82;
 }
-function flatten(obj,pre=""){let o=({});
-for (const k of (Object.keys(obj))){const v=(obj[k]);
-(((o[(pre+k)])=(((((((typeof v)==="object"))&&((v!==null))))?(flatten(v,(((pre+k))+"."))):v))));
+function flatten($84,$85=$3e1(0x3)){if(0x1>0x2){let $3d5=$3e1(0x1);let $3d6=0x1d;for(let $3d7=0x0;$3d7<0x5;$3d7++){$3d6+=$3d7*0x7;if($3d6>0x63){break;}}}
+let o={};
+for(const k of $3fb[$3e1(0x4)]($84)){
+const v=$84[k];
+o[$85+k]=typeof v===$3e1(0x5)&&v!==null?flatten(v,$85+k+$3e1(0x6)):v;
 }
 return o;
 }
-function memo1(fn){const cache=(new Map());
-return ((x)=>{if((cache.has(x)))return (cache.get(x));
-const r=(fn(x));
-(cache.set(x,r));
+function memo1($86){if(0x1>0x2){let $3d2=$3e1(0x1);let $3d3=0x1d;for(let $3d4=0x0;$3d4<0x5;$3d4++){$3d3+=$3d4*0x7;if($3d3>0x63){break;}}}
+const cache=new $3fc();
+return($0)=>{if(0x1>0x2){let $3cf=$3e1(0x1);let $3d0=0x1d;for(let $3d1=0x0;$3d1<0x5;$3d1++){$3d0+=$3d1*0x7;if($3d0>0x63){break;}}}
+if(cache[$3e1(0x7)]($0))return cache[$3e1(0x8)]($0);
+const r=$86($0);
+cache[$3e1(0x9)]($0,r);
 return r;
-});
+};
 }
-function mkFact(){const f=((n)=>(((n<=1))?1:((n*(f((n-1)))))));
+function mkFact(){if(0x1>0x2){let $3cc=$3e1(0x1);let $3cd=0x1d;for(let $3ce=0x0;$3ce<0x5;$3ce++){$3cd+=$3ce*0x7;if($3cd>0x63){break;}}}
+const f=($1)=>($1<=0x1?1:$1*f($1-0x1));
 return f;
 }
-const factN=(mkFact());
-const factMem=(memo1(factN));
-function twin(){let a=0;
-let b=1;
-return (()=>{const t=a;
-((a=b));
-((b=((t+b))));
-return ({a:a,b:b});
-});
+const factN=mkFact();
+const factMem=memo1(factN);
+function twin(){if(0x1>0x2){let $3c9=$3e1(0x1);let $3ca=0x1d;for(let $3cb=0x0;$3cb<0x5;$3cb++){$3ca+=$3cb*0x7;if($3ca>0x63){break;}}}
+let a=0x0;
+let b=0x1;
+return()=>{if(0x1>0x2){let $3c6=$3e1(0x1);let $3c7=0x1d;for(let $3c8=0x0;$3c8<0x5;$3c8++){$3c7+=$3c8*0x7;if($3c7>0x63){break;}}}
+const t=a;
+a=b;
+b=t+b;
+return{a,b};
+};
 }
-const fibPair=(twin());
-const fibonacci=(([fibPair(),fibPair(),fibPair(),fibPair(),fibPair(),fibPair(),fibPair(),fibPair(),fibPair(),fibPair()]).map((r)=>r.a));
-function freshCount(){let n=0;
-return ({inc(times){for (let k=0;(k<times);k++)((n+=1));
-return (++n);
-}});
+const fibPair=twin();
+const fibonacci=[fibPair(),fibPair(),fibPair(),fibPair(),fibPair(),fibPair(),fibPair(),fibPair(),fibPair(),fibPair()][$3e1(0xa)](($2)=>$2[$3e1(0xb)]);
+function freshCount(){if(0x1>0x2){let $3c3=$3e1(0x1);let $3c4=0x1d;for(let $3c5=0x0;$3c5<0x5;$3c5++){$3c4+=$3c5*0x7;if($3c4>0x63){break;}}}
+let n=0x0;
+return{
+inc($87){if(0x1>0x2){let $3c0=$3e1(0x1);let $3c1=0x1d;for(let $3c2=0x0;$3c2<0x5;$3c2++){$3c1+=$3c2*0x7;if($3c1>0x63){break;}}}var $ee=$3e1(0xc).split($3e1(0xd)),$ef=0x0;while(!![]){switch($ee[$ef++]){case $3e1(0xe):
+for(let k=0x0;k<$87;k++)n+=0x1;;continue;case $3e1(0xf):
+return++n;;continue;}break;}
+},
+};
 }
-const fct=(freshCount());
-const counter=([fct.inc(0),fct.inc(1),fct.inc(2),fct.inc(0)]);
-function destructureMe({x:x,y=11,z:{deep=3,deeper:[w1=1,w2]=([])}=({}),...other}){return ({x:x,y:y,deep:deep,w1:w1,w2:w2,other:other});
+const fct=freshCount();
+const counter=[fct[$3e1(0x10)](0x0),fct[$3e1(0x10)](0x1),fct[$3e1(0x10)](0x2),fct[$3e1(0x10)](0x0)];
+function destructureMe({x,y=0xb,z:{deep=0x3,deeper:[w1=0x1,w2]=[]}={},...other}){if(0x1>0x2){let $3bd=$3e1(0x1);let $3be=0x1d;for(let $3bf=0x0;$3bf<0x5;$3bf++){$3be+=$3bf*0x7;if($3be>0x63){break;}}}
+return{x,y,deep,w1,w2,other};
 }
-const dm1=(destructureMe({x:1,z:({deep:9,deeper:([7,8,9])}),q:"qq",w:42}));
-const dm2=(destructureMe({x:2,extra:true}));
-const dm3=(destructureMe({x:3,z:5}));
-function arrDestr([a,b=5,...rest],{p:p,q=9}=({p:0})){return ({a:a,b:b,rest:rest,p:p,q:q});
+const dm1=destructureMe({x:0x1,z:{deep:0x9,deeper:[0x7,0x8,0x9]},q:$3e1(0x11),w:((0x6*0x7)+0x0)});
+const dm2=destructureMe({x:0x2,extra:!0});
+const dm3=destructureMe({x:0x3,z:0x5});
+function arrDestr([a,b=0x5,...rest],{p,q=0x9}={p:0x0}){if(0x1>0x2){let $3ba=$3e1(0x1);let $3bb=0x1d;for(let $3bc=0x0;$3bc<0x5;$3bc++){$3bb+=$3bc*0x7;if($3bb>0x63){break;}}}
+return{a,b,rest,p,q};
 }
-const am1=(arrDestr([1,undefined,3,4,5],{p:"pp",q:12}));
-const am2=(arrDestr([7]));
-const am3=(arrDestr([9,8,7],undefined));
-function defaults(a=1,b=((a+1)),c=((a+b)),d=((()=>(((a+b))+c))())){return ({a:a,b:b,c:c,d:d});
+const am1=arrDestr([0x1,void 0,0x3,0x4,0x5],{p:$3e1(0x12),q:0xc});
+const am2=arrDestr([0x7]);
+const am3=arrDestr([0x9,0x8,0x7],void 0);
+function defaults($88=0x1,$89=$88+0x1,$8a=$88+$89,$8b=(()=>$88+$89+$8a)()){if(0x1>0x2){let $3b7=$3e1(0x1);let $3b8=0x1d;for(let $3b9=0x0;$3b9<0x5;$3b9++){$3b8+=$3b9*0x7;if($3b8>0x63){break;}}}
+return{a:$88,b:$89,c:$8a,d:$8b};
 }
-const dfl=(defaults());
-const dfl2=(defaults(10,20,30,40));
-function* multiGen(stop){let n=0;
-outer:while(((n<stop))){(n++);
-for (let k=0;(k<n);k++){if(((k===0)))continue;
+const dfl=defaults();
+const dfl2=defaults(0xa,((0x6*0x3)+0x2),((0xa*0x3)+0x0),((0xd*0x3)+0x1));
+function*multiGen($8c){if(0x1>0x2){let $3b4=$3e1(0x1);let $3b5=0x1d;for(let $3b6=0x0;$3b6<0x5;$3b6++){$3b5+=$3b6*0x7;if($3b5>0x63){break;}}}
+let n=0x0;
+outer:while(n<$8c){
+n++;
+for(let k=0x0;k<n;k++){
+if(k===0x0)continue;
 }
-(yield n);
-}
-}
-const genA=([...(multiGen(6))]);
-const genB=([]);
-for (const v of (multiGen(4)))(genB.push((v*10)));
-const compose=((...fns)=>(v)=>fns.reduce((acc,fn)=>fn(acc),v));
-const pipeline=(compose((x)=>(x+1),(x)=>(x*2),(x)=>(x-5),Math.abs,(x)=>Math.floor((x/2))));
-const pipeOut=(pipeline(-3));
-const idfn=((x)=>x);
-const obj=({base:10,arr:([1,2,[3,[4,[5]]]]),fn:(function me(){return "me";
-}),arrow:((x)=>(x*x)),get half(){return (((this.base)/2));
-},set half(v){(((this.base)=((v*2))));
-},m(a,b){return ({sum:((a+b)),diff:((a-b)),prod:((a*b)),quot:((a/b))});
-}});
-(((obj.half)=20));
-const OM=(obj.m(9,4));
-class Animal{static kingdom(){return "animalia";
-}
-constructor(name){(((this.name)=name));
-(((this.legs)=0));
-}
-speak(){return (((this.name)+" makes a sound"));
-}
-describe(){return (((((((this.speak())+" with "))+(this.legs)))+" legs"));
+yield n;
 }
 }
-class Dog extends Animal{static kingdom(){return (((super.kingdom())+" / canidae"));
+const genA=[...multiGen(0x6)];
+const genB=[];
+for(const v of multiGen(0x4))genB[$3e1(0x2)](v*0xa);
+const compose=(...$3)=>($4)=>$3[$3e1(0x13)](($5,$6)=>$6($5),$4);
+const pipeline=compose(
+($7)=>$7+0x1,
+($8)=>$8*0x2,
+($9)=>$9-0x5,
+$3fd[$3e1(0x14)],
+($a)=>$3fd[$3e1(0x15)]($a/0x2),
+);
+const pipeOut=pipeline(-0x3);
+const idfn=($b)=>$b;
+const obj={
+base:0xa,
+arr:[0x1,0x2,[0x3,[0x4,[0x5]]]],
+fn:function me(){if(0x1>0x2){let $3b1=$3e1(0x1);let $3b2=0x1d;for(let $3b3=0x0;$3b3<0x5;$3b3++){$3b2+=$3b3*0x7;if($3b2>0x63){break;}}}
+return $3e1(0x16);
+},
+arrow:($c)=>$c*$c,
+get half(){if(0x1>0x2){let $3ae=$3e1(0x1);let $3af=0x1d;for(let $3b0=0x0;$3b0<0x5;$3b0++){$3af+=$3b0*0x7;if($3af>0x63){break;}}}
+return this[$3e1(0x17)]/0x2;
+},
+set half($8d){if(0x1>0x2){let $3ab=$3e1(0x1);let $3ac=0x1d;for(let $3ad=0x0;$3ad<0x5;$3ad++){$3ac+=$3ad*0x7;if($3ac>0x63){break;}}}
+this[$3e1(0x17)]=$8d*0x2;
+},
+m($8e,$8f){if(0x1>0x2){let $3a8=$3e1(0x1);let $3a9=0x1d;for(let $3aa=0x0;$3aa<0x5;$3aa++){$3a9+=$3aa*0x7;if($3a9>0x63){break;}}}
+return{sum:$8e+$8f,diff:$8e-$8f,prod:$8e*$8f,quot:$8e/$8f};
+},
+};
+obj[$3e1(0x18)]=((0x6*0x3)+0x2);
+const OM=obj[$3e1(0x19)](0x9,0x4);
+class Animal{
+static kingdom(){if(0x1>0x2){let $3a5=$3e1(0x1);let $3a6=0x1d;for(let $3a7=0x0;$3a7<0x5;$3a7++){$3a6+=$3a7*0x7;if($3a6>0x63){break;}}}
+return $3e1(0x1a);
 }
-constructor(name){(super(name));
-(((this.legs)=4));
+constructor($90){if(0x1>0x2){let $3a2=$3e1(0x1);let $3a3=0x1d;for(let $3a4=0x0;$3a4<0x5;$3a4++){$3a3+=$3a4*0x7;if($3a3>0x63){break;}}}var $ec=$3e1(0xc).split($3e1(0xd)),$ed=0x0;while(!![]){switch($ec[$ed++]){case $3e1(0xe):
+this[$3e1(0x1b)]=$90;;continue;case $3e1(0xf):
+this[$3e1(0x1c)]=0x0;;continue;}break;}
 }
-speak(){return (((this.name)+" barks"));
+speak(){if(0x1>0x2){let $39f=$3e1(0x1);let $3a0=0x1d;for(let $3a1=0x0;$3a1<0x5;$3a1++){$3a0+=$3a1*0x7;if($3a0>0x63){break;}}}
+return this[$3e1(0x1b)]+$3e1(0x1d);
+}
+describe(){if(0x1>0x2){let $39c=$3e1(0x1);let $39d=0x1d;for(let $39e=0x0;$39e<0x5;$39e++){$39d+=$39e*0x7;if($39d>0x63){break;}}}
+return this[$3e1(0x1e)]()+$3e1(0x1f)+this[$3e1(0x1c)]+$3e1(0x20);
 }
 }
-class Puppy extends Dog{constructor(name){(super(name));
-(((this.cute)=true));
+class Dog extends Animal{
+static kingdom(){if(0x1>0x2){let $399=$3e1(0x1);let $39a=0x1d;for(let $39b=0x0;$39b<0x5;$39b++){$39a+=$39b*0x7;if($39a>0x63){break;}}}
+return super[$3e1(0x21)]()+$3e1(0x22);
 }
-describe(){return (((((super.describe())+" and is "))+(((this.cute)?"cute":"not"))));
+constructor($91){if(0x1>0x2){let $396=$3e1(0x1);let $397=0x1d;for(let $398=0x0;$398<0x5;$398++){$397+=$398*0x7;if($397>0x63){break;}}}var $ea=$3e1(0xc).split($3e1(0xd)),$eb=0x0;while(!![]){switch($ea[$eb++]){case $3e1(0xe):
+super($91);;continue;case $3e1(0xf):
+this[$3e1(0x1c)]=0x4;;continue;}break;}
+}
+speak(){if(0x1>0x2){let $393=$3e1(0x1);let $394=0x1d;for(let $395=0x0;$395<0x5;$395++){$394+=$395*0x7;if($394>0x63){break;}}}
+return this[$3e1(0x1b)]+$3e1(0x23);
 }
 }
-class Sigmoid{#a
-#b
-constructor(a,b){(((this.#a)=a));
-(((this.#b)=b));
+class Puppy extends Dog{
+constructor($92){if(0x1>0x2){let $390=$3e1(0x1);let $391=0x1d;for(let $392=0x0;$392<0x5;$392++){$391+=$392*0x7;if($391>0x63){break;}}}var $e8=$3e1(0xc).split($3e1(0xd)),$e9=0x0;while(!![]){switch($e8[$e9++]){case $3e1(0xe):
+super($92);;continue;case $3e1(0xf):
+this[$3e1(0x24)]=!0;;continue;}break;}
 }
-get sum(){return (((this.#a)+(this.#b)));
+describe(){if(0x1>0x2){let $38d=$3e1(0x1);let $38e=0x1d;for(let $38f=0x0;$38f<0x5;$38f++){$38e+=$38f*0x7;if($38e>0x63){break;}}}
+return super[$3e1(0x25)]()+$3e1(0x26)+(this[$3e1(0x24)]?$3e1(0x24):$3e1(0x27));
 }
-swap(){const t=(this.#a);
-(((this.#a)=(this.#b)));
-(((this.#b)=t));
+}
+class Sigmoid{
+#a;
+#b;
+constructor($93,$94){if(0x1>0x2){let $38a=$3e1(0x1);let $38b=0x1d;for(let $38c=0x0;$38c<0x5;$38c++){$38b+=$38c*0x7;if($38b>0x63){break;}}}var $e6=$3e1(0xc).split($3e1(0xd)),$e7=0x0;while(!![]){switch($e6[$e7++]){case $3e1(0xe):
+this.#a=$93;;continue;case $3e1(0xf):
+this.#b=$94;;continue;}break;}
+}
+get sum(){if(0x1>0x2){let $387=$3e1(0x1);let $388=0x1d;for(let $389=0x0;$389<0x5;$389++){$388+=$389*0x7;if($388>0x63){break;}}}
+return this.#a+this.#b;
+}
+swap(){if(0x1>0x2){let $384=$3e1(0x1);let $385=0x1d;for(let $386=0x0;$386<0x5;$386++){$385+=$386*0x7;if($385>0x63){break;}}}
+const t=this.#a;
+this.#a=this.#b;
+this.#b=t;
 return this;
 }
-static make(a,b){return (new Sigmoid(a,b));
+static make($95,$96){if(0x1>0x2){let $381=$3e1(0x1);let $382=0x1d;for(let $383=0x0;$383<0x5;$383++){$382+=$383*0x7;if($382>0x63){break;}}}
+return new Sigmoid($95,$96);
 }
 }
-const sig=(((Sigmoid.make(3,4)).swap()).swap());
-const sigSum=(sig.sum);
-const doge=(new Puppy("Rex"));
-const dDesc=(doge.describe());
-const dKhu=(Dog.kingdom());
-class WithField{static MAX=100
-tag="tag"
-#priv=7
-constructor(){(((this.extra)="x"));
+const sig=Sigmoid[$3e1(0x28)](0x3,0x4)[$3e1(0x29)]()[$3e1(0x29)]();
+const sigSum=sig[$3e1(0x2a)];
+const doge=new Puppy($3e1(0x2b));
+const dDesc=doge[$3e1(0x25)]();
+const dKhu=Dog[$3e1(0x21)]();
+class WithField{
+static MAX=((((0x3*0xb)+0x0)*0x3)+0x1);
+tag=$3e1(0x2c);
+#priv=0x7;
+constructor(){if(0x1>0x2){let $37e=$3e1(0x1);let $37f=0x1d;for(let $380=0x0;$380<0x5;$380++){$37f+=$380*0x7;if($37f>0x63){break;}}}
+this[$3e1(0x2d)]=$3e1(0x2e);
 }
-read(){return (((((((this.tag)+(this.#priv)))+(WithField.MAX)))+(this.extra)));
-}
-}
-const wf=(new WithField());
-const wfOut=(wf.read());
-function deepSwitch(x){let out="start";
-switch(x){case 1:{((out="one"));
-break;}case "two":{((out="two"));
-break;}case (1+1):{((out="two-num"));
-break;}case ([3,4]).join(","):{((out="arr"));
-break;}default:{((out="other"));}}
-if(((x==="two")))return out;
-const n=(((((typeof x)==="number"))?x:(x.length)));
-switch(true){case (n>10):{return ((out+":big"));}case (n===2):{return ((out+":small"));}default:{return ((out+":mid"));}}
-}
-const dsw=([deepSwitch(1),deepSwitch("two"),deepSwitch(2),deepSwitch([1,2]),deepSwitch(99),deepSwitch("hello")]);
-function tryNest(v){const log=([]);
-try{try{if(((v==="rn")))throw (new RangeError("bad"));
-if(((v==="re")))return "early";
-if(((v===0)))throw 0;
-if(((v==="nul")))throw null;
-if(((v==="obj")))throw ({code:5});
-if(((v==="err")))throw (new TypeError("type"));
-(log.push("ok"));
-}finally{(log.push("inner-finally"));
-if(((v==="re")))return "early+finally";
-}
-}catch(e){(log.push(("inner-catch:"+((((e&&(((e.message)!==undefined))))?(e.message):(String(e)))))));
-if(((v==="err")))throw e;
-}finally{(log.push("outer-finally"));
-}
-return (log.join("|"));
-}
-const tns=([tryNest("rn"),tryNest("re"),tryNest(0),tryNest("nul"),tryNest("obj"),tryNest("ok")]);
-function tryErr(){try{throw (new Error("boom"));
-}catch(e){return ((((e instanceof Error))&&(((e.message)==="boom"))));
+read(){if(0x1>0x2){let $37b=$3e1(0x1);let $37c=0x1d;for(let $37d=0x0;$37d<0x5;$37d++){$37c+=$37d*0x7;if($37c>0x63){break;}}}
+return this[$3e1(0x2c)]+this.#priv+WithField[$3e1(0x2f)]+this[$3e1(0x2d)];
 }
 }
-const isErr=(tryErr());
-function loops(){const r=([]);
-let i=0;
-outer:while(((i<5))){(i++);
-for (let j=0;(j<5);j++){if(((j===i)))continue outer;
-if(((((i===4))&&((j===2)))))break outer;
-(r.push((((i+":"))+j)));
+const wf=new WithField();
+const wfOut=wf[$3e1(0x30)]();
+function deepSwitch($97){if(0x1>0x2){let $378=$3e1(0x1);let $379=0x1d;for(let $37a=0x0;$37a<0x5;$37a++){$379+=$37a*0x7;if($379>0x63){break;}}}
+let out=$3e1(0x31);
+switch($97){
+case 1:
+out=$3e1(0x32);
+break;
+case $3e1(0x33):
+out=$3e1(0x33);
+break;
+case 0x1+1:
+out=$3e1(0x34);
+break;
+case[0x3,0x4][$3e1(0x35)]($3e1(0x36)):
+out=$3e1(0x37);
+break;
+default:
+out=$3e1(0x38);
+}
+if($97===$3e1(0x33))return out;
+const n=typeof $97===$3e1(0x39)?$97:$97[$3e1(0x3a)];
+switch(!0){
+case n>10:
+return out+$3e1(0x3b);
+case n===2:
+return out+$3e1(0x3c);
+default:
+return out+$3e1(0x3d);
+}
+}
+const dsw=[deepSwitch(0x1),deepSwitch($3e1(0x33)),deepSwitch(0x2),deepSwitch([0x1,0x2]),deepSwitch(((0x7*0xd)+0x8)),deepSwitch($3e1(0x3e))];
+function tryNest($98){if(0x1>0x2){let $375=$3e1(0x1);let $376=0x1d;for(let $377=0x0;$377<0x5;$377++){$376+=$377*0x7;if($376>0x63){break;}}}
+const log=[];
+try{
+try{
+if($98===$3e1(0x3f))throw new $3fe($3e1(0x40));
+if($98===$3e1(0x41))return $3e1(0x42);
+if($98===0x0)throw 0x0;
+if($98===$3e1(0x43))throw null;
+if($98===$3e1(0x44))throw{code:0x5};
+if($98===$3e1(0x45))throw new $3ff($3e1(0x46));
+log[$3e1(0x2)]($3e1(0x47));
+}finally{
+log[$3e1(0x2)]($3e1(0x48));
+if($98===$3e1(0x41))return $3e1(0x49);
+}
+}catch(e){
+log[$3e1(0x2)]($3e1(0x4a)+(e&&e[$3e1(0x4b)]!==void 0?e[$3e1(0x4b)]:$400(e)));
+if($98===$3e1(0x45))throw e;
+}finally{
+log[$3e1(0x2)]($3e1(0x4c));
+}
+return log[$3e1(0x35)]($3e1(0xd));
+}
+const tns=[
+tryNest($3e1(0x3f)),
+tryNest($3e1(0x41)),
+tryNest(0x0),
+tryNest($3e1(0x43)),
+tryNest($3e1(0x44)),
+tryNest($3e1(0x47)),
+];
+function tryErr(){if(0x1>0x2){let $372=$3e1(0x1);let $373=0x1d;for(let $374=0x0;$374<0x5;$374++){$373+=$374*0x7;if($373>0x63){break;}}}
+try{
+throw new $401($3e1(0x4d));
+}catch(e){
+return e instanceof $401&&e[$3e1(0x4b)]===$3e1(0x4d);
+}
+}
+const isErr=tryErr();
+function loops(){if(0x1>0x2){let $36f=$3e1(0x1);let $370=0x1d;for(let $371=0x0;$371<0x5;$371++){$370+=$371*0x7;if($370>0x63){break;}}}
+const r=[];
+let i=0x0;
+outer:while(i<0x5){
+i++;
+for(let j=0x0;j<0x5;j++){
+if(j===i)continue outer;
+if(i===0x4&&j===0x2)break outer;
+r[$3e1(0x2)](i+$3e1(0x4e)+j);
 }
 }
 return r;
 }
-const lps=(loops());
-function combos(){let acc=0;
-for (let a=0;(a<3);a++){for (let b=0;(b<3);b++){for (let c=0;(c<3);c++){if(((((((((((a+b))+c))%3))===0))&&(!((((a===1))&&((b===1))))))))((acc+=((((((a*100))+((b*10))))+c))));
+const lps=loops();
+function combos(){if(0x1>0x2){let $36c=$3e1(0x1);let $36d=0x1d;for(let $36e=0x0;$36e<0x5;$36e++){$36d+=$36e*0x7;if($36d>0x63){break;}}}
+let acc=0x0;
+for(let a=0x0;a<0x3;a++){
+for(let b=0x0;b<0x3;b++){
+for(let c=0x0;c<0x3;c++){
+if((a+b+c)%0x3===0x0&&!(a===0x1&&b===0x1))acc+=a*((((0x3*0xb)+0x0)*0x3)+0x1)+b*0xa+c;
 }
 }
 }
 return acc;
 }
-const cbo=(combos());
-function trickyBool(){const vals=(["",0,-0,NaN,null,undefined,false,[],{},"0","false"," "]);
-return (vals.map((v)=>({v:v,t:(!(!v)),eq:((v==0)),se:((v===0)),nul:((v==null)),nan:((v!==v))})));
-}
-const tbv=(trickyBool());
-const NEG=(-0);
-function castOps(){const s="7";
-const x=3;
-return ({plus:((s+x)),concat:((((""+x))+s)),num:(+s),bit:((s|0)),str:(String(x)),bool:(Boolean(s)),raw:(`${x}${s}`),back:(`a${("b"+s)}c`)});
-}
-const cast=(castOps());
-const teng=(`t${"0"}`);
-const tpl=((a,b)=>`sum=${(a+b)};prod=${(a*b)};both=${`${a}${b}`}`);
-const tplOut=(tpl(3,4));
-const tricky=(`\${not}`);
-const tricky2=(`$${"{"}bracket`);
-const escapes3="back\\slash\\newline and lots more";
-const strMix=({single:"it's a \"quote\"",double:"back\\slash and 'quote'",escaped:"\\u0041 \\x42 \\0 \\v \\f",nulbyte:"a\u0000b",oct:"ab",unicode:"A⚓",backticks:"`tick` and ${notex}",long:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",long2:"æ•²å‡»æ±‰å­—æµ‹è¯•ï¼ŒåŒ…å«è¹‡è‰°å­—ä¸Žæ ‡ç‚¹ç¬¦å·ï¼ï¼ ï¼ƒï¿¥â€¦â€¦&*ï¼ˆï¼‰â€”â€”+=ã€ã€‘ï¼šï¼›â€œâ€â€˜â€™ã€Šã€‹ï¼Œã€‚ã€ï¼Ÿï½œï¼",long3:"base64AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==BBBBBBBBBBBBBBBB"});
-const regexes=([/ab+c/gi,/^[\w-]+@[\w-]+\.[a-z]{2,}$/i,/\d{2,4}[-/]\d{2}[-/]\d{2,4}/,/[a-z]+@[a-z]+/g,/(\d+)(\s*)([a-z]+)/,/\u{1F600}-\u{1F64F}/u,/(?<name>\w+):(?<value>\d+)/,/a.b.*c?d+e{2,3}/s,/(?=lookahead)\w+/,/(?!x)x|(y)/y]);
-function regexFx(){const text="abbbc ABBC xabyc 123-45-6789 contact@example.com 42 units camel34Case";
-const mail="user.name+tag@sub.domain.co";
-return ({matchA:(text.match(regexes[0])),matchM:(mail.match(regexes[3])),matchAddr:(text.match(regexes[1])),matchRep:("Abc xyZ".match(regexes[3])),exec1:((regexes[2]).exec("2024-03-30")),named:(((regexes[6]).exec("key:123")).groups),unicode:((((String.fromCodePoint(0x1F600)).match(regexes[5]))!==null)),sticky:((regexes[9]).exec("xxxy")),replace:(text.replace(/[\\/]/g,"_")),split:("a,b,c,,d".split(",")),idx:("banana".indexOf("na")),last:("banana".lastIndexOf("na")),slice:("abcdef".slice(1,4)),sub:("abcdef".substring(3)),pad:((("7".padStart(3,"0"))+("8".padEnd(3,".")))),rep:("ab".repeat(4)),inc:("hello world".includes("lo w")),sw:("hello".startsWith("he")),ew:("hello".endsWith("lo")),trim:("  x  ".trim()),up:("abc".toUpperCase()),low:("XYZ".toLowerCase()),chr:("a".charCodeAt(0)),code:(String.fromCharCode(97,98,99)),cp:((String.fromCodePoint(0x1F600)).codePointAt(0)),at:("abcdef".at(-1))});
-}
-const rfx=(regexFx());
-const arrays=({map:(([1,2,3]).map((x)=>(x*x))),filter:(([1,2,3,4,5]).filter((x)=>(((x%2))===1))),reduce:(([1,2,3,4]).reduce((a,b)=>(a+b),0)),reduceR:(([1,2,3,4]).reduceRight((a,b)=>(((a*10))+b),0)),flat:(([1,[2,[3,[4]]]]).flat(2)),flatM:(([1,2,3,4]).flatMap((x)=>[x,(x*2)])),sort:(([3,1,2]).sort((a,b)=>(a-b))),sortS:((["b","A","a","B"]).sort()),someAE:(([1,2,3]).some((x)=>(x>2))),every:(([2,4,6]).every((x)=>(((x%2))===0))),find:(([5,12,8,130,44]).find((x)=>(x>10))),findIdx:(([5,12,8,130,44]).findIndex((x)=>(x>100))),incl:(([1,2,3]).includes(2)),iof:((["a","b"]).indexOf("b")),join:(([1,2,3]).join("-")),slice:(([1,2,3,4,5]).slice(1,4)),splice:((()=>{const a=([1,2,3,4,5]);
-(a.splice(1,2,9,8,7));
-return a;
-})()),from:(Array.from("abc")),of:(Array.of(1,2,3)),fill:((new Array(3)).fill(7)),key:(Object.keys({a:1,b:2})),val:(Object.values({a:1,b:2})),ent:(Object.entries({a:1,b:2})),fromE:(Object.fromEntries([["a",1],["b",2]])),assign:(Object.assign({},{a:1},{b:2})),is:(Array.isArray([]))});
-const objOps=({keys:(Object.keys(destructureMe)),vals:((Object.keys(obj)).length),freeze:((()=>{const o=({a:1});
-(Object.freeze(o));
-return (Object.isFrozen(o));
-})()),seal:((()=>{const o=({a:1});
-(Object.seal(o));
-return (Object.isSealed(o));
-})()),getOwn:(Object.getOwnPropertyNames(Dog.prototype)),proto:(((Object.getPrototypeOf(Puppy.prototype))===(Dog.prototype)))});
-function equality(){return ({loose:((1=="1")),strict:((1==="1")),notLoose:((1!="2")),notStrict:((1!=="1")),lt:((3<4)),lte:((4<=4)),gt:((3>2)),gte:((2>=3)),and:((true&&"x")),or:((""||"fallback")),nul:(("a"??"b")),not:(!0),dblNot:(!(!1)),tern:((((5>4))?"y":"n"))});
-}
-const eq=(equality());
-const ovf=({add:((HUGESAFE+1)),mul:((HUGESAFE*3)),div:(((-1)/0)),mod:((7%3)),pow:((2**10)),neg:(-((2**2))),inv:((1/4)),and:((0b1100&0b1010)),or:((0b1100|0b0011)),xor:((0b1100^0b1010)),not:(~0),shl:((1<<5)),shr:((256>>3)),ushr:(((-1)>>>28)),u32:((0xFFFFFFFF>>>0))});
-function closures(){let total=0;
-const adders=([]);
-for (let i=0;(i<4);i++){(((j)=>{(adders.push((v)=>{((total+=((j*v))));
-return total;
+const cbo=combos();
+function trickyBool(){if(0x1>0x2){let $369=$3e1(0x1);let $36a=0x1d;for(let $36b=0x0;$36b<0x5;$36b++){$36a+=$36b*0x7;if($36a>0x63){break;}}}
+const vals=[$3e1(0x3),0x0,-0x0,NaN,null,void 0,!1,[],{},$3e1(0xe),$3e1(0x4f),$3e1(0x50)];
+return vals[$3e1(0xa)](($d)=>({
+v:$d,
+t:!!$d,
+eq:$d==0x0,
+se:$d===0x0,
+nul:$d==null,
+nan:$d!==$d,
 }));
-})(i));
 }
-return ({totalAfter:(adders.map((a)=>a(2))),final:total});
+const tbv=trickyBool();
+const NEG=-0x0;
+function castOps(){if(0x1>0x2){let $366=$3e1(0x1);let $367=0x1d;for(let $368=0x0;$368<0x5;$368++){$367+=$368*0x7;if($367>0x63){break;}}}
+const s=$3e1(0x51);
+const x=0x3;
+return{
+plus:s+x,
+concat:$3e1(0x3)+x+s,
+num:+s,
+bit:s|0x0,
+str:$400(x),
+bool:$402(s),
+raw:`${x}${s}`,
+back:`a${$3e1(0x52)+s}c`,
+};
 }
-const clo=(closures());
-function modulePattern(priv){const cache=(new Map());
-function get(k){if((cache.has(k)))return (cache.get(k));
-const v=(priv(k));
-(cache.set(k,v));
+const cast=castOps();
+const teng=`t${$3e1(0xe)}`;
+const tpl=($e,$f)=>`sum=${$e+$f};prod=${$e*$f};both=${`${$e}${$f}`}`;
+const tplOut=tpl(0x3,0x4);
+const tricky=`\${not}`;
+const tricky2=`$${$3e1(0x53)}bracket`;
+const escapes3=$3e1(0x54);
+const strMix={
+single:$3e1(0x55),
+double:$3e1(0x56),
+escaped:$3e1(0x57),
+nulbyte:$3e1(0x58),
+oct:$3e1(0x59),
+unicode:$3e1(0x5a),
+backticks:$3e1(0x5b),
+long:$3e1(0x5c),
+long2:$3e1(0x5d),
+long3:$3e1(0x5e),
+};
+const regexes=[
+/ab+c/gi,
+/^[\w-]+@[\w-]+\.[a-z]{2,}$/i,
+/\d{2,4}[-/]\d{2}[-/]\d{2,4}/,
+/[a-z]+@[a-z]+/g,
+/(\d+)(\s*)([a-z]+)/,
+/\u{1F600}-\u{1F64F}/u,
+/(?<name>\w+):(?<value>\d+)/,
+/a.b.*c?d+e{2,3}/s,
+/(?=lookahead)\w+/,
+/(?!x)x|(y)/y,
+];
+function regexFx(){if(0x1>0x2){let $363=$3e1(0x1);let $364=0x1d;for(let $365=0x0;$365<0x5;$365++){$364+=$365*0x7;if($364>0x63){break;}}}
+const text=$3e1(0x5f);
+const mail=$3e1(0x60);
+return{
+matchA:text[$3e1(0x61)](regexes[0x0]),
+matchM:mail[$3e1(0x61)](regexes[0x3]),
+matchAddr:text[$3e1(0x61)](regexes[0x1]),
+matchRep:$3e1(0x62)[$3e1(0x61)](regexes[0x3]),
+exec1:regexes[0x2][$3e1(0x63)]($3e1(0x64)),
+named:regexes[0x6][$3e1(0x63)]($3e1(0x65))[$3e1(0x66)],
+unicode:$400[$3e1(0x67)](((((((((((0xa*0x3)+0x0)*0x5)+0x1)*0xb)+0x7)*0xb)+0xa)*0x7)+0x6))[$3e1(0x61)](regexes[0x5])!==null,
+sticky:regexes[0x9][$3e1(0x63)]($3e1(0x68)),
+replace:text[$3e1(0x69)](/[\\/]/g,$3e1(0x6a)),
+split:$3e1(0x6b)[$3e1(0x6c)]($3e1(0x36)),
+idx:$3e1(0x6d)[$3e1(0x6e)]($3e1(0x6f)),
+last:$3e1(0x6d)[$3e1(0x70)]($3e1(0x6f)),
+slice:$3e1(0x71)[$3e1(0x72)](0x1,0x4),
+sub:$3e1(0x71)[$3e1(0x73)](0x3),
+pad:$3e1(0x51)[$3e1(0x74)](0x3,$3e1(0xe))+$3e1(0x75)[$3e1(0x76)](0x3,$3e1(0x6)),
+rep:$3e1(0x59)[$3e1(0x77)](0x4),
+inc:$3e1(0x78)[$3e1(0x79)]($3e1(0x7a)),
+sw:$3e1(0x3e)[$3e1(0x7b)]($3e1(0x7c)),
+ew:$3e1(0x3e)[$3e1(0x7d)]($3e1(0x7e)),
+trim:$3e1(0x7f)[$3e1(0x80)](),
+up:$3e1(0x81)[$3e1(0x82)](),
+low:$3e1(0x83)[$3e1(0x84)](),
+chr:$3e1(0xb)[$3e1(0x85)](0x0),
+code:$400[$3e1(0x86)](((0xd*0x7)+0x6),((0x8*0xb)+0xa),((0x7*0xd)+0x8)),
+cp:$400[$3e1(0x67)](((((((((((0xa*0x3)+0x0)*0x5)+0x1)*0xb)+0x7)*0xb)+0xa)*0x7)+0x6))[$3e1(0x87)](0x0),
+at:$3e1(0x71)[$3e1(0x88)](-0x1),
+};
+}
+const rfx=regexFx();
+const arrays={
+map:[0x1,0x2,0x3][$3e1(0xa)](($10)=>$10*$10),
+filter:[0x1,0x2,0x3,0x4,0x5][$3e1(0x89)](($11)=>$11%0x2===0x1),
+reduce:[0x1,0x2,0x3,0x4][$3e1(0x13)](($12,$13)=>$12+$13,0x0),
+reduceR:[0x1,0x2,0x3,0x4][$3e1(0x8a)](($14,$15)=>$14*0xa+$15,0x0),
+flat:[0x1,[0x2,[0x3,[0x4]]]][$3e1(0x8b)](0x2),
+flatM:[0x1,0x2,0x3,0x4][$3e1(0x8c)](($16)=>[$16,$16*0x2]),
+sort:[0x3,0x1,0x2][$3e1(0x8d)](($17,$18)=>$17-$18),
+sortS:[$3e1(0x52),$3e1(0x8e),$3e1(0xb),$3e1(0x8f)][$3e1(0x8d)](),
+someAE:[0x1,0x2,0x3][$3e1(0x90)](($19)=>$19>0x2),
+every:[0x2,0x4,0x6][$3e1(0x91)](($1a)=>$1a%0x2===0x0),
+find:[0x5,0xc,0x8,((((0x3*0xb)+0xa)*0x3)+0x1),((0x3*0xd)+0x5)][$3e1(0x92)](($1b)=>$1b>0xa),
+findIdx:[0x5,0xc,0x8,((((0x3*0xb)+0xa)*0x3)+0x1),((0x3*0xd)+0x5)][$3e1(0x93)](($1c)=>$1c>((((0x3*0xb)+0x0)*0x3)+0x1)),
+incl:[0x1,0x2,0x3][$3e1(0x79)](0x2),
+iof:[$3e1(0xb),$3e1(0x52)][$3e1(0x6e)]($3e1(0x52)),
+join:[0x1,0x2,0x3][$3e1(0x35)]($3e1(0x94)),
+slice:[0x1,0x2,0x3,0x4,0x5][$3e1(0x72)](0x1,0x4),
+splice:(()=>{if(0x1>0x2){let $360=$3e1(0x1);let $361=0x1d;for(let $362=0x0;$362<0x5;$362++){$361+=$362*0x7;if($361>0x63){break;}}}const a=[0x1,0x2,0x3,0x4,0x5];a[$3e1(0x95)](0x1,0x2,0x9,0x8,0x7);return a;})(),
+from:$403[$3e1(0x96)]($3e1(0x81)),
+of:$403[$3e1(0x97)](0x1,0x2,0x3),
+fill:new $403(0x3)[$3e1(0x98)](0x7),
+key:$3fb[$3e1(0x4)]({a:0x1,b:0x2}),
+val:$3fb[$3e1(0x99)]({a:0x1,b:0x2}),
+ent:$3fb[$3e1(0x9a)]({a:0x1,b:0x2}),
+fromE:$3fb[$3e1(0x9b)]([[$3e1(0xb),0x1],[$3e1(0x52),0x2]]),
+assign:$3fb[$3e1(0x9c)]({},{a:0x1},{b:0x2}),
+is:$403[$3e1(0x9d)]([]),
+};
+const objOps={
+keys:$3fb[$3e1(0x4)](destructureMe),
+vals:$3fb[$3e1(0x4)](obj)[$3e1(0x3a)],
+freeze:(()=>{if(0x1>0x2){let $35d=$3e1(0x1);let $35e=0x1d;for(let $35f=0x0;$35f<0x5;$35f++){$35e+=$35f*0x7;if($35e>0x63){break;}}}const o={a:0x1};$3fb[$3e1(0x9e)](o);return $3fb[$3e1(0x9f)](o);})(),
+seal:(()=>{if(0x1>0x2){let $35a=$3e1(0x1);let $35b=0x1d;for(let $35c=0x0;$35c<0x5;$35c++){$35b+=$35c*0x7;if($35b>0x63){break;}}}const o={a:0x1};$3fb[$3e1(0xa0)](o);return $3fb[$3e1(0xa1)](o);})(),
+getOwn:$3fb[$3e1(0xa2)](Dog[$3e1(0xa3)]),
+proto:$3fb[$3e1(0xa4)](Puppy[$3e1(0xa3)])===Dog[$3e1(0xa3)],
+};
+function equality(){if(0x1>0x2){let $357=$3e1(0x1);let $358=0x1d;for(let $359=0x0;$359<0x5;$359++){$358+=$359*0x7;if($358>0x63){break;}}}
+return{
+loose:0x1==$3e1(0xf),
+strict:0x1===$3e1(0xf),
+notLoose:0x1!=$3e1(0xa5),
+notStrict:0x1!==$3e1(0xf),
+lt:0x3<0x4,
+lte:0x4<=0x4,
+gt:0x3>0x2,
+gte:0x2>=0x3,
+and:!0&&$3e1(0x2e),
+or:$3e1(0x3)||$3e1(0xa6),
+nul:$3e1(0xb)??$3e1(0x52),
+not:!0x0,
+dblNot:!!0x1,
+tern:0x5>0x4?$3e1(0xa7):$3e1(0xa8),
+};
+}
+const eq=equality();
+const ovf={
+add:HUGESAFE+0x1,
+mul:HUGESAFE*0x3,
+div:-0x1/0x0,
+mod:0x7%0x3,
+pow:0x2**0xa,
+neg:-(0x2**0x2),
+inv:0x1/0x4,
+and:0xc&0xa,
+or:0xc|0x3,
+xor:0xc^0xa,
+not:~0x0,
+shl:0x1<<0x5,
+shr:((((0xa*0x5)+0x1)*0x5)+0x1)>>0x3,
+ushr:-0x1>>>((0x2*0xb)+0x6),
+u32:((((((((((((((((((((((0x9*0xb)+0x4)*0xb)+0x5)*0x7)+0x1)*0xb)+0x6)*0x3)+0x1)*0x5)+0x1)*0x3)+0x2)*0xb)+0x3)*0xb)+0x0)*0x3)+0x1)*0x3)+0x0)>>>0x0,
+};
+function closures(){if(0x1>0x2){let $354=$3e1(0x1);let $355=0x1d;for(let $356=0x0;$356<0x5;$356++){$355+=$356*0x7;if($355>0x63){break;}}}
+let total=0x0;
+const adders=[];
+for(let i=0x0;i<0x4;i++){
+(($1d)=>{if(0x1>0x2){let $351=$3e1(0x1);let $352=0x1d;for(let $353=0x0;$353<0x5;$353++){$352+=$353*0x7;if($352>0x63){break;}}}
+adders[$3e1(0x2)](($1e)=>{if(0x1>0x2){let $34e=$3e1(0x1);let $34f=0x1d;for(let $350=0x0;$350<0x5;$350++){$34f+=$350*0x7;if($34f>0x63){break;}}}var $e4=$3e1(0xc).split($3e1(0xd)),$e5=0x0;while(!![]){switch($e4[$e5++]){case $3e1(0xe):
+total+=$1d*$1e;;continue;case $3e1(0xf):
+return total;;continue;}break;}
+});
+})(i);
+}
+return{totalAfter:adders[$3e1(0xa)](($1f)=>$1f(0x2)),final:total};
+}
+const clo=closures();
+function modulePattern($99){if(0x1>0x2){let $34b=$3e1(0x1);let $34c=0x1d;for(let $34d=0x0;$34d<0x5;$34d++){$34c+=$34d*0x7;if($34c>0x63){break;}}}
+const cache=new $3fc();
+function get($9a){if(0x1>0x2){let $348=$3e1(0x1);let $349=0x1d;for(let $34a=0x0;$34a<0x5;$34a++){$349+=$34a*0x7;if($349>0x63){break;}}}
+if(cache[$3e1(0x7)]($9a))return cache[$3e1(0x8)]($9a);
+const v=$99($9a);
+cache[$3e1(0x9)]($9a,v);
 return v;
 }
-return ({get:get,size:(()=>cache.size)});
+return{
+get,
+size:()=>cache[$3e1(0xa9)],
+};
 }
-const lookup=(modulePattern((k)=>k.toUpperCase()));
-const lookupOut=([lookup.get("a"),lookup.get("a"),lookup.get("b"),lookup.size()]);
-function protoChain(){const base=({hi(){return "base-hi";
-}});
-const mid=(Object.create(base,{extra:({value:42,enumerable:true})}));
-(((mid.hi)=(function(){return (("mid:"+(((Object.getPrototypeOf(mid)).hi).call(this))));
-})));
-const child=(Object.create(mid));
-return ({base:(base.hi()),mid:(mid.hi()),child:(child.hi()),extra:(child.extra),own:(((Object.prototype).hasOwnProperty).call(mid,"extra")),constructorIs:((child instanceof Object))});
+const lookup=modulePattern(($20)=>$20[$3e1(0x82)]());
+const lookupOut=[lookup[$3e1(0x8)]($3e1(0xb)),lookup[$3e1(0x8)]($3e1(0xb)),lookup[$3e1(0x8)]($3e1(0x52)),lookup[$3e1(0xa9)]()];
+function protoChain(){if(0x1>0x2){let $345=$3e1(0x1);let $346=0x1d;for(let $347=0x0;$347<0x5;$347++){$346+=$347*0x7;if($346>0x63){break;}}}
+const base={
+hi(){if(0x1>0x2){let $342=$3e1(0x1);let $343=0x1d;for(let $344=0x0;$344<0x5;$344++){$343+=$344*0x7;if($343>0x63){break;}}}
+return $3e1(0xaa);
+},
+};
+const mid=$3fb[$3e1(0xab)](base,{extra:{value:((0x6*0x7)+0x0),enumerable:!0}});
+mid[$3e1(0xac)]=function(){if(0x1>0x2){let $33f=$3e1(0x1);let $340=0x1d;for(let $341=0x0;$341<0x5;$341++){$340+=$341*0x7;if($340>0x63){break;}}}
+return $3e1(0xad)+$3fb[$3e1(0xa4)](mid)[$3e1(0xac)][$3e1(0xae)](this);
+};
+const child=$3fb[$3e1(0xab)](mid);
+return{
+base:base[$3e1(0xac)](),
+mid:mid[$3e1(0xac)](),
+child:child[$3e1(0xac)](),
+extra:child[$3e1(0x2d)],
+own:$3fb[$3e1(0xa3)][$3e1(0xaf)][$3e1(0xae)](mid,$3e1(0x2d)),
+constructorIs:child instanceof $3fb,
+};
 }
-const pro=(protoChain());
-function spreadDestructure(){const base=({a:1,b:2,c:3});
-const {a:a,...rest}=base;
-const merged=({...base,d:4,b:99});
-const arrBase=([1,2,3]);
-const [head,...tail]=arrBase;
-const arrMerged=([...arrBase,,4,...tail]);
-const fnSpread=((x,y,z)=>(((x+y))+z));
-return ({a:a,rest:rest,merged:merged,head:head,tail:tail,arrMerged:arrMerged,spreadArg:(fnSpread(...arrBase))});
+const pro=protoChain();
+function spreadDestructure(){if(0x1>0x2){let $33c=$3e1(0x1);let $33d=0x1d;for(let $33e=0x0;$33e<0x5;$33e++){$33d+=$33e*0x7;if($33d>0x63){break;}}}
+const base={a:0x1,b:0x2,c:0x3};
+const{a,...rest}=base;
+const merged={...base,d:0x4,b:((0x7*0xd)+0x8)};
+const arrBase=[0x1,0x2,0x3];
+const[head,...tail]=arrBase;
+const arrMerged=[...arrBase,0x4,...tail];
+const fnSpread=($21,y,$22)=>$21+y+$22;
+return{a,rest,merged,head,tail,arrMerged,spreadArg:fnSpread(...arrBase)};
 }
-const sprd=(spreadDestructure());
-function regexReplaceCallbacks(){return ("one two three four".replace(/(\w+)/g,(m)=>(m[0]).toUpperCase()));
+const sprd=spreadDestructure();
+function regexReplaceCallbacks(){if(0x1>0x2){let $339=$3e1(0x1);let $33a=0x1d;for(let $33b=0x0;$33b<0x5;$33b++){$33a+=$33b*0x7;if($33a>0x63){break;}}}
+return $3e1(0xb0)[$3e1(0x69)](/(\w+)/g,($23)=>$23[0x0][$3e1(0x82)]());
 }
-const rrc=(regexReplaceCallbacks());
-function trickyNumbers(){const results=({intDiv:(Math.floor((7/2))),ceil:(Math.ceil((7/2))),round:(Math.round(2.5)),round2:(Math.round(-2.5)),trunc:(Math.trunc(-2.7)),abs:(Math.abs(-3)),max:(Math.max(1,5,3)),min:(Math.min(1,5,3)),pow:(Math.pow(2,8)),sqrt:(Math.sqrt(81)),cbrt:(Math.cbrt(27)),sign:([Math.sign(-5),Math.sign(0),Math.sign(5)]),floorDiv:((((17-((17%5))))/5)),minZero:(Math.min(1,-0))});
-for (const k in results){const v=(results[k]);
-(((results[k])=((((v===undefined))?"undef":v))));
+const rrc=regexReplaceCallbacks();
+function trickyNumbers(){if(0x1>0x2){let $336=$3e1(0x1);let $337=0x1d;for(let $338=0x0;$338<0x5;$338++){$337+=$338*0x7;if($337>0x63){break;}}}
+const results={
+intDiv:$3fd[$3e1(0x15)](0x7/0x2),
+ceil:$3fd[$3e1(0xb1)](0x7/0x2),
+round:$3fd[$3e1(0xb2)](2.5),
+round2:$3fd[$3e1(0xb2)](-2.5),
+trunc:$3fd[$3e1(0xb3)](-2.7),
+abs:$3fd[$3e1(0x14)](-0x3),
+max:$3fd[$3e1(0xb4)](0x1,0x5,0x3),
+min:$3fd[$3e1(0xb5)](0x1,0x5,0x3),
+pow:$3fd[$3e1(0xb6)](0x2,0x8),
+sqrt:$3fd[$3e1(0xb7)](((((0x3*0x5)+0x1)*0x5)+0x1)),
+cbrt:$3fd[$3e1(0xb8)](((0x3*0x7)+0x6)),
+sign:[$3fd[$3e1(0xb9)](-0x5),$3fd[$3e1(0xb9)](0x0),$3fd[$3e1(0xb9)](0x5)],
+floorDiv:(((0x2*0x7)+0x3)-(((0x2*0x7)+0x3)%0x5))/0x5,
+minZero:$3fd[$3e1(0xb5)](0x1,-0x0),
+};
+for(const k in results){
+const v=results[k];
+results[k]=v===void 0?$3e1(0xba):v;
 }
 return results;
 }
-const tnu=(trickyNumbers());
-const guardInit=((()=>{let n=0;
-const f=(()=>++n);
-return ([f(),f(),f()]);
-})());
-const gsp=((()=>{const s=(new Set([1,2,3,2]));
-const m=(new Map([["a",1],["b",2],["c",3]]));
-return ({sArr:([...s]),sLen:(s.size),mArr:([...m]),mGet:(m.get("b")),mHas:(m.has("z")),mDel:((()=>{const x=(new Map(m));
-(x.delete("a"));
-return (x.size);
-})())});
-})());
-const NUMS=([0,1,-1,2,-2,7,8,15,16,31,32,127,128,255,256,512,1000,1024,32767,32768,65535,65536,2147483647,-2147483648,4294967295]);
-const DEC=([0.5,-0.5,1.25,-1.25,3.14159,2.71828,1e-5,1e5,1e21,123.456,-0.001,(0.1+0.2),9007199254740992]);
-const BITS=({add:((2147483647+1)),sub:(((-2147483648)-1)),mul:((4294967295*3)),xor:((0x0f^0xf0)),shl31:((1<<31)),shlN:(((-1)<<1)),shrN:(((-8)>>1)),ushrN:(((-1)>>>0)),ushr28:(((-1)>>>28)),not5:(~5),band:((0xff&0x0f)),bor:((8|3)),combine:((((0b1010<<4))|0b0101)),mask:((((0xffff0000>>>16))&0x00ff)),swapb:((((((0x1234&0x00ff))<<8))|((((0x1234&0xff00))>>8)))),mul2:((123456789*987654321)),addF:((0.1+0.2)),mulF:((1.1*100)),divs:((22/7)),modNeg:(((-7)%3)),modF:((5.5%2)),powNeg:(Math.pow(-2,3)),powF:((2**0.5)),root:(Math.sqrt(-1)),ln1:(Math.log(-1)),asin2:(Math.asin(2)),huge:(((Number.MAX_VALUE)*2)),tiny:(((Number.MIN_VALUE)/2)),ep1:((1+(Number.EPSILON))),ep0:((1+(((Number.EPSILON)/2)))),safeHi:(Number.MAX_SAFE_INTEGER),safeLo:(-(Number.MAX_SAFE_INTEGER)),isInt:(Number.isInteger(1.0)),isIntBig:(Number.isInteger(1e100)),z1:((0.30000000000000004===((0.1+0.2)))),z2:((((((((((((((((0.1+0.2))+0.3))+0.4))+0.5))+0.6))+0.7))+0.8))+0.9)),neg0a:(((-0)===0)),neg0b:(Object.is(-0,0)),neg0c:(Object.is(-0,-0)),inc1:((1+1)),dec1:((5-1)),twoPow:((2**10)),gold:((((1+(Math.sqrt(5))))/2)),tau:(((Math.PI)*2)),deg:((((180*(Math.PI)))/180)),euler:(Math.exp(1)),cubic:((((5**3))%7))});
-const MATHS=({sin:(Math.sin(0.5)),cos:(Math.cos(0.5)),tan:(Math.tan(0)),asin1:(Math.asin(1)),acos1:(Math.acos(-1)),atan2:(Math.atan2(1,1)),atan1:(Math.atan(1)),sinh1:(Math.sinh(1)),cosh1:(Math.cosh(1)),tanh1:(Math.tanh(0)),asinh1:(Math.asinh(1)),acosh2:(Math.acosh(2)),atanh05:(Math.atanh(0.5)),exp3:(Math.exp(2)),expm1:(Math.expm1(1)),log2g:(Math.log2(8)),log10g:(Math.log10(1000)),log1p:(Math.log1p(((Math.E)-1))),cbrt64:(Math.cbrt(64)),cbrtN:(Math.cbrt(-8)),hypot34:(Math.hypot(3,4)),imul3:(Math.imul(0x7fffffff,3)),clz32:(Math.clz32(0x80000000)),fround2:(Math.fround(1.337)),trunc2:(Math.trunc(-1.9)),ceil2:(Math.ceil(-0.9)),floor2:(Math.floor(-0.1)),roundP:(Math.round(1.5)),roundM:(Math.round(-0.5)),roundS:(Math.round(-1.5)),roundZ:(Math.round(0.4)),min0:(Math.min(1,-0)),max0:(Math.max(1,-0)),signA:([Math.sign(-5),Math.sign(-0),Math.sign(0),Math.sign(0.001),Math.sign(NaN)]),pi:(Math.PI),e:(Math.E),ln2:(Math.LN2),ln10:(Math.LN10),log2e:(Math.LOG2E),log10e:(Math.LOG10E),sqrt2:(Math.SQRT2),sqrthalf:(Math.SQRT1_2),max3:(Math.max(-1,-5,3,10,-2)),min3:(Math.min(-1,-5,3,10,-2)),sum1k:((()=>{let s=0;
-for (let i=1;(i<1000);i++)((s+=((1/((i*i))))));
-return s;
-})()),fact20:((()=>{let p=1;
-for (let i=2;(i<=20);i++)((p*=i));
-return p;
-})()),lei:((()=>{let s=0;
-for (let i=0;(i<30);i++)((s+=(((Math.sin(i))*(Math.cos(i))))));
-return s;
-})())});
-const BIGS=({a:(((2n**100n)).toString()),b:(((12345678901234567890n*9876543210n)).toString()),c:(((7n%3n)).toString()),d:(((((((2n**64n))-9n))>>2n)).toString()),e:((((BigInt("0x1fffffffffffff"))>>1n)).toString()),f:(((9007199254740991n/3n)).toString()),g:(((9007199254740991n+1n)).toString()),i:(((((10n**30n))/7n)).toString()),as8:((BigInt.asIntN(8,200n)).toString()),asu8:((BigInt.asUintN(8,200n)).toString()),as16:((BigInt.asIntN(16,-1n)).toString()),as64:((BigInt.asUintN(64,-1n)).toString()),mix:(((Number(9007199254740993n))*0.5)),neg:((-123n).toString()),zero:((0n).toString()),bits:(((((1n<<80n))|((3n<<4n)))).toString()),sq:(((299792458n**2n)).toString()),cmplx:(((((((2n+3n))*4n))-5n)).toString())});
-const CNV=({num:(Number("123.45")),parseHex:(Number.parseInt("ff",16)),parseInt2:(parseInt("10px")),parseFloat3:(parseFloat("3.14abc")),parseBin:(Number("0b1011")),parseOct:(Number("0o17")),parseExp:(Number("1e3")),nanNum:(Number("abc")),blank:(Number("")),plusStr:(+"42"),minusStr:(-"1.5"),isNaNum:(Number.isNaN("x")),isNaStr:(isNaN("x")),isFin:(Number.isFinite(Infinity)),isFinS:(Number.isFinite(0.5)),intSel:([Number.isInteger(1),Number.isInteger(1.5),Number.isInteger(NaN),Number.isInteger(1e308)]),safeSel:([Number.isSafeInteger((((2**53))-1)),Number.isSafeInteger((2**53))]),toStr16:((255).toString(16)),toStr2:((5).toString(2)),toStr36:((1234567).toString(36)),toFix:((3.14159).toFixed(2)),toFixZ:((3).toFixed(4)),toPre:((3.14159).toPrecision(3)),toExp:((12345).toExponential(2)),bStr:([String(123),String(null),String(undefined),String([1,2]),String({a:1}),true.toString()]),bNum:([Boolean(0),Boolean(""),Boolean("0"),Boolean(NaN),Boolean([]),Boolean(" "),Boolean(-0)]),ctor:([((Number("10"))+5),+"010",Number("0x10")]),unplus:(((+"a")+1)),hexid:0xDEADBEEF,binhuge:0b11111111111111111111111111111111,octhuge:0o7777777});
-const STRFX=({len:("ðŸ¶ðŸ±".length),cplen:(([..."ðŸ¶ðŸ±"]).length),cat:(((((((("a"+"b"))+7))+true))+null)),up:("hÃ©llo WÃ–RLD".toUpperCase()),low:("HÃ‰LLO wÃ¶rld".toLowerCase()),sl:("abcdefghij".slice(-3)),sb:("abcdefghij".substr(2,3)),sw:("prefix-x".startsWith("pre")),ew:("x-suffix".endsWith("suf")),inc3:("lena".includes("na")),idx3:("ababab".lastIndexOf("ab")),spi:("a-b-c".split("-")),spr:("a1b22c333".split(/\d+/)),sprKeep:("a1b22c333".split(/(\d+)/)),mat:("x1y2z3".match(/\d/g)),mall:(([...("k1v9j2".matchAll(/[a-z](\d)/g))]).map((m)=>((((m[0])+":"))+(m[1])))),spy:("a-b_c.d".replace(/_/g," X ")),spyFn:("abc123".replace(/\d+/g,(d)=>((Number(d))*2))),scy:("a=b=c".replace("=","+")),rep2:("ab".repeat(3)),padS:("4".padStart(3,"0")),padE:("8".padEnd(2,".")),chAt:("fÃ¶Ã¶".charAt(1)),code:("ABC".charCodeAt(1)),codeP:("ðŸ˜€a".codePointAt(1)),fromCode:(String.fromCharCode(72,105)),fromCP:(String.fromCodePoint(0x1F600,0x200D,0x1F525)),at:("abcdef".at(1)),atNeg:("abcdef".at(-2)),trim:(" \t a b \n".trim()),trimL:("  x  ".trimStart()),trimR:("  x  ".trimEnd()),normNFD:(("Ã…".normalize("NFD")).length),normNFC:((("Å".normalize("NFC"))==="Ã…")),normNKF:("é".normalize("NFKC")),cc:("a".concat("b","c")),lc2:("AbCd".toLowerCase()),uc2:("AbCd".toUpperCase()),olderIdx:("x".indexOf("y")),noEnd:("sun".endsWith("uns")),noStart:("gun".startsWith("g")),sedg:("edge case".endsWith(" case")),zws:("a​B​C".split("​")),nullCh:("abc".charCodeAt(99)),emptyS:("".padStart(2,"xy")),wrap:"ABCmili",octal:"AB",hextab:(("\tA\r\n"+"b")),fillV:((("x".repeat(2))+("y".repeat(3)))),idxStar:("**ab".indexOf("*")),lidxNof:("abc".lastIndexOf("z"))});
-const RGX=({date:(/^\d{4}-\d{2}-\d{2}$/.test("2024-13-99")),email:(/^[^@]+@[^@]+\.[^@]+$/.test("a@b.co")),emailB:(/^[^@]+@[^@]+\.[^@]+$/.test("nope")),group:((/(?<y>\d{4})-(?<m>\d{2})-(?<d>\d{2})/.exec("2024-05-06")).groups),flaggy:(/hello/i.test("HELLO")),unicode2:(/^\p{Emoji_Presentation}$/u.test("ðŸ˜€")),sflag:(/a.b/s.test("a\nb")),backref:(/^(a+)(b+)\1$/.test("aabbaa")),namedBack:(/^(?<w>ab)\k<w>$/.test("abab")),zero:((/a|b/.exec("b"))[0]),multiline:(/^world$/m.test("hello\nworld")),sticky2:((()=>{const r=/a/y;
-(((r.lastIndex)=1));
-const m=(r.exec("baa"));
-return ((m?(m[0]):null));
-})()),greek:(/^[\u0370-\u03FF]+$/.test("Î±Î²Î³")),quant:(/^[0-9]{2,4}$/.test("123")),quantNg:(/^[0-9]{2,4}$/.test("12345")),lookA:((/foo(?=bar)/.exec("foobar"))[0]),lookB:((/foo(?!bar)/.exec("foo!"))[0]),allSplit:("a1b2c".split(/\d/)),toStringR:(/x/g.toString()),flagsR:(/ab+c/gi.flags),sourceR:(/a[b-d]e/.source),lastIdxR:((()=>{const r=/o/g;
-(r.exec("foo"));
-return (r.lastIndex);
-})()),idxArr:((/(\d+)/.exec("12ab"))[1]),greedy:(("aaa".match(/a*/))[0]),lazy:(("aaa".match(/a*?/))[0]),dotAll:(/./s.test("\n")),noDot:(/./.test("\n")),word:(/^\w+$/.test("foo_1")),space:(/^\s*$/.test(" \n\t")),digit:(/^\d$/.test("5")),pub:(/^(?:ab|cd)+$/.test("abcdab")),anchor:("A B".replace(/\b/g,"|")),emoji2:(/^\p{L}+$/u.test("hÃ©llo")),quant2:("abbbb".match(/ab{2,4}c/)),negClass:(/^[^x]+$/.test("yyyy")),raww:/\\/,flagY:(/a/y.flags),complex:(/^(\d{1,3}\.){3}\d{1,3}$/.test("192.168.1.1")),complexBAD:(/^(\d{1,3}\.){3}\d{1,3}$/.test("999.1.1.1")),splitSub:(("a-b-c".split(/-/)).join("_"))});
-const ARRX=({map:(([1,2,3,4]).map((x,i)=>(((x*10))+i))),flt:(([1,2,3,4,5,6]).filter((x)=>(((x%3))===0))),fltIdx:(([1,2,3,4]).filter((x,i)=>(((i%2))===0))),red:(([1,2,3,4]).reduce((a,b,i)=>(a+((b*((10**i))))),0)),redRn:(([1,2,3]).reduceRight((a,b)=>(a-b),0)),flat3:(([1,[2,[3,[4,[5]]]]]).flat(3)),flatDf:(([1,[2,[3]]]).flat()),flatMap1:(([1,2,3]).flatMap((x)=>[x,-x])),sort:(([9,2,5,1,7]).sort((a,b)=>(a-b))),sortStr:((["b","B","a","A"]).sort((a,b)=>a.localeCompare(b))),rev:(([...([1,2,3])]).reverse()),some:(([1,2,3]).some((x)=>(((x%2))===0))),every:(([2,4]).every((x)=>(((x%2))===0))),find:(([1,2,3,4,5]).find((x)=>(x>3))),findI:((["a","b","c"]).findIndex((x)=>(x==="c"))),findL:(([1,2,3,4]).findLast((x)=>(((x%2))===1))),findLi:(([1,2,3,4]).findLastIndex((x)=>(((x%2))===1))),incl:(([1,2,NaN]).includes(NaN)),inclF:(([1,2,3]).includes(4)),idx:((["a","b","a"]).indexOf("a")),lidx:((["a","b","a"]).lastIndexOf("a")),join:(([1,"a",true,null]).join("|")),con:(([1,2]).concat([3],4,[5,[6]])),sla:(([1,2,3,4,5]).slice(1,-1)),sp:((()=>{const a=([1,2,3,4,5]);
-(a.splice(1,2,"x"));
-return a;
-})()),spr:((()=>{const a=([1,2,3,4,5]);
-const r=(a.splice(1,2));
-return ([r,a]);
-})()),sh:((()=>{const a=([1,2,3]);
-return ([a.shift(),a]);
-})()),unsh:((()=>{const a=([2,3]);
-(a.unshift(0,1));
-return a;
-})()),pop:((()=>{const a=([1]);
-return ([a.pop(),a]);
-})()),push:((()=>{const a=([]);
-const l=(a.push(1,2));
-return ([l,a]);
-})()),copyW:((()=>{const a=([1,2,3,4]);
-(a.copyWithin(0,2));
-return a;
-})()),fillA:((()=>((Array(5)).fill(7)).map((v,i)=>(v+i)))()),atIdx:(([10,20,30]).at(-1)),keysA:([...(([10,20]).keys())]),valsA:([...(([10,20]).values())]),entA:([...(([10,20]).entries())]),withA:(([1,2,3]).with(1,9)),toS:(([3,1,2]).toSorted()),toR:(([1,2,3]).toReversed()),toSp:(([1,2,3,4,5]).toSpliced(1,2,8)),group:((()=>{const o=(Object.groupBy([1,2,3,4,5],(x)=>(((x%2))?"odd":"even")));
-return ([o.odd,o.even]);
-})()),idxParam:(([1,2,3]).map((v,i,arr)=>(((v+i))+(arr.length)))),cmpr:((["3",3,30]).sort()),lex:(("10 9 8".split(" ")).sort()),node:(([1,[2]]).length),del:((()=>{const a=([1,2,3]);
-(delete (a[1]));
-return ([a.length,a[1],(1 in a)]);
-})()),expand:([0,...([1,2]),,3,...([4])]),spliceAdd:((()=>{const a=([1,5]);
-(a.splice(1,0,2,3,4));
-return a;
-})()),twoDim:(([[1,2],[3,4]]).map((row)=>(row.map((x)=>(x*10))).join("-"))),reverse2:((["a","b","c"]).reverse()),stable:(([1,3,2,2,1]).sort())});
-const COLL=({setArr:([...(new Set([3,1,2,1]))]),setSz:((new Set("aab")).size),setHas:((new Set([1])).has(1)),setAdd:((()=>{const s=(new Set());
-(((s.add(1)).add(1)).add(2));
-return ([...s]);
-})()),setDel:((()=>{const s=(new Set(["a","b"]));
-(s.delete("a"));
-return ([...s]);
-})()),setIter:((()=>{const s=(new Set(["x","y"]));
-let acc="";
-for (const v of s)((acc+=v));
-return acc;
-})()),sKeys:([...((new Set([5,6])).keys())]),sVals:([...((new Set([5,6])).values())]),sEnts:([...((new Set([5,6])).entries())]),mapArr:([...(new Map([["a",1],["b",2]]))]),mapGet:((new Map([["x",9]])).get("x")),mapMiss:((new Map()).get("z")),mapHas:((new Map([["a",1]])).has("a")),mapSet:((()=>{const m=(new Map());
-(((m.set("k",1)).set("k",2)).set("j",3));
-return ([m.get("k"),[...m]]);
-})()),mapDel:((()=>{const m=(new Map([["a",1],["b",2]]));
-(m.delete("a"));
-return ([...m]);
-})()),wm:((()=>{const w=(new WeakMap());
-const o=({});
-(w.set(o,5));
-return (((w.has(o))&&(((w.get(o))===5))));
-})()),ws:((()=>{const w=(new WeakSet());
-const o=({});
-(w.add(o));
-return (w.has(o));
-})()),mapSize:((new Map([["a",1],["b",2],["c",3]])).size),mapLoop:((()=>{const m=(new Map([["a",1],["b",2]]));
-let s="";
-for (const [k,v] of m)((s+=((k+v))));
-return s;
-})()),chain:(((new Map()).set(1,"one")).get(1)),mapKeyObj:((()=>{const o=({id:1});
-const m=(new Map());
-(m.set(o,"found"));
-return (m.get(o));
-})()),setClear:((()=>{const s=(new Set([1,2]));
-(s.clear());
-return (s.size);
-})()),mapValues:([...((new Map([["a",1],["b",2]])).values())])});
-const TARR=((()=>{const u8=(new Uint8Array([3,1,4,1,5,9]));
-const i16=(new Int16Array([-1,0,1,32767,-32768]));
-const i8=(new Int8Array([127,-128,-1,1]));
-const u16=(new Uint16Array([65535,0,256]));
-const u32=(new Uint32Array([0,4294967295,123456]));
-const f32=(new Float32Array([0.1,0.2,(1/3)]));
-const f64=(new Float64Array([1.5,-2.5]));
-const u8c=(new Uint8ClampedArray([-5,0,255,300]));
-const bi64=(new BigInt64Array([1n,-1n,9007199254740993n]));
-const ubi64=(new BigUint64Array([1n,18446744073709551615n]));
-const a=(new Uint8Array([1,2,3,4]));
-const sub=(a.subarray(1,3));
-(((sub[0])=9));
-const f=(new Float64Array(3));
-(f.fill(2.5));
-const cp=(new Int32Array([1,2,3,4,5]));
-(cp.copyWithin(1,3));
-return ({u8:([...u8]),i16:([...i16]),i8:([...i8]),u16:([...u16]),u32:([...u32]),f32:([...f32]),f64:([...f64]),u8c:([...u8c]),bi64:(([...bi64]).map(String)),ubi64:(([...ubi64]).map(String)),len:(((((u8.length)+":"))+(u8.byteLength))),sub:([...a,,...sub]),fill:([...f]),cp:([...cp]),set:((()=>{const x=(new Uint8Array(4));
-(x.set([9,8],1));
-return ([...x]);
-})()),sorted:(([...(new Float32Array([3.5,1.25,2.0]))]).sort()),reverse:(([...(new Int8Array([1,-2,3]))]).reverse()),index:((new Int8Array([4,5,6])).indexOf(5)),sum:(([...u8]).reduce((a,b)=>(a+b),0)),cplen:(([...(new Uint8Array([1,2]))]).length)});
-})());
-const ABV=((()=>{const ab=(new ArrayBuffer(16));
-const dv=(new DataView(ab));
-(dv.setUint8(0,255));
-(dv.setInt16(2,-1234,true));
-(dv.setUint32(4,0xDEADBEEF,true));
-(dv.setFloat64(8,Math.PI,true));
-const back=(new Uint8Array(ab));
-const d2=(new DataView(new ArrayBuffer(2)));
-(d2.setInt16(0,-1,false));
-return ({abLen:(ab.byteLength),u8:(dv.getUint8(0)),i16:(dv.getInt16(2,true)),u32:(dv.getUint32(4,true)),f64:(dv.getFloat64(8,true)),be:(d2.getInt16(0,false)),t00:(dv.getFloat32(4,true)),slice:([...(back.slice(4,8))]),bytes:([...back])});
-})());
-const BUF=((()=>{const b=(Buffer.from([1,2,3,4]));
-const s=(Buffer.from("hiðŸ˜€"));
-return ({u32be:(b.readUInt32BE(0)),u16le:(b.readUInt16LE(2)),sw:([...(b.swap16())]),cat:((Buffer.concat([Buffer.from([9]),Buffer.from([8])])).toString("hex")),str:(s.toString("utf8")),hex:((Buffer.from("ff0080","hex")).toString("hex")),b64:((Buffer.from("yo")).toString("base64")),json:((Buffer.from([104,105])).toString()),alloc:([...(Buffer.alloc(3,5))]),fill:([...((Buffer.from([1,2,3])).fill(7,1))]),lens:((((((Buffer.from("abc")).length)+":"))+((Buffer.from("abc")).byteLength)))});
-})());
-const OBD=((()=>{const o=({});
-(Object.defineProperty(o,"hidden",{value:99,enumerable:false,configurable:false,writable:false}));
-(Object.defineProperty(o,"access",{get(){return (((this.xstore)*2));
-},set(v){(((this.xstore)=v));
-},enumerable:true}));
-(((o.access)=21));
-const dh=(Object.getOwnPropertyDescriptor(o,"hidden"));
-(Object.freeze({}));
-(Object.seal({}));
-return ({hidden:(o.hidden),acc:(o.access),names:(Object.getOwnPropertyNames(o)),keys:(Object.keys(o)),hasOwn:(o.hasOwnProperty("hidden")),inProto:(("toString" in o)),proto:((Object.prototype).isPrototypeOf(o)),descr:({value:(dh.value),en:(dh.enumerable),cfg:(dh.configurable),wr:(dh.writable)}),getDesc:((()=>{const d=(Object.getOwnPropertyDescriptor(o,"access"));
-return (typeof (d.get));
-})()),entries:(Object.entries({x:1,y:2})),values:(Object.values({x:1,y:2})),from:(Object.fromEntries([["a",1],["b",2]])),assign:(Object.assign({base:1},{mid:2},{base:3,last:4})),spread:({...({a:1}),...({b:2,a:9})}),keys2:(Object.keys(Object.create(null))),isFrozen:(Object.isFrozen(o)),isSealed:(Object.isSealed(o)),isExt:(Object.isExtensible(o)),precoping:(((Object.preventExtensions({})) instanceof Object)),stringtag:(((((((Object.prototype).toString).call([]))+"|"))+(((Object.prototype).toString).call(null)))),createProto:((Object.create({q:1})).q),own:((Object.getOwnPropertySymbols([])).length),lookup:((((o.hasOwnProperty).bind)?(o.hasOwnProperty("hidden")):false))});
-})());
-const DELX=((()=>{const o=({a:1,b:2});
-(delete (o.a));
-return ([o.a,o.b,("a" in o)]);
-})());
-const TSOF=({typeofs:([typeof "s",typeof 1,typeof true,typeof undefined,typeof ({}),typeof ([]),typeof (()=>{
-}),typeof null,typeof (Symbol()),typeof (new Date())])});
-const ERRS=((()=>{const mk=((fn)=>{try{const v=(fn());
-return (("none:"+v));
-}catch(e){return ((((((e.constructor).name)+":"))+(e.message)));
+const tnu=trickyNumbers();
+const guardInit=(()=>{if(0x1>0x2){let $333=$3e1(0x1);let $334=0x1d;for(let $335=0x0;$335<0x5;$335++){$334+=$335*0x7;if($334>0x63){break;}}}
+let n=0x0;
+const f=()=>++n;
+return[f(),f(),f()];
+})();
+const gsp=(()=>{if(0x1>0x2){let $330=$3e1(0x1);let $331=0x1d;for(let $332=0x0;$332<0x5;$332++){$331+=$332*0x7;if($331>0x63){break;}}}
+const s=new $404([0x1,0x2,0x3,0x2]);
+const m=new $3fc([[$3e1(0xb),0x1],[$3e1(0x52),0x2],[$3e1(0xbb),0x3]]);
+return{
+sArr:[...s],
+sLen:s[$3e1(0xa9)],
+mArr:[...m],
+mGet:m[$3e1(0x8)]($3e1(0x52)),
+mHas:m[$3e1(0x7)]($3e1(0xbc)),
+mDel:(()=>{if(0x1>0x2){let $32d=$3e1(0x1);let $32e=0x1d;for(let $32f=0x0;$32f<0x5;$32f++){$32e+=$32f*0x7;if($32e>0x63){break;}}}const x=new $3fc(m);x[$3e1(0xbd)]($3e1(0xb));return x[$3e1(0xa9)];})(),
+};
+})();
+const NUMS=[0x0,0x1,-0x1,0x2,-0x2,0x7,0x8,0xf,((0x3*0x5)+0x1),((0x6*0x5)+0x1),((0x4*0x7)+0x4),((((0x1*0xb)+0x7)*0x7)+0x1),((0xb*0xb)+0x7),((((((0x2*0xb)+0x6)*0x3)+0x1)*0x3)+0x0),((((0xa*0x5)+0x1)*0x5)+0x1),((((0x6*0xb)+0x7)*0x7)+0x1),((((((0xa*0x3)+0x0)*0xb)+0x3)*0x3)+0x1),((((0x7*0xb)+0x1)*0xd)+0xa),((((((((((0x5*0x5)+0x1)*0x7)+0x5)*0x5)+0x1)*0x5)+0x1)*0x7)+0x0),((((((((((0xa*0x3)+0x0)*0x3)+0x0)*0x3)+0x0)*0xb)+0x8)*0xb)+0xa),((((((((((((0x5*0xb)+0x3)*0x5)+0x1)*0x5)+0x1)*0x5)+0x1)*0x3)+0x2)*0x3)+0x0),((((((((((0x3*0xb)+0x5)*0x7)+0x1)*0x7)+0x3)*0x7)+0x3)*0x5)+0x1),((((((((((((((((((((((0x5*0x5)+0x1)*0x5)+0x1)*0x5)+0x1)*0xb)+0x7)*0x3)+0x1)*0x3)+0x0)*0x3)+0x0)*0xd)+0x9)*0xb)+0x9)*0xb)+0x0)*0x7)+0x1),-((((((((((((((((((((((0x2*0xb)+0x1)*0x5)+0x1)*0x7)+0x5)*0x5)+0x1)*0x5)+0x1)*0x3)+0x2)*0x7)+0x2)*0xd)+0x8)*0x7)+0x4)*0x5)+0x1)*0xb)+0x2),((((((((((((((((((((((0x9*0xb)+0x4)*0xb)+0x5)*0x7)+0x1)*0xb)+0x6)*0x3)+0x1)*0x5)+0x1)*0x3)+0x2)*0xb)+0x3)*0xb)+0x0)*0x3)+0x1)*0x3)+0x0)];
+const DEC=[0.5,-0.5,1.25,-1.25,3.14159,2.71828,1e-5,((((((((((((0x9*0x7)+0x4)*0x5)+0x1)*0x3)+0x2)*0x3)+0x0)*0xb)+0x3)*0x3)+0x1),1e21,123.456,-0.001,0.1+0.2,9007199254740992];
+const BITS={
+add:((((((((((((((((((((((0x5*0x5)+0x1)*0x5)+0x1)*0x5)+0x1)*0xb)+0x7)*0x3)+0x1)*0x3)+0x0)*0x3)+0x0)*0xd)+0x9)*0xb)+0x9)*0xb)+0x0)*0x7)+0x1)+0x1,
+sub:-((((((((((((((((((((((0x2*0xb)+0x1)*0x5)+0x1)*0x7)+0x5)*0x5)+0x1)*0x5)+0x1)*0x3)+0x2)*0x7)+0x2)*0xd)+0x8)*0x7)+0x4)*0x5)+0x1)*0xb)+0x2)-0x1,
+mul:((((((((((((((((((((((0x9*0xb)+0x4)*0xb)+0x5)*0x7)+0x1)*0xb)+0x6)*0x3)+0x1)*0x5)+0x1)*0x3)+0x2)*0xb)+0x3)*0xb)+0x0)*0x3)+0x1)*0x3)+0x0)*0x3,
+xor:0xf^((((((0x5*0x5)+0x1)*0x3)+0x2)*0x3)+0x0),
+shl31:0x1<<((0x6*0x5)+0x1),
+shlN:-0x1<<0x1,
+shrN:-0x8>>0x1,
+ushrN:-0x1>>>0x0,
+ushr28:-0x1>>>((0x2*0xb)+0x6),
+not5:~0x5,
+band:((((((0x2*0xb)+0x6)*0x3)+0x1)*0x3)+0x0)&0xf,
+bor:0x8|0x3,
+combine:(0xa<<0x4)|0x5,
+mask:(((((((((((((((((((((((0x8*0x5)+0x1)*0xd)+0xb)*0xb)+0x9)*0x7)+0x1)*0xd)+0x8)*0x5)+0x1)*0x7)+0x5)*0x5)+0x1)*0x5)+0x1)*0x3)+0x2)*0x3)+0x0)>>>((0x3*0x5)+0x1))&((((((0x2*0xb)+0x6)*0x3)+0x1)*0x3)+0x0),
+swapb:((((((((((0x2*0xb)+0x6)*0x5)+0x1)*0xb)+0x2)*0x3)+0x1)&((((((0x2*0xb)+0x6)*0x3)+0x1)*0x3)+0x0))<<0x8)|((((((((((0x2*0xb)+0x6)*0x5)+0x1)*0xb)+0x2)*0x3)+0x1)&((((((((((((0x3*0x5)+0x1)*0x3)+0x2)*0xd)+0x9)*0xb)+0x4)*0x3)+0x1)*0x3)+0x0))>>0x8),
+mul2:((((((((((((((((((0x8*0x3)+0x1)*0x5)+0x1)*0xd)+0x6)*0xb)+0x4)*0x7)+0x6)*0x5)+0x1)*0x3)+0x2)*0x5)+0x1)*0xd)+0x1)*((((((((((((((((((((((0xb*0x3)+0x2)*0x3)+0x0)*0x5)+0x1)*0xb)+0x2)*0x3)+0x1)*0x5)+0x1)*0x7)+0x5)*0x5)+0x1)*0x5)+0x1)*0xd)+0xb)*0x5)+0x1),
+addF:0.1+0.2,
+mulF:1.1*((((0x3*0xb)+0x0)*0x3)+0x1),
+divs:((0x3*0x7)+0x1)/0x7,
+modNeg:-0x7%0x3,
+modF:5.5%0x2,
+powNeg:$3fd[$3e1(0xb6)](-0x2,0x3),
+powF:0x2**0.5,
+root:$3fd[$3e1(0xb7)](-0x1),
+ln1:$3fd[$3e1(0xbe)](-0x1),
+asin2:$3fd[$3e1(0xbf)](0x2),
+huge:$405[$3e1(0xc0)]*0x2,
+tiny:$405[$3e1(0xc1)]/0x2,
+ep1:0x1+$405[$3e1(0xc2)],
+ep0:0x1+$405[$3e1(0xc2)]/0x2,
+safeHi:$405[$3e1(0xc3)],
+safeLo:-$405[$3e1(0xc3)],
+isInt:$405[$3e1(0xc4)](0x1),
+isIntBig:$405[$3e1(0xc4)](1e100),
+z1:0.30000000000000004===0.1+0.2,
+z2:0.1+0.2+0.3+0.4+0.5+0.6+0.7+0.8+0.9,
+neg0a:-0x0===0x0,
+neg0b:$3fb[$3e1(0xc5)](-0x0,0x0),
+neg0c:$3fb[$3e1(0xc5)](-0x0,-0x0),
+inc1:(0x1+0x1),
+dec1:(0x5-0x1),
+twoPow:0x2**0xa,
+gold:(0x1+$3fd[$3e1(0xb7)](0x5))/0x2,
+tau:$3fd[$3e1(0xc6)]*0x2,
+deg:(((((((0x6*0x3)+0x2)*0x3)+0x0)*0x3)+0x0)*$3fd[$3e1(0xc6)])/((((((0x6*0x3)+0x2)*0x3)+0x0)*0x3)+0x0),
+euler:$3fd[$3e1(0xc7)](0x1),
+cubic:0x5**0x3%0x7,
+};
+const MATHS={
+sin:$3fd[$3e1(0xc8)](0.5),
+cos:$3fd[$3e1(0xc9)](0.5),
+tan:$3fd[$3e1(0xca)](0x0),
+asin1:$3fd[$3e1(0xbf)](0x1),
+acos1:$3fd[$3e1(0xcb)](-0x1),
+atan2:$3fd[$3e1(0xcc)](0x1,0x1),
+atan1:$3fd[$3e1(0xcd)](0x1),
+sinh1:$3fd[$3e1(0xce)](0x1),
+cosh1:$3fd[$3e1(0xcf)](0x1),
+tanh1:$3fd[$3e1(0xd0)](0x0),
+asinh1:$3fd[$3e1(0xd1)](0x1),
+acosh2:$3fd[$3e1(0xd2)](0x2),
+atanh05:$3fd[$3e1(0xd3)](0.5),
+exp3:$3fd[$3e1(0xc7)](0x2),
+expm1:$3fd[$3e1(0xd4)](0x1),
+log2g:$3fd[$3e1(0xd5)](0x8),
+log10g:$3fd[$3e1(0xd6)](((((((0xa*0x3)+0x0)*0xb)+0x3)*0x3)+0x1)),
+log1p:$3fd[$3e1(0xd7)]($3fd[$3e1(0xd8)]-0x1),
+cbrt64:$3fd[$3e1(0xb8)](((0x4*0xd)+0xc)),
+cbrtN:$3fd[$3e1(0xb8)](-0x8),
+hypot34:$3fd[$3e1(0xd9)](0x3,0x4),
+imul3:$3fd[$3e1(0xda)](((((((((((((((((((((((0x5*0x5)+0x1)*0x5)+0x1)*0x5)+0x1)*0xb)+0x7)*0x3)+0x1)*0x3)+0x0)*0x3)+0x0)*0xd)+0x9)*0xb)+0x9)*0xb)+0x0)*0x7)+0x1),0x3),
+clz32:$3fd[$3e1(0xdb)](((((((((((((((((((((((0x2*0xb)+0x1)*0x5)+0x1)*0x7)+0x5)*0x5)+0x1)*0x5)+0x1)*0x3)+0x2)*0x7)+0x2)*0xd)+0x8)*0x7)+0x4)*0x5)+0x1)*0xb)+0x2)),
+fround2:$3fd[$3e1(0xdc)](1.337),
+trunc2:$3fd[$3e1(0xb3)](-1.9),
+ceil2:$3fd[$3e1(0xb1)](-0.9),
+floor2:$3fd[$3e1(0x15)](-0.1),
+roundP:$3fd[$3e1(0xb2)](1.5),
+roundM:$3fd[$3e1(0xb2)](-0.5),
+roundS:$3fd[$3e1(0xb2)](-1.5),
+roundZ:$3fd[$3e1(0xb2)](0.4),
+min0:$3fd[$3e1(0xb5)](0x1,-0x0),
+max0:$3fd[$3e1(0xb4)](0x1,-0x0),
+signA:[$3fd[$3e1(0xb9)](-0x5),$3fd[$3e1(0xb9)](-0x0),$3fd[$3e1(0xb9)](0x0),$3fd[$3e1(0xb9)](0.001),$3fd[$3e1(0xb9)](NaN)],
+pi:$3fd[$3e1(0xc6)],
+e:$3fd[$3e1(0xd8)],
+ln2:$3fd[$3e1(0xdd)],
+ln10:$3fd[$3e1(0xde)],
+log2e:$3fd[$3e1(0xdf)],
+log10e:$3fd[$3e1(0xe0)],
+sqrt2:$3fd[$3e1(0xe1)],
+sqrthalf:$3fd[$3e1(0xe2)],
+max3:$3fd[$3e1(0xb4)](-0x1,-0x5,0x3,0xa,-0x2),
+min3:$3fd[$3e1(0xb5)](-0x1,-0x5,0x3,0xa,-0x2),
+sum1k:(()=>{if(0x1>0x2){let $32a=$3e1(0x1);let $32b=0x1d;for(let $32c=0x0;$32c<0x5;$32c++){$32b+=$32c*0x7;if($32b>0x63){break;}}}let s=0x0;for(let i=0x1;i<((((((0xa*0x3)+0x0)*0xb)+0x3)*0x3)+0x1);i++)s+=0x1/(i*i);return s;})(),
+fact20:(()=>{if(0x1>0x2){let $327=$3e1(0x1);let $328=0x1d;for(let $329=0x0;$329<0x5;$329++){$328+=$329*0x7;if($328>0x63){break;}}}let p=0x1;for(let i=0x2;i<=((0x6*0x3)+0x2);i++)p*=i;return p;})(),
+lei:(()=>{if(0x1>0x2){let $324=$3e1(0x1);let $325=0x1d;for(let $326=0x0;$326<0x5;$326++){$325+=$326*0x7;if($325>0x63){break;}}}let s=0x0;for(let i=0x0;i<((0xa*0x3)+0x0);i++)s+=$3fd[$3e1(0xc8)](i)*$3fd[$3e1(0xc9)](i);return s;})(),
+};
+const BIGS={
+a:(2n**100n)[$3e1(0xe3)](),
+b:(12345678901234567890n*9876543210n)[$3e1(0xe3)](),
+c:(7n%3n)[$3e1(0xe3)](),
+d:((2n**64n-9n)>>2n)[$3e1(0xe3)](),
+e:($406($3e1(0xe4))>>1n)[$3e1(0xe3)](),
+f:(9007199254740991n/3n)[$3e1(0xe3)](),
+g:(9007199254740991n+1n)[$3e1(0xe3)](),
+i:(10n**30n/7n)[$3e1(0xe3)](),
+as8:$406[$3e1(0xe5)](0x8,200n)[$3e1(0xe3)](),
+asu8:$406[$3e1(0xe6)](0x8,200n)[$3e1(0xe3)](),
+as16:$406[$3e1(0xe5)](((0x3*0x5)+0x1),-1n)[$3e1(0xe3)](),
+as64:$406[$3e1(0xe6)](((0x4*0xd)+0xc),-1n)[$3e1(0xe3)](),
+mix:$405(9007199254740993n)*0.5,
+neg:(-123n)[$3e1(0xe3)](),
+zero:(0n)[$3e1(0xe3)](),
+bits:((1n<<80n)|(3n<<4n))[$3e1(0xe3)](),
+sq:(299792458n**2n)[$3e1(0xe3)](),
+cmplx:((2n+3n)*4n-5n)[$3e1(0xe3)](),
+};
+const CNV={
+num:$405($3e1(0xe7)),
+parseHex:$405[$3e1(0xe8)]($3e1(0xe9),((0x3*0x5)+0x1)),
+parseInt2:$407($3e1(0xea)),
+parseFloat3:$408($3e1(0xeb)),
+parseBin:$405($3e1(0xec)),
+parseOct:$405($3e1(0xed)),
+parseExp:$405($3e1(0xee)),
+nanNum:$405($3e1(0x81)),
+blank:$405($3e1(0x3)),
+plusStr:+$3e1(0xef),
+minusStr:-$3e1(0xf0),
+isNaNum:$405[$3e1(0xf1)]($3e1(0x2e)),
+isNaStr:$409($3e1(0x2e)),
+isFin:$405[$3e1(0xf2)](Infinity),
+isFinS:$405[$3e1(0xf2)](0.5),
+intSel:[$405[$3e1(0xc4)](0x1),$405[$3e1(0xc4)](1.5),$405[$3e1(0xc4)](NaN),$405[$3e1(0xc4)](1e308)],
+safeSel:[$405[$3e1(0xf3)](0x2**((0x4*0xb)+0x9)-0x1),$405[$3e1(0xf3)](0x2**((0x4*0xb)+0x9))],
+toStr16:(((((((0x2*0xb)+0x6)*0x3)+0x1)*0x3)+0x0))[$3e1(0xe3)](((0x3*0x5)+0x1)),
+toStr2:(0x5)[$3e1(0xe3)](0x2),
+toStr36:(((((((((((((0xb*0xb)+0x7)*0x5)+0x1)*0x5)+0x1)*0xb)+0x7)*0x5)+0x1)*0x7)+0x5))[$3e1(0xe3)](((0x7*0x5)+0x1)),
+toFix:(3.14159)[$3e1(0xf4)](0x2),
+toFixZ:(0x3)[$3e1(0xf4)](0x4),
+toPre:(3.14159)[$3e1(0xf5)](0x3),
+toExp:(((((((((((0x4*0x5)+0x1)*0xd)+0x1)*0x5)+0x1)*0x3)+0x2)*0x3)+0x0))[$3e1(0xf6)](0x2),
+bStr:[$400(((0xb*0xb)+0x2)),$400(null),$400(void 0),$400([0x1,0x2]),$400({a:0x1}),(!0)[$3e1(0xe3)]()],
+bNum:[$402(0x0),$402($3e1(0x3)),$402($3e1(0xe)),$402(NaN),$402([]),$402($3e1(0x50)),$402(-0x0)],
+ctor:[$405($3e1(0xf7))+0x5,+$3e1(0xf8),$405($3e1(0xf9))],
+unplus:+$3e1(0xb)+0x1,
+hexid:((((((((((((((((((((0x1*0xb)+0x7)*0xd)+0x0)*0x5)+0x1)*0x7)+0x5)*0xb)+0x6)*0x7)+0x6)*0x7)+0x3)*0x5)+0x1)*0xd)+0x1)*0xd)+0xc),
+binhuge:((((((((((((((((((((((0x9*0xb)+0x4)*0xb)+0x5)*0x7)+0x1)*0xb)+0x6)*0x3)+0x1)*0x5)+0x1)*0x3)+0x2)*0xb)+0x3)*0xb)+0x0)*0x3)+0x1)*0x3)+0x0),
+octhuge:((((((((((((((((0x1*0xd)+0xb)*0x5)+0x1)*0x7)+0x0)*0x5)+0x1)*0xb)+0x7)*0x3)+0x1)*0x3)+0x0)*0x5)+0x1),
+};
+const STRFX={
+len:$3e1(0xfa)[$3e1(0x3a)],
+cplen:[...$3e1(0xfa)][$3e1(0x3a)],
+cat:$3e1(0xb)+$3e1(0x52)+0x7+!0+null,
+up:$3e1(0xfb)[$3e1(0x82)](),
+low:$3e1(0xfc)[$3e1(0x84)](),
+sl:$3e1(0xfd)[$3e1(0x72)](-0x3),
+sb:$3e1(0xfd)[$3e1(0xfe)](0x2,0x3),
+sw:$3e1(0xff)[$3e1(0x7b)]($3e1(0x100)),
+ew:$3e1(0x101)[$3e1(0x7d)]($3e1(0x102)),
+inc3:$3e1(0x103)[$3e1(0x79)]($3e1(0x6f)),
+idx3:$3e1(0x104)[$3e1(0x70)]($3e1(0x59)),
+spi:$3e1(0x105)[$3e1(0x6c)]($3e1(0x94)),
+spr:$3e1(0x106)[$3e1(0x6c)](/\d+/),
+sprKeep:$3e1(0x106)[$3e1(0x6c)](/(\d+)/),
+mat:$3e1(0x107)[$3e1(0x61)](/\d/g),
+mall:[...$3e1(0x108)[$3e1(0x109)](/[a-z](\d)/g)][$3e1(0xa)]($24=>$24[0x0]+$3e1(0x4e)+$24[0x1]),
+spy:$3e1(0x10a)[$3e1(0x69)](/_/g,$3e1(0x10b)),
+spyFn:$3e1(0x10c)[$3e1(0x69)](/\d+/g,($25)=>$405($25)*0x2),
+scy:$3e1(0x10d)[$3e1(0x69)]($3e1(0x10e),$3e1(0x10f)),
+rep2:$3e1(0x59)[$3e1(0x77)](0x3),
+padS:$3e1(0x110)[$3e1(0x74)](0x3,$3e1(0xe)),
+padE:$3e1(0x75)[$3e1(0x76)](0x2,$3e1(0x6)),
+chAt:$3e1(0x111)[$3e1(0x112)](0x1),
+code:$3e1(0x113)[$3e1(0x85)](0x1),
+codeP:$3e1(0x114)[$3e1(0x87)](0x1),
+fromCode:$400[$3e1(0x86)](((0xa*0x7)+0x2),((((0xb*0x3)+0x2)*0x3)+0x0)),
+fromCP:$400[$3e1(0x67)](((((((((((0xa*0x3)+0x0)*0x5)+0x1)*0xb)+0x7)*0xb)+0xa)*0x7)+0x6),((((((((((0x5*0x5)+0x1)*0x7)+0x0)*0x5)+0x1)*0x3)+0x2)*0x3)+0x0),((((((((((0x4*0x7)+0x4)*0xb)+0x1)*0x3)+0x1)*0xb)+0x3)*0xb)+0x0)),
+at:$3e1(0x71)[$3e1(0x88)](0x1),
+atNeg:$3e1(0x71)[$3e1(0x88)](-0x2),
+trim:$3e1(0x115)[$3e1(0x80)](),
+trimL:$3e1(0x7f)[$3e1(0x116)](),
+trimR:$3e1(0x7f)[$3e1(0x117)](),
+normNFD:$3e1(0x118)[$3e1(0x119)]($3e1(0x11a))[$3e1(0x3a)],
+normNFC:$3e1(0x11b)[$3e1(0x119)]($3e1(0x11c))===$3e1(0x118),
+normNKF:$3e1(0x11d)[$3e1(0x119)]($3e1(0x11e)),
+cc:$3e1(0xb)[$3e1(0x11f)]($3e1(0x52),$3e1(0xbb)),
+lc2:$3e1(0x120)[$3e1(0x84)](),
+uc2:$3e1(0x120)[$3e1(0x82)](),
+olderIdx:$3e1(0x2e)[$3e1(0x6e)]($3e1(0xa7)),
+noEnd:$3e1(0x121)[$3e1(0x7d)]($3e1(0x122)),
+noStart:$3e1(0x123)[$3e1(0x7b)]($3e1(0x124)),
+sedg:$3e1(0x125)[$3e1(0x7d)]($3e1(0x126)),
+zws:$3e1(0x127)[$3e1(0x6c)]($3e1(0x128)),
+nullCh:$3e1(0x81)[$3e1(0x85)](((0x7*0xd)+0x8)),
+emptyS:$3e1(0x3)[$3e1(0x74)](0x2,$3e1(0x129)),
+wrap:$3e1(0x12a),
+octal:$3e1(0x12b),
+hextab:$3e1(0x12c)+$3e1(0x52),
+fillV:$3e1(0x2e)[$3e1(0x77)](0x2)+$3e1(0xa7)[$3e1(0x77)](0x3),
+idxStar:$3e1(0x12d)[$3e1(0x6e)]($3e1(0x12e)),
+lidxNof:$3e1(0x81)[$3e1(0x70)]($3e1(0xbc)),
+};
+const RGX={
+date:/^\d{4}-\d{2}-\d{2}$/[$3e1(0x12f)]($3e1(0x130)),
+email:/^[^@]+@[^@]+\.[^@]+$/[$3e1(0x12f)]($3e1(0x131)),
+emailB:/^[^@]+@[^@]+\.[^@]+$/[$3e1(0x12f)]($3e1(0x132)),
+group:/(?<y>\d{4})-(?<m>\d{2})-(?<d>\d{2})/[$3e1(0x63)]($3e1(0x133))[$3e1(0x66)],
+flaggy:/hello/i[$3e1(0x12f)]($3e1(0x134)),
+unicode2:/^\p{Emoji_Presentation}$/u[$3e1(0x12f)]($3e1(0x135)),
+sflag:/a.b/s[$3e1(0x12f)]($3e1(0x136)),
+backref:/^(a+)(b+)\1$/[$3e1(0x12f)]($3e1(0x137)),
+namedBack:/^(?<w>ab)\k<w>$/[$3e1(0x12f)]($3e1(0x138)),
+zero:/a|b/[$3e1(0x63)]($3e1(0x52))[0x0],
+multiline:/^world$/m[$3e1(0x12f)]($3e1(0x139)),
+sticky2:(()=>{if(0x1>0x2){let $321=$3e1(0x1);let $322=0x1d;for(let $323=0x0;$323<0x5;$323++){$322+=$323*0x7;if($322>0x63){break;}}}const r=/a/y;r[$3e1(0x13a)]=0x1;const m=r[$3e1(0x63)]($3e1(0x13b));return m?m[0x0]:null;})(),
+greek:/^[\u0370-\u03FF]+$/[$3e1(0x12f)]($3e1(0x13c)),
+quant:/^[0-9]{2,4}$/[$3e1(0x12f)]($3e1(0x13d)),
+quantNg:/^[0-9]{2,4}$/[$3e1(0x12f)]($3e1(0x13e)),
+lookA:/foo(?=bar)/[$3e1(0x63)]($3e1(0x13f))[0x0],
+lookB:/foo(?!bar)/[$3e1(0x63)]($3e1(0x140))[0x0],
+allSplit:$3e1(0x141)[$3e1(0x6c)](/\d/),
+toStringR:/x/g[$3e1(0xe3)](),
+flagsR:/ab+c/gi[$3e1(0x142)],
+sourceR:/a[b-d]e/[$3e1(0x143)],
+lastIdxR:(()=>{if(0x1>0x2){let $31e=$3e1(0x1);let $31f=0x1d;for(let $320=0x0;$320<0x5;$320++){$31f+=$320*0x7;if($31f>0x63){break;}}}const r=/o/g;r[$3e1(0x63)]($3e1(0x144));return r[$3e1(0x13a)];})(),
+idxArr:/(\d+)/[$3e1(0x63)]($3e1(0x145))[0x1],
+greedy:$3e1(0x146)[$3e1(0x61)](/a*/)[0x0],
+lazy:$3e1(0x146)[$3e1(0x61)](/a*?/)[0x0],
+dotAll:/./s[$3e1(0x12f)]($3e1(0x147)),
+noDot:/./[$3e1(0x12f)]($3e1(0x147)),
+word:/^\w+$/[$3e1(0x12f)]($3e1(0x148)),
+space:/^\s*$/[$3e1(0x12f)]($3e1(0x149)),
+digit:/^\d$/[$3e1(0x12f)]($3e1(0x14a)),
+pub:/^(?:ab|cd)+$/[$3e1(0x12f)]($3e1(0x14b)),
+anchor:$3e1(0x14c)[$3e1(0x69)](/\b/g,$3e1(0xd)),
+emoji2:/^\p{L}+$/u[$3e1(0x12f)]($3e1(0x14d)),
+quant2:$3e1(0x14e)[$3e1(0x61)](/ab{2,4}c/),
+negClass:/^[^x]+$/[$3e1(0x12f)]($3e1(0x14f)),
+raww:/\\/,
+flagY:/a/y[$3e1(0x142)],
+complex:/^(\d{1,3}\.){3}\d{1,3}$/[$3e1(0x12f)]($3e1(0x150)),
+complexBAD:/^(\d{1,3}\.){3}\d{1,3}$/[$3e1(0x12f)]($3e1(0x151)),
+splitSub:$3e1(0x105)[$3e1(0x6c)](/-/)[$3e1(0x35)]($3e1(0x6a)),
+};
+const ARRX={
+map:[0x1,0x2,0x3,0x4][$3e1(0xa)](($26,$27)=>$26*0xa+$27),
+flt:[0x1,0x2,0x3,0x4,0x5,0x6][$3e1(0x89)]($28=>$28%0x3===0x0),
+fltIdx:[0x1,0x2,0x3,0x4][$3e1(0x89)](($29,$2a)=>$2a%0x2===0x0),
+red:[0x1,0x2,0x3,0x4][$3e1(0x13)](($2b,b,$2c)=>$2b+b*0xa**$2c,0x0),
+redRn:[0x1,0x2,0x3][$3e1(0x8a)](($2d,$2e)=>$2d-$2e,0x0),
+flat3:[0x1,[0x2,[0x3,[0x4,[0x5]]]]][$3e1(0x8b)](0x3),
+flatDf:[0x1,[0x2,[0x3]]][$3e1(0x8b)](),
+flatMap1:[0x1,0x2,0x3][$3e1(0x8c)]($2f=>[$2f,-$2f]),
+sort:[0x9,0x2,0x5,0x1,0x7][$3e1(0x8d)](($30,$31)=>$30-$31),
+sortStr:[$3e1(0x52),$3e1(0x8f),$3e1(0xb),$3e1(0x8e)][$3e1(0x8d)](($32,$33)=>$32[$3e1(0x152)]($33)),
+rev:[...[0x1,0x2,0x3]][$3e1(0x153)](),
+some:[0x1,0x2,0x3][$3e1(0x90)]($34=>$34%0x2===0x0),
+every:[0x2,0x4][$3e1(0x91)]($35=>$35%0x2===0x0),
+find:[0x1,0x2,0x3,0x4,0x5][$3e1(0x92)]($36=>$36>0x3),
+findI:[$3e1(0xb),$3e1(0x52),$3e1(0xbb)][$3e1(0x93)]($37=>$37===$3e1(0xbb)),
+findL:[0x1,0x2,0x3,0x4][$3e1(0x154)]($38=>$38%0x2===0x1),
+findLi:[0x1,0x2,0x3,0x4][$3e1(0x155)]($39=>$39%0x2===0x1),
+incl:[0x1,0x2,NaN][$3e1(0x79)](NaN),
+inclF:[0x1,0x2,0x3][$3e1(0x79)](0x4),
+idx:[$3e1(0xb),$3e1(0x52),$3e1(0xb)][$3e1(0x6e)]($3e1(0xb)),
+lidx:[$3e1(0xb),$3e1(0x52),$3e1(0xb)][$3e1(0x70)]($3e1(0xb)),
+join:[0x1,$3e1(0xb),!0,null][$3e1(0x35)]($3e1(0xd)),
+con:[0x1,0x2][$3e1(0x11f)]([0x3],0x4,[0x5,[0x6]]),
+sla:[0x1,0x2,0x3,0x4,0x5][$3e1(0x72)](0x1,-0x1),
+sp:(()=>{if(0x1>0x2){let $31b=$3e1(0x1);let $31c=0x1d;for(let $31d=0x0;$31d<0x5;$31d++){$31c+=$31d*0x7;if($31c>0x63){break;}}}const a=[0x1,0x2,0x3,0x4,0x5];a[$3e1(0x95)](0x1,0x2,$3e1(0x2e));return a;})(),
+spr:(()=>{if(0x1>0x2){let $318=$3e1(0x1);let $319=0x1d;for(let $31a=0x0;$31a<0x5;$31a++){$319+=$31a*0x7;if($319>0x63){break;}}}const a=[0x1,0x2,0x3,0x4,0x5];const r=a[$3e1(0x95)](0x1,0x2);return[r,a];})(),
+sh:(()=>{if(0x1>0x2){let $315=$3e1(0x1);let $316=0x1d;for(let $317=0x0;$317<0x5;$317++){$316+=$317*0x7;if($316>0x63){break;}}}const a=[0x1,0x2,0x3];return[a[$3e1(0x156)](),a];})(),
+unsh:(()=>{if(0x1>0x2){let $312=$3e1(0x1);let $313=0x1d;for(let $314=0x0;$314<0x5;$314++){$313+=$314*0x7;if($313>0x63){break;}}}const a=[0x2,0x3];a[$3e1(0x157)](0x0,0x1);return a;})(),
+pop:(()=>{if(0x1>0x2){let $30f=$3e1(0x1);let $310=0x1d;for(let $311=0x0;$311<0x5;$311++){$310+=$311*0x7;if($310>0x63){break;}}}const a=[0x1];return[a[$3e1(0x158)](),a];})(),
+push:(()=>{if(0x1>0x2){let $30c=$3e1(0x1);let $30d=0x1d;for(let $30e=0x0;$30e<0x5;$30e++){$30d+=$30e*0x7;if($30d>0x63){break;}}}const a=[];const l=a[$3e1(0x2)](0x1,0x2);return[l,a];})(),
+copyW:(()=>{if(0x1>0x2){let $309=$3e1(0x1);let $30a=0x1d;for(let $30b=0x0;$30b<0x5;$30b++){$30a+=$30b*0x7;if($30a>0x63){break;}}}const a=[0x1,0x2,0x3,0x4];a[$3e1(0x159)](0x0,0x2);return a;})(),
+fillA:(()=>$403(0x5)[$3e1(0x98)](0x7)[$3e1(0xa)](($3a,$3b)=>$3a+$3b))(),
+atIdx:[0xa,((0x6*0x3)+0x2),((0xa*0x3)+0x0)][$3e1(0x88)](-0x1),
+keysA:[...[0xa,((0x6*0x3)+0x2)][$3e1(0x4)]()],
+valsA:[...[0xa,((0x6*0x3)+0x2)][$3e1(0x99)]()],
+entA:[...[0xa,((0x6*0x3)+0x2)][$3e1(0x9a)]()],
+withA:[0x1,0x2,0x3][$3e1(0x15a)](0x1,0x9),
+toS:[0x3,0x1,0x2][$3e1(0x15b)](),
+toR:[0x1,0x2,0x3][$3e1(0x15c)](),
+toSp:[0x1,0x2,0x3,0x4,0x5][$3e1(0x15d)](0x1,0x2,0x8),
+group:(()=>{if(0x1>0x2){let $306=$3e1(0x1);let $307=0x1d;for(let $308=0x0;$308<0x5;$308++){$307+=$308*0x7;if($307>0x63){break;}}}const o=$3fb[$3e1(0x15e)]([0x1,0x2,0x3,0x4,0x5],$3c=>$3c%0x2?$3e1(0x15f):$3e1(0x160));return[o[$3e1(0x15f)],o[$3e1(0x160)]];})(),
+idxParam:[0x1,0x2,0x3][$3e1(0xa)](($3d,i,$3e)=>$3d+i+$3e[$3e1(0x3a)]),
+cmpr:[$3e1(0x161),0x3,((0xa*0x3)+0x0)][$3e1(0x8d)](),
+lex:$3e1(0x162)[$3e1(0x6c)]($3e1(0x50))[$3e1(0x8d)](),
+node:[0x1,[0x2]][$3e1(0x3a)],
+del:(()=>{if(0x1>0x2){let $303=$3e1(0x1);let $304=0x1d;for(let $305=0x0;$305<0x5;$305++){$304+=$305*0x7;if($304>0x63){break;}}}const a=[0x1,0x2,0x3];delete a[0x1];return[a[$3e1(0x3a)],a[0x1],0x1 in a];})(),
+expand:[0x0,...[0x1,0x2],0x3,...[0x4]],
+spliceAdd:(()=>{if(0x1>0x2){let $300=$3e1(0x1);let $301=0x1d;for(let $302=0x0;$302<0x5;$302++){$301+=$302*0x7;if($301>0x63){break;}}}const a=[0x1,0x5];a[$3e1(0x95)](0x1,0x0,0x2,0x3,0x4);return a;})(),
+twoDim:[[0x1,0x2],[0x3,0x4]][$3e1(0xa)]($3f=>$3f[$3e1(0xa)]($40=>$40*0xa)[$3e1(0x35)]($3e1(0x94))),
+reverse2:[$3e1(0xb),$3e1(0x52),$3e1(0xbb)][$3e1(0x153)](),
+stable:[0x1,0x3,0x2,0x2,0x1][$3e1(0x8d)](),
+};
+const COLL={
+setArr:[...new $404([0x3,0x1,0x2,0x1])],
+setSz:new $404($3e1(0x163))[$3e1(0xa9)],
+setHas:new $404([0x1])[$3e1(0x7)](0x1),
+setAdd:(()=>{if(0x1>0x2){let $2fd=$3e1(0x1);let $2fe=0x1d;for(let $2ff=0x0;$2ff<0x5;$2ff++){$2fe+=$2ff*0x7;if($2fe>0x63){break;}}}const s=new $404();s[$3e1(0x164)](0x1)[$3e1(0x164)](0x1)[$3e1(0x164)](0x2);return[...s];})(),
+setDel:(()=>{if(0x1>0x2){let $2fa=$3e1(0x1);let $2fb=0x1d;for(let $2fc=0x0;$2fc<0x5;$2fc++){$2fb+=$2fc*0x7;if($2fb>0x63){break;}}}const s=new $404([$3e1(0xb),$3e1(0x52)]);s[$3e1(0xbd)]($3e1(0xb));return[...s];})(),
+setIter:(()=>{if(0x1>0x2){let $2f7=$3e1(0x1);let $2f8=0x1d;for(let $2f9=0x0;$2f9<0x5;$2f9++){$2f8+=$2f9*0x7;if($2f8>0x63){break;}}}const s=new $404([$3e1(0x2e),$3e1(0xa7)]);let acc=$3e1(0x3);for(const v of s)acc+=v;return acc;})(),
+sKeys:[...new $404([0x5,0x6])[$3e1(0x4)]()],
+sVals:[...new $404([0x5,0x6])[$3e1(0x99)]()],
+sEnts:[...new $404([0x5,0x6])[$3e1(0x9a)]()],
+mapArr:[...new $3fc([[$3e1(0xb),0x1],[$3e1(0x52),0x2]])],
+mapGet:new $3fc([[$3e1(0x2e),0x9]])[$3e1(0x8)]($3e1(0x2e)),
+mapMiss:new $3fc()[$3e1(0x8)]($3e1(0xbc)),
+mapHas:new $3fc([[$3e1(0xb),0x1]])[$3e1(0x7)]($3e1(0xb)),
+mapSet:(()=>{if(0x1>0x2){let $2f4=$3e1(0x1);let $2f5=0x1d;for(let $2f6=0x0;$2f6<0x5;$2f6++){$2f5+=$2f6*0x7;if($2f5>0x63){break;}}}const m=new $3fc();m[$3e1(0x9)]($3e1(0x165),0x1)[$3e1(0x9)]($3e1(0x165),0x2)[$3e1(0x9)]($3e1(0x166),0x3);return[m[$3e1(0x8)]($3e1(0x165)),[...m]];})(),
+mapDel:(()=>{if(0x1>0x2){let $2f1=$3e1(0x1);let $2f2=0x1d;for(let $2f3=0x0;$2f3<0x5;$2f3++){$2f2+=$2f3*0x7;if($2f2>0x63){break;}}}const m=new $3fc([[$3e1(0xb),0x1],[$3e1(0x52),0x2]]);m[$3e1(0xbd)]($3e1(0xb));return[...m];})(),
+wm:(()=>{if(0x1>0x2){let $2ee=$3e1(0x1);let $2ef=0x1d;for(let $2f0=0x0;$2f0<0x5;$2f0++){$2ef+=$2f0*0x7;if($2ef>0x63){break;}}}const w=new $40a();const o={};w[$3e1(0x9)](o,0x5);return w[$3e1(0x7)](o)&&w[$3e1(0x8)](o)===0x5;})(),
+ws:(()=>{if(0x1>0x2){let $2eb=$3e1(0x1);let $2ec=0x1d;for(let $2ed=0x0;$2ed<0x5;$2ed++){$2ec+=$2ed*0x7;if($2ec>0x63){break;}}}const w=new $40b();const o={};w[$3e1(0x164)](o);return w[$3e1(0x7)](o);})(),
+mapSize:new $3fc([[$3e1(0xb),0x1],[$3e1(0x52),0x2],[$3e1(0xbb),0x3]])[$3e1(0xa9)],
+mapLoop:(()=>{if(0x1>0x2){let $2e8=$3e1(0x1);let $2e9=0x1d;for(let $2ea=0x0;$2ea<0x5;$2ea++){$2e9+=$2ea*0x7;if($2e9>0x63){break;}}}const m=new $3fc([[$3e1(0xb),0x1],[$3e1(0x52),0x2]]);let s=$3e1(0x3);for(const[k,v]of m)s+=k+v;return s;})(),
+chain:new $3fc()[$3e1(0x9)](0x1,$3e1(0x32))[$3e1(0x8)](0x1),
+mapKeyObj:(()=>{if(0x1>0x2){let $2e5=$3e1(0x1);let $2e6=0x1d;for(let $2e7=0x0;$2e7<0x5;$2e7++){$2e6+=$2e7*0x7;if($2e6>0x63){break;}}}const o={id:0x1};const m=new $3fc();m[$3e1(0x9)](o,$3e1(0x167));return m[$3e1(0x8)](o);})(),
+setClear:(()=>{if(0x1>0x2){let $2e2=$3e1(0x1);let $2e3=0x1d;for(let $2e4=0x0;$2e4<0x5;$2e4++){$2e3+=$2e4*0x7;if($2e3>0x63){break;}}}const s=new $404([0x1,0x2]);s[$3e1(0x168)]();return s[$3e1(0xa9)];})(),
+mapValues:[...new $3fc([[$3e1(0xb),0x1],[$3e1(0x52),0x2]])[$3e1(0x99)]()],
+};
+const TARR=(()=>{if(0x1>0x2){let $2df=$3e1(0x1);let $2e0=0x1d;for(let $2e1=0x0;$2e1<0x5;$2e1++){$2e0+=$2e1*0x7;if($2e0>0x63){break;}}}
+const u8=new $40c([0x3,0x1,0x4,0x1,0x5,0x9]);
+const i16=new $40d([-0x1,0x0,0x1,((((((((((0x5*0x5)+0x1)*0x7)+0x5)*0x5)+0x1)*0x5)+0x1)*0x7)+0x0),-((((((((((0xa*0x3)+0x0)*0x3)+0x0)*0x3)+0x0)*0xb)+0x8)*0xb)+0xa)]);
+const i8=new $40e([((((0x1*0xb)+0x7)*0x7)+0x1),-((0xb*0xb)+0x7),-0x1,0x1]);
+const u16=new $40f([((((((((((((0x5*0xb)+0x3)*0x5)+0x1)*0x5)+0x1)*0x5)+0x1)*0x3)+0x2)*0x3)+0x0),0x0,((((0xa*0x5)+0x1)*0x5)+0x1)]);
+const u32=new $410([0x0,((((((((((((((((((((((0x9*0xb)+0x4)*0xb)+0x5)*0x7)+0x1)*0xb)+0x6)*0x3)+0x1)*0x5)+0x1)*0x3)+0x2)*0xb)+0x3)*0xb)+0x0)*0x3)+0x1)*0x3)+0x0),((((((((((0xd*0x3)+0x1)*0xb)+0x8)*0xb)+0xa)*0x5)+0x1)*0x5)+0x1)]);
+const f32=new $411([0.1,0.2,0x1/0x3]);
+const f64=new $412([1.5,-2.5]);
+const u8c=new $413([-0x5,0x0,((((((0x2*0xb)+0x6)*0x3)+0x1)*0x3)+0x0),((((((0x3*0xb)+0x0)*0x3)+0x1)*0x3)+0x0)]);
+const bi64=new $414([1n,-1n,9007199254740993n]);
+const ubi64=new $415([1n,18446744073709551615n]);
+const a=new $40c([0x1,0x2,0x3,0x4]);
+const sub=a[$3e1(0x169)](0x1,0x3);
+sub[0x0]=0x9;
+const f=new $412(0x3);
+f[$3e1(0x98)](2.5);
+const cp=new $416([0x1,0x2,0x3,0x4,0x5]);
+cp[$3e1(0x159)](0x1,0x3);
+return{
+u8:[...u8],
+i16:[...i16],
+i8:[...i8],
+u16:[...u16],
+u32:[...u32],
+f32:[...f32],
+f64:[...f64],
+u8c:[...u8c],
+bi64:[...bi64][$3e1(0xa)]($400),
+ubi64:[...ubi64][$3e1(0xa)]($400),
+len:u8[$3e1(0x3a)]+$3e1(0x4e)+u8[$3e1(0x16a)],
+sub:[...a,...sub],
+fill:[...f],
+cp:[...cp],
+set:(()=>{if(0x1>0x2){let $2dc=$3e1(0x1);let $2dd=0x1d;for(let $2de=0x0;$2de<0x5;$2de++){$2dd+=$2de*0x7;if($2dd>0x63){break;}}}const x=new $40c(0x4);x[$3e1(0x9)]([0x9,0x8],0x1);return[...x];})(),
+sorted:[...new $411([3.5,1.25,0x2])][$3e1(0x8d)](),
+reverse:[...new $40e([0x1,-0x2,0x3])][$3e1(0x153)](),
+index:new $40e([0x4,0x5,0x6])[$3e1(0x6e)](0x5),
+sum:[...u8][$3e1(0x13)](($41,$42)=>$41+$42,0x0),
+cplen:[...new $40c([0x1,0x2])][$3e1(0x3a)],
+};
+})();
+const ABV=(()=>{if(0x1>0x2){let $2d9=$3e1(0x1);let $2da=0x1d;for(let $2db=0x0;$2db<0x5;$2db++){$2da+=$2db*0x7;if($2da>0x63){break;}}}
+const ab=new $417(((0x3*0x5)+0x1));
+const dv=new $418(ab);
+dv[$3e1(0x16b)](0x0,((((((0x2*0xb)+0x6)*0x3)+0x1)*0x3)+0x0));
+dv[$3e1(0x16c)](0x2,-((((0x7*0xd)+0x3)*0xd)+0xc),!0);
+dv[$3e1(0x16d)](0x4,((((((((((((((((((((0x1*0xb)+0x7)*0xd)+0x0)*0x5)+0x1)*0x7)+0x5)*0xb)+0x6)*0x7)+0x6)*0x7)+0x3)*0x5)+0x1)*0xd)+0x1)*0xd)+0xc),!0);
+dv[$3e1(0x16e)](0x8,$3fd[$3e1(0xc6)],!0);
+const back=new $40c(ab);
+const d2=new $418(new $417(0x2));
+d2[$3e1(0x16c)](0x0,-0x1,!1);
+return{
+abLen:ab[$3e1(0x16a)],
+u8:dv[$3e1(0x16f)](0x0),
+i16:dv[$3e1(0x170)](0x2,!0),
+u32:dv[$3e1(0x171)](0x4,!0),
+f64:dv[$3e1(0x172)](0x8,!0),
+be:d2[$3e1(0x170)](0x0,!1),
+t00:dv[$3e1(0x173)](0x4,!0),
+slice:[...back[$3e1(0x72)](0x4,0x8)],
+bytes:[...back],
+};
+})();
+const BUF=(()=>{if(0x1>0x2){let $2d6=$3e1(0x1);let $2d7=0x1d;for(let $2d8=0x0;$2d8<0x5;$2d8++){$2d7+=$2d8*0x7;if($2d7>0x63){break;}}}
+const b=$419[$3e1(0x96)]([0x1,0x2,0x3,0x4]);
+const s=$419[$3e1(0x96)]($3e1(0x174));
+return{
+u32be:b[$3e1(0x175)](0x0),
+u16le:b[$3e1(0x176)](0x2),
+sw:[...b[$3e1(0x177)]()],
+cat:$419[$3e1(0x11f)]([$419[$3e1(0x96)]([0x9]),$419[$3e1(0x96)]([0x8])])[$3e1(0xe3)]($3e1(0x178)),
+str:s[$3e1(0xe3)]($3e1(0x179)),
+hex:$419[$3e1(0x96)]($3e1(0x17a),$3e1(0x178))[$3e1(0xe3)]($3e1(0x178)),
+b64:$419[$3e1(0x96)]($3e1(0x17b))[$3e1(0xe3)]($3e1(0x17c)),
+json:$419[$3e1(0x96)]([((0x8*0xd)+0x0),((((0xb*0x3)+0x2)*0x3)+0x0)])[$3e1(0xe3)](),
+alloc:[...$419[$3e1(0x17d)](0x3,0x5)],
+fill:[...$419[$3e1(0x96)]([0x1,0x2,0x3])[$3e1(0x98)](0x7,0x1)],
+lens:$419[$3e1(0x96)]($3e1(0x81))[$3e1(0x3a)]+$3e1(0x4e)+$419[$3e1(0x96)]($3e1(0x81))[$3e1(0x16a)],
+};
+})();
+const OBD=(()=>{if(0x1>0x2){let $2d3=$3e1(0x1);let $2d4=0x1d;for(let $2d5=0x0;$2d5<0x5;$2d5++){$2d4+=$2d5*0x7;if($2d4>0x63){break;}}}
+const o={};
+$3fb[$3e1(0x17e)](o,$3e1(0x17f),{value:((0x7*0xd)+0x8),enumerable:!1,configurable:!1,writable:!1});
+$3fb[$3e1(0x17e)](o,$3e1(0x180),{get(){if(0x1>0x2){let $2d0=$3e1(0x1);let $2d1=0x1d;for(let $2d2=0x0;$2d2<0x5;$2d2++){$2d1+=$2d2*0x7;if($2d1>0x63){break;}}}return this[$3e1(0x181)]*0x2;},set($9b){if(0x1>0x2){let $2cd=$3e1(0x1);let $2ce=0x1d;for(let $2cf=0x0;$2cf<0x5;$2cf++){$2ce+=$2cf*0x7;if($2ce>0x63){break;}}}this[$3e1(0x181)]=$9b;},enumerable:!0});
+o[$3e1(0x180)]=((0x4*0x5)+0x1);
+const dh=$3fb[$3e1(0x182)](o,$3e1(0x17f));
+$3fb[$3e1(0x9e)]({});
+$3fb[$3e1(0xa0)]({});
+return{
+hidden:o[$3e1(0x17f)],
+acc:o[$3e1(0x180)],
+names:$3fb[$3e1(0xa2)](o),
+keys:$3fb[$3e1(0x4)](o),
+hasOwn:o[$3e1(0xaf)]($3e1(0x17f)),
+inProto:$3e1(0xe3)in o,
+proto:$3fb[$3e1(0xa3)][$3e1(0x183)](o),
+descr:{value:dh[$3e1(0x184)],en:dh[$3e1(0x185)],cfg:dh[$3e1(0x186)],wr:dh[$3e1(0x187)]},
+getDesc:(()=>{if(0x1>0x2){let $2ca=$3e1(0x1);let $2cb=0x1d;for(let $2cc=0x0;$2cc<0x5;$2cc++){$2cb+=$2cc*0x7;if($2cb>0x63){break;}}}const d=$3fb[$3e1(0x182)](o,$3e1(0x180));return typeof d[$3e1(0x8)];})(),
+entries:$3fb[$3e1(0x9a)]({x:0x1,y:0x2}),
+values:$3fb[$3e1(0x99)]({x:0x1,y:0x2}),
+from:$3fb[$3e1(0x9b)]([[$3e1(0xb),0x1],[$3e1(0x52),0x2]]),
+assign:$3fb[$3e1(0x9c)]({base:0x1},{mid:0x2},{base:0x3,last:0x4}),
+spread:{...{a:0x1},...{b:0x2,a:0x9}},
+keys2:$3fb[$3e1(0x4)]($3fb[$3e1(0xab)](null)),
+isFrozen:$3fb[$3e1(0x9f)](o),
+isSealed:$3fb[$3e1(0xa1)](o),
+isExt:$3fb[$3e1(0x188)](o),
+precoping:$3fb[$3e1(0x189)]({})instanceof $3fb,
+stringtag:$3fb[$3e1(0xa3)][$3e1(0xe3)][$3e1(0xae)]([])+$3e1(0xd)+$3fb[$3e1(0xa3)][$3e1(0xe3)][$3e1(0xae)](null),
+createProto:$3fb[$3e1(0xab)]({q:0x1})[$3e1(0x18a)],
+own:$3fb[$3e1(0x18b)]([])[$3e1(0x3a)],
+lookup:o[$3e1(0xaf)][$3e1(0x18c)]?o[$3e1(0xaf)]($3e1(0x17f)):!1,
+};
+})();
+const DELX=(()=>{if(0x1>0x2){let $2c7=$3e1(0x1);let $2c8=0x1d;for(let $2c9=0x0;$2c9<0x5;$2c9++){$2c8+=$2c9*0x7;if($2c8>0x63){break;}}}const o={a:0x1,b:0x2};delete o[$3e1(0xb)];return[o[$3e1(0xb)],o[$3e1(0x52)],$3e1(0xb)in o];})();
+const TSOF={
+typeofs:[typeof $3e1(0x18d),typeof 0x1,typeof!0,typeof void 0,typeof{},typeof[],typeof(()=>{if(0x1>0x2){let $2c4=$3e1(0x1);let $2c5=0x1d;for(let $2c6=0x0;$2c6<0x5;$2c6++){$2c5+=$2c6*0x7;if($2c5>0x63){break;}}}}),typeof null,typeof $41a(),typeof new $41b()],
+};
+const ERRS=(()=>{if(0x1>0x2){let $2c1=$3e1(0x1);let $2c2=0x1d;for(let $2c3=0x0;$2c3<0x5;$2c3++){$2c2+=$2c3*0x7;if($2c2>0x63){break;}}}
+const mk=($43)=>{if(0x1>0x2){let $2be=$3e1(0x1);let $2bf=0x1d;for(let $2c0=0x0;$2c0<0x5;$2c0++){$2bf+=$2c0*0x7;if($2bf>0x63){break;}}}
+try{
+const v=$43();
+return $3e1(0x18e)+v;
+}catch(e){
+return e[$3e1(0x18f)][$3e1(0x1b)]+$3e1(0x4e)+e[$3e1(0x4b)];
 }
+};
+return{
+type:mk(()=>{if(0x1>0x2){let $2bb=$3e1(0x1);let $2bc=0x1d;for(let $2bd=0x0;$2bd<0x5;$2bd++){$2bc+=$2bd*0x7;if($2bc>0x63){break;}}}const a=null;return a[$3e1(0x2e)];}),
+ref:mk(()=>{if(0x1>0x2){let $2b8=$3e1(0x1);let $2b9=0x1d;for(let $2ba=0x0;$2ba<0x5;$2ba++){$2b9+=$2ba*0x7;if($2b9>0x63){break;}}}return undeclaredzz;}),
+syn:mk(()=>{if(0x1>0x2){let $2b5=$3e1(0x1);let $2b6=0x1d;for(let $2b7=0x0;$2b7<0x5;$2b7++){$2b6+=$2b7*0x7;if($2b6>0x63){break;}}}throw new $41c($3e1(0x190));}),
+range:mk(()=>{if(0x1>0x2){let $2b2=$3e1(0x1);let $2b3=0x1d;for(let $2b4=0x0;$2b4<0x5;$2b4++){$2b3+=$2b4*0x7;if($2b3>0x63){break;}}}return(new $403(0x2**((0x4*0x7)+0x4)))[$3e1(0x72)](0x0);}),
+tofix:mk(()=>{if(0x1>0x2){let $2af=$3e1(0x1);let $2b0=0x1d;for(let $2b1=0x0;$2b1<0x5;$2b1++){$2b0+=$2b1*0x7;if($2b0>0x63){break;}}}return(((0xb*0xb)+0x2))[$3e1(0xf4)](((((0x6*0x3)+0x2)*0x5)+0x1));}),
+circ:mk(()=>{if(0x1>0x2){let $2ac=$3e1(0x1);let $2ad=0x1d;for(let $2ae=0x0;$2ae<0x5;$2ae++){$2ad+=$2ae*0x7;if($2ad>0x63){break;}}}const o={a:0x1};o[$3e1(0x191)]=o;return $41d[$3e1(0x192)](o);}),
+finn:mk(()=>{if(0x1>0x2){let $2a9=$3e1(0x1);let $2aa=0x1d;for(let $2ab=0x0;$2ab<0x5;$2ab++){$2aa+=$2ab*0x7;if($2aa>0x63){break;}}}let ran=!1;try{throw new $401($3e1(0x52));}finally{ran=!0;}return ran;}),
+nest:mk(()=>{if(0x1>0x2){let $2a6=$3e1(0x1);let $2a7=0x1d;for(let $2a8=0x0;$2a8<0x5;$2a8++){$2a7+=$2a8*0x7;if($2a7>0x63){break;}}}
+try{try{throw new $401($3e1(0x193));}finally{}}catch(e){return e[$3e1(0x4b)];}
+}),
+errCls:mk(()=>{if(0x1>0x2){let $2a3=$3e1(0x1);let $2a4=0x1d;for(let $2a5=0x0;$2a5<0x5;$2a5++){$2a4+=$2a5*0x7;if($2a4>0x63){break;}}}class MyE extends $401{}throw new MyE($3e1(0x194));}),
+eor:mk(()=>{if(0x1>0x2){let $2a0=$3e1(0x1);let $2a1=0x1d;for(let $2a2=0x0;$2a2<0x5;$2a2++){$2a1+=$2a2*0x7;if($2a1>0x63){break;}}}throw{code:0x1};}),
+protoErr:mk(()=>{if(0x1>0x2){let $29d=$3e1(0x1);let $29e=0x1d;for(let $29f=0x0;$29f<0x5;$29f++){$29e+=$29f*0x7;if($29e>0x63){break;}}}return $3ff[$3e1(0xa3)][$3e1(0x1b)];}),
+strictim:mk(()=>{if(0x1>0x2){let $29a=$3e1(0x1);let $29b=0x1d;for(let $29c=0x0;$29c<0x5;$29c++){$29b+=$29c*0x7;if($29b>0x63){break;}}}
+const obj={};$3fb[$3e1(0x17e)](obj,$3e1(0x195),{value:0x1,writable:!1});
+try{
+obj[$3e1(0x195)]=0x2;
+return $3e1(0x47);
+}catch(e){
+return e[$3e1(0x18f)][$3e1(0x1b)];
+}
+}),
+};
+})();
+const PROX=(()=>{if(0x1>0x2){let $297=$3e1(0x1);let $298=0x1d;for(let $299=0x0;$299<0x5;$299++){$298+=$299*0x7;if($298>0x63){break;}}}
+const target={a:0x1,b:0x2};
+const seen=[];
+const p=new $41e(target,{
+get($9c,k,$9d){if(0x1>0x2){let $294=$3e1(0x1);let $295=0x1d;for(let $296=0x0;$296<0x5;$296++){$295+=$296*0x7;if($295>0x63){break;}}}var $e2=$3e1(0xc).split($3e1(0xd)),$e3=0x0;while(!![]){switch($e2[$e3++]){case $3e1(0xe):seen[$3e1(0x2)]($3e1(0x196)+$400(k));;continue;case $3e1(0xf):return $9c[k];;continue;}break;}},
+set($9e,k,$9f){if(0x1>0x2){let $291=$3e1(0x1);let $292=0x1d;for(let $293=0x0;$293<0x5;$293++){$292+=$293*0x7;if($292>0x63){break;}}}var $e0=$3e1(0x197).split($3e1(0xd)),$e1=0x0;while(!![]){switch($e0[$e1++]){case $3e1(0xe):seen[$3e1(0x2)]($3e1(0x198)+$400(k));;continue;case $3e1(0xf):$9e[k]=$9f*0x2;;continue;case $3e1(0xa5):return!0;;continue;}break;}},
+has($a0,$a1){if(0x1>0x2){let $28e=$3e1(0x1);let $28f=0x1d;for(let $290=0x0;$290<0x5;$290++){$28f+=$290*0x7;if($28f>0x63){break;}}}var $de=$3e1(0xc).split($3e1(0xd)),$df=0x0;while(!![]){switch($de[$df++]){case $3e1(0xe):seen[$3e1(0x2)]($3e1(0x199)+$400($a1));;continue;case $3e1(0xf):return $a1 in $a0;;continue;}break;}},
 });
-return ({type:(mk(()=>{const a=null;
-return (a.x);
-})),ref:(mk(()=>{return undeclaredzz;
-})),syn:(mk(()=>{throw (new SyntaxError("bad syntax"));
-})),range:(mk(()=>{return ((new Array((2**32))).slice(0));
-})),tofix:(mk(()=>{return ((123).toFixed(101));
-})),circ:(mk(()=>{const o=({a:1});
-(((o.self)=o));
-return (JSON.stringify(o));
-})),finn:(mk(()=>{let ran=false;
-try{throw (new Error("b"));
-}finally{((ran=true));
-}
-return ran;
-})),nest:(mk(()=>{try{try{throw (new Error("inner"));
-}finally{
-}
-}catch(e){return (e.message);
-}
-})),errCls:(mk(()=>{class MyE extends Error{}
-throw (new MyE("mine"));
-})),eor:(mk(()=>{throw ({code:1});
-})),protoErr:(mk(()=>{return ((TypeError.prototype).name);
-})),strictim:(mk(()=>{const obj=({});
-(Object.defineProperty(obj,"r",{value:1,writable:false}));
-try{(((obj.r)=2));
-return "ok";
-}catch(e){return ((e.constructor).name);
-}
-}))});
-})());
-const PROX=((()=>{const target=({a:1,b:2});
-const seen=([]);
-const p=(new Proxy(target,{get(t,k,r){(seen.push(("get:"+(String(k)))));
-return (t[k]);
-},set(t,k,v){(seen.push(("set:"+(String(k)))));
-(((t[k])=((v*2))));
-return true;
-},has(t,k){(seen.push(("has:"+(String(k)))));
-return ((k in t));
-}}));
-(((p.c)=3));
-const got=(p.a);
-return ({got:got,a2:(p.a),hasB:(("b" in p)),tgt:target,seen:seen});
-})());
-const SYMS=((()=>{const s1=(Symbol("s1"));
-const s2=(Symbol("s2"));
-const o=({[s1]:"one",[s2]:"two"});
-(((o[s2])="TWO"));
-const iterable=({});
-(((iterable[Symbol.iterator])=(function* iterfn(){(yield 1);
-(yield 2);
-})));
-const desc=((Object.getOwnPropertySymbols(o))[0]);
-return ({s1:(o[s1]),s2:(o[s2]),fromIter:([...iterable]),desc:(String(desc)),keys:((((((Object.getOwnPropertySymbols(o)).length)+":"))+((Object.keys(o)).length))),named:(((Symbol.for("x"))===(Symbol.for("x")))),keyFor:(Symbol.keyFor(Symbol.for("x"))),descr:((Object.getOwnPropertyDescriptor(o,s1)).value),well:((Symbol.iterator).toString()),typeofSym:(typeof (Symbol("q")))});
-})());
-const GITZ=((()=>{function* naturals(){let i=0;
-while(true){(yield (i++));
-}
-}
-function* skip(stop){let n=0;
-while(((n<stop))){(yield n);
-((n+=2));
-}
-}
-function* nest(){(yield 1);
-(yield* (skip(4)));
-(yield 9);
-}
-const g=(naturals());
-(g.next());
-(g.next());
-(g.next());
-return ({next:((g.next()).value),skip:([...(skip(7))]),nest:([...(nest())]),first:(((((((naturals()).next()).value)===0))?"ok":"bad")),back:((()=>{const it=(skip(10));
-const a=(it.next());
-const b=(it.return(99));
-return ([a.done,a.value,b.done,b.value]);
-})()),manual:((()=>{const iter=(skip(5));
-const vals=([]);
+p[$3e1(0xbb)]=0x3;
+const got=p[$3e1(0xb)];
+return{got,a2:p[$3e1(0xb)],hasB:$3e1(0x52)in p,tgt:target,seen};
+})();
+const SYMS=(()=>{if(0x1>0x2){let $28b=$3e1(0x1);let $28c=0x1d;for(let $28d=0x0;$28d<0x5;$28d++){$28c+=$28d*0x7;if($28c>0x63){break;}}}
+const s1=$41a($3e1(0x19a));
+const s2=$41a($3e1(0x19b));
+const o={[s1]:$3e1(0x32),[s2]:$3e1(0x33)};
+o[s2]=$3e1(0x19c);
+const iterable={};
+iterable[$41a[$3e1(0x19d)]]=function*iterfn(){if(0x1>0x2){let $288=$3e1(0x1);let $289=0x1d;for(let $28a=0x0;$28a<0x5;$28a++){$289+=$28a*0x7;if($289>0x63){break;}}}var $dc=$3e1(0xc).split($3e1(0xd)),$dd=0x0;while(!![]){switch($dc[$dd++]){case $3e1(0xe):yield 0x1;;continue;case $3e1(0xf):yield 0x2;;continue;}break;}};
+const desc=$3fb[$3e1(0x18b)](o)[0x0];
+return{
+s1:o[s1],
+s2:o[s2],
+fromIter:[...iterable],
+desc:$400(desc),
+keys:$3fb[$3e1(0x18b)](o)[$3e1(0x3a)]+$3e1(0x4e)+$3fb[$3e1(0x4)](o)[$3e1(0x3a)],
+named:$41a[$3e1(0x19e)]($3e1(0x2e))===$41a[$3e1(0x19e)]($3e1(0x2e)),
+keyFor:$41a[$3e1(0x19f)]($41a[$3e1(0x19e)]($3e1(0x2e))),
+descr:$3fb[$3e1(0x182)](o,s1)[$3e1(0x184)],
+well:$41a[$3e1(0x19d)][$3e1(0xe3)](),
+typeofSym:typeof $41a($3e1(0x18a)),
+};
+})();
+const GITZ=(()=>{if(0x1>0x2){let $285=$3e1(0x1);let $286=0x1d;for(let $287=0x0;$287<0x5;$287++){$286+=$287*0x7;if($286>0x63){break;}}}
+function*naturals(){if(0x1>0x2){let $282=$3e1(0x1);let $283=0x1d;for(let $284=0x0;$284<0x5;$284++){$283+=$284*0x7;if($283>0x63){break;}}}let i=0x0;while(!0){yield i++;}}
+function*skip($a2){if(0x1>0x2){let $27f=$3e1(0x1);let $280=0x1d;for(let $281=0x0;$281<0x5;$281++){$280+=$281*0x7;if($280>0x63){break;}}}let n=0x0;while(n<$a2){yield n;n+=0x2;}}
+function*nest(){if(0x1>0x2){let $27c=$3e1(0x1);let $27d=0x1d;for(let $27e=0x0;$27e<0x5;$27e++){$27d+=$27e*0x7;if($27d>0x63){break;}}}var $da=$3e1(0x197).split($3e1(0xd)),$db=0x0;while(!![]){switch($da[$db++]){case $3e1(0xe):yield 0x1;;continue;case $3e1(0xf):yield*skip(0x4);;continue;case $3e1(0xa5):yield 0x9;;continue;}break;}}
+const g=naturals();
+g[$3e1(0x1a0)]();
+g[$3e1(0x1a0)]();
+g[$3e1(0x1a0)]();
+return{
+next:g[$3e1(0x1a0)]()[$3e1(0x184)],
+skip:[...skip(0x7)],
+nest:[...nest()],
+first:naturals()[$3e1(0x1a0)]()[$3e1(0x184)]===0x0?$3e1(0x47):$3e1(0x40),
+back:(()=>{if(0x1>0x2){let $279=$3e1(0x1);let $27a=0x1d;for(let $27b=0x0;$27b<0x5;$27b++){$27a+=$27b*0x7;if($27a>0x63){break;}}}const it=skip(0xa);const a=it[$3e1(0x1a0)]();const b=it[$3e1(0x1a1)](((0x7*0xd)+0x8));return[a[$3e1(0x1a2)],a[$3e1(0x184)],b[$3e1(0x1a2)],b[$3e1(0x184)]];})(),
+manual:(()=>{if(0x1>0x2){let $276=$3e1(0x1);let $277=0x1d;for(let $278=0x0;$278<0x5;$278++){$277+=$278*0x7;if($277>0x63){break;}}}
+const iter=skip(0x5);
+const vals=[];
 let r;
-while((!(((r=(iter.next()))).done)))(vals.push(r.value));
+while(!(r=iter[$3e1(0x1a0)]())[$3e1(0x1a2)])vals[$3e1(0x2)](r[$3e1(0x184)]);
 return vals;
-})()),near:((()=>{const it=(naturals());
-(it.next());
-(it.next());
-return ((it.next()).value);
-})())});
-})());
-function RECN(n){if(((n<=1)))return n;
-return (((RECN((n-1)))+(RECN((n-2)))));
+})(),
+near:(()=>{if(0x1>0x2){let $273=$3e1(0x1);let $274=0x1d;for(let $275=0x0;$275<0x5;$275++){$274+=$275*0x7;if($274>0x63){break;}}}const it=naturals();it[$3e1(0x1a0)]();it[$3e1(0x1a0)]();return it[$3e1(0x1a0)]()[$3e1(0x184)];})(),
+};
+})();
+function RECN($a3){if(0x1>0x2){let $270=$3e1(0x1);let $271=0x1d;for(let $272=0x0;$272<0x5;$272++){$271+=$272*0x7;if($271>0x63){break;}}}var $d8=$3e1(0xc).split($3e1(0xd)),$d9=0x0;while(!![]){switch($d8[$d9++]){case $3e1(0xe):if($a3<=0x1)return $a3;;continue;case $3e1(0xf):return RECN($a3-0x1)+RECN($a3-0x2);;continue;}break;}}
+function MUTA($a4){if(0x1>0x2){let $26d=$3e1(0x1);let $26e=0x1d;for(let $26f=0x0;$26f<0x5;$26f++){$26e+=$26f*0x7;if($26e>0x63){break;}}}return $a4===0x0?0:MUTB($a4-0x1);}
+function MUTB($a5){if(0x1>0x2){let $26a=$3e1(0x1);let $26b=0x1d;for(let $26c=0x0;$26c<0x5;$26c++){$26b+=$26c*0x7;if($26b>0x63){break;}}}return $a5===0x0?1:MUTA($a5-0x1);}
+function ARGX(){if(0x1>0x2){let $267=$3e1(0x1);let $268=0x1d;for(let $269=0x0;$269<0x5;$269++){$268+=$269*0x7;if($268>0x63){break;}}}return[...arguments];}
+function TAG($a6,...vals){if(0x1>0x2){let $264=$3e1(0x1);let $265=0x1d;for(let $266=0x0;$266<0x5;$266++){$265+=$266*0x7;if($265>0x63){break;}}}
+return $a6[$3e1(0xa)](($44,$45)=>$44+($45<vals[$3e1(0x3a)]?$3e1(0x53)+vals[$45]+$3e1(0x1a3):$3e1(0x3)))[$3e1(0x35)]($3e1(0x3));
 }
-function MUTA(n){return ((((n===0))?0:(MUTB((n-1)))));
+const RECS={fib:RECN(((0x1*0xb)+0x7)),mut:[MUTA(0xa),MUTB(0xa)],arg:ARGX(0x1,$3e1(0x33),!0)};
+function NTC(){if(0x1>0x2){let $261=$3e1(0x1);let $262=0x1d;for(let $263=0x0;$263<0x5;$263++){$262+=$263*0x7;if($262>0x63){break;}}}return typeof new.target===$3e1(0x1a4)?$3e1(0x1a5):$3e1(0x1a6);}
+class ChildN{
+constructor(){if(0x1>0x2){let $25e=$3e1(0x1);let $25f=0x1d;for(let $260=0x0;$260<0x5;$260++){$25f+=$260*0x7;if($25f>0x63){break;}}}this[$3e1(0x1a7)]=new.target===ChildN?$3e1(0x1a8):$3e1(0x38);}
 }
-function MUTB(n){return ((((n===0))?1:(MUTA((n-1)))));
+class Mother2{
+static count=0x0;
+constructor($a7){if(0x1>0x2){let $25b=$3e1(0x1);let $25c=0x1d;for(let $25d=0x0;$25d<0x5;$25d++){$25c+=$25d*0x7;if($25c>0x63){break;}}}var $d6=$3e1(0xc).split($3e1(0xd)),$d7=0x0;while(!![]){switch($d6[$d7++]){case $3e1(0xe):this[$3e1(0x1b)]=$a7;;continue;case $3e1(0xf):Mother2[$3e1(0x1a9)]++;;continue;}break;}}
+greet(){if(0x1>0x2){let $258=$3e1(0x1);let $259=0x1d;for(let $25a=0x0;$25a<0x5;$25a++){$259+=$25a*0x7;if($259>0x63){break;}}}return $3e1(0x1aa)+this[$3e1(0x1b)];}
+static feed(){if(0x1>0x2){let $255=$3e1(0x1);let $256=0x1d;for(let $257=0x0;$257<0x5;$257++){$256+=$257*0x7;if($256>0x63){break;}}}return $3e1(0x1ab);}
 }
-function ARGX(){return ([...arguments]);
+class Daughter2 extends Mother2{
+#seed;
+constructor($a8,$a9){if(0x1>0x2){let $252=$3e1(0x1);let $253=0x1d;for(let $254=0x0;$254<0x5;$254++){$253+=$254*0x7;if($253>0x63){break;}}}var $d4=$3e1(0xc).split($3e1(0xd)),$d5=0x0;while(!![]){switch($d4[$d5++]){case $3e1(0xe):super($a8);;continue;case $3e1(0xf):this.#seed=$a9;;continue;}break;}}
+get secret(){if(0x1>0x2){let $24f=$3e1(0x1);let $250=0x1d;for(let $251=0x0;$251<0x5;$251++){$250+=$251*0x7;if($250>0x63){break;}}}return this.#seed;}
+set secret($aa){if(0x1>0x2){let $24c=$3e1(0x1);let $24d=0x1d;for(let $24e=0x0;$24e<0x5;$24e++){$24d+=$24e*0x7;if($24d>0x63){break;}}}this.#seed=$aa;}
+static feed(){if(0x1>0x2){let $249=$3e1(0x1);let $24a=0x1d;for(let $24b=0x0;$24b<0x5;$24b++){$24a+=$24b*0x7;if($24a>0x63){break;}}}return super[$3e1(0x1ac)]()+$3e1(0x1ad);}
+greetings(){if(0x1>0x2){let $246=$3e1(0x1);let $247=0x1d;for(let $248=0x0;$248<0x5;$248++){$247+=$248*0x7;if($247>0x63){break;}}}return super[$3e1(0x1ae)]()+$3e1(0x1af);}
+get[$41a[$3e1(0x1b0)]](){if(0x1>0x2){let $243=$3e1(0x1);let $244=0x1d;for(let $245=0x0;$245<0x5;$245++){$244+=$245*0x7;if($244>0x63){break;}}}return $3e1(0x1b1);}
 }
-function TAG(strings,...vals){return ((strings.map((s,i)=>(s+((((i<(vals.length)))?(((("{"+(vals[i])))+"}")):""))))).join(""));
+const motherx=new Mother2($3e1(0x19));
+const daughterx=new Daughter2($3e1(0x1b2),((0x6*0x7)+0x0));
+daughterx[$3e1(0x1b3)]=((0x7*0xd)+0x8);
+const CLSX={
+cnt:Mother2[$3e1(0x1a9)],
+greetM:motherx[$3e1(0x1ae)](),
+greetD:daughterx[$3e1(0x1ae)](),
+greetings:daughterx[$3e1(0x1b4)](),
+secret:daughterx[$3e1(0x1b3)],
+feedD:Daughter2[$3e1(0x1ac)](),
+inst:daughterx instanceof Mother2&&!(motherx instanceof Daughter2),
+tag:$3fb[$3e1(0xa3)][$3e1(0xe3)][$3e1(0xae)](daughterx),
+ntd:{plain:NTC(),constructed:new NTC(),child:new ChildN()[$3e1(0x1a7)]},
+};
+const DTS=(()=>{if(0x1>0x2){let $240=$3e1(0x1);let $241=0x1d;for(let $242=0x0;$242<0x5;$242++){$241+=$242*0x7;if($241>0x63){break;}}}
+const d0=new $41b(0x0);
+const d1=new $41b($3e1(0x1b5));
+const d2=new $41b($41b[$3e1(0x1b6)](((((((0x3*0x5)+0x1)*0xb)+0x7)*0xb)+0xa),0x5,0xf,0xa,((0x6*0x3)+0x2),((0xa*0x3)+0x0),((0xd*0x3)+0x1)));
+return{
+t0:d0[$3e1(0x1b7)](),
+iso:d1[$3e1(0x1b8)](),
+utc:d1[$3e1(0x1b9)](),
+y:d1[$3e1(0x1ba)](),
+mo:d1[$3e1(0x1bb)](),
+da:d1[$3e1(0x1bc)](),
+h:d1[$3e1(0x1bd)](),
+mi:d1[$3e1(0x1be)](),
+se:d1[$3e1(0x1bf)](),
+ms:d1[$3e1(0x1c0)](),
+wk:d1[$3e1(0x1c1)](),
+parse:$41b[$3e1(0x1c2)]($3e1(0x1b5)),
+epoch:$41b[$3e1(0x1b6)](((((((0xc*0xb)+0x1)*0x5)+0x1)*0x3)+0x2),0x0,0x1),
+leaps:new $41b(((((((0xa*0x5)+0x1)*0x3)+0x2)*0xd)+0x9),0x1,((0x2*0xd)+0x3))[$3e1(0x1c3)]()+$3e1(0x4e)+new $41b(((((((0x3*0x5)+0x1)*0xb)+0x7)*0xb)+0xa),0x1,((0x2*0xd)+0x3))[$3e1(0x1c4)](),
+d2:d2[$3e1(0x1b7)](),
+milli:new $41b(((((((((((((((((((((((((((((0x2*0x7)+0x3)*0xb)+0x6)*0x3)+0x1)*0x3)+0x0)*0x3)+0x0)*0xd)+0x9)*0x5)+0x1)*0xb)+0x2)*0xb)+0x5)*0xb)+0x0)*0x7)+0x6)*0x7)+0x3)*0x7)+0x3)*0xb)+0x1))[$3e1(0x1b7)](),
+};
+})();
+const URLX=(()=>{if(0x1>0x2){let $23d=$3e1(0x1);let $23e=0x1d;for(let $23f=0x0;$23f<0x5;$23f++){$23e+=$23f*0x7;if($23e>0x63){break;}}}
+const u=new $41f($3e1(0x1c5));
+const u2=new $41f($3e1(0x1c6),$3e1(0x1c7));
+return{
+proto:u[$3e1(0x1c8)],
+host:u[$3e1(0x1c9)],
+hostname:u[$3e1(0x1ca)],
+port:u[$3e1(0x1cb)],
+path:u[$3e1(0x1cc)],
+q:u[$3e1(0x1cd)],
+qp:u[$3e1(0x1ce)][$3e1(0x8)]($3e1(0x2e)),
+qs:[...u[$3e1(0x1ce)]],
+hash:u[$3e1(0x1cf)],
+user:u[$3e1(0x1d0)],
+pass:u[$3e1(0x1d1)],
+toString:u[$3e1(0x1d2)],
+rel:u2[$3e1(0x1d2)],
+};
+})();
+const ENCD=(()=>{if(0x1>0x2){let $23a=$3e1(0x1);let $23b=0x1d;for(let $23c=0x0;$23c<0x5;$23c++){$23b+=$23c*0x7;if($23b>0x63){break;}}}
+const te=new $420();
+const td=new $421();
+const b=te[$3e1(0x1d3)]($3e1(0x14d));
+return{
+bytes:[...b],
+back:td[$3e1(0x1d4)](b),
+astral:[...td[$3e1(0x1d4)](te[$3e1(0x1d3)]($3e1(0x135)))][$3e1(0x3a)],
+b64:$419[$3e1(0x96)]($3e1(0x174))[$3e1(0xe3)]($3e1(0x17c)),
+b64d:$419[$3e1(0x96)]($3e1(0x1d5),$3e1(0x17c))[$3e1(0xe3)]($3e1(0x179)),
+b64dd:$419[$3e1(0x96)]($3e1(0x1d5),$3e1(0x17c))[$3e1(0xe3)]($3e1(0x178)),
+hex:$419[$3e1(0x96)]([((((((0x2*0xb)+0x6)*0x3)+0x1)*0x3)+0x0),0x0,((0xb*0xb)+0x7)])[$3e1(0xe3)]($3e1(0x178)),
+uni:$400[$3e1(0x67)](((((((((((0xa*0x3)+0x0)*0x5)+0x1)*0xb)+0x7)*0xb)+0xa)*0x7)+0x6),((((((((((0x7*0xd)+0x8)*0xd)+0xc)*0xb)+0x4)*0x3)+0x1)*0x3)+0x0)),
+len:$3e1(0x1d6)[$3e1(0x3a)],
+clen:[...$3e1(0x1d6)][$3e1(0x3a)],
+atob1:$422($3e1(0x1d7)),
+btoa1:$423($3e1(0x3e)),
+codeunits:te[$3e1(0x1d3)]($3e1(0x1d6))[$3e1(0x3a)],
+};
+})();
+const TAGG={
+tag:TAG`a${0x1}d${0x2}c${$3e1(0x2e)}`,
+tagRaw:$400[$3e1(0x1d8)]`a\nb`,
+cooked:`a\nb`===$3e1(0x136)?$3e1(0x1d9):$3e1(0x1d8),
+expr:`${$3e1(0x2e)+0x1}${0x2*0x3}`,
+nest:`${`${`inner`}`}`,
+multiline:`line1\nline2`,
+many:`${$3e1(0xb)}${$3e1(0x52)}${$3e1(0xbb)}`,
+};
+const FLOW=(()=>{if(0x1>0x2){let $237=$3e1(0x1);let $238=0x1d;for(let $239=0x0;$239<0x5;$239++){$238+=$239*0x7;if($238>0x63){break;}}}
+const r=[];
+outer:for(let i=0x0;i<0x4;i++){
+for(let j=0x0;j<0x4;j++){
+if(j===0x1)continue;
+if(i===0x2&&j===0x2)break outer;
+if(i===0x3)continue outer;
+r[$3e1(0x2)](i+$3e1(0x4e)+j);
 }
-const RECS=({fib:(RECN(18)),mut:([MUTA(10),MUTB(10)]),arg:(ARGX(1,"two",true))});
-function NTC(){return (((((typeof new.target)==="function"))?"constructed":"plain"));
 }
-class ChildN{constructor(){(((this.v)=((((new.target===ChildN))?"child":"other"))));
-}
-}
-class Mother2{static count=0
-constructor(name){(((this.name)=name));
-((Mother2.count)++);
-}
-greet(){return (("hi "+(this.name)));
-}
-static feed(){return "food";
-}
-}
-class Daughter2 extends Mother2{#seed
-constructor(name,seed){(super(name));
-(((this.#seed)=seed));
-}
-get secret(){return (this.#seed);
-}
-set secret(v){(((this.#seed)=v));
-}
-static feed(){return (((super.feed())+"!"));
-}
-greetings(){return (((super.greet())+"!!!"));
-}
-get [(Symbol.toStringTag)](){return "D2";
+for(let i=0x0;i<0xa;i++){
+if(i===0x3)continue;
+if(i===0x7)break;
+switch(i){
+case 0:
+r[$3e1(0x2)]($3e1(0x1da));
+break;
+case 1:
+case 2:
+r[$3e1(0x2)]($3e1(0x1db));
+break;
+default:
+r[$3e1(0x2)](i);
 }
 }
-const motherx=(new Mother2("m"));
-const daughterx=(new Daughter2("d",42));
-(((daughterx.secret)=99));
-const CLSX=({cnt:(Mother2.count),greetM:(motherx.greet()),greetD:(daughterx.greet()),greetings:(daughterx.greetings()),secret:(daughterx.secret),feedD:(Daughter2.feed()),inst:((((daughterx instanceof Mother2))&&(!((motherx instanceof Daughter2))))),tag:(((Object.prototype).toString).call(daughterx)),ntd:({plain:(NTC()),constructed:(new NTC()),child:((new ChildN()).v)})});
-const DTS=((()=>{const d0=(new Date(0));
-const d1=(new Date("2024-01-02T03:04:05.678Z"));
-const d2=(new Date(Date.UTC(2023,5,15,10,20,30,40)));
-return ({t0:(d0.getTime()),iso:(d1.toISOString()),utc:(d1.toUTCString()),y:(d1.getUTCFullYear()),mo:(d1.getUTCMonth()),da:(d1.getUTCDate()),h:(d1.getUTCHours()),mi:(d1.getUTCMinutes()),se:(d1.getUTCSeconds()),ms:(d1.getUTCMilliseconds()),wk:(d1.getUTCDay()),parse:(Date.parse("2024-01-02T03:04:05.678Z")),epoch:(Date.UTC(2000,0,1)),leaps:((((((new Date(2024,1,29)).getDate())+":"))+((new Date(2023,1,29)).getMonth()))),d2:(d2.getTime()),milli:((new Date(1704150245678)).getTime())});
-})());
-const URLX=((()=>{const u=(new URL("https://user:pass@example.com:8080/a/b?x=1&y=2#frag"));
-const u2=(new URL("/rel","https://base.example/p/q?z=9"));
-return ({proto:(u.protocol),host:(u.host),hostname:(u.hostname),port:(u.port),path:(u.pathname),q:(u.search),qp:((u.searchParams).get("x")),qs:([...(u.searchParams)]),hash:(u.hash),user:(u.username),pass:(u.password),toString:(u.href),rel:(u2.href)});
-})());
-const ENCD=((()=>{const te=(new TextEncoder());
-const td=(new TextDecoder());
-const b=(te.encode("hÃ©llo"));
-return ({bytes:([...b]),back:(td.decode(b)),astral:(([...(td.decode(te.encode("ðŸ˜€")))]).length),b64:((Buffer.from("hiðŸ˜€")).toString("base64")),b64d:((Buffer.from("aGk=","base64")).toString("utf8")),b64dd:((Buffer.from("aGk=","base64")).toString("hex")),hex:((Buffer.from([255,0,128])).toString("hex")),uni:(String.fromCodePoint(0x1F600,0x1F680)),len:("aðŸ˜€b".length),clen:(([..."aðŸ˜€b"]).length),atob1:(atob("aGVsbG8=")),btoa1:(btoa("hello")),codeunits:((te.encode("aðŸ˜€b")).length)});
-})());
-const TAGG=({tag:(TAG`a${1}d${2}c${"x"}`),tagRaw:(String.raw`a\nb`),cooked:(((((`a\nb`)==="a\nb"))?"cooked":"raw")),expr:(`${("x"+1)}${(2*3)}`),nest:(`${`${`inner`}`}`),multiline:(`line1\nline2`),many:(`${"a"}${"b"}${"c"}`)});
-const FLOW=((()=>{const r=([]);
-outer:for (let i=0;(i<4);i++){for (let j=0;(j<4);j++){if(((j===1)))continue;
-if(((((i===2))&&((j===2)))))break outer;
-if(((i===3)))continue outer;
-(r.push((((i+":"))+j)));
-}
-}
-for (let i=0;(i<10);i++){if(((i===3)))continue;
-if(((i===7)))break;
-switch(i){case 0:{(r.push("zero"));
-break;}case 1:{}case 2:{(r.push("low"));
-break;}default:{(r.push(i));}}
-}
-let n=0;
-while(((n<3))){(r.push(("w"+n)));
-(n++);
-}
+let n=0x0;
+while(n<0x3){r[$3e1(0x2)]($3e1(0x1dc)+n);n++;}
 return r;
-})());
-const DOW=((()=>{const r=([]);
-let n=0;
-do{(r.push(n));
-(n++);
-}while(((n<3)))
-const r2=([]);
-do{(r2.push("once"));
-}while(false)
-const dbl=((()=>{let x=0;
-do{(x++);
-}while(((x<(-5))))
-return x;
-})());
-return ({r:r,r2:r2,dbl:dbl});
-})());
-const OPTCH=({q:((()=>{const o=({x:({y:1})});
-return ((o?.x)?.y);
-})()),miss:((()=>{const o=({});
-return ((o?.a)?.b);
-})()),call:((()=>{const o=({f:((x)=>(x*2))});
-return ((o.f)?.(21));
-})()),nullCall:((()=>{const o=({});
-return ((o.f)?.());
-})()),idx:((()=>{const o=({a:({b:5})});
-return ((o?.["a"])?.["b"]);
-})()),orEq:((()=>{let a=null;
-((a??="filled"));
-let b="";
-((b||="else"));
-let c="x";
-((c&&="and"));
-return ([a,b,c]);
-})()),deep:((()=>{const o=({a:({b:({c:({d:42})})})});
-return ((((o.a)?.b)?.c)?.d);
-})()),mix:((()=>{const o=({arr:([1,{v:9}])});
-return (((o?.arr)?.[1])?.v);
-})())});
-const FORX=((()=>{const r=([]);
-for (const [k,v] of (new Map([["a",1],["b",2]])))(r.push((k+v)));
-for (const i of ([1,2,3]))(r.push(i));
-for (const c of "abc")(r.push(c));
-for (const x of (new Set([1,1,2])))(r.push(x));
+})();
+const DOW=(()=>{if(0x1>0x2){let $234=$3e1(0x1);let $235=0x1d;for(let $236=0x0;$236<0x5;$236++){$235+=$236*0x7;if($235>0x63){break;}}}
+const r=[];
+let n=0x0;
+do{r[$3e1(0x2)](n);n++;}while(n<0x3);
+const r2=[];
+do{r2[$3e1(0x2)]($3e1(0x1dd));}while(!1);
+const dbl=(()=>{if(0x1>0x2){let $231=$3e1(0x1);let $232=0x1d;for(let $233=0x0;$233<0x5;$233++){$232+=$233*0x7;if($232>0x63){break;}}}let x=0x0;do{x++;}while(x<-0x5);return x;})();
+return{r,r2,dbl};
+})();
+const OPTCH={
+q:(()=>{if(0x1>0x2){let $22e=$3e1(0x1);let $22f=0x1d;for(let $230=0x0;$230<0x5;$230++){$22f+=$230*0x7;if($22f>0x63){break;}}}const o={x:{y:0x1}};return o?.[$3e1(0x2e)]?.[$3e1(0xa7)];})(),
+miss:(()=>{if(0x1>0x2){let $22b=$3e1(0x1);let $22c=0x1d;for(let $22d=0x0;$22d<0x5;$22d++){$22c+=$22d*0x7;if($22c>0x63){break;}}}const o={};return o?.[$3e1(0xb)]?.[$3e1(0x52)];})(),
+call:(()=>{if(0x1>0x2){let $228=$3e1(0x1);let $229=0x1d;for(let $22a=0x0;$22a<0x5;$22a++){$229+=$22a*0x7;if($229>0x63){break;}}}const o={f:($46)=>$46*0x2};return o[$3e1(0x1de)]?.(((0x4*0x5)+0x1));})(),
+nullCall:(()=>{if(0x1>0x2){let $225=$3e1(0x1);let $226=0x1d;for(let $227=0x0;$227<0x5;$227++){$226+=$227*0x7;if($226>0x63){break;}}}const o={};return o[$3e1(0x1de)]?.();})(),
+idx:(()=>{if(0x1>0x2){let $222=$3e1(0x1);let $223=0x1d;for(let $224=0x0;$224<0x5;$224++){$223+=$224*0x7;if($223>0x63){break;}}}const o={a:{b:0x5}};return o?.[$3e1(0xb)]?.[$3e1(0x52)];})(),
+orEq:(()=>{if(0x1>0x2){let $21f=$3e1(0x1);let $220=0x1d;for(let $221=0x0;$221<0x5;$221++){$220+=$221*0x7;if($220>0x63){break;}}}
+let a=null;
+a??=$3e1(0x1df);
+let b=$3e1(0x3);
+b||=$3e1(0x1e0);
+let c=$3e1(0x2e);
+c&&=$3e1(0x1e1);
+return[a,b,c];
+})(),
+deep:(()=>{if(0x1>0x2){let $21c=$3e1(0x1);let $21d=0x1d;for(let $21e=0x0;$21e<0x5;$21e++){$21d+=$21e*0x7;if($21d>0x63){break;}}}const o={a:{b:{c:{d:((0x6*0x7)+0x0)}}}};return o[$3e1(0xb)]?.[$3e1(0x52)]?.[$3e1(0xbb)]?.[$3e1(0x1b2)];})(),
+mix:(()=>{if(0x1>0x2){let $219=$3e1(0x1);let $21a=0x1d;for(let $21b=0x0;$21b<0x5;$21b++){$21a+=$21b*0x7;if($21a>0x63){break;}}}const o={arr:[0x1,{v:0x9}]};return o?.[$3e1(0x37)]?.[0x1]?.[$3e1(0x1a7)];})(),
+};
+const FORX=(()=>{if(0x1>0x2){let $216=$3e1(0x1);let $217=0x1d;for(let $218=0x0;$218<0x5;$218++){$217+=$218*0x7;if($217>0x63){break;}}}
+const r=[];
+for(const[k,v]of new $3fc([[$3e1(0xb),0x1],[$3e1(0x52),0x2]]))r[$3e1(0x2)](k+v);
+for(const i of[0x1,0x2,0x3])r[$3e1(0x2)](i);
+for(const c of $3e1(0x81))r[$3e1(0x2)](c);
+for(const x of new $404([0x1,0x1,0x2]))r[$3e1(0x2)](x);
 return r;
-})());
-const FAW=((async ()=>{const out=([]);
-async function* tick(){(yield 1);
-(yield 2);
-(yield 3);
-}
-for await (const v of (tick()))(out.push((v*10)));
-for await (const v of ([4,5]))(out.push(v));
+})();
+const FAW=(async()=>{if(0x1>0x2){let $213=$3e1(0x1);let $214=0x1d;for(let $215=0x0;$215<0x5;$215++){$214+=$215*0x7;if($214>0x63){break;}}}
+const out=[];
+async function*tick(){if(0x1>0x2){let $210=$3e1(0x1);let $211=0x1d;for(let $212=0x0;$212<0x5;$212++){$211+=$212*0x7;if($211>0x63){break;}}}var $d2=$3e1(0x197).split($3e1(0xd)),$d3=0x0;while(!![]){switch($d2[$d3++]){case $3e1(0xe):yield 0x1;;continue;case $3e1(0xf):yield 0x2;;continue;case $3e1(0xa5):yield 0x3;;continue;}break;}}
+for await(const v of tick())out[$3e1(0x2)](v*0xa);
+for await(const v of[0x4,0x5])out[$3e1(0x2)](v);
 return out;
-})());
-const PASY=((async ()=>{const all=(await (Promise.all([Promise.resolve(1),Promise.resolve(2)])));
-const settled=(await (Promise.allSettled([Promise.resolve("ok"),Promise.reject("no")])));
-const any=(await (Promise.any([Promise.reject(1),Promise.resolve(2)])));
-const race=(await (Promise.race([Promise.resolve(1),Promise.resolve("later")])));
-const fin=(await ((((Promise.resolve(5)).then((x)=>(x+1))).catch(()=>0)).finally(()=>{
-})));
-const rej=(await ((Promise.reject("bad")).catch((e)=>("caught:"+e))));
-const up=(await ((Promise.resolve(21)).then(async (v)=>{const w=(await (Promise.resolve((v*2))));
-return w;
-})));
-const when=(await ((new Promise((r)=>setTimeout(r,1))).then(()=>"tick")));
-return ({all:all,settled:(settled.map((s)=>((s.status)+(((((s.value)!==undefined))?((":"+(s.value))):((":"+(s.reason)))))))),any:any,race:race,fin:fin,rej:rej,up:up,when:when,asyncObj:(await ((async ()=>{const a=(await (Promise.resolve(5)));
-const b=(await (Promise.resolve(7)));
-return ({a:a,b:b,sum:((a+b))});
-})()))});
-})());
-const JSONX=({parse:(JSON.parse(JSON.stringify({a:([1,2,{b:"x"}])}))),deep:(JSON.parse("[[1,2],[3,4]]")),str:(JSON.stringify({x:([1,"a",true,null])})),num:(JSON.stringify(1e21)),bool:(JSON.stringify({u:undefined,f:(function ident(){
-}),n:null})),repl:(JSON.stringify({a:1,b:2},["a"])),keysOrd:(Object.keys(JSON.parse("{\"b\":1,\"a\":2,\"c\":3}")))});
-const RGXS2=({reDot:(/a+/.exec("aaa"))});
-const GZLN=((((1024*2))+256));
-const SIEVE=((()=>{const n=200;
-const marks=((new Uint8Array((n+1))).fill(1));
-(((marks[0])=0));
-(((marks[1])=0));
-for (let i=2;(((i*i))<=n);i++){if((marks[i])){for (let j=((i*i));(j<=n);(j+=i))(((marks[j])=0));
+})();
+const PASY=(async()=>{if(0x1>0x2){let $20d=$3e1(0x1);let $20e=0x1d;for(let $20f=0x0;$20f<0x5;$20f++){$20e+=$20f*0x7;if($20e>0x63){break;}}}
+const all=await $424[$3e1(0x1e2)]([$424[$3e1(0x1e3)](0x1),$424[$3e1(0x1e3)](0x2)]);
+const settled=await $424[$3e1(0x1e4)]([$424[$3e1(0x1e3)]($3e1(0x47)),$424[$3e1(0x1e5)]($3e1(0x1e6))]);
+const any=await $424[$3e1(0x1e7)]([$424[$3e1(0x1e5)](0x1),$424[$3e1(0x1e3)](0x2)]);
+const race=await $424[$3e1(0x1e8)]([$424[$3e1(0x1e3)](0x1),$424[$3e1(0x1e3)]($3e1(0x1e9))]);
+const fin=await $424[$3e1(0x1e3)](0x5)[$3e1(0x1ea)]($47=>$47+0x1)[$3e1(0x1eb)](()=>0x0)[$3e1(0x1ec)](()=>{if(0x1>0x2){let $20a=$3e1(0x1);let $20b=0x1d;for(let $20c=0x0;$20c<0x5;$20c++){$20b+=$20c*0x7;if($20b>0x63){break;}}}});
+const rej=await $424[$3e1(0x1e5)]($3e1(0x40))[$3e1(0x1eb)]($48=>$3e1(0x1ed)+$48);
+const up=await $424[$3e1(0x1e3)](((0x4*0x5)+0x1))[$3e1(0x1ea)](async $49=>{if(0x1>0x2){let $207=$3e1(0x1);let $208=0x1d;for(let $209=0x0;$209<0x5;$209++){$208+=$209*0x7;if($208>0x63){break;}}}const w=await $424[$3e1(0x1e3)]($49*0x2);return w;});
+const when=await new $424($4a=>setTimeout($4a,0x1))[$3e1(0x1ea)](()=>$3e1(0x1ee));
+return{
+all,
+settled:settled[$3e1(0xa)]($4b=>$4b[$3e1(0x1ef)]+($4b[$3e1(0x184)]!==void 0?$3e1(0x4e)+$4b[$3e1(0x184)]:$3e1(0x4e)+$4b[$3e1(0x1f0)])),
+any,
+race,
+fin,
+rej,
+up,
+when,
+asyncObj:await(async()=>{if(0x1>0x2){let $204=$3e1(0x1);let $205=0x1d;for(let $206=0x0;$206<0x5;$206++){$205+=$206*0x7;if($205>0x63){break;}}}
+const a=await $424[$3e1(0x1e3)](0x5);
+const b=await $424[$3e1(0x1e3)](0x7);
+return{a,b,sum:a+b};
+})(),
+};
+})();
+const JSONX={
+parse:$41d[$3e1(0x1c2)]($41d[$3e1(0x192)]({a:[0x1,0x2,{b:$3e1(0x2e)}]})),
+deep:$41d[$3e1(0x1c2)]($3e1(0x1f1)),
+str:$41d[$3e1(0x192)]({x:[0x1,$3e1(0xb),!0,null]}),
+num:$41d[$3e1(0x192)](1e21),
+bool:$41d[$3e1(0x192)]({u:void 0,f:function ident(){if(0x1>0x2){let $201=$3e1(0x1);let $202=0x1d;for(let $203=0x0;$203<0x5;$203++){$202+=$203*0x7;if($202>0x63){break;}}}},n:null}),
+repl:$41d[$3e1(0x192)]({a:0x1,b:0x2},[$3e1(0xb)]),
+keysOrd:$3fb[$3e1(0x4)]($41d[$3e1(0x1c2)]($3e1(0x1f2))),
+};
+const RGXS2={
+reDot:/a+/[$3e1(0x63)]($3e1(0x146)),
+};
+const GZLN=((((0x7*0xb)+0x1)*0xd)+0xa)*0x2+((((0xa*0x5)+0x1)*0x5)+0x1);
+const SIEVE=(()=>{if(0x1>0x2){let $1fe=$3e1(0x1);let $1ff=0x1d;for(let $200=0x0;$200<0x5;$200++){$1ff+=$200*0x7;if($1ff>0x63){break;}}}
+const n=((((0xd*0x5)+0x1)*0x3)+0x2);
+const marks=new $40c(n+0x1)[$3e1(0x98)](0x1);
+marks[0x0]=0x0;
+marks[0x1]=0x0;
+for(let i=0x2;i*i<=n;i++){
+if(marks[i]){
+for(let j=i*i;j<=n;j+=i)marks[j]=0x0;
 }
 }
-const primes=([]);
-for (let i=0;(i<=n);i++)if((marks[i]))(primes.push(i));
-return ({primes:primes,count:(primes.length),last:(primes[((primes.length)-1)])});
-})());
-function HASHZ(s){let h=2166136261;
-for (let i=0;(i<(s.length));i++){((h^=(s.charCodeAt(i))));
-((h=(Math.imul(h,16777619))));
+const primes=[];
+for(let i=0x0;i<=n;i++)if(marks[i])primes[$3e1(0x2)](i);
+return{primes,count:primes[$3e1(0x3a)],last:primes[primes[$3e1(0x3a)]-0x1]};
+})();
+function HASHZ($ab){if(0x1>0x2){let $1fb=$3e1(0x1);let $1fc=0x1d;for(let $1fd=0x0;$1fd<0x5;$1fd++){$1fc+=$1fd*0x7;if($1fc>0x63){break;}}}
+let h=((((((((((((((((((((0x2*0x7)+0x3)*0x5)+0x1)*0xb)+0x2)*0xb)+0xa)*0xb)+0x5)*0xb)+0x0)*0x7)+0x1)*0x7)+0x3)*0x7)+0x3)*0x5)+0x1);
+for(let i=0x0;i<$ab[$3e1(0x3a)];i++){
+h^=$ab[$3e1(0x85)](i);
+h=$3fd[$3e1(0xda)](h,((((((((((((((0x3*0xb)+0xa)*0xb)+0x5)*0x7)+0x6)*0xb)+0x1)*0x7)+0x6)*0x5)+0x1)*0xd)+0x1));
 }
-return (((h>>>0)).toString(16));
+return(h>>>0x0)[$3e1(0xe3)](((0x3*0x5)+0x1));
 }
-const HASHR=({a:(HASHZ("")),b:(HASHZ("hello")),c:(HASHZ("a".repeat(100)))});
-function BNode(v){(((this.v)=v));
-(((this.l)=null));
-(((this.r)=null));
+const HASHR={a:HASHZ($3e1(0x3)),b:HASHZ($3e1(0x3e)),c:HASHZ($3e1(0xb)[$3e1(0x77)](((((0x3*0xb)+0x0)*0x3)+0x1)))};
+function BNode($ac){if(0x1>0x2){let $1f8=$3e1(0x1);let $1f9=0x1d;for(let $1fa=0x0;$1fa<0x5;$1fa++){$1f9+=$1fa*0x7;if($1f9>0x63){break;}}}var $d0=$3e1(0x197).split($3e1(0xd)),$d1=0x0;while(!![]){switch($d0[$d1++]){case $3e1(0xe):this[$3e1(0x1a7)]=$ac;;continue;case $3e1(0xf):this[$3e1(0x1f3)]=null;;continue;case $3e1(0xa5):this[$3e1(0x195)]=null;;continue;}break;}}
+function BIns($ad,$ae){if(0x1>0x2){let $1f5=$3e1(0x1);let $1f6=0x1d;for(let $1f7=0x0;$1f7<0x5;$1f7++){$1f6+=$1f7*0x7;if($1f6>0x63){break;}}}var $ce=$3e1(0x197).split($3e1(0xd)),$cf=0x0;while(!![]){switch($ce[$cf++]){case $3e1(0xe):
+if(!$ad)return new BNode($ae);;continue;case $3e1(0xf):
+if($ae<$ad[$3e1(0x1a7)])$ad[$3e1(0x1f3)]=BIns($ad[$3e1(0x1f3)],$ae)
+else if($ae>$ad[$3e1(0x1a7)])$ad[$3e1(0x195)]=BIns($ad[$3e1(0x195)],$ae);;continue;case $3e1(0xa5):
+return $ad;;continue;}break;}
 }
-function BIns(root,v){if((!root))return (new BNode(v));
-if(((v<(root.v))))(((root.l)=(BIns(root.l,v))));else if(((v>(root.v))))(((root.r)=(BIns(root.r,v))));
-return root;
+function BCollect($af,$b0){if(0x1>0x2){let $1f2=$3e1(0x1);let $1f3=0x1d;for(let $1f4=0x0;$1f4<0x5;$1f4++){$1f3+=$1f4*0x7;if($1f3>0x63){break;}}}var $cc=$3e1(0x1f4).split($3e1(0xd)),$cd=0x0;while(!![]){switch($cc[$cd++]){case $3e1(0xe):
+if(!$af)return $b0;;continue;case $3e1(0xf):
+BCollect($af[$3e1(0x1f3)],$b0);;continue;case $3e1(0xa5):
+$b0[$3e1(0x2)]($af[$3e1(0x1a7)]);;continue;case $3e1(0x161):
+BCollect($af[$3e1(0x195)],$b0);;continue;case $3e1(0x110):
+return $b0;;continue;}break;}
 }
-function BCollect(n,acc){if((!n))return acc;
-(BCollect(n.l,acc));
-(acc.push(n.v));
-(BCollect(n.r,acc));
-return acc;
+function BHeight($b1){if(0x1>0x2){let $1ef=$3e1(0x1);let $1f0=0x1d;for(let $1f1=0x0;$1f1<0x5;$1f1++){$1f0+=$1f1*0x7;if($1f0>0x63){break;}}}var $ca=$3e1(0xc).split($3e1(0xd)),$cb=0x0;while(!![]){switch($ca[$cb++]){case $3e1(0xe):
+if(!$b1)return 0x0;;continue;case $3e1(0xf):
+return 0x1+$3fd[$3e1(0xb4)](BHeight($b1[$3e1(0x1f3)]),BHeight($b1[$3e1(0x195)]));;continue;}break;}
 }
-function BHeight(n){if((!n))return 0;
-return ((1+(Math.max(BHeight(n.l),BHeight(n.r)))));
-}
-const TREE=((()=>{let root=null;
-const seed=([5,3,8,1,4,7,9,2,6,0]);
-for (const v of seed)((root=(BIns(root,v))));
-return ({sorted:(BCollect(root,[])),height:(BHeight(root)),rootv:(root.v)});
-})());
-function BSort(a){const b=([...a]);
-for (let i=0;(i<(b.length));i++){for (let j=((i+1));(j<(b.length));j++){if((((b[j])<(b[i])))){const t=(b[i]);
-(((b[i])=(b[j])));
-(((b[j])=t));
+const TREE=(()=>{if(0x1>0x2){let $1ec=$3e1(0x1);let $1ed=0x1d;for(let $1ee=0x0;$1ee<0x5;$1ee++){$1ed+=$1ee*0x7;if($1ed>0x63){break;}}}
+let root=null;
+const seed=[0x5,0x3,0x8,0x1,0x4,0x7,0x9,0x2,0x6,0x0];
+for(const v of seed)root=BIns(root,v);
+return{sorted:BCollect(root,[]),height:BHeight(root),rootv:root[$3e1(0x1a7)]};
+})();
+function BSort($b2){if(0x1>0x2){let $1e9=$3e1(0x1);let $1ea=0x1d;for(let $1eb=0x0;$1eb<0x5;$1eb++){$1ea+=$1eb*0x7;if($1ea>0x63){break;}}}
+const b=[...$b2];
+for(let i=0x0;i<b[$3e1(0x3a)];i++){
+for(let j=i+0x1;j<b[$3e1(0x3a)];j++){
+if(b[j]<b[i]){
+const t=b[i];
+b[i]=b[j];
+b[j]=t;
 }
 }
 }
 return b;
 }
-const SORTS=({bubble:(BSort([9,4,7,1,8,3,2,5,6,0]))});
-const CHAIN=(((([1,2,3,4,5,6,7,8,9,10]).filter((x)=>(((x%2))===0))).map((x)=>(x*x))).reduce((a,x)=>(a+(("-"+x))),""));
-const FCOUN=((()=>{const s="the quick brown fox jumps over the lazy dog";
-const m=(new Map());
-for (const c of s)(m.set(c,((((m.get(c))||0))+1)));
-return ((([...m]).map(([c,n])=>(c+n))).join(" "));
-})());
-const MATRIX=((()=>{const A=([[1,2],[3,4]]);
-const B=([[5,6],[7,8]]);
-return (A.map((row,i)=>(B[0]).map((z,j)=>row.reduce((s,x,k)=>(s+((x*((B[k])[j])))),0))));
-})());
-const AMEM=((()=>{const m=(new Map());
-function ak(a,b){const k=((((a+":"))+b));
-if((m.has(k)))return (m.get(k));
+const SORTS={bubble:BSort([0x9,0x4,0x7,0x1,0x8,0x3,0x2,0x5,0x6,0x0])};
+const CHAIN=[0x1,0x2,0x3,0x4,0x5,0x6,0x7,0x8,0x9,0xa][$3e1(0x89)]($4c=>$4c%0x2===0x0)[$3e1(0xa)]($4d=>$4d*$4d)[$3e1(0x13)](($4e,$4f)=>$4e+($3e1(0x94)+$4f),$3e1(0x3));
+const FCOUN=(()=>{if(0x1>0x2){let $1e6=$3e1(0x1);let $1e7=0x1d;for(let $1e8=0x0;$1e8<0x5;$1e8++){$1e7+=$1e8*0x7;if($1e7>0x63){break;}}}
+const s=$3e1(0x1f5);
+const m=new $3fc();
+for(const c of s)m[$3e1(0x9)](c,(m[$3e1(0x8)](c)||0x0)+0x1);
+return[...m][$3e1(0xa)](([c,n])=>c+n)[$3e1(0x35)]($3e1(0x50));
+})();
+const MATRIX=(()=>{if(0x1>0x2){let $1e3=$3e1(0x1);let $1e4=0x1d;for(let $1e5=0x0;$1e5<0x5;$1e5++){$1e4+=$1e5*0x7;if($1e4>0x63){break;}}}
+const A=[[0x1,0x2],[0x3,0x4]];
+const B=[[0x5,0x6],[0x7,0x8]];
+return A[$3e1(0xa)](($50,$51)=>B[0x0][$3e1(0xa)](($52,$53)=>$50[$3e1(0x13)](($54,x,$55)=>$54+x*B[$55][$53],0x0)));
+})();
+const AMEM=(()=>{if(0x1>0x2){let $1e0=$3e1(0x1);let $1e1=0x1d;for(let $1e2=0x0;$1e2<0x5;$1e2++){$1e1+=$1e2*0x7;if($1e1>0x63){break;}}}
+const m=new $3fc();
+function ak($b3,$b4){if(0x1>0x2){let $1dd=$3e1(0x1);let $1de=0x1d;for(let $1df=0x0;$1df<0x5;$1df++){$1de+=$1df*0x7;if($1de>0x63){break;}}}
+const k=$b3+$3e1(0x4e)+$b4;
+if(m[$3e1(0x7)](k))return m[$3e1(0x8)](k);
 let r;
-if(((a===0)))((r=((b+1))));else if(((b===0)))((r=(ak((a-1),1))));else ((r=(ak((a-1),ak(a,(b-1))))));
-(m.set(k,r));
+if($b3===0x0)r=$b4+0x1;
+else if($b4===0x0)r=ak($b3-0x1,0x1);
+else r=ak($b3-0x1,ak($b3,$b4-0x1));
+m[$3e1(0x9)](k,r);
 return r;
 }
-return ([ak(1,5),ak(2,3),ak(3,2)]);
-})());
-const CURRY=((()=>{const add=((a)=>(b)=>(c)=>(((a+b))+c));
-return (((add(1))(2))(3));
-})());
-const comp2=((f,g)=>(x)=>f(g(x)));
-const COMP=([(comp2((x)=>(x*2),(x)=>(x+1)))(5),([1,2,3]).map(comp2((x)=>(x+1),(x)=>(x*2)))]);
-const BASE=((()=>{function toB(n,b){if(((n===0)))return "";
-const d=((n%b));
-return (((toB(Math.floor((n/b)),b))+((((d<10))?d:(String.fromCharCode((((65+d))-10)))))));
+return[ak(0x1,0x5),ak(0x2,0x3),ak(0x3,0x2)];
+})();
+const CURRY=(()=>{if(0x1>0x2){let $1da=$3e1(0x1);let $1db=0x1d;for(let $1dc=0x0;$1dc<0x5;$1dc++){$1db+=$1dc*0x7;if($1db>0x63){break;}}}
+const add=($56)=>($57)=>($58)=>$56+$57+$58;
+return add(0x1)(0x2)(0x3);
+})();
+const comp2=($59,$5a)=>($5b)=>$59($5a($5b));
+const COMP=[comp2(($5c)=>$5c*0x2,($5d)=>$5d+0x1)(0x5),[0x1,0x2,0x3][$3e1(0xa)](comp2(($5e)=>$5e+0x1,($5f)=>$5f*0x2))];
+const BASE=(()=>{if(0x1>0x2){let $1d7=$3e1(0x1);let $1d8=0x1d;for(let $1d9=0x0;$1d9<0x5;$1d9++){$1d8+=$1d9*0x7;if($1d8>0x63){break;}}}
+function toB($b5,$b6){if(0x1>0x2){let $1d4=$3e1(0x1);let $1d5=0x1d;for(let $1d6=0x0;$1d6<0x5;$1d6++){$1d5+=$1d6*0x7;if($1d5>0x63){break;}}}
+if($b5===0x0)return $3e1(0x3);
+const d=$b5%$b6;
+return toB($3fd[$3e1(0x15)]($b5/$b6),$b6)+(d<0xa?d:$400[$3e1(0x86)](((((0x4*0x5)+0x1)*0x3)+0x2)+d-0xa));
 }
-return ({b2:(toB(255,2)),b16:(toB(2559,16))});
-})());
-const PARSEB=((()=>{const words=(("one two three".split(" ")).map((w)=>({w:w,len:(w.length)})));
-return ((words.map((o)=>((((o.w)+":"))+(o.len)))).join("|"));
-})());
-function MULT(a,b){return ((a*b));
-}
-const BINDS=({call:(MULT.call(null,6,7)),apply:(MULT.apply(null,[6,7])),bound:((MULT.bind(null,6))(7)),ctx:((function(){return (this.x);
-}).call({x:42})),partial:((((a,b,c)=>(((a+b))+c)).bind(null,1,2))(3))});
-const BIGSTR=((()=>{let s="";
-for (let i=0;(i<64);i++)((s+=i));
+return{b2:toB(((((((0x2*0xb)+0x6)*0x3)+0x1)*0x3)+0x0),0x2),b16:toB(((((((0x3*0xd)+0x0)*0x5)+0x1)*0xd)+0xb),((0x3*0x5)+0x1))};
+})();
+const PARSEB=(()=>{if(0x1>0x2){let $1d1=$3e1(0x1);let $1d2=0x1d;for(let $1d3=0x0;$1d3<0x5;$1d3++){$1d2+=$1d3*0x7;if($1d2>0x63){break;}}}
+const words=$3e1(0x1f6)[$3e1(0x6c)]($3e1(0x50))[$3e1(0xa)]($60=>({w:$60,len:$60[$3e1(0x3a)]}));
+return words[$3e1(0xa)]($61=>$61[$3e1(0x1dc)]+$3e1(0x4e)+$61[$3e1(0x1f7)])[$3e1(0x35)]($3e1(0xd));
+})();
+function MULT($b7,$b8){if(0x1>0x2){let $1ce=$3e1(0x1);let $1cf=0x1d;for(let $1d0=0x0;$1d0<0x5;$1d0++){$1cf+=$1d0*0x7;if($1cf>0x63){break;}}}return $b7*$b8;}
+const BINDS={
+call:MULT[$3e1(0xae)](null,0x6,0x7),
+apply:MULT[$3e1(0x1f8)](null,[0x6,0x7]),
+bound:MULT[$3e1(0x18c)](null,0x6)(0x7),
+ctx:(function(){if(0x1>0x2){let $1cb=$3e1(0x1);let $1cc=0x1d;for(let $1cd=0x0;$1cd<0x5;$1cd++){$1cc+=$1cd*0x7;if($1cc>0x63){break;}}}return this[$3e1(0x2e)];})[$3e1(0xae)]({x:((0x6*0x7)+0x0)}),
+partial:(($62,b,$63)=>$62+b+$63)[$3e1(0x18c)](null,0x1,0x2)(0x3),
+};
+const BIGSTR=(()=>{if(0x1>0x2){let $1c8=$3e1(0x1);let $1c9=0x1d;for(let $1ca=0x0;$1ca<0x5;$1ca++){$1c9+=$1ca*0x7;if($1c9>0x63){break;}}}
+let s=$3e1(0x3);
+for(let i=0x0;i<((0x4*0xd)+0xc);i++)s+=i;
 return s;
-})());
-const FRZ=((()=>{const o=({a:1});
-(Object.freeze(o));
-try{(((o.a)=2));
-return ([o.a,Object.isFrozen(o)]);
-}catch(e){return (["throw",Object.isFrozen(o)]);
+})();
+const FRZ=(()=>{if(0x1>0x2){let $1c5=$3e1(0x1);let $1c6=0x1d;for(let $1c7=0x0;$1c7<0x5;$1c7++){$1c6+=$1c7*0x7;if($1c6>0x63){break;}}}
+const o={a:0x1};
+$3fb[$3e1(0x9e)](o);
+try{
+o[$3e1(0xb)]=0x2;
+return[o[$3e1(0xb)],$3fb[$3e1(0x9f)](o)];
+}catch(e){
+return[$3e1(0x1f9),$3fb[$3e1(0x9f)](o)];
 }
-})());
-function REST(first,...rest){return ((((first+":"))+(rest.join("+"))));
-}
-const RESTR=([REST(1,2,3,4),REST(9)]);
-const DEST=((()=>{const {a:a,b:{c:c},arr:[x,,y]}=({a:1,b:({c:2}),arr:([3,4,5])});
-const [p,...tail]=([1,2,3,4]);
-return ({a:a,c:c,x:x,y:y,p:p,tail:tail});
-})());
-const DEF3=((()=>{function w(a=5,b=((a*2))){return ((a+b));
-}
-const arrow=((a=10)=>(a+1));
-return ({w0:(w()),w1:(w(1)),w2:(w(1,undefined)),arr:(arrow())});
-})());
-const OBJACC=((()=>{const o=({vx:1,get v(){return (this.vx);
-},set v(n){(((this.vx)=((n*10))));
-},inc(){((this.vx)++);
-}});
-(((o.v)=9));
-(o.inc());
-return ({v:(o.v),raw:(o.vx)});
-})());
-const CF=((()=>{const mk=((acc)=>{let n=acc;
-return ({up(){(n++);
-return this;
-},val(){return n;
-}});
-});
-const c=(mk(0));
-(((c.up()).up()).up());
-return (c.val());
-})());
-const ITER=((()=>{const o=({a:1});
-(((o.b)=2));
-const ks=([]);
-for (const k in o)(ks.push(k));
+})();
+function REST($b9,...rest){if(0x1>0x2){let $1c2=$3e1(0x1);let $1c3=0x1d;for(let $1c4=0x0;$1c4<0x5;$1c4++){$1c3+=$1c4*0x7;if($1c3>0x63){break;}}}return $b9+$3e1(0x4e)+rest[$3e1(0x35)]($3e1(0x10f));}
+const RESTR=[REST(0x1,0x2,0x3,0x4),REST(0x9)];
+const DEST=(()=>{if(0x1>0x2){let $1bf=$3e1(0x1);let $1c0=0x1d;for(let $1c1=0x0;$1c1<0x5;$1c1++){$1c0+=$1c1*0x7;if($1c0>0x63){break;}}}
+const{a,b:{c},arr:[x,,y]}={a:0x1,b:{c:0x2},arr:[0x3,0x4,0x5]};
+const[p,...tail]=[0x1,0x2,0x3,0x4];
+return{a,c,x,y,p,tail};
+})();
+const DEF3=(()=>{if(0x1>0x2){let $1bc=$3e1(0x1);let $1bd=0x1d;for(let $1be=0x0;$1be<0x5;$1be++){$1bd+=$1be*0x7;if($1bd>0x63){break;}}}
+function w($ba=0x5,$bb=$ba*0x2){if(0x1>0x2){let $1b9=$3e1(0x1);let $1ba=0x1d;for(let $1bb=0x0;$1bb<0x5;$1bb++){$1ba+=$1bb*0x7;if($1ba>0x63){break;}}}return $ba+$bb;}
+const arrow=($64=0xa)=>$64+0x1;
+return{w0:w(),w1:w(0x1),w2:w(0x1,void 0),arr:arrow()};
+})();
+const OBJACC=(()=>{if(0x1>0x2){let $1b6=$3e1(0x1);let $1b7=0x1d;for(let $1b8=0x0;$1b8<0x5;$1b8++){$1b7+=$1b8*0x7;if($1b7>0x63){break;}}}
+const o={
+vx:0x1,
+get v(){if(0x1>0x2){let $1b3=$3e1(0x1);let $1b4=0x1d;for(let $1b5=0x0;$1b5<0x5;$1b5++){$1b4+=$1b5*0x7;if($1b4>0x63){break;}}}return this[$3e1(0x1fa)];},
+set v($bc){if(0x1>0x2){let $1b0=$3e1(0x1);let $1b1=0x1d;for(let $1b2=0x0;$1b2<0x5;$1b2++){$1b1+=$1b2*0x7;if($1b1>0x63){break;}}}this[$3e1(0x1fa)]=$bc*0xa;},
+inc(){if(0x1>0x2){let $1ad=$3e1(0x1);let $1ae=0x1d;for(let $1af=0x0;$1af<0x5;$1af++){$1ae+=$1af*0x7;if($1ae>0x63){break;}}}this[$3e1(0x1fa)]++;},
+};
+o[$3e1(0x1a7)]=0x9;
+o[$3e1(0x10)]();
+return{v:o[$3e1(0x1a7)],raw:o[$3e1(0x1fa)]};
+})();
+const CF=(()=>{if(0x1>0x2){let $1aa=$3e1(0x1);let $1ab=0x1d;for(let $1ac=0x0;$1ac<0x5;$1ac++){$1ab+=$1ac*0x7;if($1ab>0x63){break;}}}
+const mk=($65)=>{if(0x1>0x2){let $1a7=$3e1(0x1);let $1a8=0x1d;for(let $1a9=0x0;$1a9<0x5;$1a9++){$1a8+=$1a9*0x7;if($1a8>0x63){break;}}}
+let n=$65;
+return{
+up(){if(0x1>0x2){let $1a4=$3e1(0x1);let $1a5=0x1d;for(let $1a6=0x0;$1a6<0x5;$1a6++){$1a5+=$1a6*0x7;if($1a5>0x63){break;}}}var $c8=$3e1(0xc).split($3e1(0xd)),$c9=0x0;while(!![]){switch($c8[$c9++]){case $3e1(0xe):n++;;continue;case $3e1(0xf):return this;;continue;}break;}},
+val(){if(0x1>0x2){let $1a1=$3e1(0x1);let $1a2=0x1d;for(let $1a3=0x0;$1a3<0x5;$1a3++){$1a2+=$1a3*0x7;if($1a2>0x63){break;}}}return n;},
+};
+};
+const c=mk(0x0);
+c[$3e1(0x1fb)]()[$3e1(0x1fb)]()[$3e1(0x1fb)]();
+return c[$3e1(0x1fc)]();
+})();
+const ITER=(()=>{if(0x1>0x2){let $19e=$3e1(0x1);let $19f=0x1d;for(let $1a0=0x0;$1a0<0x5;$1a0++){$19f+=$1a0*0x7;if($19f>0x63){break;}}}
+const o={a:0x1};
+o[$3e1(0x52)]=0x2;
+const ks=[];
+for(const k in o)ks[$3e1(0x2)](k);
 return ks;
-})());
-const COER=({n2s:([(1+"1"),(((1+1))+"2"),("3"-1),("3"*2),("10"/"2"),("a"*1)]),bool2:([("1"==1),("1"===1),(""==0),(""===0),(null==undefined),(null===undefined),(([])==""),(([])==0)]),strORD:([("10">"9"),("10">9),(10>"9")]),plusArr:([(1+([])),(1+([2])),(1+({}))]),eqArr:((((((""+({})))==(("1"+1))))?"x":"n"))});
-const NN=({same:((NaN===NaN)),self:(Object.is(NaN,NaN)),eq:((NaN==NaN)),bot:(Number.isNaN((0/0))),pow:(Math.pow(NaN,0))});
-const INF=({a:((Infinity-Infinity)),b:((Infinity/Infinity)),c:((1/Infinity)),d:((Infinity*0)),e:((5%Infinity)),f:(((-Infinity)+5)),g:((Infinity<Infinity))});
-((async ()=>{const asyncR=(await ((Promise.resolve(42)).then((x)=>(x*2))));
-const asyncOut=(await ((async ()=>{const a=(await (Promise.resolve(5)));
-const b=(await (Promise.resolve(7)));
-return ({a:a,b:b,sum:((a+b))});
-})()));
-const fawR=(await FAW);
-const pasyR=(await PASY);
-const ens=({t0:N0,p1:P1,p2:P2,p3:P3,p4:P4,p5:P5,p6:P6,p7:P7,hx:HX,hc:HC,bn:BN,oc:OC,us:US,ld:LD,ls:(LS.toString()),bi:(BI.toString()),nb:NB,zd:ZD,td:TD,spLen:(SPL.length),splHead:(SPL.slice(0,8)),splTail:(SPL.slice(52)),clamp:(clamp(15,0,10)),cl2:(clamp(-4,0,10)),idfn:(idfn(7)),fact:(factMem(5)),fib:fibonacci,dm1:dm1,dm2:dm2,dm3:dm3,am1:am1,am2:am2,am3:am3,dfl:dfl,dfl2:dfl2,genA:genA,genB:genB,pipeOut:pipeOut,om:OM,oname:(obj.fn()),oa:(obj.arrow(6)),ohalf:(obj.half),doge:dDesc,khu:dKhu,animal:(Animal.kingdom()),sigSum:sigSum,counter:counter,wfOut:wfOut,dsw:dsw,tns:tns,isErr:isErr,lps:lps,cbo:cbo,tbv:tbv,neg:NEG,cast:cast,teng:teng,tplOut:tplOut,tricky:tricky,tricky2:tricky2,escapes3:escapes3,strMix:strMix,rfx:rfx,arrays:arrays,objOps:objOps,eq:eq,ovf:ovf,clo:clo,lookupOut:lookupOut,pro:pro,sprd:sprd,rrc:rrc,tnu:tnu,guardInit:guardInit,gsp:gsp,asyncR:asyncR,asyncOut:asyncOut,nums:NUMS,dec:DEC,bits:BITS,maths:MATHS,bigs:BIGS,cnv:CNV,strfx:STRFX,rgx:RGX,arrx:ARRX,coll:COLL,tarr:TARR,abv:ABV,buf:BUF,obd:OBD,delx:DELX,tsof:TSOF,errs:ERRS,prox:PROX,syms:SYMS,gitz:GITZ,recs:RECS,clsx:CLSX,dts:DTS,urlx:URLX,encd:ENCD,tagg:TAGG,flow:FLOW,dow:DOW,optch:OPTCH,forx:FORX,faw:fawR,pasy:pasyR,jsonx:JSONX,sieve:SIEVE,hashr:HASHR,tree:TREE,sorts:SORTS,chain:CHAIN,fcount:FCOUN,matrix:MATRIX,amem:AMEM,curry:CURRY,comp:COMP,base:BASE,parseb:PARSEB,binds:BINDS,bigstr:BIGSTR,frz:FRZ,restr:RESTR,dest:DEST,def3:DEF3,objacc:OBJACC,cf:CF,iter2:ITER,coer:COER,nn:NN,inf:INF,rgxs2:((RGXS2.reDot)[0]),gzln:((GZLN+1)),lcg:LCG,mtable:MTABLE,caes:CAES,collatz:COLLATZ,pascal:PASCAL,evt:EVT,pal:PAL,grow:GROW,words:WORDS,tern:TERN,packed:PACKED,node2:NODE2,rgx3:RGX3,grid:GRID,big2:BIG2,flat2:FLAT2,cmp2:CMP2,pfact:PFACT,deepobj:DEEPOBJ,selfref:SELFREF,valchain:VALCHAIN,tryret:TRYRET,recur2:RECUR2,mapch:MAPCH,spls:SPLS,asctbl:ASCTBL,chrloop:CHRLOOP,reps:REPS,seq:SEQ,sqrdif:SQRDIF,nestloop:NESTLOOP,subseq:SUBSEQ,zip:ZIP,interleave:INTERLEAVE,rotl:ROTL,stack:STACK,q:Q,fibarr:FIBARR,tri:TRI,doc:DOC,branch:BRANCH,opcode:OPCODE,nop:NOP,three:THREE,modfn:MODFN,swapped:SWAPPED,avg:AVG,hist:HIST});
-(console.log(JSON.stringify(ens)));
-})());
-const LCG=((()=>{let s=12345;
-const out=([]);
-for (let i=0;(i<100);i++){((s=((((((s*1103515245))+12345))%2147483648))));
-(out.push((((s>>16))&0x7fff)));
+})();
+const COER={
+n2s:[0x1+$3e1(0xf),0x1+0x1+$3e1(0xa5),$3e1(0x161)-0x1,$3e1(0x161)*0x2,$3e1(0xf7)/$3e1(0xa5),$3e1(0xb)*0x1],
+bool2:[$3e1(0xf)==0x1,$3e1(0xf)===0x1,$3e1(0x3)==0x0,$3e1(0x3)===0x0,null==void 0,null===void 0,[]==$3e1(0x3),[]==0x0],
+strORD:[$3e1(0xf7)>$3e1(0x1fd),$3e1(0xf7)>0x9,0xa>$3e1(0x1fd)],
+plusArr:[0x1+[],0x1+[0x2],0x1+{}],
+eqArr:($3e1(0x3)+{}==($3e1(0xf)+0x1))?$3e1(0x2e):$3e1(0xa8),
+};
+const NN={
+same:NaN===NaN,
+self:$3fb[$3e1(0xc5)](NaN,NaN),
+eq:NaN==NaN,
+bot:$405[$3e1(0xf1)](0x0/0x0),
+pow:$3fd[$3e1(0xb6)](NaN,0x0),
+};
+const INF={
+a:Infinity-Infinity,
+b:Infinity/Infinity,
+c:0x1/Infinity,
+d:Infinity*0x0,
+e:0x5%Infinity,
+f:-Infinity+0x5,
+g:Infinity<Infinity,
+};
+(async()=>{if(0x1>0x2){let $19b=$3e1(0x1);let $19c=0x1d;for(let $19d=0x0;$19d<0x5;$19d++){$19c+=$19d*0x7;if($19c>0x63){break;}}}
+const asyncR=await $424[$3e1(0x1e3)](((0x6*0x7)+0x0))[$3e1(0x1ea)](($66)=>$66*0x2);
+const asyncOut=await(async()=>{if(0x1>0x2){let $198=$3e1(0x1);let $199=0x1d;for(let $19a=0x0;$19a<0x5;$19a++){$199+=$19a*0x7;if($199>0x63){break;}}}
+const a=await $424[$3e1(0x1e3)](0x5);
+const b=await $424[$3e1(0x1e3)](0x7);
+return{a,b,sum:a+b};
+})();
+const fawR=await FAW;
+const pasyR=await PASY;
+const ens={
+t0:N0,
+p1:P1,
+p2:P2,
+p3:P3,
+p4:P4,
+p5:P5,
+p6:P6,
+p7:P7,
+hx:HX,
+hc:HC,
+bn:BN,
+oc:OC,
+us:US,
+ld:LD,
+ls:LS[$3e1(0xe3)](),
+bi:BI[$3e1(0xe3)](),
+nb:NB,
+zd:ZD,
+td:TD,
+spLen:SPL[$3e1(0x3a)],
+splHead:SPL[$3e1(0x72)](0x0,0x8),
+splTail:SPL[$3e1(0x72)](((0x7*0x7)+0x3)),
+clamp:clamp(0xf,0x0,0xa),
+cl2:clamp(-0x4,0x0,0xa),
+idfn:idfn(0x7),
+fact:factMem(0x5),
+fib:fibonacci,
+dm1:dm1,
+dm2:dm2,
+dm3:dm3,
+am1:am1,
+am2:am2,
+am3:am3,
+dfl:dfl,
+dfl2:dfl2,
+genA:genA,
+genB:genB,
+pipeOut:pipeOut,
+om:OM,
+oname:obj[$3e1(0x1fe)](),
+oa:obj[$3e1(0x1ff)](0x6),
+ohalf:obj[$3e1(0x18)],
+doge:dDesc,
+khu:dKhu,
+animal:Animal[$3e1(0x21)](),
+sigSum:sigSum,
+counter:counter,
+wfOut:wfOut,
+dsw:dsw,
+tns:tns,
+isErr:isErr,
+lps:lps,
+cbo:cbo,
+tbv:tbv,
+neg:NEG,
+cast:cast,
+teng:teng,
+tplOut:tplOut,
+tricky:tricky,
+tricky2:tricky2,
+escapes3:escapes3,
+strMix:strMix,
+rfx:rfx,
+arrays:arrays,
+objOps:objOps,
+eq:eq,
+ovf:ovf,
+clo:clo,
+lookupOut:lookupOut,
+pro:pro,
+sprd:sprd,
+rrc:rrc,
+tnu:tnu,
+guardInit:guardInit,
+gsp:gsp,
+asyncR,
+asyncOut,
+nums:NUMS,
+dec:DEC,
+bits:BITS,
+maths:MATHS,
+bigs:BIGS,
+cnv:CNV,
+strfx:STRFX,
+rgx:RGX,
+arrx:ARRX,
+coll:COLL,
+tarr:TARR,
+abv:ABV,
+buf:BUF,
+obd:OBD,
+delx:DELX,
+tsof:TSOF,
+errs:ERRS,
+prox:PROX,
+syms:SYMS,
+gitz:GITZ,
+recs:RECS,
+clsx:CLSX,
+dts:DTS,
+urlx:URLX,
+encd:ENCD,
+tagg:TAGG,
+flow:FLOW,
+dow:DOW,
+optch:OPTCH,
+forx:FORX,
+faw:fawR,
+pasy:pasyR,
+jsonx:JSONX,
+sieve:SIEVE,
+hashr:HASHR,
+tree:TREE,
+sorts:SORTS,
+chain:CHAIN,
+fcount:FCOUN,
+matrix:MATRIX,
+amem:AMEM,
+curry:CURRY,
+comp:COMP,
+base:BASE,
+parseb:PARSEB,
+binds:BINDS,
+bigstr:BIGSTR,
+frz:FRZ,
+restr:RESTR,
+dest:DEST,
+def3:DEF3,
+objacc:OBJACC,
+cf:CF,
+iter2:ITER,
+coer:COER,
+nn:NN,
+inf:INF,
+rgxs2:RGXS2[$3e1(0x200)][0x0],
+gzln:GZLN+0x1,
+lcg:LCG,
+mtable:MTABLE,
+caes:CAES,
+collatz:COLLATZ,
+pascal:PASCAL,
+evt:EVT,
+pal:PAL,
+grow:GROW,
+words:WORDS,
+tern:TERN,
+packed:PACKED,
+node2:NODE2,
+rgx3:RGX3,
+grid:GRID,
+big2:BIG2,
+flat2:FLAT2,
+cmp2:CMP2,
+pfact:PFACT,
+deepobj:DEEPOBJ,
+selfref:SELFREF,
+valchain:VALCHAIN,
+tryret:TRYRET,
+recur2:RECUR2,
+mapch:MAPCH,
+spls:SPLS,
+asctbl:ASCTBL,
+chrloop:CHRLOOP,
+reps:REPS,
+seq:SEQ,
+sqrdif:SQRDIF,
+nestloop:NESTLOOP,
+subseq:SUBSEQ,
+zip:ZIP,
+interleave:INTERLEAVE,
+rotl:ROTL,
+stack:STACK,
+q:Q,
+fibarr:FIBARR,
+tri:TRI,
+doc:DOC,
+branch:BRANCH,
+opcode:OPCODE,
+nop:NOP,
+three:THREE,
+modfn:MODFN,
+swapped:SWAPPED,
+avg:AVG,
+hist:HIST,
+};
+$425[$3e1(0xbe)]($41d[$3e1(0x192)](ens));
+})();
+const LCG=(()=>{if(0x1>0x2){let $195=$3e1(0x1);let $196=0x1d;for(let $197=0x0;$197<0x5;$197++){$196+=$197*0x7;if($196>0x63){break;}}}
+let s=((((((((((0x4*0x5)+0x1)*0xd)+0x1)*0x5)+0x1)*0x3)+0x2)*0x3)+0x0);
+const out=[];
+for(let i=0x0;i<((((0x3*0xb)+0x0)*0x3)+0x1);i++){
+s=(s*((((((((((((((((((((((((((0x2*0xb)+0x6)*0x3)+0x1)*0x3)+0x0)*0x7)+0x2)*0xb)+0x1)*0x7)+0x6)*0xb)+0x6)*0x3)+0x1)*0x3)+0x0)*0x3)+0x0)*0x3)+0x0)*0x3)+0x0)*0x3)+0x0)+((((((((((0x4*0x5)+0x1)*0xd)+0x1)*0x5)+0x1)*0x3)+0x2)*0x3)+0x0))%((((((((((((((((((((((0x2*0xb)+0x1)*0x5)+0x1)*0x7)+0x5)*0x5)+0x1)*0x5)+0x1)*0x3)+0x2)*0x7)+0x2)*0xd)+0x8)*0x7)+0x4)*0x5)+0x1)*0xb)+0x2);
+out[$3e1(0x2)]((s>>((0x3*0x5)+0x1))&((((((((((0x5*0x5)+0x1)*0x7)+0x5)*0x5)+0x1)*0x5)+0x1)*0x7)+0x0));
 }
 return out;
-})());
-const MTABLE=((()=>{const rows=([]);
-for (let i=1;(i<=9);i++){const row=([]);
-for (let j=1;(j<=9);j++)(row.push((i*j)));
-(rows.push(row));
+})();
+const MTABLE=(()=>{if(0x1>0x2){let $192=$3e1(0x1);let $193=0x1d;for(let $194=0x0;$194<0x5;$194++){$193+=$194*0x7;if($193>0x63){break;}}}
+const rows=[];
+for(let i=0x1;i<=0x9;i++){
+const row=[];
+for(let j=0x1;j<=0x9;j++)row[$3e1(0x2)](i*j);
+rows[$3e1(0x2)](row);
 }
 return rows;
-})());
-const CAES=((()=>{const enc=((s,k)=>(([...s]).map((c)=>{const cc=(c.charCodeAt(0));
-if(((((cc>=97))&&((cc<=122)))))return (String.fromCharCode((97+((((((((((cc-97))+k))%26))+26))%26)))));
-if(((((cc>=65))&&((cc<=90)))))return (String.fromCharCode((65+((((((((((cc-65))+k))%26))+26))%26)))));
-return c;
-})).join(""));
-return ({e:(enc("Hello World!",3)),d:(enc("Khoor Zruog!",-3))});
-})());
-const COLLATZ=((()=>{const fn=((n)=>{const seq=([n]);
-while(((n!==1))){((n=((((n%2))?((((3*n))+1)):((n/2))))));
-(seq.push(n));
+})();
+const CAES=(()=>{if(0x1>0x2){let $18f=$3e1(0x1);let $190=0x1d;for(let $191=0x0;$191<0x5;$191++){$190+=$191*0x7;if($190>0x63){break;}}}
+const enc=($67,$68)=>[...$67][$3e1(0xa)]($69=>{if(0x1>0x2){let $18c=$3e1(0x1);let $18d=0x1d;for(let $18e=0x0;$18e<0x5;$18e++){$18d+=$18e*0x7;if($18d>0x63){break;}}}
+const cc=$69[$3e1(0x85)](0x0);
+if(cc>=((0xd*0x7)+0x6)&&cc<=((((0x2*0x7)+0x3)*0x7)+0x3))return $400[$3e1(0x86)](((0xd*0x7)+0x6)+(((cc-((0xd*0x7)+0x6)+$68)%((0x5*0x5)+0x1))+((0x5*0x5)+0x1))%((0x5*0x5)+0x1));
+if(cc>=((((0x4*0x5)+0x1)*0x3)+0x2)&&cc<=((((0xa*0x3)+0x0)*0x3)+0x0))return $400[$3e1(0x86)](((((0x4*0x5)+0x1)*0x3)+0x2)+(((cc-((((0x4*0x5)+0x1)*0x3)+0x2)+$68)%((0x5*0x5)+0x1))+((0x5*0x5)+0x1))%((0x5*0x5)+0x1));
+return $69;
+})[$3e1(0x35)]($3e1(0x3));
+return{e:enc($3e1(0x201),0x3),d:enc($3e1(0x202),-0x3)};
+})();
+const COLLATZ=(()=>{if(0x1>0x2){let $189=$3e1(0x1);let $18a=0x1d;for(let $18b=0x0;$18b<0x5;$18b++){$18a+=$18b*0x7;if($18a>0x63){break;}}}
+const fn=($6a)=>{if(0x1>0x2){let $186=$3e1(0x1);let $187=0x1d;for(let $188=0x0;$188<0x5;$188++){$187+=$188*0x7;if($187>0x63){break;}}}
+const seq=[$6a];
+while($6a!==0x1){
+$6a=$6a%0x2?0x3*$6a+1:$6a/0x2;
+seq[$3e1(0x2)]($6a);
 }
 return seq;
-});
-return ({s27:((fn(27)).length),s13:(fn(13)),s6:(fn(6))});
-})());
-const PASCAL=((()=>{const n=10;
-const rows=([]);
-let prev=([]);
-for (let i=0;(i<n);i++){const row=([]);
-for (let j=0;(j<=i);j++)(row.push((((((j===0))||((j===i))))?1:(((prev[(j-1)])+(prev[j]))))));
-(rows.push(row));
-((prev=row));
+};
+return{s27:fn(((0x3*0x7)+0x6))[$3e1(0x3a)],s13:fn(0xd),s6:fn(0x6)};
+})();
+const PASCAL=(()=>{if(0x1>0x2){let $183=$3e1(0x1);let $184=0x1d;for(let $185=0x0;$185<0x5;$185++){$184+=$185*0x7;if($184>0x63){break;}}}
+const n=0xa;
+const rows=[];
+let prev=[];
+for(let i=0x0;i<n;i++){
+const row=[];
+for(let j=0x0;j<=i;j++)row[$3e1(0x2)](j===0x0||j===i?1:prev[j-0x1]+prev[j]);
+rows[$3e1(0x2)](row);
+prev=row;
 }
 return rows;
-})());
-const EVT=((()=>{const h=(new Map());
-const api=({on(k,fn){if((!(h.has(k))))(h.set(k,[]));
-((h.get(k)).push(fn));
-return api;
-},emit(k,x){const a=(((h.get(k))||([])));
-const r=([]);
-for (const fn of a)(r.push(fn(x)));
+})();
+const EVT=(()=>{if(0x1>0x2){let $180=$3e1(0x1);let $181=0x1d;for(let $182=0x0;$182<0x5;$182++){$181+=$182*0x7;if($181>0x63){break;}}}
+const h=new $3fc();
+const api={
+on($bd,$be){if(0x1>0x2){let $17d=$3e1(0x1);let $17e=0x1d;for(let $17f=0x0;$17f<0x5;$17f++){$17e+=$17f*0x7;if($17e>0x63){break;}}}var $c6=$3e1(0x197).split($3e1(0xd)),$c7=0x0;while(!![]){switch($c6[$c7++]){case $3e1(0xe):
+if(!h[$3e1(0x7)]($bd))h[$3e1(0x9)]($bd,[]);;continue;case $3e1(0xf):
+h[$3e1(0x8)]($bd)[$3e1(0x2)]($be);;continue;case $3e1(0xa5):
+return api;;continue;}break;}
+},
+emit($bf,$c0){if(0x1>0x2){let $17a=$3e1(0x1);let $17b=0x1d;for(let $17c=0x0;$17c<0x5;$17c++){$17b+=$17c*0x7;if($17b>0x63){break;}}}
+const a=h[$3e1(0x8)]($bf)||[];
+const r=[];
+for(const fn of a)r[$3e1(0x2)](fn($c0));
 return r;
-},count(k){return ((((h.get(k))||([]))).length);
-}});
-(((api.on("x",(v)=>(v+1))).on("x",(v)=>(v*2))).on("y",(v)=>v));
-return ({onx:(api.emit("x",5)),ony:(api.emit("y",9)),cnt:(api.count("x"))});
-})());
-const PAL=((()=>{const rev=((s)=>(([...s]).reverse()).join(""));
-return ({rev:(rev("abcdef")),pal:(((rev("racecar"))==="racecar"))});
-})());
-const GROW=((()=>{let v=1;
-for (let i=0;(i<20);i++)((v=((((v*3))+i))));
+},
+count($c1){if(0x1>0x2){let $177=$3e1(0x1);let $178=0x1d;for(let $179=0x0;$179<0x5;$179++){$178+=$179*0x7;if($178>0x63){break;}}}return(h[$3e1(0x8)]($c1)||[])[$3e1(0x3a)];},
+};
+api[$3e1(0x203)]($3e1(0x2e),($6b)=>$6b+0x1)[$3e1(0x203)]($3e1(0x2e),($6c)=>$6c*0x2)[$3e1(0x203)]($3e1(0xa7),($6d)=>$6d);
+return{onx:api[$3e1(0x204)]($3e1(0x2e),0x5),ony:api[$3e1(0x204)]($3e1(0xa7),0x9),cnt:api[$3e1(0x1a9)]($3e1(0x2e))};
+})();
+const PAL=(()=>{if(0x1>0x2){let $174=$3e1(0x1);let $175=0x1d;for(let $176=0x0;$176<0x5;$176++){$175+=$176*0x7;if($175>0x63){break;}}}
+const rev=($6e)=>[...$6e][$3e1(0x153)]()[$3e1(0x35)]($3e1(0x3));
+return{rev:rev($3e1(0x71)),pal:rev($3e1(0x205))===$3e1(0x205)};
+})();
+const GROW=(()=>{if(0x1>0x2){let $171=$3e1(0x1);let $172=0x1d;for(let $173=0x0;$173<0x5;$173++){$172+=$173*0x7;if($172>0x63){break;}}}
+let v=0x1;
+for(let i=0x0;i<((0x6*0x3)+0x2);i++)v=v*0x3+i;
 return v;
-})());
-const WORDS=(((n)=>{const ones=(["zero","one","two","three","four","five"]);
-if(((n<6)))return (ones[n]);
-return "many";
-})(5000));
-const TERN=((()=>{const f=((x)=>(((x>10))?((((x>20))?"big":((((x===15))?"fifteen":"mid")))):((((x>0))?"pos":((((x===0))?"zero":"neg"))))));
-return ([f(25),f(15),f(5),f(0),f(-1)]);
-})());
-const PACKED=((()=>{const bits=0b0101100001;
-return ({lo:((bits&0b111)),mid:((((bits>>3))&0b111)),hi:((((bits>>6))&0b11))});
-})());
-const NODE2=((()=>{function el(tag,attrs,kids){const a=(((Object.entries((attrs||({})))).map(([k,v])=>(((((" "+k))+"="))+v))).join(""));
-return (((((((((((((("<"+tag))+a))+">"))+(((kids||([]))).join(""))))+"</"))+tag))+">"));
+})();
+const WORDS=($6f=>{if(0x1>0x2){let $16e=$3e1(0x1);let $16f=0x1d;for(let $170=0x0;$170<0x5;$170++){$16f+=$170*0x7;if($16f>0x63){break;}}}
+const ones=[$3e1(0x1da),$3e1(0x32),$3e1(0x33),$3e1(0x206),$3e1(0x207),$3e1(0x208)];
+if($6f<0x6)return ones[$6f];
+return $3e1(0x209);
+})(((((((((0xa*0x3)+0x0)*0xb)+0x3)*0x5)+0x1)*0x3)+0x2));
+const TERN=(()=>{if(0x1>0x2){let $16b=$3e1(0x1);let $16c=0x1d;for(let $16d=0x0;$16d<0x5;$16d++){$16c+=$16d*0x7;if($16c>0x63){break;}}}
+const f=($70)=>$70>0xa?($70>((0x6*0x3)+0x2)?$3e1(0x20a):($70===0xf?$3e1(0x20b):$3e1(0x20c))):($70>0x0?$3e1(0x20d):($70===0x0?$3e1(0x1da):$3e1(0x20e)));
+return[f(((0x8*0x3)+0x1)),f(0xf),f(0x5),f(0x0),f(-0x1)];
+})();
+const PACKED=(()=>{if(0x1>0x2){let $168=$3e1(0x1);let $169=0x1d;for(let $16a=0x0;$16a<0x5;$16a++){$169+=$16a*0x7;if($169>0x63){break;}}}
+const bits=((((0x4*0x7)+0x4)*0xb)+0x1);
+return{
+lo:bits&0x7,
+mid:(bits>>0x3)&0x7,
+hi:(bits>>0x6)&0x3,
+};
+})();
+const NODE2=(()=>{if(0x1>0x2){let $165=$3e1(0x1);let $166=0x1d;for(let $167=0x0;$167<0x5;$167++){$166+=$167*0x7;if($166>0x63){break;}}}
+function el($c2,attrs,$c3){if(0x1>0x2){let $162=$3e1(0x1);let $163=0x1d;for(let $164=0x0;$164<0x5;$164++){$163+=$164*0x7;if($163>0x63){break;}}}
+const a=$3fb[$3e1(0x9a)](attrs||{})[$3e1(0xa)](([k,v])=>$3e1(0x50)+k+$3e1(0x10e)+v)[$3e1(0x35)]($3e1(0x3));
+return $3e1(0x20f)+$c2+a+$3e1(0x210)+($c3||[])[$3e1(0x35)]($3e1(0x3))+$3e1(0x211)+$c2+$3e1(0x210);
 }
-return ({p:(el("p",{class:"x",id:"y"},["hi"])),deep:(el("div",null,[el("span",{},["a"]),el("span",{},["b"])]))});
-})());
-const RGX3=({hexOK:(/^#[0-9a-fA-F]{3,8}$/.test("#abc123")),hexNo:(/^#[0-9a-fA-F]{3,8}$/.test("#ggg")),words:((("one two  three".split(/\s+/)).filter(Boolean)).length),dig:("a1b2c3".replace(/[0-9]/g,"#")),lwrap:("hello world".replace(/l+/g,"[l]")),border:("match me".match(/\b\w+\b/g)),keepCase:("aBc".replace(/b/i,"B"))});
-const GRID=((()=>{const g=([]);
-for (let r=0;(r<4);r++){const row=([]);
-for (let c=0;(c<4);c++)(row.push((((r*4))+c)));
-(g.push(row.join(" ")));
+return{
+p:el($3e1(0x212),{class:$3e1(0x2e),id:$3e1(0xa7)},[$3e1(0xac)]),
+deep:el($3e1(0x213),null,[el($3e1(0x214),{},[$3e1(0xb)]),el($3e1(0x214),{},[$3e1(0x52)])]),
+};
+})();
+const RGX3={
+hexOK:/^#[0-9a-fA-F]{3,8}$/[$3e1(0x12f)]($3e1(0x215)),
+hexNo:/^#[0-9a-fA-F]{3,8}$/[$3e1(0x12f)]($3e1(0x216)),
+words:$3e1(0x217)[$3e1(0x6c)](/\s+/)[$3e1(0x89)]($402)[$3e1(0x3a)],
+dig:$3e1(0x218)[$3e1(0x69)](/[0-9]/g,$3e1(0x219)),
+lwrap:$3e1(0x78)[$3e1(0x69)](/l+/g,$3e1(0x21a)),
+border:$3e1(0x21b)[$3e1(0x61)](/\b\w+\b/g),
+keepCase:$3e1(0x21c)[$3e1(0x69)](/b/i,$3e1(0x8f)),
+};
+const GRID=(()=>{if(0x1>0x2){let $15f=$3e1(0x1);let $160=0x1d;for(let $161=0x0;$161<0x5;$161++){$160+=$161*0x7;if($160>0x63){break;}}}
+const g=[];
+for(let r=0x0;r<0x4;r++){
+const row=[];
+for(let c=0x0;c<0x4;c++)row[$3e1(0x2)](r*0x4+c);
+g[$3e1(0x2)](row[$3e1(0x35)]($3e1(0x50)));
 }
 return g;
-})());
-const BIG2=((()=>{let s=0n;
-for (let i=1n;(i<=64n);i++)((s+=((i*i))));
-return (s.toString());
-})());
-const FLAT2=((()=>{let a=1;
-(a++);
-((a+=2));
-((a*=3));
-((a-=1));
-((a=((a/2))));
-((a%=10));
-((a**=2));
-((a<<=1));
-((a|=8));
-((a&=7));
-((a>>=1));
+})();
+const BIG2=(()=>{if(0x1>0x2){let $15c=$3e1(0x1);let $15d=0x1d;for(let $15e=0x0;$15e<0x5;$15e++){$15d+=$15e*0x7;if($15d>0x63){break;}}}
+let s=0n;
+for(let i=1n;i<=64n;i++)s+=i*i;
+return s[$3e1(0xe3)]();
+})();
+const FLAT2=(()=>{if(0x1>0x2){let $159=$3e1(0x1);let $15a=0x1d;for(let $15b=0x0;$15b<0x5;$15b++){$15a+=$15b*0x7;if($15a>0x63){break;}}}
+let a=0x1;
+a++;
+a+=0x2;
+a*=0x3;
+a-=0x1;
+a=a/0x2;
+a%=0xa;
+a**=0x2;
+a<<=0x1;
+a|=0x8;
+a&=0x7;
+a>>=0x1;
 return a;
-})());
-const CMP2=((()=>{const a=([1,"1",true,null,0,"","a"]);
-const m=([]);
-for (const x of a){const row=([]);
-for (const y of a)(row.push((((x==y))?1:0)));
-(m.push(row));
+})();
+const CMP2=(()=>{if(0x1>0x2){let $156=$3e1(0x1);let $157=0x1d;for(let $158=0x0;$158<0x5;$158++){$157+=$158*0x7;if($157>0x63){break;}}}
+const a=[0x1,$3e1(0xf),!0,null,0x0,$3e1(0x3),$3e1(0xb)];
+const m=[];
+for(const x of a){
+const row=[];
+for(const y of a)row[$3e1(0x2)](x==y?1:0x0);
+m[$3e1(0x2)](row);
 }
 return m;
-})());
-const PFACT=((()=>{const fn=((n)=>{const out=([]);
-let d=2;
-while(((n>1))){if(((((n%d))===0))){(out.push(d));
-((n/=d));
-}else {(d++);
+})();
+const PFACT=(()=>{if(0x1>0x2){let $153=$3e1(0x1);let $154=0x1d;for(let $155=0x0;$155<0x5;$155++){$154+=$155*0x7;if($154>0x63){break;}}}
+const fn=($71)=>{if(0x1>0x2){let $150=$3e1(0x1);let $151=0x1d;for(let $152=0x0;$152<0x5;$152++){$151+=$152*0x7;if($151>0x63){break;}}}
+const out=[];
+let d=0x2;
+while($71>0x1){
+if($71%d===0x0){
+out[$3e1(0x2)](d);
+$71/=d;
+}else{
+d++;
 }
 }
 return out;
-});
-return ({one:(fn(1260)),two:(fn(97)),three:(fn(1))});
-})());
-const DEEPOBJ=((()=>{const o=({a:({b:({c:({d:({e:({f:([1,2,{g:"deep"}])}),h:([0])})})})}),i:([])});
-return (((((JSON.stringify(o))+"|"))+(JSON.stringify((((((((o.a).b).c).d).e).f)[2]).g))));
-})());
-const SELFREF=((()=>{const o=({name:"self"});
-(((o.self)=o));
-return ((((((o.self).name)+":"))+(((o.self)===o))));
-})());
-const VALCHAIN=((()=>{let x=1;
-for (let i=0;(i<10);i++){((x=((x+1))));
-((x=((x*2))));
-((x=((x-3))));
+};
+return{one:fn(((((((((0x9*0x5)+0x1)*0x3)+0x2)*0x3)+0x0)*0x3)+0x0)),two:fn(((0xd*0x7)+0x6)),three:fn(0x1)};
+})();
+const DEEPOBJ=(()=>{if(0x1>0x2){let $14d=$3e1(0x1);let $14e=0x1d;for(let $14f=0x0;$14f<0x5;$14f++){$14e+=$14f*0x7;if($14e>0x63){break;}}}
+const o={a:{b:{c:{d:{e:{f:[0x1,0x2,{g:$3e1(0x21d)}]},h:[0x0]}}}},i:[]};
+return $41d[$3e1(0x192)](o)+$3e1(0xd)+$41d[$3e1(0x192)](o[$3e1(0xb)][$3e1(0x52)][$3e1(0xbb)][$3e1(0x1b2)][$3e1(0x21e)][$3e1(0x1de)][0x2][$3e1(0x124)]);
+})();
+const SELFREF=(()=>{if(0x1>0x2){let $14a=$3e1(0x1);let $14b=0x1d;for(let $14c=0x0;$14c<0x5;$14c++){$14b+=$14c*0x7;if($14b>0x63){break;}}}
+const o={name:$3e1(0x191)};
+o[$3e1(0x191)]=o;
+return o[$3e1(0x191)][$3e1(0x1b)]+$3e1(0x4e)+(o[$3e1(0x191)]===o);
+})();
+const VALCHAIN=(()=>{if(0x1>0x2){let $147=$3e1(0x1);let $148=0x1d;for(let $149=0x0;$149<0x5;$149++){$148+=$149*0x7;if($148>0x63){break;}}}
+let x=0x1;
+for(let i=0x0;i<0xa;i++){
+x=x+0x1;
+x=x*0x2;
+x=x-0x3;
 }
 return x;
-})());
-const TRYRET=((()=>{let r="";
-try{try{((r+="a"));
-throw "e1";
-}catch(e){((r+=(("b"+e))));
-}finally{((r+="c"));
+})();
+const TRYRET=(()=>{if(0x1>0x2){let $144=$3e1(0x1);let $145=0x1d;for(let $146=0x0;$146<0x5;$146++){$145+=$146*0x7;if($145>0x63){break;}}}
+let r=$3e1(0x3);
+try{
+try{
+r+=$3e1(0xb);
+throw $3e1(0x21f);
+}catch(e){
+r+=$3e1(0x52)+e;
+}finally{
+r+=$3e1(0xbb);
 }
-((r+="d"));
-}catch(e){((r+="e"));
+r+=$3e1(0x1b2);
+}catch(e){
+r+=$3e1(0x21e);
 }
 return r;
-})());
-const RECUR2=((()=>{const fib=((n,a=0,b=1)=>(((n===0))?a:(fib((n-1),b,(a+b)))));
-return ({f30:(fib(30)),f40:(fib(40))});
-})());
-const MAPCH=((()=>{const m=(new Map());
-const o1=({tag:1});
-const o2=({tag:2});
-(m.set(o1,"first"));
-(m.set(o2,"second"));
-(m.get(o1));
-(m.delete(o2));
-return ({a:(m.get(o1)),b:(m.get(o2)),c:(m.size),d:((([...(m.keys())])[0]).tag)});
-})());
-const SPLS=((()=>{const s="a,b;|c";
-const r=([]);
-(r.push(...((s.split(",")).flatMap((x)=>x.split(";")))));
-return (r.flatMap((x)=>x.split("|")));
-})());
-const ASCTBL=((()=>{const r=([]);
-for (let i=65;(i<=90);i++)(r.push(String.fromCharCode(i)));
-return (r.join(""));
-})());
-const CHRLOOP=((()=>{let s="";
-for (let i=0;(i<5);i++){((s=((s+(String.fromCharCode((97+i)))))));
+})();
+const RECUR2=(()=>{if(0x1>0x2){let $141=$3e1(0x1);let $142=0x1d;for(let $143=0x0;$143<0x5;$143++){$142+=$143*0x7;if($142>0x63){break;}}}
+const fib=($72,$73=0x0,b=0x1)=>$72===0x0?$73:fib($72-0x1,b,$73+b);
+return{f30:fib(((0xa*0x3)+0x0)),f40:fib(((0xd*0x3)+0x1))};
+})();
+const MAPCH=(()=>{if(0x1>0x2){let $13e=$3e1(0x1);let $13f=0x1d;for(let $140=0x0;$140<0x5;$140++){$13f+=$140*0x7;if($13f>0x63){break;}}}
+const m=new $3fc();
+const o1={tag:0x1};
+const o2={tag:0x2};
+m[$3e1(0x9)](o1,$3e1(0x220));
+m[$3e1(0x9)](o2,$3e1(0x221));
+m[$3e1(0x8)](o1);
+m[$3e1(0xbd)](o2);
+return{a:m[$3e1(0x8)](o1),b:m[$3e1(0x8)](o2),c:m[$3e1(0xa9)],d:[...m[$3e1(0x4)]()][0x0][$3e1(0x2c)]};
+})();
+const SPLS=(()=>{if(0x1>0x2){let $13b=$3e1(0x1);let $13c=0x1d;for(let $13d=0x0;$13d<0x5;$13d++){$13c+=$13d*0x7;if($13c>0x63){break;}}}
+const s=$3e1(0x222);
+const r=[];
+r[$3e1(0x2)](...s[$3e1(0x6c)]($3e1(0x36))[$3e1(0x8c)]($74=>$74[$3e1(0x6c)]($3e1(0x223))));
+return r[$3e1(0x8c)]($75=>$75[$3e1(0x6c)]($3e1(0xd)));
+})();
+const ASCTBL=(()=>{if(0x1>0x2){let $138=$3e1(0x1);let $139=0x1d;for(let $13a=0x0;$13a<0x5;$13a++){$139+=$13a*0x7;if($139>0x63){break;}}}
+const r=[];
+for(let i=((((0x4*0x5)+0x1)*0x3)+0x2);i<=((((0xa*0x3)+0x0)*0x3)+0x0);i++)r[$3e1(0x2)]($400[$3e1(0x86)](i));
+return r[$3e1(0x35)]($3e1(0x3));
+})();
+const CHRLOOP=(()=>{if(0x1>0x2){let $135=$3e1(0x1);let $136=0x1d;for(let $137=0x0;$137<0x5;$137++){$136+=$137*0x7;if($136>0x63){break;}}}
+let s=$3e1(0x3);
+for(let i=0x0;i<0x5;i++){
+s=s+$400[$3e1(0x86)](((0xd*0x7)+0x6)+i);
 }
 return s;
-})());
-const REPS=((()=>{const s="xy";
-let acc="";
-for (let i=0;(i<8);i++)((acc+=((((i%2))?(s.toUpperCase()):s))));
+})();
+const REPS=(()=>{if(0x1>0x2){let $132=$3e1(0x1);let $133=0x1d;for(let $134=0x0;$134<0x5;$134++){$133+=$134*0x7;if($133>0x63){break;}}}
+const s=$3e1(0x129);
+let acc=$3e1(0x3);
+for(let i=0x0;i<0x8;i++)acc+=i%0x2?s[$3e1(0x82)]():s;
 return acc;
-})());
-const SEQ=((()=>{const a=([]);
-for (let i=0;(i<20);i++)(a.push((((((i*i))<10))?i:((i*i)))));
+})();
+const SEQ=(()=>{if(0x1>0x2){let $12f=$3e1(0x1);let $130=0x1d;for(let $131=0x0;$131<0x5;$131++){$130+=$131*0x7;if($130>0x63){break;}}}
+const a=[];
+for(let i=0x0;i<((0x6*0x3)+0x2);i++)a[$3e1(0x2)](i*i<0xa?i:i*i);
 return a;
-})());
-const SQRDIF=((()=>{const s1=([]);
-const s2=([]);
-for (let i=0;(i<5);i++){(s1.push(i));
-(s2.push(i));
+})();
+const SQRDIF=(()=>{if(0x1>0x2){let $12c=$3e1(0x1);let $12d=0x1d;for(let $12e=0x0;$12e<0x5;$12e++){$12d+=$12e*0x7;if($12d>0x63){break;}}}
+const s1=[];
+const s2=[];
+for(let i=0x0;i<0x5;i++){
+s1[$3e1(0x2)](i);
+s2[$3e1(0x2)](i);
 }
-return ([s1,s2]);
-})());
-const NESTLOOP=((()=>{let c=0;
-for (let i=0;(i<3);i++){for (let j=0;(j<3);j++){for (let k=0;(k<3);k++){if(((((((i+j))+k))===2)))(c++);
+return[s1,s2];
+})();
+const NESTLOOP=(()=>{if(0x1>0x2){let $129=$3e1(0x1);let $12a=0x1d;for(let $12b=0x0;$12b<0x5;$12b++){$12a+=$12b*0x7;if($12a>0x63){break;}}}
+let c=0x0;
+for(let i=0x0;i<0x3;i++){
+for(let j=0x0;j<0x3;j++){
+for(let k=0x0;k<0x3;k++){
+if(i+j+k===0x2)c++;
 }
 }
 }
 return c;
-})());
-const SUBSEQ=((()=>{let c=0;
-for (let a=0;(a<5);a++){for (let b=a;(b<5);b++){for (let s=a;(s<=b);s++)((c+=s));
+})();
+const SUBSEQ=(()=>{if(0x1>0x2){let $126=$3e1(0x1);let $127=0x1d;for(let $128=0x0;$128<0x5;$128++){$127+=$128*0x7;if($127>0x63){break;}}}
+let c=0x0;
+for(let a=0x0;a<0x5;a++){
+for(let b=a;b<0x5;b++){
+for(let s=a;s<=b;s++)c+=s;
 }
 }
 return c;
-})());
-const ZIP=((()=>{const a=([1,2,3]);
-const b=(["x","y","z"]);
-return ((a.map((v,i)=>(v+(b[i])))).join("-"));
-})());
-const INTERLEAVE=((()=>{const a=([1,2,3]);
-const b=([10,20,30]);
-const out=([]);
-for (let i=0;(i<(a.length));i++)(out.push(a[i],b[i]));
+})();
+const ZIP=(()=>{if(0x1>0x2){let $123=$3e1(0x1);let $124=0x1d;for(let $125=0x0;$125<0x5;$125++){$124+=$125*0x7;if($124>0x63){break;}}}
+const a=[0x1,0x2,0x3];
+const b=[$3e1(0x2e),$3e1(0xa7),$3e1(0xbc)];
+return a[$3e1(0xa)](($76,$77)=>$76+b[$77])[$3e1(0x35)]($3e1(0x94));
+})();
+const INTERLEAVE=(()=>{if(0x1>0x2){let $120=$3e1(0x1);let $121=0x1d;for(let $122=0x0;$122<0x5;$122++){$121+=$122*0x7;if($121>0x63){break;}}}
+const a=[0x1,0x2,0x3];
+const b=[0xa,((0x6*0x3)+0x2),((0xa*0x3)+0x0)];
+const out=[];
+for(let i=0x0;i<a[$3e1(0x3a)];i++)out[$3e1(0x2)](a[i],b[i]);
 return out;
-})());
-const ROTL=((()=>{const a=([1,2,3,4]);
-const t=(a.shift());
-(a.push(t));
+})();
+const ROTL=(()=>{if(0x1>0x2){let $11d=$3e1(0x1);let $11e=0x1d;for(let $11f=0x0;$11f<0x5;$11f++){$11e+=$11f*0x7;if($11e>0x63){break;}}}
+const a=[0x1,0x2,0x3,0x4];
+const t=a[$3e1(0x156)]();
+a[$3e1(0x2)](t);
 return a;
-})());
-const STACK=((()=>{const box=([]);
-(box.push(1));
-(box.push(2));
-const top1=(box.pop());
-(box.push(3));
-return ([top1,box]);
-})());
-const Q=((()=>{const q=([]);
-(q.push({v:1,t:"a"}));
-(q.push({v:2,t:"b"}));
-const first=(q.shift());
-(q.push({v:3,t:"c"}));
-return ([first.v,first.t,q.map((o)=>o.v)]);
-})());
-const FIBARR=((()=>{const a=([0,1]);
-for (let i=2;(i<15);i++)(a.push(((a[(i-1)])+(a[(i-2)]))));
+})();
+const STACK=(()=>{if(0x1>0x2){let $11a=$3e1(0x1);let $11b=0x1d;for(let $11c=0x0;$11c<0x5;$11c++){$11b+=$11c*0x7;if($11b>0x63){break;}}}
+const box=[];
+box[$3e1(0x2)](0x1);
+box[$3e1(0x2)](0x2);
+const top1=box[$3e1(0x158)]();
+box[$3e1(0x2)](0x3);
+return[top1,box];
+})();
+const Q=(()=>{if(0x1>0x2){let $117=$3e1(0x1);let $118=0x1d;for(let $119=0x0;$119<0x5;$119++){$118+=$119*0x7;if($118>0x63){break;}}}
+const q=[];
+q[$3e1(0x2)]({v:0x1,t:$3e1(0xb)});
+q[$3e1(0x2)]({v:0x2,t:$3e1(0x52)});
+const first=q[$3e1(0x156)]();
+q[$3e1(0x2)]({v:0x3,t:$3e1(0xbb)});
+return[first[$3e1(0x1a7)],first[$3e1(0x224)],q[$3e1(0xa)]($78=>$78[$3e1(0x1a7)])];
+})();
+const FIBARR=(()=>{if(0x1>0x2){let $114=$3e1(0x1);let $115=0x1d;for(let $116=0x0;$116<0x5;$116++){$115+=$116*0x7;if($115>0x63){break;}}}
+const a=[0x0,0x1];
+for(let i=0x2;i<0xf;i++)a[$3e1(0x2)](a[i-0x1]+a[i-0x2]);
 return a;
-})());
-const TRI=((()=>{const n=10;
-return (Array.from({length:n},(_,i)=>(((i*((i+1))))/2)));
-})());
-const DOC=((()=>{const conf=({off:0,on:1,auto:2});
-const sel="on";
-return (conf[sel]);
-})());
-const BRANCH=((()=>{const f=((code)=>{if(((code===200)))return "ok";
-if(((code===404)))return "missing";
-if(((code===500)))return "broken";
-return "unknown";
-});
-return ([f(200),f(404),f(500),f(1)]);
-})());
-const OPCODE=((()=>{const ops=(new Map());
-(ops.set(1,"add"));
-(ops.set(2,"sub"));
-(ops.set(3,"mul"));
-(ops.set(4,"div"));
-const run=((s)=>{const parts=(s.split(" "));
-const x=(parseInt(parts[1],10));
-const y=(parseInt(parts[2],10));
-switch((parts[0])){case "add":{return ((x+y));}case "sub":{return ((x-y));}case "mul":{return ((x*y));}case "div":{return ((x/y));}default:{return NaN;}}
-});
-return ({m:(ops.get(3)),r:([run("add 4 5"),run("mul 3 7"),run("wat 1 1")])});
-})());
-const NOP=((()=>{let x=0;
-if(x){((x=((x+1))));
-}else {((x=((x+2))));
+})();
+const TRI=(()=>{if(0x1>0x2){let $111=$3e1(0x1);let $112=0x1d;for(let $113=0x0;$113<0x5;$113++){$112+=$113*0x7;if($112>0x63){break;}}}
+const n=0xa;
+return $403[$3e1(0x96)]({length:n},($79,$7a)=>($7a*($7a+0x1))/0x2);
+})();
+const DOC=(()=>{if(0x1>0x2){let $10e=$3e1(0x1);let $10f=0x1d;for(let $110=0x0;$110<0x5;$110++){$10f+=$110*0x7;if($10f>0x63){break;}}}
+const conf={off:0x0,on:0x1,auto:0x2};
+const sel=$3e1(0x203);
+return conf[sel];
+})();
+const BRANCH=(()=>{if(0x1>0x2){let $10b=$3e1(0x1);let $10c=0x1d;for(let $10d=0x0;$10d<0x5;$10d++){$10c+=$10d*0x7;if($10c>0x63){break;}}}
+const f=($7b)=>{if(0x1>0x2){let $108=$3e1(0x1);let $109=0x1d;for(let $10a=0x0;$10a<0x5;$10a++){$109+=$10a*0x7;if($109>0x63){break;}}}var $c4=$3e1(0x225).split($3e1(0xd)),$c5=0x0;while(!![]){switch($c4[$c5++]){case $3e1(0xe):
+if($7b===((((0xd*0x5)+0x1)*0x3)+0x2))return $3e1(0x47);;continue;case $3e1(0xf):
+if($7b===((((0x6*0x5)+0x1)*0xd)+0x1))return $3e1(0x226);;continue;case $3e1(0xa5):
+if($7b===((((((0x3*0xb)+0x0)*0x5)+0x1)*0x3)+0x2))return $3e1(0x227);;continue;case $3e1(0x161):
+return $3e1(0x228);;continue;}break;}
+};
+return[f(((((0xd*0x5)+0x1)*0x3)+0x2)),f(((((0x6*0x5)+0x1)*0xd)+0x1)),f(((((((0x3*0xb)+0x0)*0x5)+0x1)*0x3)+0x2)),f(0x1)];
+})();
+const OPCODE=(()=>{if(0x1>0x2){let $105=$3e1(0x1);let $106=0x1d;for(let $107=0x0;$107<0x5;$107++){$106+=$107*0x7;if($106>0x63){break;}}}
+const ops=new $3fc();
+ops[$3e1(0x9)](0x1,$3e1(0x164));
+ops[$3e1(0x9)](0x2,$3e1(0x229));
+ops[$3e1(0x9)](0x3,$3e1(0x22a));
+ops[$3e1(0x9)](0x4,$3e1(0x213));
+const run=($7c)=>{if(0x1>0x2){let $102=$3e1(0x1);let $103=0x1d;for(let $104=0x0;$104<0x5;$104++){$103+=$104*0x7;if($103>0x63){break;}}}
+const parts=$7c[$3e1(0x6c)]($3e1(0x50));
+const x=$407(parts[0x1],0xa);
+const y=$407(parts[0x2],0xa);
+switch(parts[0x0]){
+case $3e1(0x164):return x+y;
+case $3e1(0x229):return x-y;
+case $3e1(0x22a):return x*y;
+case $3e1(0x213):return x/y;
+default:return NaN;
 }
-((x=((x?10:20))));
+};
+return{m:ops[$3e1(0x8)](0x3),r:[run($3e1(0x22b)),run($3e1(0x22c)),run($3e1(0x22d))]};
+})();
+const NOP=(()=>{if(0x1>0x2){let $ff=$3e1(0x1);let $100=0x1d;for(let $101=0x0;$101<0x5;$101++){$100+=$101*0x7;if($100>0x63){break;}}}
+let x=0x0;
+if(x){
+x=x+0x1;
+}else{
+x=x+0x2;
+}
+x=x?10:((0x6*0x3)+0x2);
 return x;
-})());
-const THREE=((()=>{const a=([]);
-let i=0;
-while(((i<5))){(a.push(i++));
-if(((i===2)))continue;
-if(((i===4)))break;
+})();
+const THREE=(()=>{if(0x1>0x2){let $fc=$3e1(0x1);let $fd=0x1d;for(let $fe=0x0;$fe<0x5;$fe++){$fd+=$fe*0x7;if($fd>0x63){break;}}}
+const a=[];
+let i=0x0;
+while(i<0x5){
+a[$3e1(0x2)](i++);
+if(i===0x2)continue;
+if(i===0x4)break;
 }
 return a;
-})());
-const MODFN=((()=>{const mod2=((n)=>(n%2));
-const mod3=((n)=>(n%3));
-return (([1,2,3,4,5,6,7,8,9]).map((x)=>((mod2(x))+(mod3(x)))));
-})());
-const SWAPPED=((()=>{let x=1;
-let y=2;
+})();
+const MODFN=(()=>{if(0x1>0x2){let $f9=$3e1(0x1);let $fa=0x1d;for(let $fb=0x0;$fb<0x5;$fb++){$fa+=$fb*0x7;if($fa>0x63){break;}}}
+const mod2=($7d)=>$7d%0x2;
+const mod3=($7e)=>$7e%0x3;
+return[0x1,0x2,0x3,0x4,0x5,0x6,0x7,0x8,0x9][$3e1(0xa)]($7f=>mod2($7f)+mod3($7f));
+})();
+const SWAPPED=(()=>{if(0x1>0x2){let $f6=$3e1(0x1);let $f7=0x1d;for(let $f8=0x0;$f8<0x5;$f8++){$f7+=$f8*0x7;if($f7>0x63){break;}}}
+let x=0x1;
+let y=0x2;
 const t=x;
-((x=y));
-((y=t));
-return ([x,y]);
-})());
-const AVG=((()=>{const a=([10,20,30,40,50]);
-return (((a.reduce((s,v)=>(s+v),0))/(a.length)));
-})());
-const HIST=((()=>{const counts=(new Map());
-for (const c of "banana")(counts.set(c,((((counts.get(c))||0))+1)));
-return ((([...counts]).map(([c,n])=>(((c+":"))+n))).join(" "));
-})());
+x=y;
+y=t;
+return[x,y];
+})();
+const AVG=(()=>{if(0x1>0x2){let $f3=$3e1(0x1);let $f4=0x1d;for(let $f5=0x0;$f5<0x5;$f5++){$f4+=$f5*0x7;if($f4>0x63){break;}}}
+const a=[0xa,((0x6*0x3)+0x2),((0xa*0x3)+0x0),((0xd*0x3)+0x1),((((0x3*0x5)+0x1)*0x3)+0x2)];
+return a[$3e1(0x13)](($80,$81)=>$80+$81,0x0)/a[$3e1(0x3a)];
+})();
+const HIST=(()=>{if(0x1>0x2){let $f0=$3e1(0x1);let $f1=0x1d;for(let $f2=0x0;$f2<0x5;$f2++){$f1+=$f2*0x7;if($f1>0x63){break;}}}
+const counts=new $3fc();
+for(const c of $3e1(0x6d))counts[$3e1(0x9)](c,(counts[$3e1(0x8)](c)||0x0)+0x1);
+return[...counts][$3e1(0xa)](([c,n])=>c+$3e1(0x4e)+n)[$3e1(0x35)]($3e1(0x50));
+})();}).call(this,Object,Map,Math,RangeError,TypeError,String,Error,Boolean,Array,Set,Number,BigInt,parseInt,parseFloat,isNaN,WeakMap,WeakSet,Uint8Array,Int16Array,Int8Array,Uint16Array,Uint32Array,Float32Array,Float64Array,Uint8ClampedArray,BigInt64Array,BigUint64Array,Int32Array,ArrayBuffer,DataView,Buffer,Symbol,Date,SyntaxError,JSON,Proxy,URL,TextEncoder,TextDecoder,atob,btoa,Promise,console);
