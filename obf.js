@@ -4,17 +4,24 @@ const solo = new Set(['{', '}', '(', ')', '[', ']', ';', ',', '<', '>', '+', '-'
 const pair = new Set(['==', '!=', '<=', '>=', '&&', '||', '??', '?.', '++', '--', '+=', '-=', '*=', '/=', '%=', '&=', '|=', '^=', '**', '<<', '>>', '=>']);
 const trio = new Set(['===', '!==', '**=', '<<=', '>>=', '>>>', '...', '&&=', '||=', '??=']);
 const quad = new Set(['>>>=']);
-const starts = new Set(['if', 'for', 'while', 'switch', 'catch', 'with']);
 const opens = new Set(['if', 'for', 'while', 'switch', 'catch', 'with', 'do', 'else', 'try', 'finally']);
 const terms = new Set(['return', 'typeof', 'instanceof', 'in', 'of', 'new', 'delete', 'void', 'throw', 'case', 'do', 'else', 'yield', 'await']);
 const halt = new Set(['continue', 'break']);
 const reserved = new Set(['if', 'for', 'while', 'switch', 'catch', 'with', 'do', 'else', 'try', 'finally', 'return', 'typeof', 'instanceof', 'in', 'of', 'new', 'delete', 'void', 'throw', 'case', 'yield', 'await', 'break', 'continue', 'this', 'super', 'class', 'function', 'var', 'let', 'const', 'true', 'false', 'null', 'undefined', 'default', 'extends', 'static', 'get', 'set', 'async', 'debugger', 'import', 'export']);
+const clip = new Set(['(', '[', '.', '?.', ',', ':', '?', '=>', '...', '=', '+=', '-=', '*=', '/=', '%=', '**=', '&=', '|=', '^=', '<<=', '>>=', '>>>=', '&&=', '||=', '??=', '+', '-', '*', '/', '%', '**', '&', '|', '^', '<<', '>>', '>>>', '<', '>', '<=', '>=', '==', '!=', '===', '!==', '&&', '||', '??']);
+const hard = new Set(['return', 'throw', 'break', 'continue', 'yield']);
+const cantend = new Set(['if', 'for', 'while', 'switch', 'catch', 'with', 'do', 'else', 'try', 'finally', 'return', 'throw', 'break', 'continue', 'case', 'default', 'var', 'let', 'const', 'function', 'class', 'import', 'export', 'debugger', 'extends', 'new', 'in', 'of', 'get', 'set', 'static', 'async', 'super']);
+const pick = [3, 5, 7, 11, 13];
 const builtins = ['Object', 'Array', 'Math', 'JSON', 'console', 'Promise', 'Date', 'Symbol', 'Map', 'Set', 'WeakMap', 'WeakSet', 'Proxy', 'Reflect', 'BigInt', 'Number', 'String', 'Boolean', 'RegExp', 'Error', 'TypeError', 'RangeError', 'SyntaxError', 'EvalError', 'URIError', 'parseInt', 'parseFloat', 'isNaN', 'isFinite', 'encodeURIComponent', 'decodeURIComponent', 'atob', 'btoa', 'TextEncoder', 'TextDecoder', 'URL', 'URLSearchParams', 'Buffer', 'Uint8Array', 'Uint16Array', 'Uint32Array', 'Int8Array', 'Int16Array', 'Int32Array', 'Float32Array', 'Float64Array', 'Uint8ClampedArray', 'BigInt64Array', 'BigUint64Array', 'ArrayBuffer', 'DataView'];
-const seed = [90, 55, 195, 17, 158, 43, 116, 232];
-const names = ['queue', 'letters', 'ord', 'decode', 'slot', 'cipher', 'mid', 'buffer', 'bits', 'pos', 'digit', 'keys', 'i', 'j', 'k', 'l', 'swap', 'out', 'checked', 'plaintext', 'cursor', 'byte', 'high', 'sbox', 'ring', 'turns', 'roll', 'steps', 'probe'];
+let seed = [90, 55, 195, 17, 158, 43, 116, 232];
+const names = ['queue', 'letters', 'ord', 'decode', 'slot', 'cipher', 'mid', 'buffer', 'bits', 'pos', 'digit', 'keys', 'i', 'j', 'k', 'l', 'swap', 'out', 'checked', 'plaintext', 'cursor', 'byte', 'high', 'sbox', 'ring', 'turns', 'roll', 'steps', 'probe', 'tally'];
 
 let counter = 0;
+let quirk = 0;
 const taken = new Set();
+const have = new Set();
+const truthy = ['!0', '!![]', '(0x1<0x2)'];
+const falsy = ['!1', '![]', '(0x1>0x2)'];
 
 function mint() {
   let n = '$' + counter.toString(16);
@@ -532,10 +539,15 @@ function scopes(tokens, links, shapes, wrap) {
       if (c && c.k === 'name') enter(scope, c.v, q + 1, 'par', true);
       return null;
     }
-    if (b && b.k === 'name' && b.v !== 'get' && b.v !== 'set' && b.v !== 'static') {
-      const bb = tokens[q - 2];
-      if (bb && (bb.v === 'function' || (bb.v === '*' && tokens[q - 3] && tokens[q - 3].v === 'function'))) enter(scope, b.v, q - 1, 'expr', false);
-    }
+if (b && b.k === 'name' && b.v !== 'get' && b.v !== 'set' && b.v !== 'static') {
+    let ki = q - 2;
+    if (tokens[ki] && tokens[ki].k === 'punc' && tokens[ki].v === '*') ki--;
+    if (tokens[ki] && tokens[ki].k === 'name' && tokens[ki].v === 'async') ki--;
+    if (!tokens[ki] || tokens[ki].k !== 'name' || tokens[ki].v !== 'function') return b;
+    const p = tokens[ki - 1];
+    if (!p || (p.k === 'punc' && (p.v === ';' || p.v === '{' || p.v === '}')) || (p.k === 'name' && (p.v === 'else' || p.v === 'do'))) return b;
+    enter(scope, b.v, q - 1, 'expr', false);
+  }
     return b;
   };
   const declarations = (i, top, glob) => {
@@ -597,18 +609,18 @@ function scopes(tokens, links, shapes, wrap) {
     const t = tokens[i];
     const top = stack[stack.length - 1];
     owner[i] = top;
-    if (t.k !== 'punc') continue;
-    const v = t.v;
-    if (v === '(') {
-      const cl = links[i];
-      const cs = tokens[cl + 1];
-      if (cs && cs.k === 'punc' && cs.v === '{' && shapes[cl + 1] === 'function') {
-        const scope = { s: i, e: links[cl + 1], k: 'function', parent: top, d: new Map(), tainted: false };
-        stack.push(scope);
+    if (t.k === 'punc') {
+      const v = t.v;
+      if (v === '(') {
+        const cl = links[i];
+        const cs = tokens[cl + 1];
+        if (cs && cs.k === 'punc' && cs.v === '{' && shapes[cl + 1] === 'function') {
+          const scope = { s: i, e: links[cl + 1], k: 'function', parent: top, d: new Map(), tainted: false };
+          stack.push(scope);
+        }
         continue;
       }
-    }
-    if (v === '{') {
+      if (v === '{') {
       const p = tokens[i - 1];
       if (shapes[i] === 'function' && p && p.v === ')') {
         const q = links[i - 1];
@@ -628,6 +640,8 @@ function scopes(tokens, links, shapes, wrap) {
       continue;
     }
     if (v === '}') continue;
+    }
+    const v = t.v;
     if (v === 'let' || v === 'const' || v === 'var') {
       const stop = declarations(i, top, global);
       if (stop >= 0) i = stop;
@@ -641,7 +655,7 @@ function scopes(tokens, links, shapes, wrap) {
       let ni = i + 1;
       if (tokens[ni] && tokens[ni].v === '*' && tokens[ni].k === 'punc') ni++;
       const n = tokens[ni];
-      if (n && n.k === 'name' && !terms.has(n.v) && !starts.has(n.v)) enter(top, n.v, ni, top.k === 'fun' ? 'fun' : 'fnb', true);
+      if (n && n.k === 'name' && !terms.has(n.v) && !opens.has(n.v)) enter(top, n.v, ni, top.k === 'fun' ? 'fun' : 'fnb', true);
       continue;
     }
     if (v === 'class') {
@@ -762,13 +776,17 @@ function rename(tokens, info, links, mode) {
 }
 
 function numbers(tokens) {
-  const pick = [3, 5, 7, 11, 13];
-  const encode = (n) => {
+  const encode = (n, d) => {
     if (n < 16) return '0x' + n.toString(16);
+    if (d > 12) {
+      const hi = Math.floor(n / 0x80000000);
+      const lo = n % 0x80000000;
+      return '((' + encode(hi, 0) + '*0x80000000)+' + encode(lo, 0) + ')';
+    }
     const p = pick[n % 5];
     const q = Math.floor(n / p);
     const r = n % p;
-    return '((' + encode(q) + '*0x' + p.toString(16) + ')+' + encode(r) + ')';
+    return '((' + encode(q, d + 1) + '*0x' + p.toString(16) + ')+' + encode(r, d + 1) + ')';
   };
   for (let i = 0; i < tokens.length; i++) {
     const t = tokens[i];
@@ -778,7 +796,7 @@ function numbers(tokens) {
     if (prev && prev.k === 'punc' && (prev.v === '.' || prev.v === '#')) continue;
     const next = tokens[i + 1];
     if (next && next.k === 'punc' && next.v === ':') continue;
-    t.v = encode(t.n);
+    t.v = encode(t.n, 0);
   }
 }
 
@@ -796,9 +814,13 @@ function bools(tokens, info) {
     const next = tokens[i + 1];
     if (next && next.k === 'punc' && next.v === ':') continue;
     if (info.guarded[i]) continue;
-    if (t.v === 'true') t.v = '!0';
-    else if (t.v === 'false') t.v = '!1';
-    else if (!shadow) t.v = 'void 0';
+    if (t.v === 'true') {
+      t.v = truthy[quirk % truthy.length];
+      quirk++;
+    } else if (t.v === 'false') {
+      t.v = falsy[quirk % falsy.length];
+      quirk++;
+    } else if (!shadow) t.v = 'void 0';
   }
 }
 
@@ -831,6 +853,7 @@ function dispatch(segs, step, tick) {
   for (let j = 0; j < segs.length; j++) ord.push(String(j));
   let txt = 'var ' + step + "='" + ord.join('|') + "'.split('|')," + tick + '=0x0;while(!![]){switch(' + step + '[' + tick + '++]){';
   for (let j = 0; j < segs.length; j++) txt += "case '" + j + "':'\u0001" + j + "\u0001';continue;";
+  txt += "case 'x':0x0;continue;";
   txt += '}break;}';
   return txt;
 }
@@ -908,65 +931,47 @@ function flatten(tokens, guarded) {
   }
 }
 
-function cadaver() {
-  const m = mint();
-  const n = mint();
-  const w = mint();
-  return 'if(0x1>0x2){let ' + m + "='zt7q';let " + n + '=0x1d;for(let ' + w + '=0x0;' + w + '<0x5;' + w + '++){' + n + '+=' + w + '*0x7;if(' + n + '>0x63){break;}}}';
-}
-
-function spot(tokens, o) {
-  let owner = o + 1;
-  const t = tokens[owner];
-  if (t && t.k === 'str' && t.c === 'use strict') {
-    let j = owner + 1;
-    let dep = 0;
-    for (; j < tokens.length; j++) {
-      const w = tokens[j];
-      if (w.k !== 'punc') continue;
-      if (w.v === '(' || w.v === '[' || w.v === '{') dep++;
-      else if (w.v === ')' || w.v === ']' || w.v === '}') dep--;
-      else if (w.v === ';' && dep === 0) {
-        j++;
-        break;
-      }
-    }
-    owner = j;
-  }
-  return owner;
-}
-
-function dead(tokens, guarded) {
+function labels(tokens, guarded) {
   const links = pairs(tokens);
   const shapes = kinds(tokens, links);
-  const bodies = [];
-  for (const k of Object.keys(shapes)) {
-    const o = Number(k);
-    if (shapes[o] === 'function') bodies.push([o, links[o]]);
+  const mode = state(tokens, shapes);
+  for (let i = tokens.length - 1; i >= 0; i--) {
+    const t = tokens[i];
+    if (t.k !== 'name' || mode[i] !== 'obj') continue;
+    if (t.v === '__proto__') continue;
+    const b = tokens[i - 1];
+    if (!b || b.k !== 'punc' || (b.v !== '{' && b.v !== ',')) continue;
+    const nxa = tokens[i + 1];
+    if (!nxa || nxa.k !== 'punc' || (nxa.v !== ':' && nxa.v !== '(')) continue;
+    tokens.splice(i, 1, { k: 'punc', v: '[', newline: false }, { k: 'str', v: "'" + t.v + "'", c: t.v, newline: false }, { k: 'punc', v: ']', newline: false });
+    guarded.splice(i, 1, 0, 0, 0);
   }
-  bodies.sort((a, b) => b[0] - a[0]);
-  for (const [o] of bodies) {
-    const owner = spot(tokens, o);
-    const fresh = lex(cadaver());
-    const zeros = new Array(fresh.length).fill(0);
-    tokens.splice(owner, 0, ...fresh);
-    guarded.splice(owner, 0, ...zeros);
-  }
-  const mat = spot(tokens, -1);
-  const fresh = lex(cadaver());
-  const zeros = new Array(fresh.length).fill(0);
-  tokens.splice(mat, 0, ...fresh);
-  guarded.splice(mat, 0, ...zeros);
 }
 
 function collect(tokens, guarded) {
   const map = new Map();
   const list = [];
+  const q = (s) => "'" + s.replace(/\\/g, '\\\\').replace(/'/g, "\\'") + "'";
   for (let i = 0; i < tokens.length; i++) {
     const t = tokens[i];
     if (t.k !== 'str') continue;
     if (t.c === 'use strict' || t.c === 'use asm') continue;
     if (guarded[i]) continue;
+const pa = tokens[i - 1];
+  const fn = tokens[i + 1];
+  if (pa && pa.k === 'punc' && (pa.v === '{' || pa.v === ',') && fn && fn.k === 'punc' && fn.v === ':') continue;
+  if (pa && pa.k === 'name' && (pa.v === 'import' || pa.v === 'export' || pa.v === 'from' || pa.v === 'as')) continue;
+    if (t.c.length > 24) {
+      const half = (t.c.length + 1) >> 1;
+      const lo = t.c.slice(0, half);
+      const hi = t.c.slice(half);
+      tokens.splice(i, 1,
+        { k: 'str', v: q(lo), c: lo, newline: false },
+        { k: 'punc', v: '+', newline: false },
+        { k: 'str', v: q(hi), c: hi, newline: false });
+      guarded.splice(i, 1, 0, 0, 0);
+      continue;
+    }
     let ord = map.get(t.c);
     if (ord === undefined) {
       ord = list.length;
@@ -1122,10 +1127,26 @@ function spinner(parts, mark, rot) {
   return o;
 }
 
+function vigil(parts, check) {
+  let o = '';
+  o += 'var ' + parts.tally + '=0x0;';
+  o += 'for(var ' + parts.cursor + '=0x1;' + parts.cursor + '<' + parts.queue + '.length;' + parts.cursor + '++){';
+  o += 'var ' + parts.mid + '=' + parts.decode + '(' + parts.cursor + ');';
+  o += 'for(var ' + parts.j + '=0x0;' + parts.j + '<' + parts.mid + '.length;' + parts.j + '++)';
+  o += parts.tally + '=((' + parts.tally + '+' + parts.mid + '.charCodeAt(' + parts.j + '))&0xfffff)^' + parts.cursor + ';}';
+  o += 'if(' + parts.tally + '!==0x' + check.toString(16) + '){' + parts.queue + '.splice(0x0);}';
+  return o;
+}
+
 function prelude(list, parts) {
   const mark = 'q' + (list.length % 10) + 'w8k';
   const len = list.length + 1;
   const rot = len - 1;
+  let check = 0;
+  for (let s = 1; s <= list.length; s++) {
+    const w = list[s - 1];
+    for (let c = 0; c < w.length; c++) check = ((check + w.charCodeAt(c)) & 0xfffff) ^ s;
+  }
   const encode = list.map((s, j) => lock(s, (j + 1) % len));
   encode.push(lock(mark, 0));
   let o = '';
@@ -1138,6 +1159,7 @@ function prelude(list, parts) {
   o += octet(parts);
   o += 'return ' + parts.plaintext + ';};';
   o += spinner(parts, mark, rot);
+  o += vigil(parts, check);
   return o;
 }
 
@@ -1153,17 +1175,32 @@ function gap(a, b) {
 }
 
 function emit(tokens) {
+  const links = pairs(tokens);
   let s = '';
-  for (const t of tokens) {
-    if (t.newline && s.length) s += '\n';
-    s += gap(s.length ? s[s.length - 1] : '', t.v[0]);
-    s += t.v;
+  for (let i = 0; i < tokens.length; i++) {
+    const t = tokens[i];
+    let sep = '';
+    if (i > 0 && t.newline) {
+      const prev = tokens[i - 1];
+      const pv = prev.v;
+      const op = links[i - 1];
+      const pre = op !== undefined ? tokens[op - 1] : null;
+      const ctrl = pv === ')' && pre && pre.k === 'name' && opens.has(pre.v);
+      if (ctrl) sep = '';
+      else if (hard.has(pv) || prev.k === 'num' || prev.k === 'str' || prev.k === 'regex') sep = ';';
+      else if (clip.has(t.v)) sep = '';
+      else if (prev.k === 'name' && !cantend.has(pv)) sep = ';';
+      else if (prev.k === 'punc' && (pv === ')' || pv === ']' || pv === '}' || pv === '++' || pv === '--' || pv === '!' || pv === '~')) sep = ';';
+      else sep = '';
+    }
+    const pc = s.length ? s[s.length - 1] : '';
+    s += sep + gap(pc, t.v[0]) + t.v;
   }
   return s;
 }
 
 function globals(tokens, info) {
-  const have = new Set();
+  have.clear();
   for (const entry of info.entries) have.add(entry.name);
   const links = pairs(tokens);
   const shapes = kinds(tokens, links);
@@ -1205,7 +1242,22 @@ function syntax(code) {
   }
 }
 
+function fuse(source) {
+  const block = [0, 0, 0, 0, 0, 0, 0, 0];
+  for (let i = 0; i < source.length; i++) {
+    const c = source.charCodeAt(i);
+    const b = i % 8;
+    block[b] = (block[b] * 0x11 + c + ((i * 0x9e) & 0xffff)) & 0xff;
+  }
+  for (let j = 0; j < block.length; j++) {
+    if (block[j] === 0) block[j] = 0x5a ^ ((j * 0x13) & 0xff);
+    block[j] = block[j] ^ ((j + 1) * 0x2d) & 0xff;
+  }
+  return block;
+}
+
 function make(source) {
+  seed = fuse(source);
   const tokens = lex(source);
   let wrap = true;
   for (const t of tokens) {
@@ -1221,7 +1273,7 @@ function make(source) {
   bools(tokens, info);
   members(tokens, info.guarded);
   flatten(tokens, info.guarded);
-  dead(tokens, info.guarded);
+  labels(tokens, info.guarded);
   const list = collect(tokens, info.guarded);
   let head = '';
   let len = 1;
